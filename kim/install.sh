@@ -19,19 +19,19 @@
 
 kdeinstdir=`kde4-config --prefix`
 
-cp src/kim_*.desktop $kdeinstdir/share/kde4/services/ServiceMenus/
-cp src/bin/kim_* $kdeinstdir/bin/
+cp -f src/kim_*.desktop $kdeinstdir/share/kservices5/ServiceMenus/
+cp -f src/bin/kim_* $kdeinstdir/bin/
 chmod a+rx $kdeinstdir/bin/kim_*
-chmod a+r $kdeinstdir/share/kde4/services/ServiceMenus/kim_*.desktop
-mv $kdeinstdir/share/kde4/services/ServiceMenus/imageconverter.desktop $kdeinstdir/share/kde4/services/ServiceMenus/imageconverter.desktop~
+chmod a+r $kdeinstdir/share/kservices5/ServiceMenus/kim_*.desktop
+#mv -f $kdeinstdir/share/kde4/services/ServiceMenus/imageconverter.desktop $kdeinstdir/share/kde4/services/ServiceMenus/imageconverter.desktop~ 2>/dev/null
 
-mkdir $kdeinstdir/share/kim
+mkdir -p $kdeinstdir/share/kim
 cp COPYING $kdeinstdir/share/kim/kim_about.txt
 
-mkdir $kdeinstdir/share/kim/slideshow/
+mkdir -p $kdeinstdir/share/kim/slideshow/
 cp src/slideshow/* $kdeinstdir/share/kim/slideshow/
 
-mkdir $kdeinstdir/share/kim/gallery
+mkdir -p $kdeinstdir/share/kim/gallery
 cp src/gallery/* $kdeinstdir/share/kim/gallery
 
 echo "Kim has been installed. Good bye!"

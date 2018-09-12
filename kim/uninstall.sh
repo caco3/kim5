@@ -19,9 +19,9 @@
 
 kdeinstdir=`kde4-config --prefix`
 
-rm $kdeinstdir/share/kde4/services/ServiceMenus/kim_*.desktop
-rm $kdeinstdir/bin/kim_*
-rm -rf $kdeinstdir/share/kim
-mv $kdeinstdir/share/kde4/services/ServiceMenus/imageconverter.desktop~ $kdeinstdir/share/kde4/services/ServiceMenus/imageconverter.desktop
+rm -f $kdeinstdir/share/kservices5/ServiceMenus/kim_*.desktop 2&> /dev/null
+rm -f $kdeinstdir/bin/kim_* 2&> /dev/null
+rm -rf $kdeinstdir/share/kim 2&> /dev/null
+mv -f $kdeinstdir/share/kservices5/ServiceMenus/imageconverter.desktop~ $kdeinstdir/share/kservices5/ServiceMenus/imageconverter.desktop 2&> /dev/null
 
 echo "Kim has been removed. Good bye."
