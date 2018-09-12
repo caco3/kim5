@@ -1,0 +1,116 @@
+#!/bin/bash
+#
+# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, U
+#
+# Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
+#		Alessandro Faggiano <>
+#		Mathieu Vilaplana <mathieu@creationgif.com>
+#		Raphaël Pinson <raphink@raphink.net>
+
+ATTACHMENTS="";
+SCELTA="$1";
+DIR="$2";
+let "nbfiles = ($# -1)/2" 
+case $SCELTA in 
+		mark) annotation=`kdialog --inputbox "Choose your annotation:" "My annotation"`;;
+		border) color=`kdialog --radiolist "Kim - Select border color:" 1 "white"  on 2 "black" off`;;
+esac
+kdialog --title "Kim" --yesnocancel "Do you want to replace exisiting files ?"
+case $? in
+	0)	# Replace exisiting files !
+	dbusRef=`kdialog --progressbar "Kim - Initialising ..." "$nbfiles"`
+	qdbus $dbusRef showCancelButton true 
+	compteur=0
+	for i in "$@";do
+		if [ -f "$i" ];then
+			#test if cancel button has been pushed
+			if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+				qdbus $dbusRef close
+				exit 1
+			fi
+			ATTACHMENTS="$i"
+			let "compteur +=1"
+			qdbus $dbusRef setLabelText "Kim - Treatment of file: `basename "$ATTACHMENTS"`"
+			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+			case "$SCELTA" in 
+				gray)
+					mogrify -colorspace gray "$ATTACHMENTS"
+				;;
+				sepia)
+					mogrify -sepia-tone 80% "$ATTACHMENTS"
+				;;
+				border)
+					case "$color" in
+					1) mogrify -border 10x10 -bordercolor white "$ATTACHMENTS";;
+					2) mogrify -border 10x10 -bordercolor black "$ATTACHMENTS";;
+					esac
+				;;
+				mark)
+					mogrify -font SheerBeauty -pointsize 20 -draw "gravity southeast  text 0,0 '$annotation'" "$ATTACHMENTS"
+				;;
+				*)
+					exit 1
+				;;
+			esac
+		fi;
+	done
+	qdbus $dbusRef close;;
+	
+	1)	# Save files with another name !
+	dbusRef=`kdialog --progressbar "Kim - Initialising ..." "$nbfiles"`
+	qdbus $dbusRef showCancelButton true 
+	compteur=0
+	for i in "$@";do
+		if [ -f "$i" ];then
+			#test if cancel button has been pushed
+			if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+				qdbus $dbusRef close
+				exit 1
+			fi
+			ATTACHMENTS="$i"
+			let "compteur +=1"
+			qdbus $dbusRef setLabelText "Kim - Treatment of file: `basename "$ATTACHMENTS"`"
+			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+			case "$SCELTA" in 
+				gray)
+					convert -colorspace gray "$ATTACHMENTS" "$DIR/gray_`basename "$ATTACHMENTS"`"
+				;;
+				sepia)
+					convert -sepia-tone 80% "$ATTACHMENTS" "$DIR/sepia_`basename "$ATTACHMENTS"`"
+				;;
+				border)
+					case "$color" in
+					1) convert -border 10x10 -bordercolor white "$ATTACHMENTS" "$DIR/border_`basename "$ATTACHMENTS"`";;
+					2) convert -border 10x10 -bordercolor black "$ATTACHMENTS" "$DIR/border_`basename "$ATTACHMENTS"`";;
+					esac
+				;;
+				mark)
+					convert -font SheerBeauty -pointsize 20 -draw "gravity southeast  text 0,0 '$annotation'" "$ATTACHMENTS" "$DIR"/text_`basename "$ATTACHMENTS"`
+				;;
+				*)
+					exit 1
+				;;
+			esac
+		fi;
+	done
+	qdbus $dbusRef close;;
+	
+	2) kdialog --title "Kim" --msgbox "The action was cancelled by user !"
+	exit 1;;
+esac;
+
+

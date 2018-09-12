@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, U
+#
+# Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
+#		Alessandro Faggiano <>
+#		Mathieu Vilaplana <mathieu@creationgif.com>
+#		Raphaël Pinson <raphink@raphink.net>
+
+FILE="";
+ANGLE="$1";
+let "nbfiles = $# -1"
+dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+qdbus $dbusRef showCancelButton true
+
+compteur=0
+for i in "$@";do
+	if [ -f "$i" ];then
+		#test if cancel button has been pushed
+		if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+			qdbus $dbusRef close
+			exit 1
+		fi
+		let "compteur +=1"
+		FILE="$i"
+		if test "EXIF" = $ANGLE; then
+			mogrify -auto-orient "$FILE";
+		else mogrify -rotate $ANGLE "$FILE"
+		fi
+		qdbus $dbusRef setLabelText "Kim - Rotating file: `basename "$FILE"`"
+ 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+	fi;
+done
+
+qdbus $dbusRef close

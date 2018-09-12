@@ -1,0 +1,121 @@
+# Servicemenu image converter
+#
+# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, U
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin,image/*
+Actions=JPEG;PNG;GIF;TIF;PDF;ConvCustom;_SEPARATOR_;GrayScale;Sepia;_SEPARATOR_;AutoRot;Rot90;Rot180;Rot270;RotCustom;_SEPARATOR_;Flip;Flop
+Encoding=UTF-8
+X-KDE-Submenu=Kim - Convert and Rotate
+X-KDE-Submenu[fr]=Kim - Convertir et tourner
+
+[Desktop Action JPEG]
+Name=Convert to JPEG
+Name[fr]=Convertir en JPEG
+Icon=image
+Exec=kim_convert jpg %U
+
+[Desktop Action PNG]
+Name=Convert to PNG
+Name[fr]=Convertir en PNG
+Icon=image
+Exec=kim_convert png %U
+
+[Desktop Action GIF]
+Name=Convert to GIF
+Name[fr]=Convertir en GIF
+Icon=image
+Exec=kim_convert gif %U
+
+[Desktop Action TIF]
+Name=Convert to TIF
+Name[fr]=Convertir en TIF
+Icon=image
+Exec=kim_convert tiff %U
+
+[Desktop Action PDF]
+Name=Convert to PDF
+Name[fr]=Convertir en PDF
+Icon=image
+Exec=kim_convert pdf %U
+
+[Desktop Action ConvCustom]
+Name=Convert custom ...
+Name[fr]=Conversion personnalisée
+Icon=image
+Exec=kim_convert `kdialog --inputbox "Choose format to convert:" ` %U;
+
+[Desktop Action GrayScale]
+Name=Convert to graysale
+Name[fr]=Convertir en échelle de gris
+Icon=image
+Exec=kim_treatment gray %D %U
+
+[Desktop Action Sepia]
+Name=Convert in sepia tone
+Name[fr]=Convertir en sépia
+Icon=image
+Exec=kim_treatment sepia %D %U
+
+[Desktop Action AutoRot];
+Name=Auto-rotate with EXIF
+Name[fr]=Rotation automatique (EXIF)
+Icon=rotate_cw
+Exec=kim_rotate EXIF %U
+
+[Desktop Action Rot90];
+Name=Rotate (90°)
+Name[fr]=Tourner de 90°
+Icon=rotate_cw
+Exec=kim_rotate 90 %U
+
+[Desktop Action Rot180]
+Name=Rotate (180°)
+Name[fr]=Tourner de 180°
+Icon=rotate_cw
+Exec=kim_rotate 180 %U
+
+[Desktop Action Rot270]
+Name=Rotate (270°)
+Name[fr]=Tourner de 270°
+Icon=rotate_cw
+Exec=kim_rotate 270 %U
+
+[Desktop Action RotCustom]
+Name=Rotate custom...
+Name[fr]=Rotation personnalisée
+Icon=rotate_cw
+Exec=kim_rotate `kdialog --inputbox "Rotate x degrees:" 45` %U;
+
+[Desktop Action Flip]
+Name=Verticaly
+Name[es]=Verticalmente
+Name[fr]=Verticalement
+Name[hu]=Tükrözés vízszintesen
+Name[de]=Vertikal spiegeln
+Icon=2uparrow
+Exec=kim_flipflop flip %U 
+
+[Desktop Action Flop]
+Name=Horizontaly
+Name[es]=Horizontalmente
+Name[fr]=Horizontalement
+Name[hu]=Tükrözés függőlegesen
+Name[de]=Horizontal spiegeln
+Icon=2rightarrow
+Exec=kim_flipflop flop %U 

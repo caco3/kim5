@@ -1,0 +1,96 @@
+#!/bin/bash
+#
+# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+dir="$1";
+let "nbfiles = $#"
+test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME;
+KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1;
+
+nb=`kdialog --radiolist "Kim - Select album type:" 1 "9x13 cm: 2x2 images, landscape"  off 2 "10x15 cm: 1x2 images, portrait"  off 3 "11.5x15 cm: 1x2 images, portrait"  on 4 "13x18 cm: 1x2 images, portrait"  off 5 "20x25 cm: 1 image, landscape" off 6 "3x2 portrait album"  off 7 "Thumbnails: 4x5 images, portrait" off`
+
+dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+qdbus $dbusRef showCancelButton true
+compteur=0
+
+case "$nb" in
+1)	for i in "$@";do
+		if [ -f "$i" ];then
+			if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+				qdbus $dbusRef close
+				rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*
+				exit 1
+			fi
+			let "compteur +=1"
+			FILE=`basename "$i"`;
+			convert -resize 640x480 -rotate '90<' $i "$TMPDIR/mini_$FILE";
+			qdbus $dbusRef setLabelText "Kim - resizing of file: $FILE"
+ 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+		fi;
+	done
+	qdbus $dbusRef close;
+	montage -tile 2x2 -geometry 600x800+5+5 -page 595x842 "$KIMDIR"/mini_* `kdialog --getsavefilename "$dir" *.pdf`;
+	rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*;;
+
+2)	montage -tile 1x1 -geometry 800x600+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg
+	qdbus $dbusRef setLabelText "Kim - Creating album ..."
+	qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
+	montage -tile 1x1 -geometry 800x600+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" 
+*.pdf`;;
+
+3)	montage -tile 1x2 -geometry 640x480+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg
+	qdbus $dbusRef setLabelText "Kim - Creating album ..."
+	qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
+	montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+
+4)	montage -tile 1x2 -geometry 640x480+5+5 -page 842x595 "$@" "$KIMDIR"/miniature.jpg
+	qdbus $dbusRef setLabelText "Kim - Creating album ..."
+	qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
+	montage -tile 1x1 -geometry 480x640+5+5 -page 842x595 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+	
+5)	montage -tile 2x2 -geometry 640x480+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg
+	qdbus $dbusRef setLabelText "Kim - Creating album ..."
+	qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
+	montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+	
+6)	montage -tile 2x3 -geometry 640x480+5+5 -page 842x595 "$@" "$KIMDIR"/miniature.jpg 
+	qdbus $dbusRef setLabelText "Kim - Creating album ..."
+	qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
+	montage -tile 1x1 -geometry 480x640+5+5 -page 842x595 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+
+7)	montage -tile 4x3 -geometry 640x480+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg 
+	qdbus $dbusRef setLabelText "Kim - Creating album ..."
+	qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
+	montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+	
+8)	montage -tile 4x4 -geometry 640x480+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg 
+	qdbus $dbusRef setLabelText "Kim - Creating album ..."
+	qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
+	montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+
+*) kdialog --msgbox "Kim - Unrecognized option ! ";;
+esac
+
+qdbus $dbusRef setLabelText "Kim - Deleting miniatures ..."
+qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 2
+#rm "$KIMDIR"/miniature*.jpg*
+rm -rf "$KIMDIR"
+qdbus $dbusRef close
+
+
+
+

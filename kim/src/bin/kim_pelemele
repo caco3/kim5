@@ -1,0 +1,78 @@
+#!/bin/sh
+#
+# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, 
+# MA  02110-1301, USA
+#
+# Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
+
+FILE="";
+let "nbfiles = $#"
+
+test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
+TMPDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1
+
+SIZE=`kdialog --inputbox "Size of small images:" 400x400`;
+TILE=`kdialog --inputbox "Number of rows and columns:" 5x4`;
+RATIO=`kdialog --inputbox "Overlaping ratio in percent:" 15`;
+COLOR=`kdialog --inputbox "Background color:" grey`;
+W=`echo $SIZE | sed 's/[^0-9]/ /g' | awk '{print $1}'`;
+let "OVER = ($RATIO*$W)/100";
+let "BORDER = (2*$W)/100";
+
+dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+qdbus $dbusRef showCancelButton true
+compteur=0
+
+for i in "$@";do
+	if [ -f "$i" ];then 
+		#test if cancel button has been pushed
+		if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+			qdbus $dbusRef close
+			rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*
+			exit 1
+		fi
+		let "compteur +=1"
+		FILE=`basename "$i"`;
+		RANDOM=`perl -e 'print int(rand(1000000))'`;
+		while [ -e "$TMPDIR/pelemele_$RANDOM.png" ]; do 
+			RANDOM=`perl -e 'print int(rand(1000000))'`;
+		done
+		convert -resize $SIZE $i "$TMPDIR/$FILE"
+		convert "$TMPDIR/$FILE" thumbnail.gif \
+			-bordercolor white  -border $BORDER \
+			-bordercolor grey60 -border 1 \
+			-background  none   -rotate `perl -e 'print rand() * 30 - 15'` \
+			-background  black  \( +clone -shadow 60x4+4+4 \) +swap \
+			-background  none   -flatten \
+			-depth 8  -quality 95 "$TMPDIR/pelemele_$RANDOM.png"
+		#	-depth 8  -quality 95 "$TMPDIR/pelemele_$FILE.png"
+		qdbus $dbusRef setLabelText "Kim - resizing of file: $FILE"
+ 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+		fi;
+done
+qdbus $dbusRef close;
+
+montage -background $COLOR -tile $TILE -geometry -$OVER-$OVER $TMPDIR/pelemele_*.png `kdialog --getsavefilename ~ *.png`;
+
+rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*;
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+#!/bin/bash
+#
+# A small script to convert Sony Cybershot multiburst images into an animated GIF. The script requires the 
+# imagemagick command line tools to be installed.
+#
+# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+# Author : Charles Bouveyron <charles.bouveyron@free.fr>
+#	Mathieu Vilaplana <mathieu@creationgif.com>
+#		Raphaël Pinson <raphink@raphink.net>
+
+test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
+#KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$USER"/kim.XXXXXXXX` || exit 1
+KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1
+
+let "nbfiles = $# -1"
+dbusRef=`kdialog --progressbar "Kim - Initialising compression" "$nbfiles"`
+qdbus $dbusRef showCancelButton true
+
+compteur=0
+
+# Extract all 16 subpictures
+for ((i=1;i<=4;i++))
+do
+	for ((j=1;j<=4;j++))
+	do
+		#test if cancel button has been pushed
+		if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+			qdbus $dbusRef close
+			exit 1
+		fi
+		let "compteur +=1"
+		x=$((($j-1)*320));
+		y=$((($i-1)*240));
+		convert -crop 320x240+$x+$y "$1" "$KIMDIR"/imagette.$i.$j.jpg
+		qdbus $dbusRef setLabelText "Kim - Compressing file `basename "$FILE"`"
+ 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+	done
+done
+
+# Convert in gif animation
+convert -adjoin -delay 5 imagette.*.jpg animation.gif
+
+# Remove subpictures (?!)
+rm "$KIMDIR"/imagette.*.jpg
+rm -rf "$KIMDIR"
+
+qdbus $dbusRef close
+

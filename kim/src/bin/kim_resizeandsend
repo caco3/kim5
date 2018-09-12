@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, U
+#
+# Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
+#		Alessandro Faggiano <>
+#		Mathieu Vilaplana <mathieu@creationgif.com>
+#		Raphaël Pinson <raphink@raphink.net>
+
+test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
+TMPDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1
+
+ATTACHMENTS="";
+
+choice=`kdialog --radiolist "Kim - Send by mail:" 1 "Full size"  off 2 "800x600 px"  on 3 "600x450 px" off 4 "300x225 px"  off`;
+
+let "nbfiles = $#" 
+dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+qdbus $dbusRef showCancelButton true 
+
+compteur=0
+
+for i in "$@";do
+	if [ -f "$i" ];then
+		#test if cancel button has been pushed
+		if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+			qdbus $dbusRef close
+			exit 1
+		fi
+		ATTACHMENTS="$i"
+		let "compteur +=1"
+		qdbus $dbusRef setLabelText "Kim - Resizing and compressing file: `basename "$ATTACHMENTS"`"
+ 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $compteur
+		case "$choice" in 
+			1) cp $i $TMPDIR;;
+			2) convert -resize 800x800 "$ATTACHMENTS" "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+			3) convert -resize 600x600 "$ATTACHMENTS" "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+			4) convert -resize 300x300 "$ATTACHMENTS" "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+			*)exit 1;;
+		esac
+	fi;
+done
+
+kmail --attach "$TMPDIR"/*;
+qdbus $dbusRef close;
+kdialog --msgbox "Kim - Send by mail: you can write your message!"
+rm -rf "$TMPDIR"

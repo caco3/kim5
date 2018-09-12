@@ -1,0 +1,31 @@
+Release 0.8.3 :
+ - Fix security issues by using temporary files
+ - Fix UTF-8 encoding issues in desktop files
+ - Fix copyrights and other licensing stuff
+
+Release 0.8.2 (for kde >= 3.3):
+ - Some updates ...
+
+ Release 0.8 (for kde >= 3.3):
+ - create pdf album,
+ - create animated screen capture by clicking anywhere in a folder (example in the Kim web page).
+
+ Release 0.7 (for kde >= 3.3):
+ - correction of some bugs (Kim work now in directories which names have space),
+ - Kim can export images in a single multi-files Tiff image.
+
+ Release 0.6 (for kde >= 3.3):
+ - addition of a renaming tool,
+ - addition of a watermarking tool. (requires ImageMagick 6).
+
+ Release 0.5 (for kde >= 3.3):
+ - addition of kdialog to save the modified images as new images
+ - addition of progressbar and cancel button during actions (Thanks to Matthieu)
+ - new istallation dialog
+
+ Release 0.4:
+ - Correction of bugs in "Compress and Send" (Thanks to Alessandro Faggiano)
+
+ Release 0.3:
+ - "Create Mpeg" action in Publication menu,
+ - Separators in menus.

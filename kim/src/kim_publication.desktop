@@ -1,0 +1,104 @@
+# Servicemenu image converter
+#
+# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, U
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin,image/*
+Actions=Rename;SortByDate;SendByMail;_SEPARATOR_;PeleMele;Slideshow;Galery;_SEPARATOR_;Watermark;Border;_SEPARATOR_;Animation;Multiburst;Adjoin;_SEPARATOR_;Apropos;
+Encoding=UTF-8
+X-KDE-Submenu=Kim - Treatment and publication
+X-KDE-Submenu[fr]=Kim - Traitement et publication
+
+[Desktop Action Slideshow]
+Name=Create a Flash slideshow
+Name[fr]=Créer un slideshow en Flash
+Icon=html
+Exec=kim_slideshow %U
+
+[Desktop Action Galery]
+Name=Create a html gallery
+Name[fr]=Créer un album en html
+Icon=html
+Exec=kim_galery %U
+
+[Desktop Action PeleMele]
+Name=Create a photo montage
+Name[fr]=Créer un pèle-mèle
+Icon=image
+Exec=kim_pelemele %U
+
+[Desktop Action SendByMail]
+Name=Send by mail
+Name[fr]=Envoyer par mail
+Icon=kmail
+Exec=kim_resizeandsend %U
+
+[Desktop Action SortByDate]
+Name=Sort by date
+Name[fr]=Ordonner par date
+Icon=today
+Exec=kim_sortbydate %D %U
+
+[Desktop Action Rename]
+Name=Rename images
+Name[fr]=Renommer des images
+Icon=run
+Exec=kim_rename %D %U
+
+[Desktop Action Adjoin]
+Name=Create a multi-files Tiff image
+Name[fr]=Créer une image Tiff multi-pages
+Icon=attach
+Exec=convert -adjoin %U %D/my_images.tiff
+
+[Desktop Action Animation]
+Name=Create a gif animation
+Name[fr]=Créer une animation gif
+Icon=video
+Exec=convert -delay `kdialog --inputbox "Kim - Delay between images in delay/100 seconds:" 100` %U %D/my_animation.gif
+
+[Desktop Action Multiburst]
+Name=Multiburst image to gif animation
+Name[fr]=image multiburst vers animation gif
+Icon=video
+Exec=kim_multiburst %u
+
+[Desktop Action Border]
+Name=Add a border
+Name[fr]=Ajouter une bordure
+Icon=image
+Exec=kim_treatment border %D %U
+
+#[Desktop Action Album]
+#Name=Create a pdf album
+#Name[fr]=Créer un album en pdf
+#Icon=pdf
+#Exec=kim_album %D %U
+
+[Desktop Action Watermark]
+Name=Add text annotation
+Name[fr]=Ajouter une annotation
+Icon=text
+Exec=kim_treatment mark %D %U
+
+[Desktop Action Apropos]
+Name=About Kim
+Name[fr]=A propos de Kim
+Icon=help
+Exec=kim_other about %U
+

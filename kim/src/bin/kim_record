@@ -1,0 +1,55 @@
+#!/bin/bash
+# A simple bash script to screen capture
+#
+# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, U
+#
+# Author: Charles Bouveyron <charles.bouveyron@free.fr>
+#		Raphaël Pinson <raphink@raphink.net>
+
+test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
+#KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$USER"/kim.XXXXXXXX` || exit 1
+KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1
+
+tps=`kdialog --title "Kim" --inputbox "Choose duration of animation (sec):" 10`
+nb=$[3*$tps]
+kdialog --title "Kim" --msgbox "Click 'Ok' and then choose the window target ! "
+id=`xwininfo | grep "id:" | sed -e "s/.*id: //" -e "s/ .*//"`;
+let x=1;
+
+# loop until it has captured the number of captures requested
+while [ "$x" -le "$nb" ]
+do
+  	if [ "$x" -lt "10" ]
+	then
+		xwd -id "$id" -silent -out "$KIMDIR"/capture0"$x".xwd;
+		#import -window $id "$KIMDIR"/capture0"$x".miff; 
+	else
+		xwd -id "$id" -silent -out "$KIMDIR"/capture"$x".xwd;
+		#import -window $id "$KIMDIR"/capture"$x".miff; 
+	fi
+	#sleep 0.10
+	let x+=1
+done
+
+# convert all images in a simple gif animation
+convert -delay 30 "$KIMDIR"/capture*.xwd `kdialog --getsavefilename ~ *.gif`
+
+#rm "$KIMDIR"/capture*.xwd
+rm -rf "$KIMDIR"
+
+kdialog --title "Kim - Record" --msgbox "The animation is created ! "
+
