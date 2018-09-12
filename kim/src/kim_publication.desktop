@@ -27,13 +27,13 @@ X-KDE-Submenu[fr]=Kim - Traitement et publication
 [Desktop Action Slideshow]
 Name=Create a Flash slideshow
 Name[fr]=Créer un slideshow en Flash
-Icon=html
+Icon=applications-development-web
 Exec=kim_slideshow %U
 
 [Desktop Action Galery]
 Name=Create a html gallery
 Name[fr]=Créer un album en html
-Icon=html
+Icon=applications-development-web
 Exec=kim_galery %U
 
 [Desktop Action PeleMele]
@@ -51,13 +51,13 @@ Exec=kim_resizeandsend %U
 [Desktop Action SortByDate]
 Name=Sort by date
 Name[fr]=Ordonner par date
-Icon=today
+Icon=view-sort-descending
 Exec=kim_sortbydate %D %U
 
 [Desktop Action Rename]
 Name=Rename images
 Name[fr]=Renommer des images
-Icon=run
+Icon=edit-rename
 Exec=kim_rename %D %U
 
 [Desktop Action Adjoin]
