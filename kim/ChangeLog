@@ -1,3 +1,7 @@
+Release 0.9.6:
+ - Migration to KDE5
+ - Various fixes
+
 Release 0.8.3 :
  - Fix security issues by using temporary files
  - Fix UTF-8 encoding issues in desktop files

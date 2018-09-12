@@ -24,6 +24,11 @@ ACTION="$1";
 kdeinstdir=`kde4-config --prefix`
 
 case $ACTION in 
-	about) kdialog --textbox "$kdeinstdir/share/apps/kim/kim_about.txt" 600 400;;
+	about) 
+            kdialog --textbox "$kdeinstdir/share/kim/kim_about.txt" 600 400
+            ;;
+	license) 
+            kdialog --textbox "$kdeinstdir/share/kim/kim_license.txt" 600 400
+            ;;
 esac
 

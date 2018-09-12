@@ -26,12 +26,14 @@ chmod a+r $kdeinstdir/share/kservices5/ServiceMenus/kim_*.desktop
 #mv -f $kdeinstdir/share/kde4/services/ServiceMenus/imageconverter.desktop $kdeinstdir/share/kde4/services/ServiceMenus/imageconverter.desktop~ 2>/dev/null
 
 mkdir -p $kdeinstdir/share/kim
-cp COPYING $kdeinstdir/share/kim/kim_about.txt
+cp COPYING $kdeinstdir/share/kim/kim_license.txt
+cp ABOUT $kdeinstdir/share/kim/kim_about.txt
 
 mkdir -p $kdeinstdir/share/kim/slideshow/
 cp src/slideshow/* $kdeinstdir/share/kim/slideshow/
 
 mkdir -p $kdeinstdir/share/kim/gallery
 cp src/gallery/* $kdeinstdir/share/kim/gallery
+chmod a+rx -R $kdeinstdir/share/kim
 
 echo "Kim has been installed. Good bye!"

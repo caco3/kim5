@@ -19,7 +19,7 @@
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,image/*
-Actions=Rename;SortByDate;SendByMail;_SEPARATOR_;PeleMele;Slideshow;Galery;_SEPARATOR_;Watermark;Border;_SEPARATOR_;Animation;Multiburst;Adjoin;_SEPARATOR_;Apropos;
+Actions=Rename;SortByDate;SendByMail;_SEPARATOR_;PeleMele;Slideshow;Galery;_SEPARATOR_;Watermark;Border;_SEPARATOR_;Animation;Multiburst;Adjoin;_SEPARATOR_;License;Apropos;
 Encoding=UTF-8
 X-KDE-Submenu=Kim - Treatment and publication
 X-KDE-Submenu[fr]=Kim - Traitement et publication
@@ -96,9 +96,15 @@ Name[fr]=Ajouter une annotation
 Icon=text
 Exec=kim_treatment mark %D %U
 
+[Desktop Action License]
+Name=License
+Icon=help-about
+Exec=kim_other license %U
+
+
 [Desktop Action Apropos]
 Name=About Kim
 Name[fr]=A propos de Kim
-Icon=help
+Icon=help-about
 Exec=kim_other about %U
 
