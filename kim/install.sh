@@ -17,7 +17,7 @@
 # along with Foobar; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-kdeinstdir=`kde4-config --prefix`
+kdeinstdir=`qtpaths --install-prefix`
 
 cp -f src/kim_*.desktop $kdeinstdir/share/kservices5/ServiceMenus/
 cp -f src/bin/kim_* $kdeinstdir/bin/
