@@ -17,7 +17,12 @@
 # along with Foobar; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-kdeinstdir=`qtpaths --install-prefix`
+kdeinstdir=`kf5-config --install-prefix`
+
+if [[ $? != 0 ]]; then
+    "Error fetching the KDE install prefix. Exiting..."
+    exit 1
+fi
 
 cp -f src/kim_*.desktop $kdeinstdir/share/kservices5/ServiceMenus/
 cp -f src/bin/kim_* $kdeinstdir/bin/
