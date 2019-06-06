@@ -25,7 +25,7 @@ FILE="";
 QUALITY="$1"; # hd720
 DIR="$2";
 let "nbfiles = ($# -1)/2"
-kdialog --title "Kim" --yesnocancel "Do you want to replace exisiting files ?"
+kdialog --title "Kim" --yesnocancel "Do you want to replace existing files ?"
 case $? in
 	0)	# Replace exisiting files !
 	dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
@@ -72,6 +72,6 @@ case $? in
 	done
 	qdbus $dbusRef close;;
 	
-	2) kdialog --title "Kim" --msgbox "The action was cancelled by user !"
+	2) kdialog --title "Kim" --msgbox "The action was cancelled by user!"
 	exit 1;;
 esac;
