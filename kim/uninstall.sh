@@ -17,7 +17,7 @@
 # along with Foobar; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-kdeinstdir=`qtpaths --install-prefix`
+kdeinstdir=`kf5-config --prefix`
 
 rm -f $kdeinstdir/share/kservices5/ServiceMenus/kim_*.desktop 2&> /dev/null
 rm -f $kdeinstdir/bin/kim_* 2&> /dev/null
