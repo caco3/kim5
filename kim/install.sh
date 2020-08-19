@@ -24,6 +24,19 @@ if [[ $? != 0 ]]; then
     exit 1
 fi
 
+# Check for tools used by KIM
+if [ ! -x /usr/bin/montage ]; then
+	"Error: Can not find executive \"montage\".  Please install it which may be in package \"graphicsmagick\"."
+elif [ ! -x /usr/bin/mogrify ]; then
+	"Error: Can not find executive \"mogrify\".  Please install it which may be in package \"graphicsmagick\"."
+elif [ ! -x /usr/bin/convert ]; then
+	"Error: Can not find executive \"convert\".  Please install it."
+elif [ ! -x /usr/bin/xwd ]; then
+	"Error: Can not find executive \"xwd\".  Please install it."
+elif [ ! -x /usr/bin/ffmpeg ]; then
+	"Error: Can not find executive \"ffmpeg\".  Please install it which may be in package \"ffmpeg\"."
+fi
+
 cp -f src/kim_*.desktop $kdeinstdir/share/kservices5/ServiceMenus/
 cp -f src/bin/kim_* $kdeinstdir/bin/
 chmod a+rx $kdeinstdir/bin/kim_*
