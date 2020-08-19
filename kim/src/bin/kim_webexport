@@ -21,14 +21,16 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
+. `kf5-config --prefix`/share/kim/kim_translation
+
 FILE="";
 SCELTA="$1";
 DIR="$2";
 let "nbfiles = ($# -1)/2"
-kdialog --title "Kim" --yesnocancel "Do you want to replace exisiting files ?"
+kdialog --title "Kim" --yesnocancel "$Q_REPLACE_EXISTING_FILES"
 case $? in
 	0)	# Replace exisiting files !
-	dbusRef=`kdialog --progressbar "Kim - Initialising compression" "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$INITIALISING_COMPRESSION" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -41,14 +43,14 @@ case $? in
 			let "compteur +=1"
 			FILE="$i"
 			mogrify -resize "$SCELTA" -quality 75 "$FILE"
-			qdbus $dbusRef setLabelText "Kim - Compressing file `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$COMPRESSING_FILE_ `basename "$FILE"`"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
 	1)
-	dbusRef=`kdialog --progressbar "Kim - Initialising compression" "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$INITIALISING_COMPRESSION" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -61,12 +63,12 @@ case $? in
 			let "compteur +=1"
 			FILE="$i"
 			convert -resize $SCELTA -quality 75 "$FILE" "$DIR/web_`basename "$FILE"`"
-			qdbus $dbusRef setLabelText "Kim - Compressing file `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$COMPRESSING_FILE_ `basename "$FILE"`"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
-	2) kdialog --title "Kim" --msgbox "The action was cancelled by user !"
+	2) kdialog --title "Kim" --msgbox "$ACTION_CANCEL_BY_USER"
 	exit 1;;
 esac;

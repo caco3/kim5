@@ -21,16 +21,18 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
+. `kf5-config --prefix`/share/kim/kim_translation
+
 FILE="";
 let "nbfiles = ($# -1)/2"
 DIR="$1";
-kdialog --title "Kim" --yesnocancel "Do you want to replace exisiting files ?"
+kdialog --title "Kim" --yesnocancel "$Q_REPLACE_EXISTING_FILES"
 case $? in
 	0)	# Replace exisiting files !
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+	dbusRef=`kdialog --progressbar "$INITIALISING" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
-	newname=`kdialog --inputbox "Choose the new name of images:" "wallpaper_"`
+	newname=`kdialog --inputbox "$CHOOSE_NEW_NAME_OF_IMAGE" "wallpaper_"`
 	for i in "$@";do
 		if [ -f "$i" ];then 
 			#test if cancel button has been pushed
@@ -48,17 +50,17 @@ case $? in
 				fi
 			fi
 			mv "$FILE" "$DIR/$newname$suff$compteur.jpg"
-			qdbus $dbusRef setLabelText "Kim - Renaming file: `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$RENAMING_FILE_ `basename "$FILE"`"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
 	1) 
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$INITIALISING" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
-	newname="`kdialog --inputbox "Choose the new name of images:" "wallpaper_"`"
+	newname="`kdialog --inputbox "$CHOOSE_NEW_NAME_OF_IMAGE" "wallpaper_"`"
 	for i in "$@";do
 		if [ -f "$i" ];then 
 			#test if cancel button has been pushed
@@ -76,12 +78,12 @@ case $? in
 				fi
 			fi
 			cp "$FILE" "$DIR/$newname$suff$compteur.jpg"
-			qdbus $dbusRef setLabelText "Kim - Renaming file: `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$RENAMING_FILE_ `basename "$FILE"`"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
-	2) kdialog --title "Kim" --msgbox "The action was cancelled by user !"
+	2) kdialog --title "Kim" --msgbox "$ACTION_CANCEL_BY_USER"
 	exit 1;;
 esac;

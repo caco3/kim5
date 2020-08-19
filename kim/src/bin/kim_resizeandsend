@@ -21,15 +21,17 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
-test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
-TMPDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1
+. `kf5-config --prefix`/share/kim/kim_translation
+
+#test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
+TMPDIR=`mktemp -d /tmp-"$HOST"/kim.XXXXXXXX` || exit 1
 
 ATTACHMENTS="";
 
-choice=`kdialog --radiolist "Kim - Send by mail:" 1 "Full size"  off 2 "800x600 px"  on 3 "600x450 px" off 4 "300x225 px"  off`;
+choice=`kdialog --radiolist "$SEND_BY_MAIL_" 1 "$FULL_SIZE" off 2 "$PX_800_600" on 3 "$PX_600_450" off 4 "$PX_300_225"  off`;
 
 let "nbfiles = $#" 
-dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+dbusRef=`kdialog --progressbar "$INITIALISING" $nbfiles`
 qdbus $dbusRef showCancelButton true 
 
 compteur=0
@@ -43,7 +45,7 @@ for i in "$@";do
 		fi
 		ATTACHMENTS="$i"
 		let "compteur +=1"
-		qdbus $dbusRef setLabelText "Kim - Resizing and compressing file: `basename "$ATTACHMENTS"`"
+		qdbus $dbusRef setLabelText "$RESIZING_AND_COMPRESSING_FILE_ `basename "$ATTACHMENTS"`"
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $compteur
 		case "$choice" in 
 			1) cp $i $TMPDIR;;
@@ -57,5 +59,5 @@ done
 
 kmail --attach "$TMPDIR"/*;
 qdbus $dbusRef close;
-kdialog --msgbox "Kim - Send by mail: you can write your message!"
+kdialog --msgbox "$SEND_BY_MAIL_WRITE_MESSAGE"
 rm -rf "$TMPDIR"

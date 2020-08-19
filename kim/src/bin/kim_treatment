@@ -21,18 +21,20 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
+. `kf5-config --prefix`/share/kim/kim_translation
+
 ATTACHMENTS="";
 SCELTA="$1";
 DIR="$2";
 let "nbfiles = ($# -1)/2" 
 case $SCELTA in 
-		mark) annotation=`kdialog --inputbox "Choose your annotation:" "My annotation"`;;
-		border) color=`kdialog --radiolist "Kim - Select border color:" 1 "white"  on 2 "black" off`;;
+		mark) annotation=`kdialog --inputbox "$CHOOSE_YOUR_ANNOTATION_" "$MY_ANNOTATION"`;;
+		border) color=`kdialog --radiolist "$SELECT_BORDER_COLOR_" 1 "$WHITE"  on 2 "$BLACK" off`;;
 esac
-kdialog --title "Kim" --yesnocancel "Do you want to replace exisiting files ?"
+kdialog --title "Kim" --yesnocancel "$Q_REPLACE_EXISTING_FILES"
 case $? in
 	0)	# Replace exisiting files !
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$INITIALISING" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true 
 	compteur=0
 	for i in "$@";do
@@ -44,7 +46,7 @@ case $? in
 			fi
 			ATTACHMENTS="$i"
 			let "compteur +=1"
-			qdbus $dbusRef setLabelText "Kim - Treatment of file: `basename "$ATTACHMENTS"`"
+			qdbus $dbusRef setLabelText "$TREATMENT_OF_FILE_ `basename "$ATTACHMENTS"`"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 			case "$SCELTA" in 
 				gray)
@@ -71,7 +73,7 @@ case $? in
 	qdbus $dbusRef close;;
 	
 	1)	# Save files with another name !
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$INITIALISING" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true 
 	compteur=0
 	for i in "$@";do
@@ -83,7 +85,7 @@ case $? in
 			fi
 			ATTACHMENTS="$i"
 			let "compteur +=1"
-			qdbus $dbusRef setLabelText "Kim - Treatment of file: `basename "$ATTACHMENTS"`"
+			qdbus $dbusRef setLabelText "$TREATMENT_OF_FILE_ `basename "$ATTACHMENTS"`"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 			case "$SCELTA" in 
 				gray)
@@ -109,7 +111,7 @@ case $? in
 	done
 	qdbus $dbusRef close;;
 	
-	2) kdialog --title "Kim" --msgbox "The action was cancelled by user !"
+	2) kdialog --title "Kim" --msgbox "$ACTION_CANCEL_BY_USER"
 	exit 1;;
 esac;
 

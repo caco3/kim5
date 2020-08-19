@@ -1,20 +1,23 @@
 #!/bin/sh
+
+. `kf5-config --prefix`/share/kim/kim_translation
+
 # Create a html gallery
 FILE="";
 let "nbfiles = $#"
-kdeinstdir=`kde4-config --prefix`
+kdeinstdir=`kf5-config --prefix`
 KIM_DIR=$kdeinstdir/share/kim/gallery
-TITLE=`kdialog --inputbox "Kim - Title:" "My title ..."`;
-AUTHOR=`kdialog --inputbox "Kim - Author:" "$USER"`;
-DATE=`date '+%A %-d %B %Y'`;
+TITLE=`kdialog --inputbox "$TITLE_" "$MY_TITLE"`;
+AUTHOR=`kdialog --inputbox "$AUTHOR" "$USER"`;
+DATE=`date +%Y%m%d`;
 SCALE_1="800x800";
 SCALE_2="200x200";
-K=`kdialog --inputbox "Kim - Number of columns:" "4"`;
+K=`kdialog --inputbox "$NUM_OF_COLUMNS" "4"`;
 DIR=`kdialog --getexistingdirectory /home/$USER`;
 W="200";
 H="150";
 
-dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+dbusRef=`kdialog --progressbar "$INITIALISING" $nbfiles`
 qdbus $dbusRef showCancelButton true
 
 # Creation of directories
@@ -54,7 +57,7 @@ for i in "$@";do
 		then 	echo '</tr><tr>' >> $DIR/index.html;
 			tmp=0;
 		fi
-		qdbus $dbusRef setLabelText "Kim - Treatment of file: "$IMAGE""
+		qdbus $dbusRef setLabelText "$TREATMENT_OF_FILE "$IMAGE""
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 	fi;
 done
@@ -62,4 +65,4 @@ done
 cat $KIM_DIR/index.part2 >> $DIR/index.html;
 qdbus $dbusRef close;
 
-konqueror $DIR/index.html;
+x-www-browser $DIR/index.html;

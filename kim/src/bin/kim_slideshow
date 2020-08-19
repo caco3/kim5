@@ -1,18 +1,21 @@
 #!/bin/sh
+
+. `kf5-config --prefix`/share/kim/kim_translation
+
 # Create a Flash slideshow
 FILE="";
 let "nbfiles = $#"
 kdeinstdir=`kde4-config --prefix`
 KIM_DIR=$kdeinstdir/share/kim/slideshow
-TITLE=`kdialog --inputbox "Kim - Title:" "My title ..."`;
-AUTHOR=`kdialog --inputbox "Kim - Author:" "$USER"`;
-DATE=`date '+%A %-d %B %Y'`;
-SCALE=`kdialog --inputbox "Kim - Size:" "600x450"`;
+TITLE=`kdialog --inputbox "$TITLE_" "$MY_TITLE"`;
+AUTHOR=`kdialog --inputbox "$AUTHOR_" "$USER"`;
+DATE=`date '+%Y%m%d'`;
+SCALE=`kdialog --inputbox "$SIZE_" "600x450"`;
 DIR=`kdialog --getexistingdirectory /home/$USER`;
 W=`echo $SCALE | sed 's/[^0-9]/ /g' | awk '{print $1}'`;
 H=`echo $SCALE | sed 's/[^0-9]/ /g' | awk '{print $2}'`;
 
-dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+dbusRef=`kdialog --progressbar "$INITIALISING" $nbfiles`
 qdbus $dbusRef showCancelButton true
 
 mkdir $DIR/images;
@@ -47,11 +50,11 @@ for i in "$@";do
 		FILE="$i"
 		convert -resize $SCALE "$FILE" $DIR/images/`basename "$FILE"`.jpg;
 		echo '<img src="images/'`basename "$FILE"`'.jpg" title="'`basename "$FILE"`'" />' >> $DIR/dewslider.xml;
-		qdbus $dbusRef setLabelText "Kim - Treatment of file: `basename "$FILE"`"
+		qdbus $dbusRef setLabelText "$TREATMENT_OF_FILE_ `basename "$FILE"`"
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 	fi;
 done
 
 echo '</album>' >> $DIR/dewslider.xml;
 qdbus $dbusRef close;
-konqueror $DIR/index.html;
+x-www-browser $DIR/index.html;

@@ -21,14 +21,16 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
+. `kf5-config --prefix`/share/kim/kim_translation
+
 FILE="";
 QUALITY="$1"; # hd720
 DIR="$2";
 let "nbfiles = ($# -1)/2"
-kdialog --title "Kim" --yesnocancel "Do you want to replace existing files ?"
+kdialog --title "Kim" --yesnocancel "$Q_REPLACE_EXISTING_FILES"
 case $? in
 	0)	# Replace exisiting files !
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+	dbusRef=`kdialog --progressbar "$INITIALISING" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -40,7 +42,7 @@ case $? in
 			fi
 			let "compteur +=1"
 			FILE="$i"
-			qdbus $dbusRef setLabelText "Kim - Compressing file: `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$COMPRESSING_FILE_ `basename "$FILE"`"
 			mv "$FILE" "$FILE-work"
 			ffmpeg -i "$FILE-work" -s $QUALITY -c:v libx264 -crf 23 -c:a aac -strict -2 "$FILE"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $compteur
@@ -49,7 +51,7 @@ case $? in
 	qdbus $dbusRef close;;
 	
 	1)
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+	dbusRef=`kdialog --progressbar "$INITIALISING" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -66,12 +68,12 @@ case $? in
                         filename="${filename%.*}"
 			DIR=$(dirname "${FILE}")
 			ffmpeg -i "$FILE" -s $QUALITY -c:v libx264 -crf 23 -c:a aac -strict -2 "$DIR/$filename-compressed.$extension"
-			qdbus $dbusRef setLabelText "Kim - Compressing file: `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$COMPRESSING_FILE_ `basename "$FILE"`"
 #	 		qdbus $dbusRef setProgress "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
-	2) kdialog --title "Kim" --msgbox "The action was cancelled by user!"
+	2) kdialog --title "Kim" --msgbox "$ACTION_CANCEL_BY_USER"
 	exit 1;;
 esac;

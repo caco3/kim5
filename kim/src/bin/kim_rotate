@@ -21,10 +21,12 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
+. `kf5-config --prefix`/share/kim/kim_translation
+
 FILE="";
 ANGLE="$1";
 let "nbfiles = $# -1"
-dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+dbusRef=`kdialog --progressbar "$INITIALISING" $nbfiles`
 qdbus $dbusRef showCancelButton true
 
 compteur=0
@@ -41,7 +43,7 @@ for i in "$@";do
 			mogrify -auto-orient "$FILE";
 		else mogrify -rotate $ANGLE "$FILE"
 		fi
-		qdbus $dbusRef setLabelText "Kim - Rotating file: `basename "$FILE"`"
+		qdbus $dbusRef setLabelText "$ROTATING_FILE_ `basename "$FILE"`"
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 	fi;
 done
