@@ -54,6 +54,7 @@ chmod a+r $kdeinstdir/share/kservices5/ServiceMenus/kim_*.desktop
 mkdir -p $kdeinstdir/share/kim
 cp COPYING $kdeinstdir/share/kim/kim_license.txt
 cp ABOUT $kdeinstdir/share/kim/kim_about.txt
+cp src/kim_translation $kdeinstdir/share/kim
 
 mkdir -p $kdeinstdir/share/kim/slideshow/
 cp src/slideshow/* $kdeinstdir/share/kim/slideshow/
@@ -61,5 +62,11 @@ cp src/slideshow/* $kdeinstdir/share/kim/slideshow/
 mkdir -p $kdeinstdir/share/kim/gallery
 cp src/gallery/* $kdeinstdir/share/kim/gallery
 chmod a+rx -R $kdeinstdir/share/kim
+
+# install translation mo files
+for i in src/po/*.po; do
+	MOFILE=/usr/share/locale/`basename -s .po $i`/LC_MESSAGES/kim5.mo
+	msgfmt -o ${MOFILE} $i
+done
 
 echo "Kim has been installed. Good bye!"

@@ -21,14 +21,16 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
+. `kf5-config --prefix`/share/kim/kim_translation
+
 FILE="";
 QUALITY="$1";
 DIR="$2";
 let "nbfiles = ($# -1)/2"
-kdialog --title "Kim" --yesnocancel "Do you want to replace exisiting files ?"
+kdialog --title $(gettext "Kim") --yesnocancel "$(gettext "Do you want to replace existing files?")"
 case $? in
-	0)	# Replace exisiting files !
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+	0)	# Replace existing files !
+	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -40,7 +42,7 @@ case $? in
 			fi
 			let "compteur +=1"
 			FILE="$i"
-			qdbus $dbusRef setLabelText "Kim - Compressing file: `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim - Compressing file: ") `basename $(FILE)`"
 			mogrify -quality $QUALITY "$FILE"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $compteur
 		fi;
@@ -48,7 +50,7 @@ case $? in
 	qdbus $dbusRef close;;
 	
 	1)
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -61,12 +63,12 @@ case $? in
 			let "compteur +=1"
 			FILE="$i"
 			convert -quality $QUALITY "$FILE" $DIR/compressed_"`basename "$FILE"`"
-			qdbus $dbusRef setLabelText "Kim - Compressing file: `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim - Compressing file: ") `basename $(FILE)`"
 #	 		qdbus $dbusRef setProgress "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
-	2) kdialog --title "Kim" --msgbox "The action was cancelled by user !"
+	2) kdialog --title $(gettext "Kim") --msgbox "$(gettext "The action was cancelled by user !")"
 	exit 1;;
 esac;
