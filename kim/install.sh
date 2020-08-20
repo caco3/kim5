@@ -17,6 +17,27 @@
 # along with Foobar; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
+if [ ! `command -v kf5-config` ]; then
+	echo "KDE Image Menu is running under KDE Framework 5, but I can't find executive \"kf5-config\".  Please check your system installation."
+	exit
+elif [ ! `command -v montage` ]; then
+	echo "Can not find executive \"montage\".  Please install it which may be in package \"graphicsmagick\"."
+	exit
+elif [ ! `command -v mogrify` ]; then
+	echo "Can not find executive \"mogrify\".  Please install it which may be in package \"graphicsmagick\"."
+	exit
+elif [ ! `command -v convert` ]; then
+	echo "Can not find executive \"convert\".  Please install it."
+	exit
+elif [ ! `command -v xwd` ]; then
+	echo "Can not find executive \"xwd\".  Please install it."
+	exit
+elif [ ! `command -v ffmpeg` ]; then
+	echo "Can not find executive \"ffmpeg\".  Please install it which may be in package \"ffmpeg\"."
+	exit
+fi
+
+
 kdeinstdir=`kf5-config --prefix`
 
 if [[ $? != 0 ]]; then
