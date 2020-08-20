@@ -23,12 +23,14 @@
 #	Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
-test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
+. `kf5-config --prefix`/share/kim/kim_translation
+
+#test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
 #KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$USER"/kim.XXXXXXXX` || exit 1
-KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1
+KIMDIR=`mktemp -d /tmp/kim.XXXXXXXX` || exit 1
 
 let "nbfiles = $# -1"
-dbusRef=`kdialog --progressbar "Kim - Initialising compression" "$nbfiles"`
+dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising compression")" "$nbfiles"`
 qdbus $dbusRef showCancelButton true
 
 compteur=0
@@ -47,7 +49,7 @@ do
 		x=$((($j-1)*320));
 		y=$((($i-1)*240));
 		convert -crop 320x240+$x+$y "$1" "$KIMDIR"/imagette.$i.$j.jpg
-		qdbus $dbusRef setLabelText "Kim - Compressing file `basename "$FILE"`"
+		qdbus $dbusRef setLabelText "$(gettext "Kim - Compressing file: ") `basename "$FILE"`"
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 	done
 done

@@ -19,18 +19,20 @@
 #
 # Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
 
+. `kf5-config --prefix`/share/kim/kim_translation
+
 FILE="";
 DIR="$1"
 let "nbfiles = $#/2"
 
-test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
-TMPDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1
+#test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
+TMPDIR=`mktemp -d /tmp/kim.XXXXXXXX` || exit 1
 
-kdialog --title "Kim" --yesnocancel "Do you want to replace exisiting files ?"
+kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to replace existing files?")"
 
 case $? in
-	0)	# Replace exisiting files !
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+	0)	# Replace existing files !
+	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -59,14 +61,14 @@ case $? in
 				NEWNAME="$NAME"_"$tmp.jpg"
 			done
 			mv "$TMPDIR/$FILE" "$DIR/$NEWNAME"
-			qdbus $dbusRef setLabelText "Kim - Renaming file: $FILE"
+			qdbus $dbusRef setLabelText "$(gettext "Kim - Renaming file: ") $FILE"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
-	1) # Do not replace exisiting files !
-	dbusRef=`kdialog --progressbar "Kim - Initialising ..." "$nbfiles"`
+	1) # Do not replace existing files !
+	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -95,13 +97,14 @@ case $? in
 				NEWNAME="$NAME"_"$tmp.jpg"
 			done
 			mv "$TMPDIR/$FILE" "$DIR/$NEWNAME"
-			qdbus $dbusRef setLabelText "Kim - Renaming file: $FILE"
+			qdbus $dbusRef setLabelText "$(gettext "Kim - Renaming file: ") $FILE"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
-	2) kdialog --title "Kim" --msgbox "The action was cancelled by user !"
+	2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user !")"
 	exit 1;;
 esac;
 rm -rf "$TMPDIR"
+
