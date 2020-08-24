@@ -20,13 +20,15 @@
 # Author: Charles Bouveyron <charles.bouveyron@free.fr>
 #		Raphaël Pinson <raphink@raphink.net>
 
-test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
-#KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$USER"/kim.XXXXXXXX` || exit 1
-KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1
+. `kf5-config --prefix`/share/kim/kim_translation
 
-tps=`kdialog --title "Kim" --inputbox "Choose duration of animation (sec):" 10`
+#test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
+#KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$USER"/kim.XXXXXXXX` || exit 1
+KIMDIR=`mktemp -d /tmp/kim.XXXXXXXX` || exit 1
+
+tps=`kdialog --title "$(gettext "Kim")" --inputbox "$(gettext "Choose duration of animation (sec):")" 10`
 nb=$[3*$tps]
-kdialog --title "Kim" --msgbox "Click 'Ok' and then choose the window target ! "
+kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "Click 'Ok' and then choose the window target ! ")"
 id=`xwininfo | grep "id:" | sed -e "s/.*id: //" -e "s/ .*//"`;
 let x=1;
 
@@ -51,5 +53,5 @@ convert -delay 30 "$KIMDIR"/capture*.xwd `kdialog --getsavefilename ~ *.gif`
 #rm "$KIMDIR"/capture*.xwd
 rm -rf "$KIMDIR"
 
-kdialog --title "Kim - Record" --msgbox "The animation is created ! "
+kdialog --title "$(gettext "Kim - Record")" --msgbox "$(gettext "The animation is created ! ")"
 

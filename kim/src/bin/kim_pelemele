@@ -19,21 +19,23 @@
 #
 # Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
 
+. `kf5-config --prefix`/share/kim/kim_translation
+
 FILE="";
 let "nbfiles = $#"
 
-test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
-TMPDIR=`mktemp -d "$KDEHOME"/tmp-"$HOST"/kim.XXXXXXXX` || exit 1
+#test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
+TMPDIR=`mktemp -d /tmp/kim.XXXXXXXX` || exit 1
 
-SIZE=`kdialog --inputbox "Size of small images:" 400x400`;
-TILE=`kdialog --inputbox "Number of rows and columns:" 5x4`;
-RATIO=`kdialog --inputbox "Overlaping ratio in percent:" 15`;
-COLOR=`kdialog --inputbox "Background color:" grey`;
+SIZE=`kdialog --inputbox "$(gettext "Size of small images:")" 400x400`;
+TILE=`kdialog --inputbox "$(gettext "Number of rows and columns:")" 5x4`;
+RATIO=`kdialog --inputbox "$(gettext "Overlaping ratio in percent:")" 15`;
+COLOR=`kdialog --inputbox "$(gettext "Background color:")" grey`;
 W=`echo $SIZE | sed 's/[^0-9]/ /g' | awk '{print $1}'`;
 let "OVER = ($RATIO*$W)/100";
 let "BORDER = (2*$W)/100";
 
-dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
 qdbus $dbusRef showCancelButton true
 compteur=0
 
@@ -42,7 +44,8 @@ for i in "$@";do
 		#test if cancel button has been pushed
 		if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
 			qdbus $dbusRef close
-			rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*
+			#rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*
+			rm -rf $TMPDIR
 			exit 1
 		fi
 		let "compteur +=1"
@@ -60,7 +63,7 @@ for i in "$@";do
 			-background  none   -flatten \
 			-depth 8  -quality 95 "$TMPDIR/pelemele_$RANDOM.png"
 		#	-depth 8  -quality 95 "$TMPDIR/pelemele_$FILE.png"
-		qdbus $dbusRef setLabelText "Kim - resizing of file: $FILE"
+		qdbus $dbusRef setLabelText "$(gettext "Kim - resizing of file: ") $FILE"
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 done
@@ -68,11 +71,6 @@ qdbus $dbusRef close;
 
 montage -background $COLOR -tile $TILE -geometry -$OVER-$OVER $TMPDIR/pelemele_*.png `kdialog --getsavefilename ~ *.png`;
 
-rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*;
-
-
-
-
-
-
+#rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*;
+rm -rf $TMPDIR
 

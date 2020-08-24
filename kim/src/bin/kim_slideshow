@@ -1,18 +1,27 @@
 #!/bin/sh
+
+. `kf5-config --prefix`/share/kim/kim_translation
+
+CANCEL=`kdialog --warningcontinuecancel "$(gettext "This feature is supposed to create a Flash slideshow, but Flash is dead now!  Are you sure you want to do that?")"`
+
+if [ $CANCEL -eq 1 ]; then
+	exit
+fi
+
 # Create a Flash slideshow
 FILE="";
 let "nbfiles = $#"
-kdeinstdir=`kde4-config --prefix`
+kdeinstdir=`kf5-config --prefix`
 KIM_DIR=$kdeinstdir/share/kim/slideshow
-TITLE=`kdialog --inputbox "Kim - Title:" "My title ..."`;
-AUTHOR=`kdialog --inputbox "Kim - Author:" "$USER"`;
-DATE=`date '+%A %-d %B %Y'`;
-SCALE=`kdialog --inputbox "Kim - Size:" "600x450"`;
+TITLE=`kdialog --inputbox "$(gettext "Kim - Title:")" "$(gettext "My title ...")"`;
+AUTHOR=`kdialog --inputbox "$(gettext "Kim - Author:")" "$USER"`;
+DATE=`date '+%Y%m%d'`;
+SCALE=`kdialog --inputbox "$(gettext "Kim - Size:")" "600x450"`;
 DIR=`kdialog --getexistingdirectory /home/$USER`;
 W=`echo $SCALE | sed 's/[^0-9]/ /g' | awk '{print $1}'`;
 H=`echo $SCALE | sed 's/[^0-9]/ /g' | awk '{print $2}'`;
 
-dbusRef=`kdialog --progressbar "Kim - Initialising ..." $nbfiles`
+dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
 qdbus $dbusRef showCancelButton true
 
 mkdir $DIR/images;
@@ -47,11 +56,11 @@ for i in "$@";do
 		FILE="$i"
 		convert -resize $SCALE "$FILE" $DIR/images/`basename "$FILE"`.jpg;
 		echo '<img src="images/'`basename "$FILE"`'.jpg" title="'`basename "$FILE"`'" />' >> $DIR/dewslider.xml;
-		qdbus $dbusRef setLabelText "Kim - Treatment of file: `basename "$FILE"`"
+		qdbus $dbusRef setLabelText "$(gettext "Kim - Treatment of file: ") `basename "$FILE"`"
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 	fi;
 done
 
 echo '</album>' >> $DIR/dewslider.xml;
 qdbus $dbusRef close;
-konqueror $DIR/index.html;
+x-www-browser $DIR/index.html;

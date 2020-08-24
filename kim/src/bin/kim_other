@@ -19,9 +19,11 @@
 # Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
 #		Raphaël Pinson <raphink@raphink.net>
 
+. `kf5-config --prefix`/share/kim/kim_translation
+
 ATTACHMENTS="";
 ACTION="$1";
-kdeinstdir=`kde4-config --prefix`
+kdeinstdir=`kf5-config --prefix`
 
 case $ACTION in 
 	about) 
