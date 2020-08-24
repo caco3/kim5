@@ -44,7 +44,8 @@ for i in "$@";do
 		#test if cancel button has been pushed
 		if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
 			qdbus $dbusRef close
-			rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*
+			#rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*
+			rm -rf $TMPDIR
 			exit 1
 		fi
 		let "compteur +=1"
@@ -70,5 +71,6 @@ qdbus $dbusRef close;
 
 montage -background $COLOR -tile $TILE -geometry -$OVER-$OVER $TMPDIR/pelemele_*.png `kdialog --getsavefilename ~ *.png`;
 
-rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*;
+#rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*;
+rm -rf $TMPDIR
 
