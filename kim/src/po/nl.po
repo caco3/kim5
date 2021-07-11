@@ -1,0 +1,274 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Heimen Stoffels <vistausss@fastmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-20 22:31+0800\n"
+"PO-Revision-Date: 2021-06-06 13:19+0100\n"
+"Language-Team: Dutch <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: bin/kim_album:22 bin/kim_print:26
+msgid "Kim - Select album type:"
+msgstr "Kim - Kies het soort album:"
+
+#: bin/kim_album:22
+msgid "1x1 portrait album"
+msgstr "1x1 verticaal album"
+
+#: bin/kim_album:22
+msgid "1x1 landscape album"
+msgstr "1x1 horizontaal album"
+
+#: bin/kim_album:22
+msgid "1x2 landscape album"
+msgstr "1x2 horizontaal album"
+
+#: bin/kim_album:22
+msgid "2x1 portrait album"
+msgstr "2x1 verticaal album"
+
+#: bin/kim_album:22
+msgid "2x2 landscape album"
+msgstr "2x2 horizontaal album"
+
+#: bin/kim_album:22 bin/kim_print:26
+msgid "3x2 portrait album"
+msgstr "3x2 verticaal album"
+
+#: bin/kim_album:22
+msgid "3x4 landscape album"
+msgstr "3x4 horizontaal album"
+
+#: bin/kim_album:22
+msgid "4x4 landscape album"
+msgstr "4x4 horizontaal album"
+
+#: bin/kim_album:28
+msgid "Kim - Creating miniatures ..."
+msgstr "Kim - Bezig met samenstellen van miniaturen…"
+
+#: bin/kim_album:31 bin/kim_album:37 bin/kim_album:43 bin/kim_album:48
+#: bin/kim_album:53 bin/kim_album:58 bin/kim_album:63 bin/kim_album:68
+#: bin/kim_print:52 bin/kim_print:58 bin/kim_print:63 bin/kim_print:68
+#: bin/kim_print:73 bin/kim_print:78 bin/kim_print:83
+msgid "Kim - Creating album ..."
+msgstr "Kim - Bezig met samenstellen van album…"
+
+#: bin/kim_album:72 bin/kim_print:87
+msgid "Kim - Unrecognized option ! "
+msgstr "Kim - Onbekende optie!"
+
+#: bin/kim_album:75 bin/kim_print:90
+msgid "Kim - Deleting miniatures ..."
+msgstr "Kim - Bezig met verwijderen van miniaturen…"
+
+#: bin/kim_compress:30 bin/kim_compress:72 bin/kim_record:29 bin/kim_record:31
+#: bin/kim_record_mpg:29 bin/kim_record_mpg:31 bin/kim_rename:29
+#: bin/kim_rename:87 bin/kim_resize:30 bin/kim_resize:72 bin/kim_sortbydate:31
+#: bin/kim_sortbydate:106 bin/kim_treatment:34 bin/kim_treatment:114
+#: bin/kim_video:30 bin/kim_video:77 bin/kim_webexport:30 bin/kim_webexport:72
+msgid "Kim"
+msgstr "Kim"
+
+#: bin/kim_compress:30 bin/kim_rename:29 bin/kim_resize:30
+#: bin/kim_sortbydate:31 bin/kim_treatment:34 bin/kim_video:30
+#: bin/kim_webexport:30
+msgid "Do you want to replace existing files?"
+msgstr "Wil je bestaande bestanden vervangen?"
+
+#: bin/kim_compress:33 bin/kim_compress:53 bin/kim_convert:29
+#: bin/kim_flipflop:29 bin/kim_galery:20 bin/kim_pelemele:38 bin/kim_print:28
+#: bin/kim_rename:32 bin/kim_rename:60 bin/kim_resize:33 bin/kim_resize:53
+#: bin/kim_resizeandsend:34 bin/kim_rotate:29 bin/kim_rotatewithexif:29
+#: bin/kim_slideshow:24 bin/kim_sortbydate:35 bin/kim_sortbydate:71
+#: bin/kim_treatment:37 bin/kim_treatment:76 bin/kim_video:33 bin/kim_video:54
+msgid "Kim - Initialising ..."
+msgstr "Kim - Bezig met initialiseren…"
+
+#: bin/kim_compress:45 bin/kim_compress:66 bin/kim_multiburst:52
+#: bin/kim_video:45 bin/kim_video:71 bin/kim_webexport:46 bin/kim_webexport:66
+msgid "Kim - Compressing file: "
+msgstr "Kim - Bezig met comprimeren van bestand: "
+
+#: bin/kim_compress:72 bin/kim_rename:87 bin/kim_resize:72
+#: bin/kim_sortbydate:106 bin/kim_treatment:114 bin/kim_video:77
+#: bin/kim_webexport:72
+msgid "The action was cancelled by user !"
+msgstr "De handeling is afgebroken."
+
+#: bin/kim_convert:42
+msgid "Kim - Converting file:"
+msgstr "Kim - Bezig met converteren van bestand:"
+
+#: bin/kim_flipflop:42 bin/kim_rotate:46 bin/kim_rotatewithexif:43
+msgid "Kim - Rotating file: "
+msgstr "Kim - Bezig met draaien van bestand:"
+
+#: bin/kim_galery:10 bin/kim_slideshow:16
+msgid "Kim - Title:"
+msgstr "Kim - Naam:"
+
+#: bin/kim_galery:10 bin/kim_slideshow:16
+msgid "My title ..."
+msgstr "Mijn zelfgekozen naam…"
+
+#: bin/kim_galery:11 bin/kim_slideshow:17
+msgid "Kim - Author:"
+msgstr "Kim - Maker:"
+
+#: bin/kim_galery:15
+msgid "Kim - Number of columns:"
+msgstr "Kim - Aantal kolommen:"
+
+#: bin/kim_galery:60 bin/kim_slideshow:59 bin/kim_treatment:49
+#: bin/kim_treatment:88
+msgid "Kim - Treatment of file: "
+msgstr "Kim - Bezig met afhandelen van bestand: "
+
+#: bin/kim_multiburst:33 bin/kim_webexport:33 bin/kim_webexport:53
+msgid "Kim - Initialising compression"
+msgstr "Kim - Bezig met initialiseren van compressie…"
+
+#: bin/kim_pelemele:30
+msgid "Size of small images:"
+msgstr "Grootte van kleine afbeeldingen:"
+
+#: bin/kim_pelemele:31
+msgid "Number of rows and columns:"
+msgstr "Aantal rijen en kolommen:"
+
+#: bin/kim_pelemele:32
+msgid "Overlaping ratio in percent:"
+msgstr "Overlappercentage:"
+
+#: bin/kim_pelemele:33
+msgid "Background color:"
+msgstr "Achtergrondkleur:"
+
+#: bin/kim_pelemele:65 bin/kim_print:43
+msgid "Kim - resizing of file: "
+msgstr "Kim - Bezig met grootte-aanpassing van bestand: "
+
+#: bin/kim_print:26
+msgid "9x13 cm: 2x2 images, landscape"
+msgstr "9x13 cm: 2x2 afbeeldingen, horizontaal"
+
+#: bin/kim_print:26
+msgid "10x15 cm: 1x2 images, portrait"
+msgstr "10x15 cm: 1x2 afbeeldingen, verticaal"
+
+#: bin/kim_print:26
+msgid "11.5x15 cm: 1x2 images, portrait"
+msgstr "11.5x15 cm: 1x2 afbeeldingen, verticaal"
+
+#: bin/kim_print:26
+msgid "13x18 cm: 1x2 images, portrait"
+msgstr "13x18 cm: 1x2 afbeeldingen, verticaal"
+
+#: bin/kim_print:26
+msgid "20x25 cm: 1 image, landscape"
+msgstr "20x25 cm: 1 afbeelding, horizontaal"
+
+#: bin/kim_print:26
+msgid "Thumbnails: 4x5 images, portrait"
+msgstr "Miniaturen: 4x5 afbeeldingen, verticaal"
+
+#: bin/kim_record:29 bin/kim_record_mpg:29
+msgid "Choose duration of animation (sec):"
+msgstr "Kies de animatieduur (in sec.):"
+
+#: bin/kim_record:31 bin/kim_record_mpg:31
+msgid "Click 'Ok' and then choose the window target ! "
+msgstr "Klik op ‘Oké’ en vervolgens op het betreffende venster."
+
+#: bin/kim_record:56 bin/kim_record_mpg:57
+msgid "Kim - Record"
+msgstr "Kim - Opname"
+
+#: bin/kim_record:56 bin/kim_record_mpg:57
+msgid "The animation is created ! "
+msgstr "De animatie is vastgelegd."
+
+#: bin/kim_rename:35 bin/kim_rename:63
+msgid "Choose the new name of images:"
+msgstr "Geef de afbeeldingen een nieuwe naam:"
+
+#: bin/kim_rename:53 bin/kim_rename:81 bin/kim_sortbydate:64
+#: bin/kim_sortbydate:100
+msgid "Kim - Renaming file: "
+msgstr "Kim - Bezig met naamswijziging: "
+
+#: bin/kim_resize:46 bin/kim_resize:66
+msgid "Kim - Resizing file: "
+msgstr "Kim - Bezig met grootte-aanpassing: "
+
+#: bin/kim_resizeandsend:31
+msgid "Kim - Send by mail:"
+msgstr "Kim - Versturen per e-mail:"
+
+#: bin/kim_resizeandsend:31
+msgid "Full size"
+msgstr "Volledig"
+
+#: bin/kim_resizeandsend:31
+msgid "800x600 px"
+msgstr "800x600 px"
+
+#: bin/kim_resizeandsend:31
+msgid "600x450 px"
+msgstr "600x450 px"
+
+#: bin/kim_resizeandsend:31
+msgid "300x225 px"
+msgstr "300x225 px"
+
+#: bin/kim_resizeandsend:48
+msgid "Kim - Resizing and compressing file: "
+msgstr "Kim - Bezig met aanpassen en comprimeren van bestand: "
+
+#: bin/kim_resizeandsend:63 bin/kim_resizeandsend:67
+msgid "Kim - Send by mail: you can write your message!"
+msgstr "Kim - Versturen per e-mail: stel een bericht op."
+
+#: bin/kim_slideshow:5
+msgid ""
+"This feature is supposed to create a Flash slideshow, but Flash is dead "
+"now!  Are you sure you want to do that?"
+msgstr ""
+"Met deze functie kun je een diavoorstelling met Flash maken, maar Flash wordt"
+" niet meer ondersteund. Weet je het zeker?"
+
+#: bin/kim_slideshow:19
+msgid "Kim - Size:"
+msgstr "Kim - Grootte:"
+
+#: bin/kim_treatment:31
+msgid "Choose your annotation:"
+msgstr "Kies het soort aantekening:"
+
+#: bin/kim_treatment:31
+msgid "My annotation"
+msgstr "Mijn aantekening"
+
+#: bin/kim_treatment:32
+msgid "Kim - Select border color:"
+msgstr "Kim - Kies een kaderkleur:"
+
+#: bin/kim_treatment:32
+msgid "white"
+msgstr "wit"
+
+#: bin/kim_treatment:32
+msgid "black"
+msgstr "zwart"
+

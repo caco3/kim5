@@ -23,11 +23,13 @@ Actions=Rename;SortByDate;SendByMail;_SEPARATOR_;PeleMele;Slideshow;Galery;_SEPA
 Encoding=UTF-8
 X-KDE-Submenu=Kim - Treatment and publication
 X-KDE-Submenu[fr]=Kim - Traitement et publication
+X-KDE-Submenu[nl]=Kim - Aanpassen en publiceren
 X-KDE-Submenu[zh_TW]=Kim - 處理與發布
 
 [Desktop Action Slideshow]
 Name=Create a Flash slideshow
 Name[fr]=Créer un slideshow en Flash
+Name[nl]=Flash-diavoorstelling maken
 Name[zh_TW]=建立 Flash 投影秀
 Icon=applications-development-web
 Exec=kim_slideshow %U
@@ -35,6 +37,7 @@ Exec=kim_slideshow %U
 [Desktop Action Galery]
 Name=Create a html gallery
 Name[fr]=Créer un album en html
+Name[nl]=HTML-galerij samenstellen
 Name[zh_TW]=建立 HTML 藝廊
 Icon=applications-development-web
 Exec=kim_galery %U
@@ -42,6 +45,7 @@ Exec=kim_galery %U
 [Desktop Action PeleMele]
 Name=Create a photo montage
 Name[fr]=Créer un pèle-mèle
+Name[nl]=Fotomontage maken
 Name[zh_TW]=建立相片拼布
 Icon=image
 Exec=kim_pelemele %U
@@ -49,6 +53,7 @@ Exec=kim_pelemele %U
 [Desktop Action SendByMail]
 Name=Send by mail
 Name[fr]=Envoyer par mail
+Name[nl]=Versturen per e-mail
 Name[zh_TW]=透過郵件傳遞
 Icon=kmail
 Exec=kim_resizeandsend %U
@@ -56,6 +61,7 @@ Exec=kim_resizeandsend %U
 [Desktop Action SortByDate]
 Name=Sort by date
 Name[fr]=Ordonner par date
+Name[nl]=Sorteren op datum
 Name[zh_TW]=依日期排序
 Icon=view-sort-descending
 Exec=kim_sortbydate %D %U
@@ -63,6 +69,7 @@ Exec=kim_sortbydate %D %U
 [Desktop Action Rename]
 Name=Rename images
 Name[fr]=Renommer des images
+Name[nl]=Afbeeldingsnamen wijzigen
 Name[zh_TW]=重新命名圖片
 Icon=edit-rename
 Exec=kim_rename %D %U
@@ -70,6 +77,7 @@ Exec=kim_rename %D %U
 [Desktop Action Adjoin]
 Name=Create a multi-files Tiff image
 Name[fr]=Créer une image Tiff multi-pages
+Name[nl]=TIFF met meerdere pagina's samenstellen
 Name[zh_TW]=建立多檔案的 Tiff 影像
 Icon=attach
 Exec=convert -adjoin %U %D/my_images.tiff
@@ -77,6 +85,7 @@ Exec=convert -adjoin %U %D/my_images.tiff
 [Desktop Action Animation]
 Name=Create a gif animation
 Name[fr]=Créer une animation gif
+Name[nl]=GIF-animatie maken
 Name[zh_TW]=建立 GIF 動畫
 Icon=video
 Exec=convert -delay `kdialog --inputbox "Kim - Delay between images in delay/100 seconds:" 100` %U %D/my_animation.gif
@@ -84,6 +93,7 @@ Exec=convert -delay `kdialog --inputbox "Kim - Delay between images in delay/100
 [Desktop Action Multiburst]
 Name=Multiburst image to gif animation
 Name[fr]=image multiburst vers animation gif
+Name[nl]=GIF-animatie maken uit reeks
 Name[zh_TW]=將多張影像轉換成 GIF 動畫
 Icon=video
 Exec=kim_multiburst %u
@@ -91,6 +101,7 @@ Exec=kim_multiburst %u
 [Desktop Action Border]
 Name=Add a border
 Name[fr]=Ajouter une bordure
+Name[nl]=Kader toevoegen
 Name[zh_TW]=新增邊框
 Icon=image
 Exec=kim_treatment border %D %U
@@ -98,18 +109,21 @@ Exec=kim_treatment border %D %U
 #[Desktop Action Album]
 #Name=Create a pdf album
 #Name[fr]=Créer un album en pdf
+#Name[nl]=PDF-album samenstellen
 #Icon=pdf
 #Exec=kim_album %D %U
 
 [Desktop Action Watermark]
 Name=Add text annotation
 Name[fr]=Ajouter une annotation
+Name[nl]=Aantekening toevoegen
 Name[zh_TW]=新增文字註記
 Icon=text
 Exec=kim_treatment mark %D %U
 
 [Desktop Action License]
 Name=License
+Name[nl]=Licentie
 Name[zh_TW]=版權宣告
 Icon=help-about
 Exec=kim_other license %U
@@ -118,6 +132,7 @@ Exec=kim_other license %U
 [Desktop Action Apropos]
 Name=About Kim
 Name[fr]=A propos de Kim
+Name[nl]=Over Kim
 Name[zh_TW]=關於 Kim
 Icon=help-about
 Exec=kim_other about %U
