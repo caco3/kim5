@@ -6,5 +6,11 @@ This is a port and refactoring of the no longer maintained KIM for KDE4, see htt
 
 
 ## Install
+
 1. Download or clone the project
-1. Run the script kim/install.sh as root in a terminal
+2. Run the following code:
+
+```
+cd kim/
+sudo ./install.sh
+```
