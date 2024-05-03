@@ -14,3 +14,9 @@ This is a port and refactoring of the no longer maintained KIM for KDE4, see htt
 cd kim/
 sudo ./install.sh
 ```
+
+## Uninstall
+```
+cd kim/
+sudo ./uninstall.sh
+```
