@@ -22,12 +22,14 @@ ServiceTypes=KonqPopupMenu/Plugin,video/*
 Actions=CompressVidHd720
 Encoding=UTF-8
 X-KDE-Submenu=Kim - Compress and Resize
+X-KDE-Submenu[de]=Kim: Videogröße ändern
 X-KDE-Submenu[fr]=Kim - Compresser et redimensionner
 X-KDE-Submenu[nl]=Kim - Comprimeren en grootte aanpassen
 X-KDE-Submenu[zh_TW]=Kim - 壓縮與調整大小
 
 [Desktop Action CompressVidHd720]
 Name=Compress video hd720
+Name[de]=Bildabmessungen ändern: HD 720p
 Name[nl]=Video comprimeren (720p)
 Name[zh_TW]=壓縮影像為 720p
 Icon=application-x-compress
