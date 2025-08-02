@@ -6,6 +6,9 @@ Note that some actions in the treatment and publication menu do not work. Patche
 
 ![Screenshot](KIM6.png)
 
+## Dependencies
+It assumes KDialog and ImageMagick are installed.
+
 ## Install
 
 1. Download or clone the project
