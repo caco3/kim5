@@ -1,4 +1,4 @@
 
 export TEXTDOMAINDIR=/usr/share/locale
-export TEXTDOMAIN=kim5
+export TEXTDOMAIN=kim6
 

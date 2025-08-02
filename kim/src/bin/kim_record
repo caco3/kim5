@@ -20,7 +20,7 @@
 # Author: Charles Bouveyron <charles.bouveyron@free.fr>
 #		Raphaël Pinson <raphink@raphink.net>
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 #test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
 #KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$USER"/kim.XXXXXXXX` || exit 1
@@ -47,8 +47,8 @@ do
 	let x+=1
 done
 
-# convert all images in a simple gif animation
-convert -delay 30 "$KIMDIR"/capture*.xwd `kdialog --getsavefilename ~ *.gif`
+# magick all images in a simple gif animation
+magick -delay 30 "$KIMDIR"/capture*.xwd `kdialog --getsavefilename ~ *.gif`
 
 #rm "$KIMDIR"/capture*.xwd
 rm -rf "$KIMDIR"

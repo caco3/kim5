@@ -21,7 +21,7 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 #test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
 TMPDIR=`mktemp -d /tmp/kim.XXXXXXXX` || exit 1
@@ -49,9 +49,9 @@ for i in "$@";do
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $compteur
 		case "$choice" in 
 			1) cp $i $TMPDIR;;
-			2) convert -resize 800x800 "$ATTACHMENTS" "$TMPDIR"/`basename "$ATTACHMENTS"`;;
-			3) convert -resize 600x600 "$ATTACHMENTS" "$TMPDIR"/`basename "$ATTACHMENTS"`;;
-			4) convert -resize 300x300 "$ATTACHMENTS" "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+			2) magick "$ATTACHMENTS" -resize 800x800 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+			3) magick "$ATTACHMENTS" -resize 600x600 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+			4) magick "$ATTACHMENTS" -resize 300x300 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
 			*)exit 1;;
 		esac
 	fi;
@@ -66,8 +66,13 @@ elif [ `command -v thunderbird` ]; then
 	thunderbird -compose "attachment='$ATTACHMENT'"
 	qdbus $dbusRef close;
 	kdialog --msgbox "$(gettext "Kim - Send by mail: you can write your message!")"
+elif [ `command -v xdg-email` ]; then
+	ATTACHMENT=`ls -m $TMPDIR/* | tr -d ' '`
+	xdg-email --attach "$ATTACHMENT";
+	qdbus $dbusRef close;
+	kdialog --msgbox "$(gettext "Kim - Send by mail: you can write your message!")"
 else
-	kdialog --msgbox "$(gettext "Can't find your mail client.  The attachments are in $TMPDIR/ and you need to send them yourself.")"
+	kdialog --msgbox "$(gettext "Can't find your mail client. The attachments are in $TMPDIR/ and you need to send them yourself.")"
 fi
 
 rm -rf "$TMPDIR"

@@ -19,7 +19,7 @@
 #
 # Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 FILE="";
 DIR="$1"

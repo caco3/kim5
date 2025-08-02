@@ -20,7 +20,8 @@
 # Author: Charles Bouveyron <charles.bouveyron@free.fr>
 #		Raphaël Pinson <raphink@raphink.net>
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix
+`/share/kim/kim_translation
 
 #test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
 #KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$USER"/kim.XXXXXXXX` || exit 1
@@ -47,9 +48,9 @@ do
 	let x+=1
 done
 
-# convert all images in a simple gif animation
+# magick all images in a simple gif animation
 # mpeg2vidcodec is required for mpeg movie !
-convert -delay 30 "$KIMDIR"/capture*.xwd `kdialog --getsavefilename ~ *.mpg`
+magick -delay 30 "$KIMDIR"/capture*.xwd `kdialog --getsavefilename ~ *.mpg`
 
 #rm "$KIMDIR"/capture*.xwd
 rm -rf "$KIMDIR"

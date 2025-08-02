@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 dir="$1";
 nb=`kdialog --radiolist "$(gettext "Kim - Select album type:")" 1 "$(gettext "1x1 portrait album")"  off 2 "$(gettext "1x1 landscape album")"  off 3 "$(gettext "1x2 landscape album")"  off 4 "$(gettext "2x1 portrait album")"  off 5 "$(gettext "2x2 landscape album")" on 6 "$(gettext "3x2 portrait album")" off 7 "$(gettext "3x4 landscape album")" off 8 "$(gettext "4x4 landscape album")" off`

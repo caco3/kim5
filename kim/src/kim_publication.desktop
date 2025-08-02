@@ -19,20 +19,12 @@
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,image/*
-Actions=Rename;SortByDate;SendByMail;_SEPARATOR_;PeleMele;Slideshow;Galery;_SEPARATOR_;Watermark;Border;_SEPARATOR_;Animation;Multiburst;Adjoin;_SEPARATOR_;License;Apropos;
+Actions=Rename;SortByDate;SendByMail;_SEPARATOR_;PeleMele;Galery;_SEPARATOR_;Watermark;Border;_SEPARATOR_;Animation;Multiburst;Adjoin;_SEPARATOR_;License;Apropos;
 Encoding=UTF-8
 X-KDE-Submenu=Kim - Treatment and publication
 X-KDE-Submenu[fr]=Kim - Traitement et publication
 X-KDE-Submenu[nl]=Kim - Aanpassen en publiceren
 X-KDE-Submenu[zh_TW]=Kim - 處理與發布
-
-[Desktop Action Slideshow]
-Name=Create a Flash slideshow
-Name[fr]=Créer un slideshow en Flash
-Name[nl]=Flash-diavoorstelling maken
-Name[zh_TW]=建立 Flash 投影秀
-Icon=applications-development-web
-Exec=kim_slideshow %U
 
 [Desktop Action Galery]
 Name=Create a html gallery
@@ -80,7 +72,7 @@ Name[fr]=Créer une image Tiff multi-pages
 Name[nl]=TIFF met meerdere pagina's samenstellen
 Name[zh_TW]=建立多檔案的 Tiff 影像
 Icon=attach
-Exec=convert -adjoin %U %D/my_images.tiff
+Exec=magick -adjoin %U %D/my_images.tiff
 
 [Desktop Action Animation]
 Name=Create a gif animation
@@ -88,7 +80,7 @@ Name[fr]=Créer une animation gif
 Name[nl]=GIF-animatie maken
 Name[zh_TW]=建立 GIF 動畫
 Icon=video
-Exec=convert -delay `kdialog --inputbox "Kim - Delay between images in delay/100 seconds:" 100` %U %D/my_animation.gif
+Exec=magick -delay `kdialog --inputbox "Kim - Delay between images in delay/100 seconds:" 100` %U %D/my_animation.gif
 
 [Desktop Action Multiburst]
 Name=Multiburst image to gif animation

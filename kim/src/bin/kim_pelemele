@@ -19,7 +19,7 @@
 #
 # Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 FILE="";
 let "nbfiles = $#"
@@ -54,8 +54,8 @@ for i in "$@";do
 		while [ -e "$TMPDIR/pelemele_$RANDOM.png" ]; do 
 			RANDOM=`perl -e 'print int(rand(1000000))'`;
 		done
-		convert -resize $SIZE $i "$TMPDIR/$FILE"
-		convert "$TMPDIR/$FILE" thumbnail.gif \
+		magick -resize $SIZE $i "$TMPDIR/$FILE"
+		magick "$TMPDIR/$FILE" thumbnail.gif \
 			-bordercolor white  -border $BORDER \
 			-bordercolor grey60 -border 1 \
 			-background  none   -rotate `perl -e 'print rand() * 30 - 15'` \

@@ -21,7 +21,7 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 FILE="";
 QUALITY="$1";
@@ -62,7 +62,7 @@ case $? in
 			fi
 			let "compteur +=1"
 			FILE="$i"
-			convert -quality $QUALITY "$FILE" $DIR/compressed_"`basename "$FILE"`"
+			magick -quality $QUALITY "$FILE" $DIR/compressed_"`basename "$FILE"`"
 			qdbus $dbusRef setLabelText "$(gettext "Kim - Compressing file: ") `basename $(FILE)`"
 #	 		qdbus $dbusRef setProgress "$compteur"
 		fi;

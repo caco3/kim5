@@ -1,9 +1,10 @@
-# Images Service menu für Dolphin (KF5)
+# Images Service menu for Dolphin (Plasma 6)
 
-This is a port and refactoring of the no longer maintained KIM for KDE4, see https://www.linux-apps.com/content/show.php?content=11505
+This is a basic port of KIM5 for Plasma 6. KIM itself apparently goes as far back as KDE3, at least.
 
-![Screenshot](KIM5.png)
+Note that some actions in the treatment and publication menu do not work. Patches to either make them work or remove them altogether are welcome.
 
+![Screenshot](KIM6.png)
 
 ## Install
 

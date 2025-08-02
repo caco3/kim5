@@ -1,11 +1,11 @@
 #!/bin/sh
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 # Create a html gallery
 FILE="";
 let "nbfiles = $#"
-kdeinstdir=`kf5-config --prefix`
+kdeinstdir=`qtpaths --install-prefix`
 KIM_DIR=$kdeinstdir/share/kim/gallery
 TITLE=`kdialog --inputbox "$(gettext "Kim - Title:")" "$(gettext "My title ...")"`;
 AUTHOR=`kdialog --inputbox "$(gettext "Kim - Author:")" "$USER"`;
@@ -42,8 +42,8 @@ for i in "$@";do
 		let "tmp +=1"
 		FILE="$i";
 		IMAGE=`basename "$FILE"`;
-		convert -resize $SCALE_1 "$FILE" $DIR/images/"$IMAGE";
-		convert -resize $SCALE_2 "$FILE" $DIR/thumbs/"$IMAGE";
+		magick -resize $SCALE_1 "$FILE" $DIR/images/"$IMAGE";
+		magick -resize $SCALE_2 "$FILE" $DIR/thumbs/"$IMAGE";
 		W2=`identify -format "%w" $DIR/images/"$IMAGE"`;
 		H2=`identify -format "%h" $DIR/images/"$IMAGE"`;
 		echo '<td align='center'>' >> $DIR/index.html;

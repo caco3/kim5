@@ -5,7 +5,7 @@ To install KIM on your computer, run
 
 ./install.sh
 
-as root and select the option for installation.
+as root.
 
 
 HOW TO UNINSTALL
@@ -15,4 +15,4 @@ To uninstall KIM from your computer, run
 
 ./uninstall.sh
 
-as root and select the uninstall option.
+as root.

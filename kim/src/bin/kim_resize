@@ -21,7 +21,7 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 FILE="";
 SCALE="$1";
@@ -62,7 +62,7 @@ case $? in
 			fi
 			let "compteur +=1"
 			FILE="$i"
-			convert -resize "$SCALE" "$FILE" "$DIR/resized_`basename "$FILE"`";
+			magick "$FILE" -resize "$SCALE" "$DIR/resized_`basename "$FILE"`";
 			qdbus $dbusRef setLabelText "$(gettext "Kim - Resizing file: ") `basename "$FILE"`"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;

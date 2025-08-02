@@ -21,7 +21,7 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 ATTACHMENTS="";
 SCELTA="$1";
@@ -89,19 +89,19 @@ case $? in
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 			case "$SCELTA" in 
 				gray)
-					convert -colorspace gray "$ATTACHMENTS" "$DIR/gray_`basename "$ATTACHMENTS"`"
+					magick "$ATTACHMENTS" -colorspace gray "$DIR/gray_`basename "$ATTACHMENTS"`"
 				;;
 				sepia)
-					convert -sepia-tone 80% "$ATTACHMENTS" "$DIR/sepia_`basename "$ATTACHMENTS"`"
+					magick "$ATTACHMENTS" -sepia-tone 80% "$DIR/sepia_`basename "$ATTACHMENTS"`"
 				;;
 				border)
 					case "$color" in
-					1) convert -border 10x10 -bordercolor white "$ATTACHMENTS" "$DIR/border_`basename "$ATTACHMENTS"`";;
-					2) convert -border 10x10 -bordercolor black "$ATTACHMENTS" "$DIR/border_`basename "$ATTACHMENTS"`";;
+					1) magick "$ATTACHMENTS" -border 10x10 -bordercolor white "$DIR/border_`basename "$ATTACHMENTS"`";;
+					2) magick "$ATTACHMENTS" -border 10x10 -bordercolor black "$DIR/border_`basename "$ATTACHMENTS"`";;
 					esac
 				;;
 				mark)
-					convert -font SheerBeauty -pointsize 20 -draw "gravity southeast  text 0,0 '$annotation'" "$ATTACHMENTS" "$DIR"/text_`basename "$ATTACHMENTS"`
+					magick "$ATTACHMENTS" -font SheerBeauty -pointsize 20 -draw "gravity southeast  text 0,0 '$annotation'" "$DIR"/text_`basename "$ATTACHMENTS"`
 				;;
 				*)
 					exit 1
@@ -114,5 +114,3 @@ case $? in
 	2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user !")"
 	exit 1;;
 esac;
-
-

@@ -21,7 +21,7 @@
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 FILE="";
 SCELTA="$1";
@@ -62,7 +62,7 @@ case $? in
 			fi
 			let "compteur +=1"
 			FILE="$i"
-			convert -resize $SCELTA -quality 75 "$FILE" "$DIR/web_`basename "$FILE"`"
+			magick "$FILE" -resize $SCELTA -quality 75 "$DIR""web_`basename "$FILE"`"
 			qdbus $dbusRef setLabelText "$(gettext "Kim - Compressing file: ") `basename "$FILE"`"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;

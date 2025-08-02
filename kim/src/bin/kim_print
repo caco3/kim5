@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-. `kf5-config --prefix`/share/kim/kim_translation
+. `qtpaths --install-prefix`/share/kim/kim_translation
 
 dir="$1";
 let "nbfiles = $#"
@@ -39,7 +39,7 @@ case "$nb" in
 			fi
 			let "compteur +=1"
 			FILE=`basename "$i"`;
-			convert -resize 640x480 -rotate '90<' $i "$TMPDIR/mini_$FILE";
+			magick -resize 640x480 -rotate '90<' $i "$TMPDIR/mini_$FILE";
 			qdbus $dbusRef setLabelText "$(gettext "Kim - resizing of file: ") $FILE"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
