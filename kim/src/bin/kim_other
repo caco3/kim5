@@ -19,18 +19,20 @@
 # Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
 #		Raphaël Pinson <raphink@raphink.net>
 
-. `qtpaths --install-prefix`/share/kim/kim_translation
+TEXTDOMAIN="kim6"
+TEXTDOMAINDIR=LOCALE_SOURCE_TTT
+SOURCE_TRANSLATION_TTT
 
 ATTACHMENTS="";
 ACTION="$1";
-kdeinstdir=`qtpaths --install-prefix`
+KIM_INST_TTT
 
 case $ACTION in 
 	about) 
-            kdialog --textbox "$kdeinstdir/share/kim/kim_about.txt" 600 400
+            kdialog --textbox "$kim_inst/ABOUT" 600 400
             ;;
 	license) 
-            kdialog --textbox "$kdeinstdir/share/kim/kim_license.txt" 600 400
+            kdialog --textbox "$kim_inst/COPYING" 600 400
             ;;
 esac
 

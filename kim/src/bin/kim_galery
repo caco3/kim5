@@ -1,12 +1,14 @@
 #!/bin/sh
 
-. `qtpaths --install-prefix`/share/kim/kim_translation
+TEXTDOMAIN="kim6"
+TEXTDOMAINDIR=LOCALE_SOURCE_TTT
+SOURCE_TRANSLATION_TTT
 
 # Create a html gallery
 FILE="";
 let "nbfiles = $#"
-kdeinstdir=`qtpaths --install-prefix`
-KIM_DIR=$kdeinstdir/share/kim/gallery
+KIM_INST_TTT
+KIM_DIR=$kim_inst/src/gallery
 TITLE=`kdialog --inputbox "$(gettext "Kim - Title:")" "$(gettext "My title ...")"`;
 AUTHOR=`kdialog --inputbox "$(gettext "Kim - Author:")" "$USER"`;
 DATE=`date '+%Y%m%d'`;

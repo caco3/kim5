@@ -16,7 +16,9 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-. `qtpaths --install-prefix`/share/kim/kim_translation
+TEXTDOMAIN="kim6"
+TEXTDOMAINDIR=LOCALE_SOURCE_TTT
+SOURCE_TRANSLATION_TTT
 
 dir="$1";
 let "nbfiles = $#"

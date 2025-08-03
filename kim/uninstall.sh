@@ -17,15 +17,8 @@
 # along with Foobar; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-kdeinstdir=`qtpaths --install-prefix`
+kim_inst_dir=`qtpaths --locate-dirs GenericDataLocation kio/servicemenus | cut -f 1 -d ':'`
 
-rm -f $kdeinstdir/share/kio/servicemenus/kim_*.desktop 2&> /dev/null
-rm -f $kdeinstdir/bin/kim_* 2&> /dev/null
-rm -rf $kdeinstdir/share/kim 2&> /dev/null
-
-# remove translation mo files
-for i in src/po/*.po; do
-        rm /usr/share/locale/`basename -s .po $i`/LC_MESSAGES/kim6.mo 2&> /dev/null
-done
+rm -f $kde_inst_dir/kim_*.desktop 2&> /dev/null
 
 echo "Kim has been removed. Good bye."

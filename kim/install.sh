@@ -40,33 +40,38 @@ elif [ ! `command -v xdg-email` ]; then
 	exit
 fi
 
-
-kdeinstdir=`qtpaths --install-prefix`
+if [ -t 0 ]; then
+  #echo "Running in a terminal"
+  src_folder=`pwd`
+else
+  #echo "Not running in a terminal (hopefully install from Dolphin"
+  src_folder=$(dirname "$0")
+fi
+kim_inst_dir=`qtpaths --locate-dirs GenericDataLocation kio/servicemenus | cut -f 1 -d ':'`
 
 if [[ $? != 0 ]]; then
     "Error fetching the KDE install prefix. Exiting..."
     exit 1
 fi
 
-cp -f src/kim_*.desktop $kdeinstdir/share/kio/servicemenus/
-cp -f src/bin/kim_* $kdeinstdir/bin/
-chmod a+r $kdeinstdir/share/kio/servicemenus/kim_*.desktop
-chmod a+rx $kdeinstdir/bin/kim_*
+# Replace the path in Desktop files with the installed path
+for file in $src_folder/src/*.desktop; do
+  sed -i "s|Exec=kim|Exec=$src_folder/src/bin/kim|g" "$file"
+done
 
-mkdir -p $kdeinstdir/share/kim
-cp COPYING $kdeinstdir/share/kim/kim_license.txt
-cp ABOUT $kdeinstdir/share/kim/kim_about.txt
-cp src/kim_translation $kdeinstdir/share/kim
-chmod a+rx $kdeinstdir/bin/kim_*
+for file in $src_folder/src/bin/kim_*; do
+  sed -i "s|SOURCE_TRANSLATION_TTT|. $src_folder/src/kim_translation|g" "$file"
+  sed -i "s|KIM_INST_TTT|\$kim_inst=$src_folder|g" "$file"
+  sed -i "s|LOCALE_SOURCE_TTT|$src_folder/locale|g" "$file"
+done
 
-mkdir -p $kdeinstdir/share/kim/gallery
-cp src/gallery/* $kdeinstdir/share/kim/gallery
-chmod a+rx -R $kdeinstdir/share/kim
+cp -f $src_folder/src/kim_*.desktop $kim_inst_dir/
 
 # install translation mo files
-for i in src/po/*.po; do
-	MOFILE=/usr/share/locale/`basename -s .po $i`/LC_MESSAGES/kim6.mo
-	msgfmt -o ${MOFILE} $i
+for i in $src_folder/src/po/*.po; do
+	TRANSLANG=`basename -s .po $i`
+	mkdir -p $src_folder/locale/$TRANSLANG/LC_MESSAGES
+	msgfmt -o $src_folder/locale/$TRANSLANG/LC_MESSAGES/kim6.mo $i
 done
 
 echo "Kim has been installed. Good bye!"

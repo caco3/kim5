@@ -19,7 +19,9 @@
 #
 # Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
 
-. `qtpaths --install-prefix`/share/kim/kim_translation
+TEXTDOMAIN="kim6"
+TEXTDOMAINDIR=LOCALE_SOURCE_TTT
+SOURCE_TRANSLATION_TTT
 
 FILE="";
 DIR="$1"
