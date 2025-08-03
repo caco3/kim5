@@ -20,11 +20,12 @@ The best way is to download directly from Doplhin's settings. Manually, you can:
 
 ```
 cd kim/
-sudo ./install.sh
+./install.sh
 ```
 
 ## Uninstall
 ```
 cd kim/
-sudo ./uninstall.sh
+./uninstall.sh
 ```
+It will install into your home directory. Not that it overwrites some paths specific to your system. In order to install again, redownload/re-extract the archive.
