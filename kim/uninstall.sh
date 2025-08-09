@@ -17,8 +17,9 @@
 # along with Foobar; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-kim_inst_dir=`qtpaths --locate-dirs GenericDataLocation kio/servicemenus | cut -f 1 -d ':'`
+kim_install_dir=`qtpaths --locate-dirs GenericDataLocation kio/servicemenus | cut -f 1 -d ':'`
 
-rm -f $kde_inst_dir/kim_*.desktop 2&> /dev/null
+rm -f $kim_install_dir/kim_*.desktop 2&> /dev/null
+rm -rf $kim_install_dir/kim6 2&> /dev/null
 
 echo "Kim has been removed. Good bye."
