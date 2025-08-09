@@ -28,11 +28,4 @@ cd kim/
 cd kim/
 ./uninstall.sh
 ```
-It will install into your home directory.
-
-## Todo
-Log install output in case something goes wrong
-Update manual pointing to old site
-
-
-
+It will install into your home directory. Not that it overwrites some paths specific to your system. In order to install again, redownload/re-extract the archive.
