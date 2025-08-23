@@ -56,4 +56,4 @@ magick -delay 30 "$KIMDIR"/capture*.xwd `kdialog --getsavefilename ~ *.mpg`
 #rm "$KIMDIR"/capture*.xwd
 rm -rf "$KIMDIR"
 
-kdialog --title "$(gettext "Kim - Record")" --msgbox "$(gettext "The animation is created ! ")"
+kdialog --title "$(gettext "Kim – Record")" --msgbox "$(gettext "The animation is created ! ")"

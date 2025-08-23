@@ -32,7 +32,7 @@ let "nbfiles = ($# -1)/2"
 kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to replace existing files?")"
 case $? in
 	0)	# Replace existing files !
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -44,7 +44,7 @@ case $? in
 			fi
 			let "compteur +=1"
 			FILE="$i"
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Compressing file: ") `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
 			mv "$FILE" "$FILE-work"
 			ffmpeg -i "$FILE-work" -s $QUALITY -c:v libx264 -crf 23 -c:a aac -strict -2 "$FILE"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $compteur
@@ -53,7 +53,7 @@ case $? in
 	qdbus $dbusRef close;;
 	
 	1)
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -70,7 +70,7 @@ case $? in
                         filename="${filename%.*}"
 			DIR=$(dirname "${FILE}")
 			ffmpeg -i "$FILE" -s $QUALITY -c:v libx264 -crf 23 -c:a aac -strict -2 "$DIR/$filename-compressed.$extension"
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Compressing file: ") `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
 #	 		qdbus $dbusRef setProgress "$compteur"
 		fi;
 	done

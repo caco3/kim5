@@ -30,10 +30,10 @@ TMPDIR=`mktemp -d /tmp/kim.XXXXXXXX` || exit 1
 
 ATTACHMENTS="";
 
-choice=`kdialog --radiolist "$(gettext "Kim - Send by mail:")" 1 "$(gettext "Full size")"  off 2 "$(gettext "800x600 px")"  on 3 "$(gettext "600x450 px")" off 4 "$(gettext "300x225 px")"  off`;
+choice=`kdialog --radiolist "$(gettext "Kim – Send by mail:")" 1 "$(gettext "Full size")"  off 2 "$(gettext "800x600 px")"  on 3 "$(gettext "600x450 px")" off 4 "$(gettext "300x225 px")"  off`;
 
 let "nbfiles = $#" 
-dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
+dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 qdbus $dbusRef showCancelButton true 
 
 compteur=0
@@ -47,7 +47,7 @@ for i in "$@";do
 		fi
 		ATTACHMENTS="$i"
 		let "compteur +=1"
-		qdbus $dbusRef setLabelText "$(gettext "Kim - Resizing and compressing file: ") `basename "$ATTACHMENTS"`"
+		qdbus $dbusRef setLabelText "$(gettext "Kim – Resizing and compressing file: ") `basename "$ATTACHMENTS"`"
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $compteur
 		case "$choice" in 
 			1) cp $i $TMPDIR;;
@@ -62,17 +62,17 @@ done
 if [ `command -v kmail` ]; then
 	kmail --attach "$TMPDIR"/*;
 	qdbus $dbusRef close;
-	kdialog --msgbox "$(gettext "Kim - Send by mail: you can write your message!")"
+	kdialog --msgbox "$(gettext "Kim – Send by mail: you can write your message!")"
 elif [ `command -v thunderbird` ]; then
 	ATTACHMENT=`ls -m $TMPDIR/* | tr -d ' '`
 	thunderbird -compose "attachment='$ATTACHMENT'"
 	qdbus $dbusRef close;
-	kdialog --msgbox "$(gettext "Kim - Send by mail: you can write your message!")"
+	kdialog --msgbox "$(gettext "Kim – Send by mail: you can write your message!")"
 elif [ `command -v xdg-email` ]; then
 	ATTACHMENT=`ls -m $TMPDIR/* | tr -d ' '`
 	xdg-email --attach "$ATTACHMENT";
 	qdbus $dbusRef close;
-	kdialog --msgbox "$(gettext "Kim - Send by mail: you can write your message!")"
+	kdialog --msgbox "$(gettext "Kim – Send by mail: you can write your message!")"
 else
 	kdialog --msgbox "$(gettext "Can't find your mail client. The attachments are in $TMPDIR/ and you need to send them yourself.")"
 fi

@@ -31,7 +31,7 @@ DIR="$1";
 kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to replace existing files?")"
 case $? in
 	0)	# Replace existing files !
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	newname=`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`
@@ -52,14 +52,14 @@ case $? in
 				fi
 			fi
 			mv "$FILE" "$DIR/$newname$suff$compteur.jpg"
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Renaming file: ") `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
 	1) 
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	newname="`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`"
@@ -80,7 +80,7 @@ case $? in
 				fi
 			fi
 			cp "$FILE" "$DIR/$newname$suff$compteur.jpg"
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Renaming file: ") `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done

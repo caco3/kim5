@@ -21,10 +21,10 @@ Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,image/*
 Actions=JPEG;PNG;GIF;TIF;PDF;ConvCustom;_SEPARATOR_;GrayScale;Sepia;_SEPARATOR_;AutoRot;Rot90;Rot180;Rot270;RotCustom;_SEPARATOR_;Flip;Flop
 Encoding=UTF-8
-X-KDE-Submenu=Kim - Convert and Rotate
-X-KDE-Submenu[fr]=Kim - Convertir et tourner
-X-KDE-Submenu[nl]=Kim - Converteren en draaien
-X-KDE-Submenu[zh_TW]=Kim - 轉換與旋轉
+X-KDE-Submenu=Kim – Convert and Rotate
+X-KDE-Submenu[fr]=Kim – Convertir et tourner
+X-KDE-Submenu[nl]=Kim – Converteren en draaien
+X-KDE-Submenu[zh_TW]=Kim – 轉換與旋轉
 
 [Desktop Action JPEG]
 Name=Convert to JPEG

@@ -32,7 +32,7 @@ DIR="$2";
 kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to replace existing files?")"
 case $? in
 	0)	# Replace existing files !
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -45,14 +45,14 @@ case $? in
 			let "compteur +=1"
 			FILE="$i"
 			mogrify -resize "$SCALE" "$FILE";
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Resizing file: ") `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Resizing file: ") `basename "$FILE"`"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
 	1) 
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -65,7 +65,7 @@ case $? in
 			let "compteur +=1"
 			FILE="$i"
 			magick "$FILE" -resize "$SCALE" "$DIR/resized_`basename "$FILE"`";
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Resizing file: ") `basename "$FILE"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Resizing file: ") `basename "$FILE"`"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done

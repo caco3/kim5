@@ -9,17 +9,17 @@ FILE="";
 let "nbfiles = $#"
 KIM_INST_TTT
 KIM_DIR=$kim_inst/src/gallery
-TITLE=`kdialog --inputbox "$(gettext "Kim - Title:")" "$(gettext "My title ...")"`;
-AUTHOR=`kdialog --inputbox "$(gettext "Kim - Author:")" "$USER"`;
+TITLE=`kdialog --inputbox "$(gettext "Kim – Title:")" "$(gettext "My title ...")"`;
+AUTHOR=`kdialog --inputbox "$(gettext "Kim – Author:")" "$USER"`;
 DATE=`date '+%Y%m%d'`;
 SCALE_1="800x800";
 SCALE_2="200x200";
-K=`kdialog --inputbox "$(gettext "Kim - Number of columns:")" "4"`;
+K=`kdialog --inputbox "$(gettext "Kim – Number of columns:")" "4"`;
 DIR=`kdialog --getexistingdirectory /home/$USER`;
 W="200";
 H="150";
 
-dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
+dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 qdbus $dbusRef showCancelButton true
 
 # Creation of directories
@@ -59,7 +59,7 @@ for i in "$@";do
 		then 	echo '</tr><tr>' >> $DIR/index.html;
 			tmp=0;
 		fi
-		qdbus $dbusRef setLabelText "$(gettext "Kim - Treatment of file: ") $IMAGE"
+		qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") $IMAGE"
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 	fi;
 done

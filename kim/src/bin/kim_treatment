@@ -31,12 +31,12 @@ DIR="$2";
 let "nbfiles = ($# -1)/2" 
 case $SCELTA in 
 	mark) annotation=`kdialog --inputbox "$(gettext "Choose your annotation:")" "$(gettext "My annotation")"`;;
-	border) color=`kdialog --radiolist "$(gettext "Kim - Select border color:")" 1 "$(gettext "white")"  on 2 "$(gettext "black")" off`;;
+	border) color=`kdialog --radiolist "$(gettext "Kim – Select border color:")" 1 "$(gettext "white")"  on 2 "$(gettext "black")" off`;;
 esac
 kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to replace existing files?")"
 case $? in
 	0)	# Replace existing files !
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true 
 	compteur=0
 	for i in "$@";do
@@ -48,7 +48,7 @@ case $? in
 			fi
 			ATTACHMENTS="$i"
 			let "compteur +=1"
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Treatment of file: ") `basename "$ATTACHMENTS"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") `basename "$ATTACHMENTS"`"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 			case "$SCELTA" in 
 				gray)
@@ -75,7 +75,7 @@ case $? in
 	qdbus $dbusRef close;;
 	
 	1)	# Save files with another name !
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true 
 	compteur=0
 	for i in "$@";do
@@ -87,7 +87,7 @@ case $? in
 			fi
 			ATTACHMENTS="$i"
 			let "compteur +=1"
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Treatment of file: ") `basename "$ATTACHMENTS"`"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") `basename "$ATTACHMENTS"`"
 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 			case "$SCELTA" in 
 				gray)

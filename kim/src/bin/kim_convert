@@ -29,7 +29,7 @@ SOURCE_TRANSLATION_TTT
 FILE="";
 FORMAT="$1";
 let "nbfiles = $# -1"
-dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" "$nbfiles"`
+dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 qdbus $dbusRef showCancelButton "true"
 
 compteur=0
@@ -42,7 +42,7 @@ for i in "$@";do
 		fi
 		let "compteur +=1"
 		FILE="$i"
-		qdbus $dbusRef setLabelText "$(gettext "Kim - Converting file:") `basename "$FILE"`"
+		qdbus $dbusRef setLabelText "$(gettext "Kim – Converting file:") `basename "$FILE"`"
 		mogrify -format "$FORMAT" "$FILE"
 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $compteur
 	fi;

@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: bin/kim_album:22 bin/kim_print:26
-msgid "Kim - Select album type:"
-msgstr "Kim - 請選擇相簿型態："
+msgid "Kim – Select album type:"
+msgstr "Kim – 請選擇相簿型態："
 
 #: bin/kim_album:22
 msgid "1x1 portrait album"
@@ -54,23 +54,23 @@ msgid "4x4 landscape album"
 msgstr "4x4 橫向相簿"
 
 #: bin/kim_album:28
-msgid "Kim - Creating miniatures ..."
-msgstr "Kim - 建立縮圖中..."
+msgid "Kim – Creating miniatures ..."
+msgstr "Kim – 建立縮圖中..."
 
 #: bin/kim_album:31 bin/kim_album:37 bin/kim_album:43 bin/kim_album:48
 #: bin/kim_album:53 bin/kim_album:58 bin/kim_album:63 bin/kim_album:68
 #: bin/kim_print:52 bin/kim_print:58 bin/kim_print:63 bin/kim_print:68
 #: bin/kim_print:73 bin/kim_print:78 bin/kim_print:83
-msgid "Kim - Creating album ..."
-msgstr "Kim - 建立相簿中..."
+msgid "Kim – Creating album ..."
+msgstr "Kim – 建立相簿中..."
 
 #: bin/kim_album:72 bin/kim_print:87
-msgid "Kim - Unrecognized option ! "
-msgstr "Kim - 無法識別的選項。"
+msgid "Kim – Unrecognized option ! "
+msgstr "Kim – 無法識別的選項。"
 
 #: bin/kim_album:75 bin/kim_print:90
-msgid "Kim - Deleting miniatures ..."
-msgstr "Kim - 刪除縮圖中..."
+msgid "Kim – Deleting miniatures ..."
+msgstr "Kim – 刪除縮圖中..."
 
 #: bin/kim_compress:30 bin/kim_compress:72 bin/kim_record:29 bin/kim_record:31
 #: bin/kim_record_mpg:29 bin/kim_record_mpg:31 bin/kim_rename:29
@@ -92,13 +92,13 @@ msgstr "您要取代現有的檔案嗎？"
 #: bin/kim_resizeandsend:34 bin/kim_rotate:29 bin/kim_rotatewithexif:29
 #: bin/kim_sortbydate:35 bin/kim_sortbydate:71
 #: bin/kim_treatment:37 bin/kim_treatment:76 bin/kim_video:33 bin/kim_video:54
-msgid "Kim - Initialising ..."
-msgstr "Kim - 初始化中..."
+msgid "Kim – Initialising ..."
+msgstr "Kim – 初始化中..."
 
 #: bin/kim_compress:45 bin/kim_compress:66 bin/kim_multiburst:52
 #: bin/kim_video:45 bin/kim_video:71 bin/kim_webexport:46 bin/kim_webexport:66
-msgid "Kim - Compressing file: "
-msgstr "Kim - 壓縮此檔案中："
+msgid "Kim – Compressing file: "
+msgstr "Kim – 壓縮此檔案中："
 
 #: bin/kim_compress:72 bin/kim_rename:87 bin/kim_resize:72
 #: bin/kim_sortbydate:106 bin/kim_treatment:114 bin/kim_video:77
@@ -107,37 +107,37 @@ msgid "The action was cancelled by user !"
 msgstr "此動作已被使用者取消。"
 
 #: bin/kim_convert:42
-msgid "Kim - Converting file:"
-msgstr "Kim - 轉換此檔案中："
+msgid "Kim – Converting file:"
+msgstr "Kim – 轉換此檔案中："
 
 #: bin/kim_flipflop:42 bin/kim_rotate:46 bin/kim_rotatewithexif:43
-msgid "Kim - Rotating file: "
-msgstr "Kim - 旋轉此檔案中："
+msgid "Kim – Rotating file: "
+msgstr "Kim – 旋轉此檔案中："
 
 #: bin/kim_galery:10 
-msgid "Kim - Title:"
-msgstr "Kim - 標題："
+msgid "Kim – Title:"
+msgstr "Kim – 標題："
 
 #: bin/kim_galery:10 
 msgid "My title ..."
 msgstr "請在此輸入標題..."
 
 #: bin/kim_galery:11 
-msgid "Kim - Author:"
-msgstr "Kim - 作者："
+msgid "Kim – Author:"
+msgstr "Kim – 作者："
 
 #: bin/kim_galery:15
-msgid "Kim - Number of columns:"
-msgstr "Kim - 欄數："
+msgid "Kim – Number of columns:"
+msgstr "Kim – 欄數："
 
 #: bin/kim_galery:60 bin/kim_treatment:49
 #: bin/kim_treatment:88
-msgid "Kim - Treatment of file: "
-msgstr "Kim - 檔案處理方式："
+msgid "Kim – Treatment of file: "
+msgstr "Kim – 檔案處理方式："
 
 #: bin/kim_multiburst:33 bin/kim_webexport:33 bin/kim_webexport:53
-msgid "Kim - Initialising compression"
-msgstr "Kim - 壓縮初始化中"
+msgid "Kim – Initialising compression"
+msgstr "Kim – 壓縮初始化中"
 
 #: bin/kim_pelemele:30
 msgid "Size of small images:"
@@ -156,8 +156,8 @@ msgid "Background color:"
 msgstr "背景顏色："
 
 #: bin/kim_pelemele:65 bin/kim_print:43
-msgid "Kim - resizing of file: "
-msgstr "Kim - 調整此檔案大小中："
+msgid "Kim – resizing of file: "
+msgstr "Kim – 調整此檔案大小中："
 
 #: bin/kim_print:26
 msgid "9x13 cm: 2x2 images, landscape"
@@ -192,8 +192,8 @@ msgid "Click 'Ok' and then choose the window target ! "
 msgstr "點擊「確認」然後選擇視窗目標。"
 
 #: bin/kim_record:56 bin/kim_record_mpg:57
-msgid "Kim - Record"
-msgstr "Kim - 錄影"
+msgid "Kim – Record"
+msgstr "Kim – 錄影"
 
 #: bin/kim_record:56 bin/kim_record_mpg:57
 msgid "The animation is created ! "
@@ -205,16 +205,16 @@ msgstr "選擇新影像的名稱："
 
 #: bin/kim_rename:53 bin/kim_rename:81 bin/kim_sortbydate:64
 #: bin/kim_sortbydate:100
-msgid "Kim - Renaming file: "
-msgstr "Kim - 重新命名此檔案中："
+msgid "Kim – Renaming file: "
+msgstr "Kim – 重新命名此檔案中："
 
 #: bin/kim_resize:46 bin/kim_resize:66
-msgid "Kim - Resizing file: "
-msgstr "Kim - 重新調整此檔案大小中："
+msgid "Kim – Resizing file: "
+msgstr "Kim – 重新調整此檔案大小中："
 
 #: bin/kim_resizeandsend:31
-msgid "Kim - Send by mail:"
-msgstr "Kim - 用郵件寄出："
+msgid "Kim – Send by mail:"
+msgstr "Kim – 用郵件寄出："
 
 #: bin/kim_resizeandsend:31
 msgid "Full size"
@@ -233,12 +233,12 @@ msgid "300x225 px"
 msgstr "300x225 像素"
 
 #: bin/kim_resizeandsend:48
-msgid "Kim - Resizing and compressing file: "
-msgstr "Kim - 正在調整與壓縮此檔案："
+msgid "Kim – Resizing and compressing file: "
+msgstr "Kim – 正在調整與壓縮此檔案："
 
 #: bin/kim_resizeandsend:63 bin/kim_resizeandsend:67
-msgid "Kim - Send by mail: you can write your message!"
-msgstr "Kim - 用郵件寄出：您可以開始寫您的信件內容了。"
+msgid "Kim – Send by mail: you can write your message!"
+msgstr "Kim – 用郵件寄出：您可以開始寫您的信件內容了。"
 
 #: bin/kim_treatment:31
 msgid "Choose your annotation:"
@@ -249,8 +249,8 @@ msgid "My annotation"
 msgstr "請將註記寫在這裡"
 
 #: bin/kim_treatment:32
-msgid "Kim - Select border color:"
-msgstr "Kim - 選擇邊框顏色："
+msgid "Kim – Select border color:"
+msgstr "Kim – 選擇邊框顏色："
 
 #: bin/kim_treatment:32
 msgid "white"

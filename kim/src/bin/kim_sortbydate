@@ -34,7 +34,7 @@ kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to repl
 
 case $? in
 	0)	# Replace existing files !
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -63,14 +63,14 @@ case $? in
 				NEWNAME="$NAME"_"$tmp.jpg"
 			done
 			mv "$TMPDIR/$FILE" "$DIR/$NEWNAME"
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Renaming file: ") $FILE"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") $FILE"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done
 	qdbus $dbusRef close;;
 	
 	1) # Do not replace existing files !
-	dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" "$nbfiles"`
+	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
 	for i in "$@";do
@@ -99,7 +99,7 @@ case $? in
 				NEWNAME="$NAME"_"$tmp.jpg"
 			done
 			mv "$TMPDIR/$FILE" "$DIR/$NEWNAME"
-			qdbus $dbusRef setLabelText "$(gettext "Kim - Renaming file: ") $FILE"
+			qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") $FILE"
  			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 	done

@@ -37,7 +37,7 @@ W=`echo $SIZE | sed 's/[^0-9]/ /g' | awk '{print $1}'`;
 let "OVER = ($RATIO*$W)/100";
 let "BORDER = (2*$W)/100";
 
-dbusRef=`kdialog --progressbar "$(gettext "Kim - Initialising ...")" $nbfiles`
+dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 qdbus $dbusRef showCancelButton true
 compteur=0
 
@@ -60,12 +60,12 @@ for i in "$@";do
 		magick "$TMPDIR/$FILE" thumbnail.gif \
 			-bordercolor white  -border $BORDER \
 			-bordercolor grey60 -border 1 \
-			-background  none   -rotate `perl -e 'print rand() * 30 - 15'` \
+			-background  none   -rotate `perl -e 'print rand() * 30 – 15'` \
 			-background  black  \( +clone -shadow 60x4+4+4 \) +swap \
 			-background  none   -flatten \
 			-depth 8  -quality 95 "$TMPDIR/pelemele_$RANDOM.png"
 		#	-depth 8  -quality 95 "$TMPDIR/pelemele_$FILE.png"
-		qdbus $dbusRef setLabelText "$(gettext "Kim - resizing of file: ") $FILE"
+		qdbus $dbusRef setLabelText "$(gettext "Kim – resizing of file: ") $FILE"
  		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
 		fi;
 done

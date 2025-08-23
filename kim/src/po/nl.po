@@ -18,8 +18,8 @@ msgstr ""
 "Language: nl\n"
 
 #: bin/kim_album:22 bin/kim_print:26
-msgid "Kim - Select album type:"
-msgstr "Kim - Kies het soort album:"
+msgid "Kim – Select album type:"
+msgstr "Kim – Kies het soort album:"
 
 #: bin/kim_album:22
 msgid "1x1 portrait album"
@@ -54,23 +54,23 @@ msgid "4x4 landscape album"
 msgstr "4x4 horizontaal album"
 
 #: bin/kim_album:28
-msgid "Kim - Creating miniatures ..."
-msgstr "Kim - Bezig met samenstellen van miniaturen…"
+msgid "Kim – Creating miniatures ..."
+msgstr "Kim – Bezig met samenstellen van miniaturen…"
 
 #: bin/kim_album:31 bin/kim_album:37 bin/kim_album:43 bin/kim_album:48
 #: bin/kim_album:53 bin/kim_album:58 bin/kim_album:63 bin/kim_album:68
 #: bin/kim_print:52 bin/kim_print:58 bin/kim_print:63 bin/kim_print:68
 #: bin/kim_print:73 bin/kim_print:78 bin/kim_print:83
-msgid "Kim - Creating album ..."
-msgstr "Kim - Bezig met samenstellen van album…"
+msgid "Kim – Creating album ..."
+msgstr "Kim – Bezig met samenstellen van album…"
 
 #: bin/kim_album:72 bin/kim_print:87
-msgid "Kim - Unrecognized option ! "
-msgstr "Kim - Onbekende optie!"
+msgid "Kim – Unrecognized option ! "
+msgstr "Kim – Onbekende optie!"
 
 #: bin/kim_album:75 bin/kim_print:90
-msgid "Kim - Deleting miniatures ..."
-msgstr "Kim - Bezig met verwijderen van miniaturen…"
+msgid "Kim – Deleting miniatures ..."
+msgstr "Kim – Bezig met verwijderen van miniaturen…"
 
 #: bin/kim_compress:30 bin/kim_compress:72 bin/kim_record:29 bin/kim_record:31
 #: bin/kim_record_mpg:29 bin/kim_record_mpg:31 bin/kim_rename:29
@@ -92,13 +92,13 @@ msgstr "Wil je bestaande bestanden vervangen?"
 #: bin/kim_resizeandsend:34 bin/kim_rotate:29 bin/kim_rotatewithexif:29
 #: bin/kim_sortbydate:35 bin/kim_sortbydate:71
 #: bin/kim_treatment:37 bin/kim_treatment:76 bin/kim_video:33 bin/kim_video:54
-msgid "Kim - Initialising ..."
-msgstr "Kim - Bezig met initialiseren…"
+msgid "Kim – Initialising ..."
+msgstr "Kim – Bezig met initialiseren…"
 
 #: bin/kim_compress:45 bin/kim_compress:66 bin/kim_multiburst:52
 #: bin/kim_video:45 bin/kim_video:71 bin/kim_webexport:46 bin/kim_webexport:66
-msgid "Kim - Compressing file: "
-msgstr "Kim - Bezig met comprimeren van bestand: "
+msgid "Kim – Compressing file: "
+msgstr "Kim – Bezig met comprimeren van bestand: "
 
 #: bin/kim_compress:72 bin/kim_rename:87 bin/kim_resize:72
 #: bin/kim_sortbydate:106 bin/kim_treatment:114 bin/kim_video:77
@@ -107,37 +107,37 @@ msgid "The action was cancelled by user !"
 msgstr "De handeling is afgebroken."
 
 #: bin/kim_convert:42
-msgid "Kim - Converting file:"
-msgstr "Kim - Bezig met converteren van bestand:"
+msgid "Kim – Converting file:"
+msgstr "Kim – Bezig met converteren van bestand:"
 
 #: bin/kim_flipflop:42 bin/kim_rotate:46 bin/kim_rotatewithexif:43
-msgid "Kim - Rotating file: "
-msgstr "Kim - Bezig met draaien van bestand:"
+msgid "Kim – Rotating file: "
+msgstr "Kim – Bezig met draaien van bestand:"
 
 #: bin/kim_galery:10
-msgid "Kim - Title:"
-msgstr "Kim - Naam:"
+msgid "Kim – Title:"
+msgstr "Kim – Naam:"
 
 #: bin/kim_galery:10
 msgid "My title ..."
 msgstr "Mijn zelfgekozen naam…"
 
 #: bin/kim_galery:11
-msgid "Kim - Author:"
-msgstr "Kim - Maker:"
+msgid "Kim – Author:"
+msgstr "Kim – Maker:"
 
 #: bin/kim_galery:15
-msgid "Kim - Number of columns:"
-msgstr "Kim - Aantal kolommen:"
+msgid "Kim – Number of columns:"
+msgstr "Kim – Aantal kolommen:"
 
 #: bin/kim_galery:60 bin/kim_treatment:49
 #: bin/kim_treatment:88
-msgid "Kim - Treatment of file: "
-msgstr "Kim - Bezig met afhandelen van bestand: "
+msgid "Kim – Treatment of file: "
+msgstr "Kim – Bezig met afhandelen van bestand: "
 
 #: bin/kim_multiburst:33 bin/kim_webexport:33 bin/kim_webexport:53
-msgid "Kim - Initialising compression"
-msgstr "Kim - Bezig met initialiseren van compressie…"
+msgid "Kim – Initialising compression"
+msgstr "Kim – Bezig met initialiseren van compressie…"
 
 #: bin/kim_pelemele:30
 msgid "Size of small images:"
@@ -156,8 +156,8 @@ msgid "Background color:"
 msgstr "Achtergrondkleur:"
 
 #: bin/kim_pelemele:65 bin/kim_print:43
-msgid "Kim - resizing of file: "
-msgstr "Kim - Bezig met grootte-aanpassing van bestand: "
+msgid "Kim – resizing of file: "
+msgstr "Kim – Bezig met grootte-aanpassing van bestand: "
 
 #: bin/kim_print:26
 msgid "9x13 cm: 2x2 images, landscape"
@@ -192,8 +192,8 @@ msgid "Click 'Ok' and then choose the window target ! "
 msgstr "Klik op ‘Oké’ en vervolgens op het betreffende venster."
 
 #: bin/kim_record:56 bin/kim_record_mpg:57
-msgid "Kim - Record"
-msgstr "Kim - Opname"
+msgid "Kim – Record"
+msgstr "Kim – Opname"
 
 #: bin/kim_record:56 bin/kim_record_mpg:57
 msgid "The animation is created ! "
@@ -205,16 +205,16 @@ msgstr "Geef de afbeeldingen een nieuwe naam:"
 
 #: bin/kim_rename:53 bin/kim_rename:81 bin/kim_sortbydate:64
 #: bin/kim_sortbydate:100
-msgid "Kim - Renaming file: "
-msgstr "Kim - Bezig met naamswijziging: "
+msgid "Kim – Renaming file: "
+msgstr "Kim – Bezig met naamswijziging: "
 
 #: bin/kim_resize:46 bin/kim_resize:66
-msgid "Kim - Resizing file: "
-msgstr "Kim - Bezig met grootte-aanpassing: "
+msgid "Kim – Resizing file: "
+msgstr "Kim – Bezig met grootte-aanpassing: "
 
 #: bin/kim_resizeandsend:31
-msgid "Kim - Send by mail:"
-msgstr "Kim - Versturen per e-mail:"
+msgid "Kim – Send by mail:"
+msgstr "Kim – Versturen per e-mail:"
 
 #: bin/kim_resizeandsend:31
 msgid "Full size"
@@ -233,12 +233,12 @@ msgid "300x225 px"
 msgstr "300x225 px"
 
 #: bin/kim_resizeandsend:48
-msgid "Kim - Resizing and compressing file: "
-msgstr "Kim - Bezig met aanpassen en comprimeren van bestand: "
+msgid "Kim – Resizing and compressing file: "
+msgstr "Kim – Bezig met aanpassen en comprimeren van bestand: "
 
 #: bin/kim_resizeandsend:63 bin/kim_resizeandsend:67
-msgid "Kim - Send by mail: you can write your message!"
-msgstr "Kim - Versturen per e-mail: stel een bericht op."
+msgid "Kim – Send by mail: you can write your message!"
+msgstr "Kim – Versturen per e-mail: stel een bericht op."
 
 #: bin/kim_treatment:31
 msgid "Choose your annotation:"
@@ -249,8 +249,8 @@ msgid "My annotation"
 msgstr "Mijn aantekening"
 
 #: bin/kim_treatment:32
-msgid "Kim - Select border color:"
-msgstr "Kim - Kies een kaderkleur:"
+msgid "Kim – Select border color:"
+msgstr "Kim – Kies een kaderkleur:"
 
 #: bin/kim_treatment:32
 msgid "white"
