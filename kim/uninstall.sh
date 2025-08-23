@@ -22,4 +22,9 @@ kim_install_dir=`qtpaths --locate-dirs GenericDataLocation kio/servicemenus | cu
 rm -f $kim_install_dir/kim_*.desktop 2&> /dev/null
 rm -rf $kim_install_dir/kim6 2&> /dev/null
 
-echo "Kim has been removed. Good bye."
+if [[ "$1" == "--no_message" ]]; then
+	: # Say nothing when called from uninstall script
+else
+	echo "Kim has been removed. Good bye."
+fi
+
