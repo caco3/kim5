@@ -56,11 +56,11 @@ for i in "$@";do
 		while [ -e "$TMPDIR/pelemele_$RANDOM.png" ]; do 
 			RANDOM=`perl -e 'print int(rand(1000000))'`;
 		done
-		magick -resize $SIZE $i "$TMPDIR/$FILE"
-		magick "$TMPDIR/$FILE" thumbnail.gif \
+		magick $i -resize $SIZE "$TMPDIR/$FILE"
+		magick "$TMPDIR/$FILE" \
 			-bordercolor white  -border $BORDER \
 			-bordercolor grey60 -border 1 \
-			-background  none   -rotate `perl -e 'print rand() * 30 – 15'` \
+			-background  none   -rotate `perl -e 'print rand() * 30 - 15'` \
 			-background  black  \( +clone -shadow 60x4+4+4 \) +swap \
 			-background  none   -flatten \
 			-depth 8  -quality 95 "$TMPDIR/pelemele_$RANDOM.png"
