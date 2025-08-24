@@ -131,7 +131,7 @@ Icon=object-rotate-right
 Exec=kim_rotate `kdialog --inputbox "Rotate x degrees:" 45` %U;
 
 [Desktop Action Flip]
-Name=Verticaly
+Name=Flip verticaly
 Name[de]=Vertikal spiegeln
 Name[es]=Verticalmente
 Name[fr]=Verticalement
@@ -142,7 +142,7 @@ Icon=object-flip-vertical
 Exec=kim_flipflop flip %U 
 
 [Desktop Action Flop]
-Name=Horizontaly
+Name=Flip horizontaly
 Name[de]=Horizontal spiegeln
 Name[es]=Horizontalmente
 Name[fr]=Horizontalement
