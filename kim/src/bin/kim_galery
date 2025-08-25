@@ -8,7 +8,7 @@ SOURCE_TRANSLATION_TTT
 FILE="";
 let "nbfiles = $#"
 KIM_INST_TTT
-KIM_DIR=$kim_inst/src/gallery
+KIM_DIR=$kim_inst/gallery
 TITLE=`kdialog --inputbox "$(gettext "Kim – Title:")" "$(gettext "My title ...")"`;
 AUTHOR=`kdialog --inputbox "$(gettext "Kim – Author:")" "$USER"`;
 DATE=`date '+%Y%m%d'`;
@@ -44,8 +44,8 @@ for i in "$@";do
 		let "tmp +=1"
 		FILE="$i";
 		IMAGE=`basename "$FILE"`;
-		magick -resize $SCALE_1 "$FILE" $DIR/images/"$IMAGE";
-		magick -resize $SCALE_2 "$FILE" $DIR/thumbs/"$IMAGE";
+		magick "$FILE" -resize $SCALE_1 $DIR/images/"$IMAGE";
+		magick "$FILE" -resize $SCALE_2 $DIR/thumbs/"$IMAGE";
 		W2=`identify -format "%w" $DIR/images/"$IMAGE"`;
 		H2=`identify -format "%h" $DIR/images/"$IMAGE"`;
 		echo '<td align='center'>' >> $DIR/index.html;
@@ -67,4 +67,4 @@ done
 cat $KIM_DIR/index.part2 >> $DIR/index.html;
 qdbus $dbusRef close;
 
-x-www-browser $DIR/index.html;
+xdg-open $DIR/index.html;
