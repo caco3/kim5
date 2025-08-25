@@ -72,7 +72,7 @@ Name[fr]=Créer une image Tiff multi-pages
 Name[nl]=TIFF met meerdere pagina's samenstellen
 Name[zh_TW]=建立多檔案的 Tiff 影像
 Icon=attach
-Exec=magick -adjoin %U %D/my_images.tiff
+Exec=magick -adjoin %U my_images.tiff
 
 [Desktop Action Animation]
 Name=Create a gif animation
@@ -80,7 +80,9 @@ Name[fr]=Créer une animation gif
 Name[nl]=GIF-animatie maken
 Name[zh_TW]=建立 GIF 動畫
 Icon=video
-Exec=magick -delay `kdialog --inputbox "Kim – Delay between images in delay/100 seconds:" 100` %U %D/my_animation.gif
+Exec=magick %U -set delay `kdialog --inputbox "Kim – Delay between images in centiseconds (100 is one second, 50 is half a second):" 100` -loop 0 my_animation.gif
+
+
 
 [Desktop Action Multiburst]
 Name=Multiburst image to gif animation
