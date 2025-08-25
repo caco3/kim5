@@ -29,10 +29,10 @@ KIM_INST_TTT
 
 case $ACTION in 
 	about) 
-            kdialog --textbox "$kim_inst"/ABOUT 600 400
+            kdialog --textbox "$kim_inst/ABOUT" 600 400
             ;;
 	license) 
-            kdialog --textbox "$kim_inst"/COPYING 600 400
+            kdialog --textbox "$kim_inst/COPYING" 600 400
             ;;
 esac
 

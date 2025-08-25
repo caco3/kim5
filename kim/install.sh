@@ -88,7 +88,7 @@ done
 
 for file in $kim_helper_files/bin/kim_*; do
   sed -i "s|SOURCE_TRANSLATION_TTT|. $kim_helper_files/kim_translation|g" "$file"
-  sed -i "s|KIM_INST_TTT|\$kim_inst=$kim_helper_files|g" "$file"
+  sed -i "s|KIM_INST_TTT|kim_inst=$kim_helper_files|g" "$file"
   sed -i "s|LOCALE_SOURCE_TTT|$kim_helper_files/locale|g" "$file"
 done
 
