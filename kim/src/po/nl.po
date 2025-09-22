@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
-"POT-Creation-Date: 2025-09-22 16:14+0200\n"
+"POT-Creation-Date: 2025-09-22 16:38+0200\n"
 "PO-Revision-Date: 2021-06-06 13:19+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <>\n"
@@ -17,255 +17,258 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/bin/kim_album:24 src/bin/kim_print:28
+#: ../bin/kim_album:24 ../bin/kim_print:28
 msgid "Kim – Select album type:"
 msgstr "Kim – Kies het soort album:"
 
-#: src/bin/kim_album:24
+#: ../bin/kim_album:24
 msgid "1x1 portrait album"
 msgstr "1x1 verticaal album"
 
-#: src/bin/kim_album:24
+#: ../bin/kim_album:24
 msgid "1x1 landscape album"
 msgstr "1x1 horizontaal album"
 
-#: src/bin/kim_album:24
+#: ../bin/kim_album:24
 msgid "1x2 landscape album"
 msgstr "1x2 horizontaal album"
 
-#: src/bin/kim_album:24
+#: ../bin/kim_album:24
 msgid "2x1 portrait album"
 msgstr "2x1 verticaal album"
 
-#: src/bin/kim_album:24
+#: ../bin/kim_album:24
 msgid "2x2 landscape album"
 msgstr "2x2 horizontaal album"
 
-#: src/bin/kim_album:24 src/bin/kim_print:28
+#: ../bin/kim_album:24 ../bin/kim_print:28
 msgid "3x2 portrait album"
 msgstr "3x2 verticaal album"
 
-#: src/bin/kim_album:24
+#: ../bin/kim_album:24
 msgid "3x4 landscape album"
 msgstr "3x4 horizontaal album"
 
-#: src/bin/kim_album:24
+#: ../bin/kim_album:24
 msgid "4x4 landscape album"
 msgstr "4x4 horizontaal album"
 
-#: src/bin/kim_album:30
+#: ../bin/kim_album:30
 msgid "Kim – Creating miniatures ..."
 msgstr "Kim – Bezig met samenstellen van miniaturen…"
 
-#: src/bin/kim_album:33 src/bin/kim_album:39 src/bin/kim_album:45
-#: src/bin/kim_album:50 src/bin/kim_album:55 src/bin/kim_album:60
-#: src/bin/kim_album:65 src/bin/kim_album:70 src/bin/kim_print:54
-#: src/bin/kim_print:60 src/bin/kim_print:65 src/bin/kim_print:70
-#: src/bin/kim_print:75 src/bin/kim_print:80 src/bin/kim_print:85
+#: ../bin/kim_album:33 ../bin/kim_album:39 ../bin/kim_album:45
+#: ../bin/kim_album:50 ../bin/kim_album:55 ../bin/kim_album:60
+#: ../bin/kim_album:65 ../bin/kim_album:70 ../bin/kim_print:54
+#: ../bin/kim_print:60 ../bin/kim_print:65 ../bin/kim_print:70
+#: ../bin/kim_print:75 ../bin/kim_print:80 ../bin/kim_print:85
 msgid "Kim – Creating album ..."
 msgstr "Kim – Bezig met samenstellen van album…"
 
-#: src/bin/kim_album:74 src/bin/kim_print:89
+#: ../bin/kim_album:74 ../bin/kim_print:89
 #, fuzzy
 msgid "Kim – Unrecognized option ! "
 msgstr "Kim – Onbekende optie!"
 
-#: src/bin/kim_album:77 src/bin/kim_print:92
+#: ../bin/kim_album:77 ../bin/kim_print:92
 msgid "Kim – Deleting miniatures ..."
 msgstr "Kim – Bezig met verwijderen van miniaturen…"
 
-#: src/bin/kim_compress:29 src/bin/kim_compress:71 src/bin/kim_record:31
-#: src/bin/kim_record:33 src/bin/kim_record_mpg:31 src/bin/kim_record_mpg:33
-#: src/bin/kim_rename:31 src/bin/kim_rename:89 src/bin/kim_resize:30
-#: src/bin/kim_resize:53 src/bin/kim_resize:77 src/bin/kim_sortbydate:33
-#: src/bin/kim_sortbydate:108 src/bin/kim_treatment:33
-#: src/bin/kim_treatment:113 src/bin/kim_video:29 src/bin/kim_video:76
-#: src/bin/kim_webexport:29 src/bin/kim_webexport:71
+#: ../bin/kim_compress:29 ../bin/kim_compress:71 ../bin/kim_record:31
+#: ../bin/kim_record:33 ../bin/kim_record_mpg:31 ../bin/kim_record_mpg:33
+#: ../bin/kim_rename:31 ../bin/kim_rename:89 ../bin/kim_resize:29
+#: ../bin/kim_resize:72 ../bin/kim_sortbydate:33 ../bin/kim_sortbydate:108
+#: ../bin/kim_treatment:33 ../bin/kim_treatment:113 ../bin/kim_video:29
+#: ../bin/kim_video:76 ../bin/kim_webexport:29 ../bin/kim_webexport:71
 msgid "Kim"
 msgstr "Kim"
 
-#: src/bin/kim_compress:29 src/bin/kim_rename:31 src/bin/kim_resize:30
-#: src/bin/kim_resize:53 src/bin/kim_sortbydate:33 src/bin/kim_treatment:33
-#: src/bin/kim_video:29 src/bin/kim_webexport:29
+#: ../bin/kim_compress:29 ../bin/kim_rename:31 ../bin/kim_resize:29
+#: ../bin/kim_sortbydate:33 ../bin/kim_treatment:33 ../bin/kim_video:29
+#: ../bin/kim_webexport:29
 msgid "Do you want to replace existing files?"
 msgstr "Wil je bestaande bestanden vervangen?"
 
-#: src/bin/kim_compress:32 src/bin/kim_compress:52 src/bin/kim_convert:28
-#: src/bin/kim_flipflop:28 src/bin/kim_galery:19 src/bin/kim_pelemele:37
-#: src/bin/kim_print:30 src/bin/kim_rename:34 src/bin/kim_rename:62
-#: src/bin/kim_resize:33 src/bin/kim_resize:58 src/bin/kim_resizeandsend:36
-#: src/bin/kim_rotate:31 src/bin/kim_rotatewithexif:31
-#: src/bin/kim_sortbydate:37 src/bin/kim_sortbydate:73 src/bin/kim_treatment:36
-#: src/bin/kim_treatment:75 src/bin/kim_video:32 src/bin/kim_video:53
+#: ../bin/kim_compress:32 ../bin/kim_compress:52 ../bin/kim_convert:28
+#: ../bin/kim_flipflop:28 ../bin/kim_galery:19 ../bin/kim_pelemele:37
+#: ../bin/kim_print:30 ../bin/kim_rename:34 ../bin/kim_rename:62
+#: ../bin/kim_resize:32 ../bin/kim_resize:53 ../bin/kim_resizeandsend:36
+#: ../bin/kim_rotate:31 ../bin/kim_rotatewithexif:31 ../bin/kim_sortbydate:37
+#: ../bin/kim_sortbydate:73 ../bin/kim_treatment:36 ../bin/kim_treatment:75
+#: ../bin/kim_video:32 ../bin/kim_video:53
 msgid "Kim – Initialising ..."
 msgstr "Kim – Bezig met initialiseren…"
 
-#: src/bin/kim_compress:44 src/bin/kim_compress:65 src/bin/kim_multiburst:54
-#: src/bin/kim_video:44 src/bin/kim_video:70 src/bin/kim_webexport:45
-#: src/bin/kim_webexport:65
+#: ../bin/kim_compress:44 ../bin/kim_compress:65 ../bin/kim_multiburst:54
+#: ../bin/kim_video:44 ../bin/kim_video:70 ../bin/kim_webexport:45
+#: ../bin/kim_webexport:65
 msgid "Kim – Compressing file: "
 msgstr "Kim – Bezig met comprimeren van bestand: "
 
-#: src/bin/kim_compress:71 src/bin/kim_rename:89 src/bin/kim_resize:77
-#: src/bin/kim_sortbydate:108 src/bin/kim_treatment:113 src/bin/kim_video:76
-#: src/bin/kim_webexport:71
+#: ../bin/kim_compress:71 ../bin/kim_rename:89 ../bin/kim_sortbydate:108
+#: ../bin/kim_treatment:113 ../bin/kim_video:76
 #, fuzzy
 msgid "The action was cancelled by user !"
 msgstr "De handeling is afgebroken."
 
-#: src/bin/kim_convert:41
+#: ../bin/kim_convert:41
 msgid "Kim – Converting file:"
 msgstr "Kim – Bezig met converteren van bestand:"
 
-#: src/bin/kim_flipflop:41 src/bin/kim_rotate:48 src/bin/kim_rotatewithexif:45
+#: ../bin/kim_flipflop:41 ../bin/kim_rotate:48 ../bin/kim_rotatewithexif:45
 msgid "Kim – Rotating file: "
 msgstr "Kim – Bezig met draaien van bestand:"
 
-#: src/bin/kim_galery:9
+#: ../bin/kim_galery:9
 msgid "Kim – Title:"
 msgstr "Kim – Naam:"
 
-#: src/bin/kim_galery:9
+#: ../bin/kim_galery:9
 msgid "My title ..."
 msgstr "Mijn zelfgekozen naam…"
 
-#: src/bin/kim_galery:10
+#: ../bin/kim_galery:10
 msgid "Kim – Author:"
 msgstr "Kim – Maker:"
 
-#: src/bin/kim_galery:14
+#: ../bin/kim_galery:14
 msgid "Kim – Number of columns:"
 msgstr "Kim – Aantal kolommen:"
 
-#: src/bin/kim_galery:59 src/bin/kim_treatment:48 src/bin/kim_treatment:87
+#: ../bin/kim_galery:59 ../bin/kim_treatment:48 ../bin/kim_treatment:87
 msgid "Kim – Treatment of file: "
 msgstr "Kim – Bezig met afhandelen van bestand: "
 
-#: src/bin/kim_multiburst:35 src/bin/kim_webexport:32 src/bin/kim_webexport:52
+#: ../bin/kim_multiburst:35 ../bin/kim_webexport:32 ../bin/kim_webexport:52
 msgid "Kim – Initialising compression"
 msgstr "Kim – Bezig met initialiseren van compressie…"
 
-#: src/bin/kim_pelemele:29
+#: ../bin/kim_pelemele:29
 msgid "Size of small images:"
 msgstr "Grootte van kleine afbeeldingen:"
 
-#: src/bin/kim_pelemele:30
+#: ../bin/kim_pelemele:30
 msgid "Number of rows and columns:"
 msgstr "Aantal rijen en kolommen:"
 
-#: src/bin/kim_pelemele:31
+#: ../bin/kim_pelemele:31
 msgid "Overlaping ratio in percent:"
 msgstr "Overlappercentage:"
 
-#: src/bin/kim_pelemele:32
+#: ../bin/kim_pelemele:32
 msgid "Background color:"
 msgstr "Achtergrondkleur:"
 
-#: src/bin/kim_pelemele:65 src/bin/kim_print:45
+#: ../bin/kim_pelemele:65 ../bin/kim_print:45
 msgid "Kim – resizing of file: "
 msgstr "Kim – Bezig met grootte-aanpassing van bestand: "
 
-#: src/bin/kim_print:28
+#: ../bin/kim_print:28
 msgid "9x13 cm: 2x2 images, landscape"
 msgstr "9x13 cm: 2x2 afbeeldingen, horizontaal"
 
-#: src/bin/kim_print:28
+#: ../bin/kim_print:28
 msgid "10x15 cm: 1x2 images, portrait"
 msgstr "10x15 cm: 1x2 afbeeldingen, verticaal"
 
-#: src/bin/kim_print:28
+#: ../bin/kim_print:28
 msgid "11.5x15 cm: 1x2 images, portrait"
 msgstr "11.5x15 cm: 1x2 afbeeldingen, verticaal"
 
-#: src/bin/kim_print:28
+#: ../bin/kim_print:28
 msgid "13x18 cm: 1x2 images, portrait"
 msgstr "13x18 cm: 1x2 afbeeldingen, verticaal"
 
-#: src/bin/kim_print:28
+#: ../bin/kim_print:28
 msgid "20x25 cm: 1 image, landscape"
 msgstr "20x25 cm: 1 afbeelding, horizontaal"
 
-#: src/bin/kim_print:28
+#: ../bin/kim_print:28
 msgid "Thumbnails: 4x5 images, portrait"
 msgstr "Miniaturen: 4x5 afbeeldingen, verticaal"
 
-#: src/bin/kim_record:31 src/bin/kim_record_mpg:31
+#: ../bin/kim_record:31 ../bin/kim_record_mpg:31
 msgid "Choose duration of animation (sec):"
 msgstr "Kies de animatieduur (in sec.):"
 
-#: src/bin/kim_record:33 src/bin/kim_record_mpg:33
+#: ../bin/kim_record:33 ../bin/kim_record_mpg:33
 #, fuzzy
 msgid "Click 'Ok' and then choose the window target ! "
 msgstr "Klik op ‘Oké’ en vervolgens op het betreffende venster."
 
-#: src/bin/kim_record:58 src/bin/kim_record_mpg:59
+#: ../bin/kim_record:58 ../bin/kim_record_mpg:59
 msgid "Kim – Record"
 msgstr "Kim – Opname"
 
-#: src/bin/kim_record:58 src/bin/kim_record_mpg:59
+#: ../bin/kim_record:58 ../bin/kim_record_mpg:59
 #, fuzzy
 msgid "The animation is created ! "
 msgstr "De animatie is vastgelegd."
 
-#: src/bin/kim_rename:37 src/bin/kim_rename:65
+#: ../bin/kim_rename:37 ../bin/kim_rename:65
 msgid "Choose the new name of images:"
 msgstr "Geef de afbeeldingen een nieuwe naam:"
 
-#: src/bin/kim_rename:55 src/bin/kim_rename:83 src/bin/kim_sortbydate:66
-#: src/bin/kim_sortbydate:102
+#: ../bin/kim_rename:55 ../bin/kim_rename:83 ../bin/kim_sortbydate:66
+#: ../bin/kim_sortbydate:102
 msgid "Kim – Renaming file: "
 msgstr "Kim – Bezig met naamswijziging: "
 
-#: src/bin/kim_resize:48 src/bin/kim_resize:71
+#: ../bin/kim_resize:45 ../bin/kim_resize:66
 msgid "Kim – Resizing file: "
 msgstr "Kim – Bezig met grootte-aanpassing: "
 
-#: src/bin/kim_resizeandsend:33
+#: ../bin/kim_resize:72 ../bin/kim_webexport:71
+#, fuzzy
+msgid "The action was cancelled by user!"
+msgstr "De handeling is afgebroken."
+
+#: ../bin/kim_resizeandsend:33
 msgid "Kim – Send by mail:"
 msgstr "Kim – Versturen per e-mail:"
 
-#: src/bin/kim_resizeandsend:33
+#: ../bin/kim_resizeandsend:33
 msgid "Full size"
 msgstr "Volledig"
 
-#: src/bin/kim_resizeandsend:33
+#: ../bin/kim_resizeandsend:33
 msgid "800x600 px"
 msgstr "800x600 px"
 
-#: src/bin/kim_resizeandsend:33
+#: ../bin/kim_resizeandsend:33
 msgid "600x450 px"
 msgstr "600x450 px"
 
-#: src/bin/kim_resizeandsend:33
+#: ../bin/kim_resizeandsend:33
 msgid "300x225 px"
 msgstr "300x225 px"
 
-#: src/bin/kim_resizeandsend:50
+#: ../bin/kim_resizeandsend:50
 msgid "Kim – Resizing and compressing file: "
 msgstr "Kim – Bezig met aanpassen en comprimeren van bestand: "
 
-#: src/bin/kim_resizeandsend:65 src/bin/kim_resizeandsend:70
-#: src/bin/kim_resizeandsend:75
+#: ../bin/kim_resizeandsend:65 ../bin/kim_resizeandsend:70
+#: ../bin/kim_resizeandsend:75
 msgid "Kim – Send by mail: you can write your message!"
 msgstr "Kim – Versturen per e-mail: stel een bericht op."
 
-#: src/bin/kim_treatment:30
+#: ../bin/kim_treatment:30
 msgid "Choose your annotation:"
 msgstr "Kies het soort aantekening:"
 
-#: src/bin/kim_treatment:30
+#: ../bin/kim_treatment:30
 msgid "My annotation"
 msgstr "Mijn aantekening"
 
-#: src/bin/kim_treatment:31
+#: ../bin/kim_treatment:31
 msgid "Kim – Select border color:"
 msgstr "Kim – Kies een kaderkleur:"
 
-#: src/bin/kim_treatment:31
+#: ../bin/kim_treatment:31
 msgid "white"
 msgstr "wit"
 
-#: src/bin/kim_treatment:31
+#: ../bin/kim_treatment:31
 msgid "black"
 msgstr "zwart"
 

@@ -1,25 +1,26 @@
 #!/bin/bash
 #
-# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# FIXME Description
+#
+# Copyright (C) 2005, 2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# Copyright (C) 2025  Tomáš Hnyk <tomashnyk@gmail.com>
 # 
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
-# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Author: FIXME
 
-TEXTDOMAIN="kim6"
-TEXTDOMAINDIR=LOCALE_SOURCE_TTT
 SOURCE_TRANSLATION_TTT
-
 dir="$1";
 let "nbfiles = $#"
 #test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME;
@@ -86,7 +87,7 @@ case "$nb" in
 	qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
 	montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
 
-*) kdialog --msgbox "$(gettext "Kim – Unrecognized option ! ")";;
+*) kdialog --msgbox "$(gettext "Kim – Unrecognized option! ")";;
 esac
 
 qdbus $dbusRef setLabelText "$(gettext "Kim – Deleting miniatures ...")"

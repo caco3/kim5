@@ -1,22 +1,26 @@
 #!/bin/bash
 #
-# This file is part of Kde Image Menu (KIM). KIM was created by
-# Charles Bouveyron <charles.bouveyron@free.fr>.
+# Installation script.
 #
-# KIM is free software; you can redistribute it and/or modify
+# Copyright (C) 2005, 2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# Copyright (C) 2025  Tomáš Hnyk <tomashnyk@gmail.com>
+#
+# This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# any later version.
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
 #
-# KIM is distributed in the hope that it will be useful,
+# This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with Foobar; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
+# Author: ???
+#         Tomáš Hnyk <tomashnyk@gmail.com>
+
 install_log=""
 
 # If there is no kdedialog, create an error log and abort.
@@ -77,7 +81,7 @@ kim_helper_files="$kim_install_dir"/kim6
 "$src_folder"/uninstall.sh --no_message
 
 mkdir -p "$kim_helper_files"
-cp -pr "$src_folder"/src/gallery "$src_folder"/src/po "$src_folder"/src/bin "$src_folder"/src/kim_translation "$src_folder"/ABOUT "$src_folder"/COPYING "$kim_helper_files"/
+cp -pr "$src_folder"/src/gallery "$src_folder"/src/po "$src_folder"/src/bin "$src_folder"/src/kim_translation "$src_folder"/ABOUT "$src_folder"/LICENSE "$kim_helper_files"/
 cp -pr "$src_folder"/src/kim_*.desktop "$kim_install_dir"
 
 # Replace the path in Desktop files with the installed path
@@ -101,7 +105,7 @@ done
 rm -rf "$kim_helper_files/"po
 
 if [[ "$install_log" == "" ]]; then
-	echo "Kim has been succesfully installed. Good bye!":
+	echo "Kim has been succesfully installed. Good bye!"
 else
 	spit_install_log
 fi

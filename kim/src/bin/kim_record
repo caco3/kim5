@@ -1,36 +1,34 @@
 #!/bin/bash
+#
 # A simple bash script to screen capture
 #
-# Copyright (C) 2005,2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# Copyright (C) 2005, 2006  Charles Bouveyron <charles.bouveyron@free.fr>
+# Copyright (C) 2025  Tomáš Hnyk <tomashnyk@gmail.com>
 # 
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
-# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, U
 #
-# Author: Charles Bouveyron <charles.bouveyron@free.fr>
-#		Raphaël Pinson <raphink@raphink.net>
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Authors: Charles Bouveyron <charles.bouveyron@free.fr>
+#          Raphaël Pinson <raphink@raphink.net>
 
-TEXTDOMAIN="kim6"
-TEXTDOMAINDIR=LOCALE_SOURCE_TTT
 SOURCE_TRANSLATION_TTT
-
 #test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
 #KIMDIR=`mktemp -d "$KDEHOME"/tmp-"$USER"/kim.XXXXXXXX` || exit 1
 KIMDIR=`mktemp -d /tmp/kim.XXXXXXXX` || exit 1
 
 tps=`kdialog --title "$(gettext "Kim")" --inputbox "$(gettext "Choose duration of animation (sec):")" 10`
 nb=$[3*$tps]
-kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "Click 'Ok' and then choose the window target ! ")"
+kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "Click 'Ok' and then choose the window target! ")"
 id=`xwininfo | grep "id:" | sed -e "s/.*id: //" -e "s/ .*//"`;
 let x=1;
 
@@ -55,5 +53,5 @@ magick -delay 30 "$KIMDIR"/capture*.xwd `kdialog --getsavefilename ~ *.gif`
 #rm "$KIMDIR"/capture*.xwd
 rm -rf "$KIMDIR"
 
-kdialog --title "$(gettext "Kim – Record")" --msgbox "$(gettext "The animation is created ! ")"
+kdialog --title "$(gettext "Kim – Record")" --msgbox "$(gettext "The animation is created! ")"
 
