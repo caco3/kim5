@@ -56,10 +56,10 @@ cd po;
 # this creates a new pot file from the files in the bin directory (do not update because then deleted strings are kept)
 xgettext --language=Shell --keyword=gettext --output=kim6.pot --from-code=UTF-8 --add-comments=TRANSLATORS --package-name="KIM 6 – Kde Image Menu 6" --package-version="$VERSION" --msgid-bugs-address="https://github.com/felagund/kim6/issues" ../bin/kim_*
 # this gets strings from the desktop.in files, one needs to first extract the strings before gettext can recognize them, that creates header files and so comments about string locations are then wrong in the po and pot files
-for desk_ini in ../*.desktop.in;
+for desk_ini in ../src/*.desktop.in;
 do intltool-extract --type=gettext/ini "$desk_ini";
 xgettext --keyword=N_:1 --join-existing --output kim6.pot --from-code=UTF-8 --package-name="KIM 6 – Kde Image Menu 6" --package-version="$VERSION" --msgid-bugs-address="https://github.com/felagund/kim6/issues" "$desk_ini".h;
-#the header files are just temporary
+# the header files are just temporary
 rm "$desk_ini".h;
 done;
 # % in the strings causes gettext to include this warning that we get rid of
@@ -75,12 +75,12 @@ Do not forget to update translations and changelog and then run the following in
 VERSION=1.1; # set kim6 version
 # generate desktop files
 cd po;
-for desk_ini in ../*.desktop.in; do intltool-merge --desktop-style ./ "$desk_ini"  "${desk_ini%.in}"; done
+for desk_ini in ../src/*.desktop.in; do intltool-merge --desktop-style ./ "$desk_ini"  "${desk_ini%.in}"; done
 cd ..;
 # Do not include files that need not be installed
 tar -czf kim6_$VERSION.tar.gz --exclude=README.md  --exclude=KIM6.png --exclude=Changelog --exclude kim6_devel.tar.gz --exclude './src/*desktop.in' ./
 # generated desktop files are no longer needed
-rm kim_compressandresize.desktop kim_compressandresizevideo.desktop kim_convertandrotate.desktop kim_publication.desktop
+rm src/kim_compressandresize.desktop src/kim_compressandresizevideo.desktop src/kim_convertandrotate.desktop src/kim_publication.desktop
 ```
 
 After making the archive, it is manually uploaded here to Github and then to https://store.kde.org/p/2307290/.
