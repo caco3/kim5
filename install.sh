@@ -76,7 +76,7 @@ kim_helper_files="$kim_install_dir"/kim6
 "$src_folder"/uninstall.sh --no_message
 
 mkdir -p "$kim_helper_files"
-cp -pr "$src_folder"/src/gallery "$src_folder"/src/po "$src_folder"/src/bin "$src_folder"/src/kim_translation "$src_folder"/ABOUT "$src_folder"/LICENSE "$kim_helper_files"/
+cp -pr "$src_folder"/src/gallery "$src_folder"/po "$src_folder"/src/bin "$src_folder"/src/kim_translation "$src_folder"/ABOUT "$src_folder"/LICENSE "$kim_helper_files"/
 cp -pr "$src_folder"/src/kim_*.desktop "$kim_install_dir"
 
 # Replace the path in Desktop files with the installed path
