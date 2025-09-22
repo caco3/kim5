@@ -38,15 +38,15 @@ if [ ! `command -v qtpaths` ]; then
 fi
 
 if [ ! `command -v montage` ]; then
-	install_log="$install_log""Cannot find executable \"montage\".  Please install it. It may be in package \"graphicsmagick\". Without it, the montage feature will not work.\n\n"
+	install_log="$install_log""Cannot find executable \"montage\".  Please install it. It is usually in package \"graphicsmagick\". Without it, the montage feature will not work.\n\n"
 fi
 
 if [ ! `command -v mogrify` ]; then
-	install_log="$install_log""Cannot find executable \"mogrify\".  Please install it. It may be in package \"graphicsmagick\". Without it, a lot of features like resizing and rotating and other transformations will not work.\n\n"
+	install_log="$install_log""Cannot find executable \"mogrify\".  Please install it. It  is usually in package \"graphicsmagick\". Without it, a lot of features like resizing and rotating and other transformations will not work.\n\n"
 fi
 
 if [ ! `command -v convert` ]; then
-	install_log="$install_log""Cannot find executable \"convert\".  Please install it. Without it, format conversion will not work.\n\n"
+	install_log="$install_log""Cannot find executable \"convert\".  Please install it. It is usually in package \"graphicsmagick\". Without it, format conversion will not work.\n\n"
 fi
 
 # this will be removed, it relies on screen capturing thrugh X
@@ -63,44 +63,45 @@ if [ ! `command -v xdg-email` ]; then
 fi
 
 
-
 src_folder="$(dirname "$(realpath "$0")")"
 kim_install_dir=`qtpaths --locate-dirs GenericDataLocation kio/servicemenus | cut -f 1 -d ':'`
 # This checks if qtpaths returned an existing directory
-if [[ ! -d $kim_install_dir ]]; then
+if [[ ! -d "$kim_install_dir" ]]; then
     install_log="$install_log""Error fetching the KDE install prefix. Installation was aborted."
 	spit_install_log
     exit 1
 fi
-kim_helper_files=$kim_install_dir/kim6
+kim_helper_files="$kim_install_dir"/kim6
 
-# first uninstall so we do not leave anything behind when potentially renaming removing or moving stuff from version to version
-$src_folder/uninstall.sh --no_message
+# first uninstall so we do not leave anything behind when potentially renaming, removing or moving stuff from version to version
+"$src_folder"/uninstall.sh --no_message
 
-mkdir -p $kim_helper_files
-cp -pr $src_folder/src/gallery $src_folder/src/po $src_folder/src/bin $src_folder/src/kim_translation $src_folder/ABOUT $src_folder/COPYING $kim_helper_files/
-cp -pr $src_folder/src/kim_*.desktop $kim_install_dir
+mkdir -p "$kim_helper_files"
+cp -pr "$src_folder"/src/gallery "$src_folder"/src/po "$src_folder"/src/bin "$src_folder"/src/kim_translation "$src_folder"/ABOUT "$src_folder"/COPYING "$kim_helper_files"/
+cp -pr "$src_folder"/src/kim_*.desktop "$kim_install_dir"
 
 # Replace the path in Desktop files with the installed path
-for file in $kim_install_dir/kim_*.desktop; do
-  sed -i "s|Exec=kim|Exec=$kim_helper_files/bin/kim|g" "$file"
+for file in "$kim_install_dir"/kim_*.desktop; do
+  sed -i "s|Exec=kim|Exec='$kim_helper_files/bin/kim'|g" "$file"
 done
 
-for file in $kim_helper_files/bin/kim_*; do
-  sed -i "s|SOURCE_TRANSLATION_TTT|. $kim_helper_files/kim_translation|g" "$file"
-  sed -i "s|KIM_INST_TTT|kim_inst=$kim_helper_files|g" "$file"
-  sed -i "s|LOCALE_SOURCE_TTT|$kim_helper_files/locale|g" "$file"
+for file in "$kim_helper_files"/bin/kim_*; do
+  sed -i "s|KIM_INST_TTT|kim_inst='$kim_helper_files'|g" "$file"
+  sed -i "s|SOURCE_TRANSLATION_TTT|. '$kim_helper_files/kim_translation'|g" "$file"
 done
+sed -i "s|LOCALE_SOURCE_TTT|'$kim_helper_files/locale'|g" "$kim_helper_files/kim_translation"
 
 # install translation mo files
-for i in $kim_helper_files/po/*.po; do
+for i in "$kim_helper_files"/po/*.po; do
 	TRANSLANG=`basename -s .po $i`
-	mkdir -p $kim_helper_files/locale/$TRANSLANG/LC_MESSAGES
-	msgfmt -o $kim_helper_files/locale/$TRANSLANG/LC_MESSAGES/kim6.mo $i
+	mkdir -p "$kim_helper_files"/locale/$TRANSLANG/LC_MESSAGES
+	msgfmt -o "$kim_helper_files"/locale/$TRANSLANG/LC_MESSAGES/kim6.mo $i
 done
+# po files do not need to be installed after generating locale
+rm -rf "$kim_helper_files/"po
 
 if [[ "$install_log" == "" ]]; then
-	echo "Kim has been i succesfully installed. Good bye!"
+	echo "Kim has been succesfully installed. Good bye!":
 else
 	spit_install_log
 fi

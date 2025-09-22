@@ -1,4 +1,2 @@
-
-export TEXTDOMAINDIR=/usr/share/locale
-export TEXTDOMAIN=kim6
-
+export TEXTDOMAINDIR=LOCALE_SOURCE_TTT
+export TEXTDOMAIN='kim6'

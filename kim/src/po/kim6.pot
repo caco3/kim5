@@ -1,271 +1,268 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the KIM 6 – Kde Image Menu 6 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 22:31+0800\n"
+"Project-Id-Version: KIM 6 – Kde Image Menu 6 1.1\n"
+"Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
+"POT-Creation-Date: 2025-09-22 16:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: bin/kim_album:22 bin/kim_print:26
+#: ../bin/kim_album:24 ../bin/kim_print:28
 msgid "Kim – Select album type:"
 msgstr ""
 
-#: bin/kim_album:22
+#: ../bin/kim_album:24
 msgid "1x1 portrait album"
 msgstr ""
 
-#: bin/kim_album:22
+#: ../bin/kim_album:24
 msgid "1x1 landscape album"
 msgstr ""
 
-#: bin/kim_album:22
+#: ../bin/kim_album:24
 msgid "1x2 landscape album"
 msgstr ""
 
-#: bin/kim_album:22
+#: ../bin/kim_album:24
 msgid "2x1 portrait album"
 msgstr ""
 
-#: bin/kim_album:22
+#: ../bin/kim_album:24
 msgid "2x2 landscape album"
 msgstr ""
 
-#: bin/kim_album:22 bin/kim_print:26
+#: ../bin/kim_album:24 ../bin/kim_print:28
 msgid "3x2 portrait album"
 msgstr ""
 
-#: bin/kim_album:22
+#: ../bin/kim_album:24
 msgid "3x4 landscape album"
 msgstr ""
 
-#: bin/kim_album:22
+#: ../bin/kim_album:24
 msgid "4x4 landscape album"
 msgstr ""
 
-#: bin/kim_album:28
+#: ../bin/kim_album:30
 msgid "Kim – Creating miniatures ..."
 msgstr ""
 
-#: bin/kim_album:31 bin/kim_album:37 bin/kim_album:43 bin/kim_album:48
-#: bin/kim_album:53 bin/kim_album:58 bin/kim_album:63 bin/kim_album:68
-#: bin/kim_print:52 bin/kim_print:58 bin/kim_print:63 bin/kim_print:68
-#: bin/kim_print:73 bin/kim_print:78 bin/kim_print:83
+#: ../bin/kim_album:33 ../bin/kim_album:39 ../bin/kim_album:45
+#: ../bin/kim_album:50 ../bin/kim_album:55 ../bin/kim_album:60
+#: ../bin/kim_album:65 ../bin/kim_album:70 ../bin/kim_print:54
+#: ../bin/kim_print:60 ../bin/kim_print:65 ../bin/kim_print:70
+#: ../bin/kim_print:75 ../bin/kim_print:80 ../bin/kim_print:85
 msgid "Kim – Creating album ..."
 msgstr ""
 
-#: bin/kim_album:72 bin/kim_print:87
+#: ../bin/kim_album:74 ../bin/kim_print:89
 msgid "Kim – Unrecognized option ! "
 msgstr ""
 
-#: bin/kim_album:75 bin/kim_print:90
+#: ../bin/kim_album:77 ../bin/kim_print:92
 msgid "Kim – Deleting miniatures ..."
 msgstr ""
 
-#: bin/kim_compress:30 bin/kim_compress:72 bin/kim_record:29 bin/kim_record:31
-#: bin/kim_record_mpg:29 bin/kim_record_mpg:31 bin/kim_rename:29
-#: bin/kim_rename:87 bin/kim_resize:30 bin/kim_resize:72 bin/kim_sortbydate:31
-#: bin/kim_sortbydate:106 bin/kim_treatment:34 bin/kim_treatment:114
-#: bin/kim_video:30 bin/kim_video:77 bin/kim_webexport:30 bin/kim_webexport:72
+#: ../bin/kim_compress:29 ../bin/kim_compress:71 ../bin/kim_record:31
+#: ../bin/kim_record:33 ../bin/kim_record_mpg:31 ../bin/kim_record_mpg:33
+#: ../bin/kim_rename:31 ../bin/kim_rename:89 ../bin/kim_resize:29
+#: ../bin/kim_resize:72 ../bin/kim_sortbydate:33 ../bin/kim_sortbydate:108
+#: ../bin/kim_treatment:33 ../bin/kim_treatment:113 ../bin/kim_video:29
+#: ../bin/kim_video:76 ../bin/kim_webexport:29 ../bin/kim_webexport:71
 msgid "Kim"
 msgstr ""
 
-#: bin/kim_compress:30 bin/kim_rename:29 bin/kim_resize:30
-#: bin/kim_sortbydate:31 bin/kim_treatment:34 bin/kim_video:30
-#: bin/kim_webexport:30
+#: ../bin/kim_compress:29 ../bin/kim_rename:31 ../bin/kim_resize:29
+#: ../bin/kim_sortbydate:33 ../bin/kim_treatment:33 ../bin/kim_video:29
+#: ../bin/kim_webexport:29
 msgid "Do you want to replace existing files?"
 msgstr ""
 
-#: bin/kim_compress:33 bin/kim_compress:53 bin/kim_convert:29
-#: bin/kim_flipflop:29 bin/kim_galery:20 bin/kim_pelemele:38 bin/kim_print:28
-#: bin/kim_rename:32 bin/kim_rename:60 bin/kim_resize:33 bin/kim_resize:53
-#: bin/kim_resizeandsend:34 bin/kim_rotate:29 bin/kim_rotatewithexif:29
-#: bin/kim_slideshow:24 bin/kim_sortbydate:35 bin/kim_sortbydate:71
-#: bin/kim_treatment:37 bin/kim_treatment:76 bin/kim_video:33 bin/kim_video:54
+#: ../bin/kim_compress:32 ../bin/kim_compress:52 ../bin/kim_convert:28
+#: ../bin/kim_flipflop:28 ../bin/kim_galery:19 ../bin/kim_pelemele:37
+#: ../bin/kim_print:30 ../bin/kim_rename:34 ../bin/kim_rename:62
+#: ../bin/kim_resize:32 ../bin/kim_resize:53 ../bin/kim_resizeandsend:36
+#: ../bin/kim_rotate:31 ../bin/kim_rotatewithexif:31 ../bin/kim_sortbydate:37
+#: ../bin/kim_sortbydate:73 ../bin/kim_treatment:36 ../bin/kim_treatment:75
+#: ../bin/kim_video:32 ../bin/kim_video:53
 msgid "Kim – Initialising ..."
 msgstr ""
 
-#: bin/kim_compress:45 bin/kim_compress:66 bin/kim_multiburst:52
-#: bin/kim_video:45 bin/kim_video:71 bin/kim_webexport:46 bin/kim_webexport:66
+#: ../bin/kim_compress:44 ../bin/kim_compress:65 ../bin/kim_multiburst:54
+#: ../bin/kim_video:44 ../bin/kim_video:70 ../bin/kim_webexport:45
+#: ../bin/kim_webexport:65
 msgid "Kim – Compressing file: "
 msgstr ""
 
-#: bin/kim_compress:72 bin/kim_rename:87 bin/kim_resize:72
-#: bin/kim_sortbydate:106 bin/kim_treatment:114 bin/kim_video:77
-#: bin/kim_webexport:72
+#: ../bin/kim_compress:71 ../bin/kim_rename:89 ../bin/kim_sortbydate:108
+#: ../bin/kim_treatment:113 ../bin/kim_video:76
 msgid "The action was cancelled by user !"
 msgstr ""
 
-#: bin/kim_convert:42
+#: ../bin/kim_convert:41
 msgid "Kim – Converting file:"
 msgstr ""
 
-#: bin/kim_flipflop:42 bin/kim_rotate:46 bin/kim_rotatewithexif:43
+#: ../bin/kim_flipflop:41 ../bin/kim_rotate:48 ../bin/kim_rotatewithexif:45
 msgid "Kim – Rotating file: "
 msgstr ""
 
-#: bin/kim_galery:10 bin/kim_slideshow:16
+#: ../bin/kim_galery:9
 msgid "Kim – Title:"
 msgstr ""
 
-#: bin/kim_galery:10 bin/kim_slideshow:16
+#: ../bin/kim_galery:9
 msgid "My title ..."
 msgstr ""
 
-#: bin/kim_galery:11 bin/kim_slideshow:17
+#: ../bin/kim_galery:10
 msgid "Kim – Author:"
 msgstr ""
 
-#: bin/kim_galery:15
+#: ../bin/kim_galery:14
 msgid "Kim – Number of columns:"
 msgstr ""
 
-#: bin/kim_galery:60 bin/kim_slideshow:59 bin/kim_treatment:49
-#: bin/kim_treatment:88
+#: ../bin/kim_galery:59 ../bin/kim_treatment:48 ../bin/kim_treatment:87
 msgid "Kim – Treatment of file: "
 msgstr ""
 
-#: bin/kim_multiburst:33 bin/kim_webexport:33 bin/kim_webexport:53
+#: ../bin/kim_multiburst:35 ../bin/kim_webexport:32 ../bin/kim_webexport:52
 msgid "Kim – Initialising compression"
 msgstr ""
 
-#: bin/kim_pelemele:30
+#: ../bin/kim_pelemele:29
 msgid "Size of small images:"
 msgstr ""
 
-#: bin/kim_pelemele:31
+#: ../bin/kim_pelemele:30
 msgid "Number of rows and columns:"
 msgstr ""
 
-#: bin/kim_pelemele:32
+#: ../bin/kim_pelemele:31
 msgid "Overlaping ratio in percent:"
 msgstr ""
 
-#: bin/kim_pelemele:33
+#: ../bin/kim_pelemele:32
 msgid "Background color:"
 msgstr ""
 
-#: bin/kim_pelemele:65 bin/kim_print:43
+#: ../bin/kim_pelemele:65 ../bin/kim_print:45
 msgid "Kim – resizing of file: "
 msgstr ""
 
-#: bin/kim_print:26
+#: ../bin/kim_print:28
 msgid "9x13 cm: 2x2 images, landscape"
 msgstr ""
 
-#: bin/kim_print:26
+#: ../bin/kim_print:28
 msgid "10x15 cm: 1x2 images, portrait"
 msgstr ""
 
-#: bin/kim_print:26
+#: ../bin/kim_print:28
 msgid "11.5x15 cm: 1x2 images, portrait"
 msgstr ""
 
-#: bin/kim_print:26
+#: ../bin/kim_print:28
 msgid "13x18 cm: 1x2 images, portrait"
 msgstr ""
 
-#: bin/kim_print:26
+#: ../bin/kim_print:28
 msgid "20x25 cm: 1 image, landscape"
 msgstr ""
 
-#: bin/kim_print:26
+#: ../bin/kim_print:28
 msgid "Thumbnails: 4x5 images, portrait"
 msgstr ""
 
-#: bin/kim_record:29 bin/kim_record_mpg:29
+#: ../bin/kim_record:31 ../bin/kim_record_mpg:31
 msgid "Choose duration of animation (sec):"
 msgstr ""
 
-#: bin/kim_record:31 bin/kim_record_mpg:31
+#: ../bin/kim_record:33 ../bin/kim_record_mpg:33
 msgid "Click 'Ok' and then choose the window target ! "
 msgstr ""
 
-#: bin/kim_record:56 bin/kim_record_mpg:57
+#: ../bin/kim_record:58 ../bin/kim_record_mpg:59
 msgid "Kim – Record"
 msgstr ""
 
-#: bin/kim_record:56 bin/kim_record_mpg:57
+#: ../bin/kim_record:58 ../bin/kim_record_mpg:59
 msgid "The animation is created ! "
 msgstr ""
 
-#: bin/kim_rename:35 bin/kim_rename:63
+#: ../bin/kim_rename:37 ../bin/kim_rename:65
 msgid "Choose the new name of images:"
 msgstr ""
 
-#: bin/kim_rename:53 bin/kim_rename:81 bin/kim_sortbydate:64
-#: bin/kim_sortbydate:100
+#: ../bin/kim_rename:55 ../bin/kim_rename:83 ../bin/kim_sortbydate:66
+#: ../bin/kim_sortbydate:102
 msgid "Kim – Renaming file: "
 msgstr ""
 
-#: bin/kim_resize:46 bin/kim_resize:66
+#: ../bin/kim_resize:45 ../bin/kim_resize:66
 msgid "Kim – Resizing file: "
 msgstr ""
 
-#: bin/kim_resizeandsend:31
+#: ../bin/kim_resize:72 ../bin/kim_webexport:71
+msgid "The action was cancelled by user!"
+msgstr ""
+
+#: ../bin/kim_resizeandsend:33
 msgid "Kim – Send by mail:"
 msgstr ""
 
-#: bin/kim_resizeandsend:31
+#: ../bin/kim_resizeandsend:33
 msgid "Full size"
 msgstr ""
 
-#: bin/kim_resizeandsend:31
+#: ../bin/kim_resizeandsend:33
 msgid "800x600 px"
 msgstr ""
 
-#: bin/kim_resizeandsend:31
+#: ../bin/kim_resizeandsend:33
 msgid "600x450 px"
 msgstr ""
 
-#: bin/kim_resizeandsend:31
+#: ../bin/kim_resizeandsend:33
 msgid "300x225 px"
 msgstr ""
 
-#: bin/kim_resizeandsend:48
+#: ../bin/kim_resizeandsend:50
 msgid "Kim – Resizing and compressing file: "
 msgstr ""
 
-#: bin/kim_resizeandsend:63 bin/kim_resizeandsend:67
+#: ../bin/kim_resizeandsend:65 ../bin/kim_resizeandsend:70
+#: ../bin/kim_resizeandsend:75
 msgid "Kim – Send by mail: you can write your message!"
 msgstr ""
 
-#: bin/kim_slideshow:5
-msgid ""
-"This feature is supposed to create a Flash slideshow, but Flash is dead "
-"now!  Are you sure you want to do that?"
-msgstr ""
-
-#: bin/kim_slideshow:19
-msgid "Kim – Size:"
-msgstr ""
-
-#: bin/kim_treatment:31
+#: ../bin/kim_treatment:30
 msgid "Choose your annotation:"
 msgstr ""
 
-#: bin/kim_treatment:31
+#: ../bin/kim_treatment:30
 msgid "My annotation"
 msgstr ""
 
-#: bin/kim_treatment:32
+#: ../bin/kim_treatment:31
 msgid "Kim – Select border color:"
 msgstr ""
 
-#: bin/kim_treatment:32
+#: ../bin/kim_treatment:31
 msgid "white"
 msgstr ""
 
-#: bin/kim_treatment:32
+#: ../bin/kim_treatment:31
 msgid "black"
 msgstr ""

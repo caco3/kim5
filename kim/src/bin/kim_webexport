@@ -16,22 +16,19 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, U
 #
-# Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
+# Author:  	Charles Bouveyron <charles.bouveyron@free.fr>
 #		Alessandro Faggiano <>
 #		Mathieu Vilaplana <mathieu@creationgif.com>
 #		Raphaël Pinson <raphink@raphink.net>
 
-TEXTDOMAIN="kim6"
-TEXTDOMAINDIR=LOCALE_SOURCE_TTT
 SOURCE_TRANSLATION_TTT
-
 FILE="";
 SCELTA="$1";
 DIR="$2";
 let "nbfiles = ($# -1)/2"
 kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to replace existing files?")"
 case $? in
-	0)	# Replace existing files !
+	0)	# Replace existing files!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising compression")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	compteur=0
@@ -71,7 +68,7 @@ case $? in
 	done
 	qdbus $dbusRef close;;
 	
-	2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user !")"
+	2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user!")"
 	exit 1;;
 esac;
 

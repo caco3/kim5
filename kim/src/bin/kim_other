@@ -16,13 +16,10 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, U
 #
-# Author : 	Charles Bouveyron <charles.bouveyron@free.fr>
+# Author: 	Charles Bouveyron <charles.bouveyron@free.fr>
 #		Raphaël Pinson <raphink@raphink.net>
 
-TEXTDOMAIN="kim6"
-TEXTDOMAINDIR=LOCALE_SOURCE_TTT
 SOURCE_TRANSLATION_TTT
-
 ATTACHMENTS="";
 ACTION="$1";
 KIM_INST_TTT
