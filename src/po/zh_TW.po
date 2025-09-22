@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kim 5\n"
+"Project-Id-Version: KIM 6 – Kde Image Menu 6\n"
 "Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
-"POT-Creation-Date: 2025-09-22 19:13+0200\n"
+"POT-Creation-Date: 2025-09-22 23:03+0200\n"
 "PO-Revision-Date: 2020-08-20 22:13+0800\n"
 "Last-Translator: Franklin Weng <franklin@goodhorse.idv.tw>\n"
 "Language-Team: Chinese (traditional) <zh_l10n@lists.linux.org.tw>\n"
@@ -248,6 +248,193 @@ msgstr "白色"
 #: ../bin/kim_treatment:33
 msgid "black"
 msgstr "黑色"
+
+#: ../kim_compressandresize.desktop.in.h:1
+#: ../kim_compressandresizevideo.desktop.in.h:1
+msgid "Kim – Compress and Resize"
+msgstr "Kim – 壓縮與調整大小"
+
+# Compress and resize actions
+#: ../kim_compressandresize.desktop.in.h:3
+msgid "Compress at 75 %"
+msgstr "壓縮到 75%"
+
+#: ../kim_compressandresize.desktop.in.h:5
+msgid "Compress at 80 %"
+msgstr "壓縮到 80%"
+
+#: ../kim_compressandresize.desktop.in.h:7
+msgid "Compress at 90 %"
+msgstr "壓縮到 90%"
+
+#: ../kim_compressandresize.desktop.in.h:8
+msgid "Compress Custom..."
+msgstr "自訂壓縮比例"
+
+#: ../kim_compressandresize.desktop.in.h:9
+msgid "Resize (300x225 pixels)"
+msgstr "調整大小（300x225 像素）"
+
+#: ../kim_compressandresize.desktop.in.h:10
+msgid "Resize (600x450 pixels)"
+msgstr "調整大小（600x450 像素）"
+
+#: ../kim_compressandresize.desktop.in.h:11
+msgid "Resize (800x600 pixels)"
+msgstr "調整大小（800x600 像素）"
+
+#: ../kim_compressandresize.desktop.in.h:12
+msgid "Resize (1024x768 pixels)"
+msgstr "調整大小（1024x768 像素）"
+
+#: ../kim_compressandresize.desktop.in.h:13
+msgid "Resize (1200x900 pixels)"
+msgstr "調整大小（1200x900 像素）"
+
+#: ../kim_compressandresize.desktop.in.h:14
+msgid "Resize (1400x1050 pixels)"
+msgstr "調整大小（1400x1050 像素）"
+
+#: ../kim_compressandresize.desktop.in.h:15
+msgid "Resize Custom..."
+msgstr "自訂調整大小"
+
+#: ../kim_compressandresize.desktop.in.h:17
+msgid "WebExport: 600x450 at 75 %"
+msgstr "網頁匯出：600x450 比例 75%"
+
+#: ../kim_compressandresize.desktop.in.h:19
+msgid "WebExport: 800x600 at 75 %"
+msgstr "網頁匯出：800x600 比例 75%"
+
+#: ../kim_compressandresize.desktop.in.h:21
+msgid "WebExport: 1024x768 at 75 %"
+msgstr "網頁匯出：1024x768 比例 75%"
+
+#: ../kim_compressandresizevideo.desktop.in.h:2
+msgid "Compress video hd720"
+msgstr "壓縮影像為 720p"
+
+#: ../kim_convertandrotate.desktop.in.h:1
+msgid "Kim – Convert and Rotate"
+msgstr "Kim – 轉換與旋轉"
+
+#: ../kim_convertandrotate.desktop.in.h:2
+msgid "Convert to JPEG"
+msgstr "轉換成 JPEG"
+
+#: ../kim_convertandrotate.desktop.in.h:3
+msgid "Convert to PNG"
+msgstr "轉換成 PNG"
+
+#: ../kim_convertandrotate.desktop.in.h:4
+msgid "Convert to GIF"
+msgstr "轉換成 GIF"
+
+#: ../kim_convertandrotate.desktop.in.h:5
+msgid "Convert to TIF"
+msgstr "轉換成 TIF"
+
+#: ../kim_convertandrotate.desktop.in.h:6
+msgid "Convert to PDF"
+msgstr "轉換成 PDF"
+
+#: ../kim_convertandrotate.desktop.in.h:7
+msgid "Convert custom ..."
+msgstr "自訂轉換格式"
+
+#: ../kim_convertandrotate.desktop.in.h:8
+msgid "Convert to graysale"
+msgstr "轉換成灰階"
+
+#: ../kim_convertandrotate.desktop.in.h:9
+msgid "Convert in sepia tone"
+msgstr "轉換成深褐色調（sepia tone）"
+
+#: ../kim_convertandrotate.desktop.in.h:10
+msgid "Auto-rotate with EXIF"
+msgstr "自動旋轉 (根據 EXIF)"
+
+#: ../kim_convertandrotate.desktop.in.h:11
+msgid "Rotate (90°)"
+msgstr "旋轉（90°）"
+
+#: ../kim_convertandrotate.desktop.in.h:12
+msgid "Rotate (180°)"
+msgstr "旋轉（180°）"
+
+#: ../kim_convertandrotate.desktop.in.h:13
+msgid "Rotate (270°)"
+msgstr "旋轉（270°）"
+
+#: ../kim_convertandrotate.desktop.in.h:14
+msgid "Rotate custom..."
+msgstr "自訂旋轉角度"
+
+#: ../kim_convertandrotate.desktop.in.h:15
+msgid "Flip verticaly"
+msgstr "垂直"
+
+#: ../kim_convertandrotate.desktop.in.h:16
+msgid "Flip horizontaly"
+msgstr "水平"
+
+#: ../kim_publication.desktop.in.h:1
+msgid "Kim – Treatment and publication"
+msgstr "Kim – 處理與發布"
+
+#: ../kim_publication.desktop.in.h:2
+msgid "Create a html gallery"
+msgstr "建立 HTML 藝廊"
+
+#: ../kim_publication.desktop.in.h:3
+msgid "Create a photo montage"
+msgstr "建立相片拼布"
+
+#: ../kim_publication.desktop.in.h:4
+msgid "Send by mail"
+msgstr "透過郵件傳遞"
+
+#: ../kim_publication.desktop.in.h:5
+msgid "Sort by date"
+msgstr "依日期排序"
+
+#: ../kim_publication.desktop.in.h:6
+msgid "Rename images"
+msgstr "重新命名圖片"
+
+#: ../kim_publication.desktop.in.h:7
+msgid "Create a multi-files Tiff image"
+msgstr "建立多檔案的 Tiff 影像"
+
+#: ../kim_publication.desktop.in.h:8
+msgid "Create a gif animation"
+msgstr "建立 GIF 動畫"
+
+#: ../kim_publication.desktop.in.h:9
+msgid "Multiburst image to gif animation"
+msgstr "將多張影像轉換成 GIF 動畫"
+
+#: ../kim_publication.desktop.in.h:10
+msgid "Add a border"
+msgstr "新增邊框"
+
+#: ../kim_publication.desktop.in.h:11
+#, fuzzy
+msgid "Create a pdf album"
+msgstr "建立 GIF 動畫"
+
+#: ../kim_publication.desktop.in.h:12
+msgid "Add text annotation"
+msgstr "新增文字註記"
+
+#: ../kim_publication.desktop.in.h:13
+msgid "License"
+msgstr "版權宣告"
+
+#: ../kim_publication.desktop.in.h:14
+msgid "About Kim"
+msgstr "關於 Kim"
 
 #, fuzzy
 #~ msgid "The action was cancelled by user !"

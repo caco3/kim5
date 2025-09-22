@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
-"POT-Creation-Date: 2025-09-22 19:13+0200\n"
+"POT-Creation-Date: 2025-09-22 22:44+0200\n"
 "PO-Revision-Date: 2021-06-06 13:19+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <>\n"
@@ -248,6 +248,192 @@ msgstr "wit"
 #: ../bin/kim_treatment:33
 msgid "black"
 msgstr "zwart"
+
+#: ../kim_compressandresize.desktop.in.h:1
+#: ../kim_compressandresizevideo.desktop.in.h:1
+msgid "Kim – Compress and Resize"
+msgstr "Kim – Comprimeren en grootte aanpassen"
+
+#: ../kim_compressandresize.desktop.in.h:3
+msgid "Compress at 75 %"
+msgstr "75% comprimeren"
+
+#: ../kim_compressandresize.desktop.in.h:5
+msgid "Compress at 80 %"
+msgstr "80% comprimeren"
+
+#: ../kim_compressandresize.desktop.in.h:7
+msgid "Compress at 90 %"
+msgstr "90% comprimeren"
+
+#: ../kim_compressandresize.desktop.in.h:8
+msgid "Compress Custom..."
+msgstr "Geavanceerd…"
+
+#: ../kim_compressandresize.desktop.in.h:9
+msgid "Resize (300x225 pixels)"
+msgstr "Grootte aanpassen (300x225 pixels)"
+
+#: ../kim_compressandresize.desktop.in.h:10
+msgid "Resize (600x450 pixels)"
+msgstr "Grootte aanpassen (600x450 pixels)"
+
+#: ../kim_compressandresize.desktop.in.h:11
+msgid "Resize (800x600 pixels)"
+msgstr "Grootte aanpassen (800x600 pixels)"
+
+#: ../kim_compressandresize.desktop.in.h:12
+msgid "Resize (1024x768 pixels)"
+msgstr "Grootte aanpassen (1024x768 pixels)"
+
+#: ../kim_compressandresize.desktop.in.h:13
+msgid "Resize (1200x900 pixels)"
+msgstr "Grootte aanpassen (1200x900 pixels)"
+
+#: ../kim_compressandresize.desktop.in.h:14
+msgid "Resize (1400x1050 pixels)"
+msgstr "Grootte aanpassen (1400x1050 pixels)"
+
+#: ../kim_compressandresize.desktop.in.h:15
+msgid "Resize Custom..."
+msgstr "Geavanceerd…"
+
+#: ../kim_compressandresize.desktop.in.h:17
+msgid "WebExport: 600x450 at 75 %"
+msgstr "Webafbeelding (600x450 pixels, 75%)"
+
+#: ../kim_compressandresize.desktop.in.h:19
+msgid "WebExport: 800x600 at 75 %"
+msgstr "Webafbeelding (800x600 pixels, 75%)"
+
+#: ../kim_compressandresize.desktop.in.h:21
+msgid "WebExport: 1024x768 at 75 %"
+msgstr "Webafbeelding (1024x768 pixels, 75%)"
+
+#: ../kim_compressandresizevideo.desktop.in.h:2
+msgid "Compress video hd720"
+msgstr "Video comprimeren (720p)"
+
+#: ../kim_convertandrotate.desktop.in.h:1
+msgid "Kim – Convert and Rotate"
+msgstr "Kim – Converteren en draaien"
+
+#: ../kim_convertandrotate.desktop.in.h:2
+msgid "Convert to JPEG"
+msgstr "Converteren naar jpeg"
+
+#: ../kim_convertandrotate.desktop.in.h:3
+msgid "Convert to PNG"
+msgstr "Converteren naar png"
+
+#: ../kim_convertandrotate.desktop.in.h:4
+msgid "Convert to GIF"
+msgstr "Converteren naar gif"
+
+#: ../kim_convertandrotate.desktop.in.h:5
+msgid "Convert to TIF"
+msgstr "Converteren naar tiff"
+
+#: ../kim_convertandrotate.desktop.in.h:6
+msgid "Convert to PDF"
+msgstr "Converteren naar pdf"
+
+#: ../kim_convertandrotate.desktop.in.h:7
+msgid "Convert custom ..."
+msgstr "Geavanceerd…"
+
+#: ../kim_convertandrotate.desktop.in.h:8
+msgid "Convert to graysale"
+msgstr "Converteren naar grijstinten"
+
+#: ../kim_convertandrotate.desktop.in.h:9
+msgid "Convert in sepia tone"
+msgstr "Converteren naar sepia"
+
+#: ../kim_convertandrotate.desktop.in.h:10
+msgid "Auto-rotate with EXIF"
+msgstr "Automatisch draaien met exif"
+
+#: ../kim_convertandrotate.desktop.in.h:11
+msgid "Rotate (90°)"
+msgstr "90° draaien"
+
+#: ../kim_convertandrotate.desktop.in.h:12
+msgid "Rotate (180°)"
+msgstr "180° draaien"
+
+#: ../kim_convertandrotate.desktop.in.h:13
+msgid "Rotate (270°)"
+msgstr "270° draaien"
+
+#: ../kim_convertandrotate.desktop.in.h:14
+msgid "Rotate custom..."
+msgstr "Geavanceerd…"
+
+#: ../kim_convertandrotate.desktop.in.h:15
+msgid "Flip verticaly"
+msgstr "Verticaal spiegelen"
+
+#: ../kim_convertandrotate.desktop.in.h:16
+msgid "Flip horizontaly"
+msgstr "Horizontaal spiegelen"
+
+#: ../kim_publication.desktop.in.h:1
+msgid "Kim – Treatment and publication"
+msgstr "Kim – Aanpassen en publiceren"
+
+#: ../kim_publication.desktop.in.h:2
+msgid "Create a html gallery"
+msgstr "HTML-galerij samenstellen"
+
+#: ../kim_publication.desktop.in.h:3
+msgid "Create a photo montage"
+msgstr "Fotomontage maken"
+
+#: ../kim_publication.desktop.in.h:4
+msgid "Send by mail"
+msgstr "Versturen per e-mail"
+
+#: ../kim_publication.desktop.in.h:5
+msgid "Sort by date"
+msgstr "Sorteren op datum"
+
+#: ../kim_publication.desktop.in.h:6
+msgid "Rename images"
+msgstr "Afbeeldingsnamen wijzigen"
+
+#: ../kim_publication.desktop.in.h:7
+msgid "Create a multi-files Tiff image"
+msgstr "TIFF met meerdere pagina's samenstellen"
+
+#: ../kim_publication.desktop.in.h:8
+msgid "Create a gif animation"
+msgstr "GIF-animatie maken"
+
+#: ../kim_publication.desktop.in.h:9
+msgid "Multiburst image to gif animation"
+msgstr "GIF-animatie maken uit reeks"
+
+#: ../kim_publication.desktop.in.h:10
+msgid "Add a border"
+msgstr "Kader toevoegen"
+
+#: ../kim_publication.desktop.in.h:11
+#, fuzzy
+msgid "Create a pdf album"
+msgstr "GIF-animatie maken"
+
+#: ../kim_publication.desktop.in.h:12
+msgid "Add text annotation"
+msgstr "Aantekening toevoegen"
+
+#: ../kim_publication.desktop.in.h:13
+msgid "License"
+msgstr "Licentie"
+
+#: ../kim_publication.desktop.in.h:14
+msgid "About Kim"
+msgstr "Over Kim"
 
 #, fuzzy
 #~ msgid "The action was cancelled by user !"

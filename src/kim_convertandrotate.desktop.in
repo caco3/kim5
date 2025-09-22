@@ -21,133 +21,79 @@ Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,image/*
 Actions=JPEG;PNG;GIF;TIF;PDF;ConvCustom;_SEPARATOR_;GrayScale;Sepia;_SEPARATOR_;AutoRot;Rot90;Rot180;Rot270;RotCustom;_SEPARATOR_;Flip;Flop
 Encoding=UTF-8
-X-KDE-Submenu=Kim – Convert and Rotate
-X-KDE-Submenu[fr]=Kim – Convertir et tourner
-X-KDE-Submenu[nl]=Kim – Converteren en draaien
-X-KDE-Submenu[zh_TW]=Kim – 轉換與旋轉
+_X-KDE-Submenu=Kim – Convert and Rotate
 
 [Desktop Action JPEG]
-Name=Convert to JPEG
-Name[fr]=Convertir en JPEG
-Name[nl]=Converteren naar jpeg
-Name[zh_TW]=轉換成 JPEG
+_Name=Convert to JPEG
 Icon=document-save
 Exec=kim_convert jpg %U
 
 [Desktop Action PNG]
-Name=Convert to PNG
-Name[fr]=Convertir en PNG
-Name[nl]=Converteren naar png
-Name[zh_TW]=轉換成 PNG
+_Name=Convert to PNG
 Icon=document-save
 Exec=kim_convert png %U
 
 [Desktop Action GIF]
-Name=Convert to GIF
-Name[fr]=Convertir en GIF
-Name[nl]=Converteren naar gif
-Name[zh_TW]=轉換成 GIF
+_Name=Convert to GIF
 Icon=document-save
 Exec=kim_convert gif %U
 
 [Desktop Action TIF]
-Name=Convert to TIF
-Name[fr]=Convertir en TIF
-Name[nl]=Converteren naar tiff
-Name[zh_TW]=轉換成 TIF
+_Name=Convert to TIF
 Icon=document-save
 Exec=kim_convert tiff %U
 
 [Desktop Action PDF]
-Name=Convert to PDF
-Name[fr]=Convertir en PDF
-Name[nl]=Converteren naar pdf
-Name[zh_TW]=轉換成 PDF
+_Name=Convert to PDF
 Icon=application-pdf
 Exec=kim_convert pdf %U
 
 [Desktop Action ConvCustom]
-Name=Convert custom ...
-Name[fr]=Conversion personnalisée
-Name[nl]=Geavanceerd…
-Name[zh_TW]=自訂轉換格式
+_Name=Convert custom ...
 Icon=document-save
 Exec=kim_convert `kdialog --inputbox "Choose format to convert:" ` %U;
 
 [Desktop Action GrayScale]
-Name=Convert to graysale
-Name[fr]=Convertir en échelle de gris
-Name[nl]=Converteren naar grijstinten
-Name[zh_TW]=轉換成灰階
+_Name=Convert to graysale
 Icon=document-save
 Exec=kim_treatment gray %D %U
 
 [Desktop Action Sepia]
-Name=Convert in sepia tone
-Name[fr]=Convertir en sépia
-Name[nl]=Converteren naar sepia
-Name[zh_TW]=轉換成深褐色調（sepia tone）
+_Name=Convert in sepia tone
 Icon=document-save
 Exec=kim_treatment sepia %D %U
 
 [Desktop Action AutoRot];
-Name=Auto-rotate with EXIF
-Name[fr]=Rotation automatique (EXIF)
-Name[nl]=Automatisch draaien met exif
-Name[zh_TW]=自動旋轉 (根據 EXIF)
+_Name=Auto-rotate with EXIF
 Icon=object-rotate-right
 Exec=kim_rotate EXIF %U
 
 [Desktop Action Rot90];
-Name=Rotate (90°)
-Name[fr]=Tourner de 90°
-Name[nl]=90° draaien
-Name[zh_TW]=旋轉（90°）
+_Name=Rotate (90°)
 Icon=object-rotate-right
 Exec=kim_rotate 90 %U
 
 [Desktop Action Rot180]
-Name=Rotate (180°)
-Name[fr]=Tourner de 180°
-Name[nl]=180° draaien
-Name[zh_TW]=旋轉（180°）
+_Name=Rotate (180°)
 Icon=object-rotate-right
 Exec=kim_rotate 180 %U
 
 [Desktop Action Rot270]
-Name=Rotate (270°)
-Name[fr]=Tourner de 270°
-Name[nl]=270° draaien
-Name[zh_TW]=旋轉（270°）
+_Name=Rotate (270°)
 Icon=object-rotate-right
 Exec=kim_rotate 270 %U
 
 [Desktop Action RotCustom]
-Name=Rotate custom...
-Name[fr]=Rotation personnalisée
-Name[nl]=Geavanceerd…
-Name[zh_TW]=自訂旋轉角度
+_Name=Rotate custom...
 Icon=object-rotate-right
 Exec=kim_rotate `kdialog --inputbox "Rotate x degrees:" 45` %U;
 
 [Desktop Action Flip]
-Name=Flip verticaly
-Name[de]=Vertikal spiegeln
-Name[es]=Verticalmente
-Name[fr]=Verticalement
-Name[hu]=Tükrözés vízszintesen
-Name[nl]=Verticaal spiegelen
-Name[zh_TW]=垂直
+_Name=Flip verticaly
 Icon=object-flip-vertical
 Exec=kim_flipflop flip %U 
 
 [Desktop Action Flop]
-Name=Flip horizontaly
-Name[de]=Horizontal spiegeln
-Name[es]=Horizontalmente
-Name[fr]=Horizontalement
-Name[hu]=Tükrözés függőlegesen
-Name[nl]=Horizontaal spiegelen
-Name[zh_TW]=水平
+_Name=Flip horizontaly
 Icon=object-flip-horizontal
 Exec=kim_flipflop flop %U 

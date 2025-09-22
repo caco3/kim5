@@ -1,21 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Spanish translations for KIM 6 – Kde Image Menu 6 package.
+# Copyright (C) 2025 THE KIM 6 – Kde Image Menu 6'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the KIM 6 – Kde Image Menu 6 package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Tomáš Hnyk <drew@greenone>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: KIM 6 – Kde Image Menu 6 1.1\n"
 "Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
-"POT-Creation-Date: 2025-09-22 23:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2025-09-22 22:44+0200\n"
+"PO-Revision-Date: 2025-09-22 22:22+0200\n"
+"Last-Translator: Tomáš Hnyk <drew@greenone>\n"
+"Language-Team: Spanish <es@tp.org.es>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../bin/kim_album:25 ../bin/kim_print:29
 msgid "Kim – Select album type:"
@@ -370,11 +370,11 @@ msgstr ""
 
 #: ../kim_convertandrotate.desktop.in.h:15
 msgid "Flip verticaly"
-msgstr ""
+msgstr "Verticalmente"
 
 #: ../kim_convertandrotate.desktop.in.h:16
 msgid "Flip horizontaly"
-msgstr ""
+msgstr "Horizontalmente"
 
 #: ../kim_publication.desktop.in.h:1
 msgid "Kim – Treatment and publication"

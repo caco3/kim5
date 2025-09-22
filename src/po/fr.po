@@ -1,21 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# French translations for KIM 6 – Kde Image Menu 6 package.
+# Copyright (C) 2025 THE KIM 6 – Kde Image Menu 6'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the KIM 6 – Kde Image Menu 6 package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: KIM 6 – Kde Image Menu 6 1.1\n"
 "Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
-"POT-Creation-Date: 2025-09-22 23:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2025-09-22 22:44+0200\n"
+"PO-Revision-Date: 2025-09-22 22:16+0200\n"
+"Last-Translator:\n"
+"Language-Team: French <traduc@traduc.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../bin/kim_album:25 ../bin/kim_print:29
 msgid "Kim – Select album type:"
@@ -250,179 +249,182 @@ msgstr ""
 #: ../kim_compressandresize.desktop.in.h:1
 #: ../kim_compressandresizevideo.desktop.in.h:1
 msgid "Kim – Compress and Resize"
-msgstr ""
+msgstr "Kim – Compresser et redimensionner"
 
 #: ../kim_compressandresize.desktop.in.h:3
 msgid "Compress at 75 %"
-msgstr ""
+msgstr "Compresser à 75 %"
 
 #: ../kim_compressandresize.desktop.in.h:5
 msgid "Compress at 80 %"
-msgstr ""
+msgstr "Compresser à 80 %"
 
 #: ../kim_compressandresize.desktop.in.h:7
 msgid "Compress at 90 %"
-msgstr ""
+msgstr "Compresser à 90 %"
 
 #: ../kim_compressandresize.desktop.in.h:8
 msgid "Compress Custom..."
-msgstr ""
+msgstr "Compression personnalisée"
 
 #: ../kim_compressandresize.desktop.in.h:9
 msgid "Resize (300x225 pixels)"
-msgstr ""
+msgstr "Redimensionner (300x225 pixels)"
 
 #: ../kim_compressandresize.desktop.in.h:10
 msgid "Resize (600x450 pixels)"
-msgstr ""
+msgstr "Redimensionner (600x450 pixels)"
 
 #: ../kim_compressandresize.desktop.in.h:11
 msgid "Resize (800x600 pixels)"
-msgstr ""
+msgstr "Redimensionner (800x600 pixels)"
 
 #: ../kim_compressandresize.desktop.in.h:12
 msgid "Resize (1024x768 pixels)"
-msgstr ""
+msgstr "Redimensionner (1024x768 pixels)"
 
 #: ../kim_compressandresize.desktop.in.h:13
 msgid "Resize (1200x900 pixels)"
-msgstr ""
+msgstr "Redimensionner (1200x900 pixels)"
 
 #: ../kim_compressandresize.desktop.in.h:14
 msgid "Resize (1400x1050 pixels)"
-msgstr ""
+msgstr "Redimensionner (1400x1050 pixels)"
 
 #: ../kim_compressandresize.desktop.in.h:15
 msgid "Resize Custom..."
-msgstr ""
+msgstr "Redimensionnement personnalisé"
 
 #: ../kim_compressandresize.desktop.in.h:17
 msgid "WebExport: 600x450 at 75 %"
-msgstr ""
+msgstr "Pour le web : 600x450 à 75 %"
 
 #: ../kim_compressandresize.desktop.in.h:19
 msgid "WebExport: 800x600 at 75 %"
-msgstr ""
+msgstr "Pour le web : 800x600 à 75 %"
 
 #: ../kim_compressandresize.desktop.in.h:21
 msgid "WebExport: 1024x768 at 75 %"
-msgstr ""
+msgstr "Pour le web : 1024x768 à 75 %"
 
 #: ../kim_compressandresizevideo.desktop.in.h:2
+#, fuzzy
 msgid "Compress video hd720"
-msgstr ""
+msgstr "Compresser à 75 %"
 
 #: ../kim_convertandrotate.desktop.in.h:1
 msgid "Kim – Convert and Rotate"
-msgstr ""
+msgstr "Kim – Convertir et tourner"
 
+# Convert and rotate actions
 #: ../kim_convertandrotate.desktop.in.h:2
 msgid "Convert to JPEG"
-msgstr ""
+msgstr "Convertir en JPEG"
 
 #: ../kim_convertandrotate.desktop.in.h:3
 msgid "Convert to PNG"
-msgstr ""
+msgstr "Convertir en PNG"
 
 #: ../kim_convertandrotate.desktop.in.h:4
 msgid "Convert to GIF"
-msgstr ""
+msgstr "Convertir en GIF"
 
 #: ../kim_convertandrotate.desktop.in.h:5
 msgid "Convert to TIF"
-msgstr ""
+msgstr "Convertir en TIF"
 
 #: ../kim_convertandrotate.desktop.in.h:6
 msgid "Convert to PDF"
-msgstr ""
+msgstr "Convertir en PDF"
 
 #: ../kim_convertandrotate.desktop.in.h:7
 msgid "Convert custom ..."
-msgstr ""
+msgstr "Conversion personnalisée"
 
 #: ../kim_convertandrotate.desktop.in.h:8
 msgid "Convert to graysale"
-msgstr ""
+msgstr "Convertir en échelle de gris"
 
 #: ../kim_convertandrotate.desktop.in.h:9
 msgid "Convert in sepia tone"
-msgstr ""
+msgstr "Convertir en sépia"
 
 #: ../kim_convertandrotate.desktop.in.h:10
 msgid "Auto-rotate with EXIF"
-msgstr ""
+msgstr "Rotation automatique (EXIF)"
 
 #: ../kim_convertandrotate.desktop.in.h:11
 msgid "Rotate (90°)"
-msgstr ""
+msgstr "Tourner de 90°"
 
 #: ../kim_convertandrotate.desktop.in.h:12
 msgid "Rotate (180°)"
-msgstr ""
+msgstr "Tourner de 180°"
 
 #: ../kim_convertandrotate.desktop.in.h:13
 msgid "Rotate (270°)"
-msgstr ""
+msgstr "Tourner de 270°"
 
 #: ../kim_convertandrotate.desktop.in.h:14
 msgid "Rotate custom..."
-msgstr ""
+msgstr "Rotation personnalisée"
 
 #: ../kim_convertandrotate.desktop.in.h:15
 msgid "Flip verticaly"
-msgstr ""
+msgstr "Verticalement"
 
 #: ../kim_convertandrotate.desktop.in.h:16
 msgid "Flip horizontaly"
-msgstr ""
+msgstr "Horizontalement"
 
 #: ../kim_publication.desktop.in.h:1
 msgid "Kim – Treatment and publication"
-msgstr ""
+msgstr "Kim – Traitement et publication"
 
 #: ../kim_publication.desktop.in.h:2
 msgid "Create a html gallery"
-msgstr ""
+msgstr "Créer un album en html"
 
 #: ../kim_publication.desktop.in.h:3
 msgid "Create a photo montage"
-msgstr ""
+msgstr "Créer un pèle-mèle"
 
 #: ../kim_publication.desktop.in.h:4
 msgid "Send by mail"
-msgstr ""
+msgstr "Envoyer par mail"
 
 #: ../kim_publication.desktop.in.h:5
 msgid "Sort by date"
-msgstr ""
+msgstr "Ordonner par date"
 
 #: ../kim_publication.desktop.in.h:6
 msgid "Rename images"
-msgstr ""
+msgstr "Renommer des images"
 
 #: ../kim_publication.desktop.in.h:7
 msgid "Create a multi-files Tiff image"
-msgstr ""
+msgstr "Créer une image Tiff multi-pages"
 
 #: ../kim_publication.desktop.in.h:8
 msgid "Create a gif animation"
-msgstr ""
+msgstr "Créer une animation gif"
 
 #: ../kim_publication.desktop.in.h:9
 msgid "Multiburst image to gif animation"
-msgstr ""
+msgstr "image multiburst vers animation gif"
 
 #: ../kim_publication.desktop.in.h:10
 msgid "Add a border"
-msgstr ""
+msgstr "Ajouter une bordure"
 
 #: ../kim_publication.desktop.in.h:11
+#, fuzzy
 msgid "Create a pdf album"
-msgstr ""
+msgstr "Créer une animation gif"
 
 #: ../kim_publication.desktop.in.h:12
 msgid "Add text annotation"
-msgstr ""
+msgstr "Ajouter une annotation"
 
 #: ../kim_publication.desktop.in.h:13
 msgid "License"
@@ -430,4 +432,4 @@ msgstr ""
 
 #: ../kim_publication.desktop.in.h:14
 msgid "About Kim"
-msgstr ""
+msgstr "A propos de Kim"
