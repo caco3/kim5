@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kim 5\n"
 "Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
-"POT-Creation-Date: 2025-09-22 16:38+0200\n"
+"POT-Creation-Date: 2025-09-22 19:13+0200\n"
 "PO-Revision-Date: 2020-08-20 22:13+0800\n"
 "Last-Translator: Franklin Weng <franklin@goodhorse.idv.tw>\n"
 "Language-Team: Chinese (traditional) <zh_l10n@lists.linux.org.tw>\n"
@@ -17,260 +17,255 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../bin/kim_album:24 ../bin/kim_print:28
+#: ../bin/kim_album:25 ../bin/kim_print:29
 msgid "Kim – Select album type:"
 msgstr "Kim – 請選擇相簿型態："
 
-#: ../bin/kim_album:24
+#: ../bin/kim_album:25
 msgid "1x1 portrait album"
 msgstr "1x1 直向相簿"
 
-#: ../bin/kim_album:24
+#: ../bin/kim_album:25
 msgid "1x1 landscape album"
 msgstr "1x1 橫向相簿"
 
-#: ../bin/kim_album:24
+#: ../bin/kim_album:25
 msgid "1x2 landscape album"
 msgstr "1x2 橫向相簿"
 
-#: ../bin/kim_album:24
+#: ../bin/kim_album:25
 msgid "2x1 portrait album"
 msgstr "2x1 直向相簿"
 
-#: ../bin/kim_album:24
+#: ../bin/kim_album:25
 msgid "2x2 landscape album"
 msgstr "2x2 橫向相簿"
 
-#: ../bin/kim_album:24 ../bin/kim_print:28
+#: ../bin/kim_album:25 ../bin/kim_print:29
 msgid "3x2 portrait album"
 msgstr "3x2 直向相簿"
 
-#: ../bin/kim_album:24
+#: ../bin/kim_album:25
 msgid "3x4 landscape album"
 msgstr "3x4 橫向相簿"
 
-#: ../bin/kim_album:24
+#: ../bin/kim_album:25
 msgid "4x4 landscape album"
 msgstr "4x4 橫向相簿"
 
-#: ../bin/kim_album:30
+#: ../bin/kim_album:31
 msgid "Kim – Creating miniatures ..."
 msgstr "Kim – 建立縮圖中..."
 
-#: ../bin/kim_album:33 ../bin/kim_album:39 ../bin/kim_album:45
-#: ../bin/kim_album:50 ../bin/kim_album:55 ../bin/kim_album:60
-#: ../bin/kim_album:65 ../bin/kim_album:70 ../bin/kim_print:54
-#: ../bin/kim_print:60 ../bin/kim_print:65 ../bin/kim_print:70
-#: ../bin/kim_print:75 ../bin/kim_print:80 ../bin/kim_print:85
+#: ../bin/kim_album:34 ../bin/kim_album:40 ../bin/kim_album:46
+#: ../bin/kim_album:51 ../bin/kim_album:56 ../bin/kim_album:61
+#: ../bin/kim_album:66 ../bin/kim_album:71 ../bin/kim_print:55
+#: ../bin/kim_print:61 ../bin/kim_print:66 ../bin/kim_print:71
+#: ../bin/kim_print:76 ../bin/kim_print:81 ../bin/kim_print:86
 msgid "Kim – Creating album ..."
 msgstr "Kim – 建立相簿中..."
 
-#: ../bin/kim_album:74 ../bin/kim_print:89
+#: ../bin/kim_album:75 ../bin/kim_print:90
 #, fuzzy
-msgid "Kim – Unrecognized option ! "
+msgid "Kim – Unrecognized option! "
 msgstr "Kim – 無法識別的選項。"
 
-#: ../bin/kim_album:77 ../bin/kim_print:92
+#: ../bin/kim_album:78 ../bin/kim_print:93
 msgid "Kim – Deleting miniatures ..."
 msgstr "Kim – 刪除縮圖中..."
 
-#: ../bin/kim_compress:29 ../bin/kim_compress:71 ../bin/kim_record:31
-#: ../bin/kim_record:33 ../bin/kim_record_mpg:31 ../bin/kim_record_mpg:33
-#: ../bin/kim_rename:31 ../bin/kim_rename:89 ../bin/kim_resize:29
-#: ../bin/kim_resize:72 ../bin/kim_sortbydate:33 ../bin/kim_sortbydate:108
-#: ../bin/kim_treatment:33 ../bin/kim_treatment:113 ../bin/kim_video:29
-#: ../bin/kim_video:76 ../bin/kim_webexport:29 ../bin/kim_webexport:71
+#: ../bin/kim_compress:31 ../bin/kim_compress:73 ../bin/kim_rename:30
+#: ../bin/kim_rename:88 ../bin/kim_resize:31 ../bin/kim_resize:74
+#: ../bin/kim_sortbydate:31 ../bin/kim_sortbydate:106 ../bin/kim_treatment:35
+#: ../bin/kim_treatment:115 ../bin/kim_video:31 ../bin/kim_video:78
+#: ../bin/kim_webexport:31 ../bin/kim_webexport:73
 msgid "Kim"
 msgstr "Kim"
 
-#: ../bin/kim_compress:29 ../bin/kim_rename:31 ../bin/kim_resize:29
-#: ../bin/kim_sortbydate:33 ../bin/kim_treatment:33 ../bin/kim_video:29
-#: ../bin/kim_webexport:29
+#: ../bin/kim_compress:31 ../bin/kim_rename:30 ../bin/kim_resize:31
+#: ../bin/kim_sortbydate:31 ../bin/kim_treatment:35 ../bin/kim_video:31
+#: ../bin/kim_webexport:31
 msgid "Do you want to replace existing files?"
 msgstr "您要取代現有的檔案嗎？"
 
-#: ../bin/kim_compress:32 ../bin/kim_compress:52 ../bin/kim_convert:28
-#: ../bin/kim_flipflop:28 ../bin/kim_galery:19 ../bin/kim_pelemele:37
-#: ../bin/kim_print:30 ../bin/kim_rename:34 ../bin/kim_rename:62
-#: ../bin/kim_resize:32 ../bin/kim_resize:53 ../bin/kim_resizeandsend:36
-#: ../bin/kim_rotate:31 ../bin/kim_rotatewithexif:31 ../bin/kim_sortbydate:37
-#: ../bin/kim_sortbydate:73 ../bin/kim_treatment:36 ../bin/kim_treatment:75
-#: ../bin/kim_video:32 ../bin/kim_video:53
+#: ../bin/kim_compress:34 ../bin/kim_compress:54 ../bin/kim_convert:30
+#: ../bin/kim_flipflop:30 ../bin/kim_galery:39 ../bin/kim_pelemele:38
+#: ../bin/kim_print:31 ../bin/kim_rename:33 ../bin/kim_rename:61
+#: ../bin/kim_resize:34 ../bin/kim_resize:55 ../bin/kim_resizeandsend:35
+#: ../bin/kim_rotate:30 ../bin/kim_rotatewithexif:30 ../bin/kim_sortbydate:35
+#: ../bin/kim_sortbydate:71 ../bin/kim_treatment:38 ../bin/kim_treatment:77
+#: ../bin/kim_video:34 ../bin/kim_video:55
 msgid "Kim – Initialising ..."
 msgstr "Kim – 初始化中..."
 
-#: ../bin/kim_compress:44 ../bin/kim_compress:65 ../bin/kim_multiburst:54
-#: ../bin/kim_video:44 ../bin/kim_video:70 ../bin/kim_webexport:45
-#: ../bin/kim_webexport:65
+#: ../bin/kim_compress:46 ../bin/kim_compress:67 ../bin/kim_multiburst:54
+#: ../bin/kim_video:46 ../bin/kim_video:72 ../bin/kim_webexport:47
+#: ../bin/kim_webexport:67
 msgid "Kim – Compressing file: "
 msgstr "Kim – 壓縮此檔案中："
 
-#: ../bin/kim_compress:71 ../bin/kim_rename:89 ../bin/kim_sortbydate:108
-#: ../bin/kim_treatment:113 ../bin/kim_video:76
-#, fuzzy
-msgid "The action was cancelled by user !"
-msgstr "此動作已被使用者取消。"
-
-#: ../bin/kim_convert:41
-msgid "Kim – Converting file:"
-msgstr "Kim – 轉換此檔案中："
-
-#: ../bin/kim_flipflop:41 ../bin/kim_rotate:48 ../bin/kim_rotatewithexif:45
-msgid "Kim – Rotating file: "
-msgstr "Kim – 旋轉此檔案中："
-
-#: ../bin/kim_galery:9
-msgid "Kim – Title:"
-msgstr "Kim – 標題："
-
-#: ../bin/kim_galery:9
-msgid "My title ..."
-msgstr "請在此輸入標題..."
-
-#: ../bin/kim_galery:10
-msgid "Kim – Author:"
-msgstr "Kim – 作者："
-
-#: ../bin/kim_galery:14
-msgid "Kim – Number of columns:"
-msgstr "Kim – 欄數："
-
-#: ../bin/kim_galery:59 ../bin/kim_treatment:48 ../bin/kim_treatment:87
-msgid "Kim – Treatment of file: "
-msgstr "Kim – 檔案處理方式："
-
-#: ../bin/kim_multiburst:35 ../bin/kim_webexport:32 ../bin/kim_webexport:52
-msgid "Kim – Initialising compression"
-msgstr "Kim – 壓縮初始化中"
-
-#: ../bin/kim_pelemele:29
-msgid "Size of small images:"
-msgstr "小影像的大小："
-
-#: ../bin/kim_pelemele:30
-msgid "Number of rows and columns:"
-msgstr "列數與欄數："
-
-#: ../bin/kim_pelemele:31
-msgid "Overlaping ratio in percent:"
-msgstr "覆蓋比例（百分比）："
-
-#: ../bin/kim_pelemele:32
-msgid "Background color:"
-msgstr "背景顏色："
-
-#: ../bin/kim_pelemele:65 ../bin/kim_print:45
-msgid "Kim – resizing of file: "
-msgstr "Kim – 調整此檔案大小中："
-
-#: ../bin/kim_print:28
-msgid "9x13 cm: 2x2 images, landscape"
-msgstr "9x13 cm: 2x2 張影像，橫向"
-
-#: ../bin/kim_print:28
-msgid "10x15 cm: 1x2 images, portrait"
-msgstr "10x15 cm: 1x2 張影像，直向"
-
-#: ../bin/kim_print:28
-msgid "11.5x15 cm: 1x2 images, portrait"
-msgstr "11.5x15 cm: 1x2 張影像，直向"
-
-#: ../bin/kim_print:28
-msgid "13x18 cm: 1x2 images, portrait"
-msgstr "13x18 cm: 1x2 張影像，直向"
-
-#: ../bin/kim_print:28
-msgid "20x25 cm: 1 image, landscape"
-msgstr "20x25 cm: 1 張影像，橫向"
-
-#: ../bin/kim_print:28
-msgid "Thumbnails: 4x5 images, portrait"
-msgstr "縮圖：4x5 張影像，直向"
-
-#: ../bin/kim_record:31 ../bin/kim_record_mpg:31
-msgid "Choose duration of animation (sec):"
-msgstr "選擇動畫時間（秒）："
-
-#: ../bin/kim_record:33 ../bin/kim_record_mpg:33
-#, fuzzy
-msgid "Click 'Ok' and then choose the window target ! "
-msgstr "點擊「確認」然後選擇視窗目標。"
-
-#: ../bin/kim_record:58 ../bin/kim_record_mpg:59
-msgid "Kim – Record"
-msgstr "Kim – 錄影"
-
-#: ../bin/kim_record:58 ../bin/kim_record_mpg:59
-#, fuzzy
-msgid "The animation is created ! "
-msgstr "動畫已建立。"
-
-#: ../bin/kim_rename:37 ../bin/kim_rename:65
-msgid "Choose the new name of images:"
-msgstr "選擇新影像的名稱："
-
-#: ../bin/kim_rename:55 ../bin/kim_rename:83 ../bin/kim_sortbydate:66
-#: ../bin/kim_sortbydate:102
-msgid "Kim – Renaming file: "
-msgstr "Kim – 重新命名此檔案中："
-
-#: ../bin/kim_resize:45 ../bin/kim_resize:66
-msgid "Kim – Resizing file: "
-msgstr "Kim – 重新調整此檔案大小中："
-
-#: ../bin/kim_resize:72 ../bin/kim_webexport:71
+#: ../bin/kim_compress:73 ../bin/kim_rename:88 ../bin/kim_resize:74
+#: ../bin/kim_sortbydate:106 ../bin/kim_treatment:115 ../bin/kim_video:78
+#: ../bin/kim_webexport:73
 #, fuzzy
 msgid "The action was cancelled by user!"
 msgstr "此動作已被使用者取消。"
 
-#: ../bin/kim_resizeandsend:33
+#: ../bin/kim_convert:43
+msgid "Kim – Converting file:"
+msgstr "Kim – 轉換此檔案中："
+
+#: ../bin/kim_flipflop:43 ../bin/kim_rotate:47 ../bin/kim_rotatewithexif:44
+msgid "Kim – Rotating file: "
+msgstr "Kim – 旋轉此檔案中："
+
+#: ../bin/kim_galery:29
+msgid "Kim – Title:"
+msgstr "Kim – 標題："
+
+#: ../bin/kim_galery:29
+msgid "My title ..."
+msgstr "請在此輸入標題..."
+
+#: ../bin/kim_galery:30
+msgid "Kim – Author:"
+msgstr "Kim – 作者："
+
+#: ../bin/kim_galery:34
+msgid "Kim – Number of columns:"
+msgstr "Kim – 欄數："
+
+#: ../bin/kim_galery:79 ../bin/kim_treatment:50 ../bin/kim_treatment:89
+msgid "Kim – Treatment of file: "
+msgstr "Kim – 檔案處理方式："
+
+#: ../bin/kim_multiburst:35 ../bin/kim_webexport:34 ../bin/kim_webexport:54
+msgid "Kim – Initialising compression"
+msgstr "Kim – 壓縮初始化中"
+
+#: ../bin/kim_pelemele:30
+msgid "Size of small images:"
+msgstr "小影像的大小："
+
+#: ../bin/kim_pelemele:31
+msgid "Number of rows and columns:"
+msgstr "列數與欄數："
+
+#: ../bin/kim_pelemele:32
+msgid "Overlaping ratio in percent:"
+msgstr "覆蓋比例（百分比）："
+
+#: ../bin/kim_pelemele:33
+msgid "Background color:"
+msgstr "背景顏色："
+
+#: ../bin/kim_pelemele:66 ../bin/kim_print:46
+msgid "Kim – resizing of file: "
+msgstr "Kim – 調整此檔案大小中："
+
+#: ../bin/kim_print:29
+msgid "9x13 cm: 2x2 images, landscape"
+msgstr "9x13 cm: 2x2 張影像，橫向"
+
+#: ../bin/kim_print:29
+msgid "10x15 cm: 1x2 images, portrait"
+msgstr "10x15 cm: 1x2 張影像，直向"
+
+#: ../bin/kim_print:29
+msgid "11.5x15 cm: 1x2 images, portrait"
+msgstr "11.5x15 cm: 1x2 張影像，直向"
+
+#: ../bin/kim_print:29
+msgid "13x18 cm: 1x2 images, portrait"
+msgstr "13x18 cm: 1x2 張影像，直向"
+
+#: ../bin/kim_print:29
+msgid "20x25 cm: 1 image, landscape"
+msgstr "20x25 cm: 1 張影像，橫向"
+
+#: ../bin/kim_print:29
+msgid "Thumbnails: 4x5 images, portrait"
+msgstr "縮圖：4x5 張影像，直向"
+
+#: ../bin/kim_rename:36 ../bin/kim_rename:64
+msgid "Choose the new name of images:"
+msgstr "選擇新影像的名稱："
+
+#: ../bin/kim_rename:54 ../bin/kim_rename:82 ../bin/kim_sortbydate:64
+#: ../bin/kim_sortbydate:100
+msgid "Kim – Renaming file: "
+msgstr "Kim – 重新命名此檔案中："
+
+#: ../bin/kim_resize:47 ../bin/kim_resize:68
+msgid "Kim – Resizing file: "
+msgstr "Kim – 重新調整此檔案大小中："
+
+#: ../bin/kim_resizeandsend:32
 msgid "Kim – Send by mail:"
 msgstr "Kim – 用郵件寄出："
 
-#: ../bin/kim_resizeandsend:33
+#: ../bin/kim_resizeandsend:32
 msgid "Full size"
 msgstr "完整大小"
 
-#: ../bin/kim_resizeandsend:33
+#: ../bin/kim_resizeandsend:32
 msgid "800x600 px"
 msgstr "800x600 像素"
 
-#: ../bin/kim_resizeandsend:33
+#: ../bin/kim_resizeandsend:32
 msgid "600x450 px"
 msgstr "600x450 像素"
 
-#: ../bin/kim_resizeandsend:33
+#: ../bin/kim_resizeandsend:32
 msgid "300x225 px"
 msgstr "300x225 像素"
 
-#: ../bin/kim_resizeandsend:50
+#: ../bin/kim_resizeandsend:49
 msgid "Kim – Resizing and compressing file: "
 msgstr "Kim – 正在調整與壓縮此檔案："
 
-#: ../bin/kim_resizeandsend:65 ../bin/kim_resizeandsend:70
-#: ../bin/kim_resizeandsend:75
+#: ../bin/kim_resizeandsend:64 ../bin/kim_resizeandsend:69
+#: ../bin/kim_resizeandsend:74
 msgid "Kim – Send by mail: you can write your message!"
 msgstr "Kim – 用郵件寄出：您可以開始寫您的信件內容了。"
 
-#: ../bin/kim_treatment:30
+#: ../bin/kim_treatment:32
 msgid "Choose your annotation:"
 msgstr "選擇您的註記："
 
-#: ../bin/kim_treatment:30
+#: ../bin/kim_treatment:32
 msgid "My annotation"
 msgstr "請將註記寫在這裡"
 
-#: ../bin/kim_treatment:31
+#: ../bin/kim_treatment:33
 msgid "Kim – Select border color:"
 msgstr "Kim – 選擇邊框顏色："
 
-#: ../bin/kim_treatment:31
+#: ../bin/kim_treatment:33
 msgid "white"
 msgstr "白色"
 
-#: ../bin/kim_treatment:31
+#: ../bin/kim_treatment:33
 msgid "black"
 msgstr "黑色"
+
+#, fuzzy
+#~ msgid "The action was cancelled by user !"
+#~ msgstr "此動作已被使用者取消。"
+
+#~ msgid "Choose duration of animation (sec):"
+#~ msgstr "選擇動畫時間（秒）："
+
+#, fuzzy
+#~ msgid "Click 'Ok' and then choose the window target ! "
+#~ msgstr "點擊「確認」然後選擇視窗目標。"
+
+#~ msgid "Kim – Record"
+#~ msgstr "Kim – 錄影"
+
+#, fuzzy
+#~ msgid "The animation is created ! "
+#~ msgstr "動畫已建立。"
 
 #, fuzzy
 #~ msgid "Kim – Size:"

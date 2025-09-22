@@ -53,11 +53,6 @@ if [ ! `command -v convert` ]; then
 	install_log="$install_log""Cannot find executable \"convert\".  Please install it. It is usually in package \"graphicsmagick\". Without it, format conversion will not work.\n\n"
 fi
 
-# this will be removed, it relies on screen capturing thrugh X
-#elif [ ! `command -v xwd` ]; then
-#	install_log="$install_log""'\nCannot find executable \"xwd\".  Please install it."
-#	exit
-
 if [ ! `command -v ffmpeg` ]; then
 	install_log="$install_log""Cannot find executable \"ffmpeg\".  Please install it. It may be in package \"ffmpeg\". Without it, video resizing will not work.\n\n"
 fi
