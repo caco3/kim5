@@ -53,11 +53,13 @@ xgettext --language=Shell --keyword=gettext --output=kim6.pot --from-code=UTF-8 
 for po in *.po; do msgmerge --update "$po" kim6.pot; done
 ```
 ## Developement and release
-Cloning from git will download a directory that contains this readme, a license file, a screenshot used in this readme and a kim directory where everything important is. After doing your changes, the easiest way to test them is to run in this high lever directory this:
+Clone this repository. After doing your changes, the easiest way to test is to run the following in the root project directory:
 ```
-tar -czf kim6_devel.tar.gz ./kim/*
+tar -czf kim6_devel.tar.gz --exclude=README.md  --exclude=KIM6.png --exclude=Changelog --exclude kim6_devel.tar.gz ./*
 servicemenuinstaller install kim6_devel.tar.gz
 ```
+This is also how a release is made. After making an archive, it is manually uploaded here to Github and then to https://store.kde.org/p/2307290/.
+
 Then clean up with:
 ```
 servicemenuinstaller install kim6_devel.tar.gz
