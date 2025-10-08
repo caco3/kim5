@@ -18,8 +18,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-# Author: ???
-#         Tomáš Hnyk <tomashnyk@gmail.com>
+# Authors: Unknown
+#          Tomáš Hnyk <tomashnyk@gmail.com>
 
 # If there is no kdedialog, create an error log and abort.
 if [ ! `command -v kdialog` ]; then

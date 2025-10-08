@@ -1,7 +1,6 @@
 #!/bin/bash
 #
-# A small script to magick Sony Cybershot multiburst images into an animated GIF. The script requires the
-# imagemagick command line tools to be installed.
+# A small script to magick Sony Cybershot multiburst images into an animated GIF.
 #
 # Copyright (C) 2005, 2006  Charles Bouveyron <charles.bouveyron@free.fr>
 # Copyright (C) 2025  Tomáš Hnyk <tomashnyk@gmail.com>
