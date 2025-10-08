@@ -1,6 +1,6 @@
-# Images Service menu for Dolphin (Plasma 6)
+# KDE Image Menu 6 – KIM6
 
-This is a basic port of KIM5 for Plasma 6. KIM itself apparently goes as far back as KDE3, at least. A huge majority of the code is from its authors, thanks to them!
+This is a service menu for the KDE desktop. It displays a context menu entry for images (and for video too, though there it only resizes it) in Dolphin and in Folder View (Desktop) and other software.
 
 Here is the KDE store link: https://store.kde.org/p/2307290/
 
@@ -23,7 +23,7 @@ servicemenuinstaller install ./kim6*.tar.gz
 ```
 3. You can also clone the project using git or untar the downloaded archive and run the install manually:
 ```
-cd kim/
+cd kim6/
 ./install.sh
 ```
 
@@ -106,3 +106,10 @@ Individual scripts can also be ran directly. Look into the bin files (which are 
 - Display old and new sizes of resized files
 - Add new resolutions to resize plugins
 - Add more options to video transformations
+
+## History
+- KIM6 is a fork for KDE 6 of KIM5: https://github.com/caco3/kim5 
+- One KDE4 fork is here: https://store.kde.org/p/998188/
+- The original version for KDE4 is here: https://store.kde.org/p/1126887/
+- KIM itself goes as far back as KDE 3. There is a website that was still functioning in 2025: http://bouveyron.free.fr/kim/index.html
+- A huge majority of the code is from the original authors, thanks to them!
