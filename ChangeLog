@@ -1,8 +1,18 @@
+Release 1.1.0.
+ - Make installation a lot more robust.
+ - Update translations and streamline translation process (only one po file, desktop files are not generated dynamically).
+ - Update developer documentation.
+ - Remove non functioning command to make screencasts and screnshots that depended on X.
+ - Fix all commands so that they work correctly.
+ - Set licence to GPL 3 or later.
+ - Various small fixes and streamlined and slimmed the project directory
+
 Release 1.0.0:
  - Now installs in home directory, so can be installed from Dolphin
 
 Release 0.9.7:
  - Migration to KDE6
+  - Remove non-functional and obsolete command to generate a flash slideshow.
 
 Release 0.9.6:
  - Migration to KDE5

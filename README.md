@@ -73,7 +73,7 @@ Do not forget to update translations and changelog and then run the following in
 VERSION=1.1; # set kim6 version
 # generate desktop files
 cd po;
-for desk_ini in ../src/*.desktop.in; do intltool-merge --desktop-style ./ "$desk_ini"  "${desk_ini%.in}"; done
+for desk_ini in ../src/*.desktop.in; do intltool-merge --desktop-style ./ "$desk_ini"  "${desk_ini%.in}"; chmod +x "${desk_ini%.in}" ; done
 cd ..;
 # Do not include files that need not be installed
 tar -czf kim6_$VERSION.tar.gz --exclude=README.md  --exclude=KIM6.png --exclude=Changelog --exclude kim6_devel.tar.gz --exclude './src/*desktop.in' ./
@@ -84,7 +84,7 @@ rm src/kim_compressandresize.desktop src/kim_compressandresizevideo.desktop src/
 After making the archive, it is manually uploaded here to Github and then to https://store.kde.org/p/2307290/.
 
 ## Developement
-Generate desktop files like for release and then try changes with:
+Try to make a release (see above) and then try your changes changes with:
 ```
 servicemenuinstaller install kim6_$VERSION.tar.gz
 ```
@@ -93,7 +93,9 @@ Then clean up with:
 servicemenuinstaller uninstall kim6_$VERSION.tar.gz
 ```
 
-Individual scripts can also be ran directly. Look into the as to what arguements they need. For example this resizes proportionally a given file 300 pixels along its shorter side:
+It is also possible to run directly the `.install.sh` and `.uninstall.sh` scripts, the desktopfiles will be generated automatically. 
+
+Individual scripts can also be ran directly. Look into the bin files (which are bash scripts) to see what arguments they need. For example this resizes proportionally a given file 300 pixels along its shorter side:
 ```
 ./kim_resize ~/example.jpg 300x300
 ```
