@@ -35,8 +35,8 @@ kdialog --title "KIM 6 Installation problems" --error="$install_log"
 }
 
 # Test for presence of dependencies, if not present, a user is presented with a log after installation
-if [ ! `command -v qtpaths` ]; then
-	install_log="$install_log""KDE Image Menu 6 is meant to be run under KDE 6, but I can't find executable <b>qtpaths</b> that should be a part of your QT installation. Without qtpaths, I cannot check for installations directories.  Please check your system installation. Installation was aborted."
+if [ ! `command -v qtpaths6` ]; then
+	install_log="$install_log""KDE Image Menu 6 is meant to be run under KDE 6, but I can't find executable <b>qtpaths6</b> that should be a part of your QT base installation. Without qtpaths6, I cannot check for installations directories.  Please check your system installation. Installation was aborted."
 	spit_install_log
 	exit 1
 fi
@@ -59,10 +59,10 @@ fi
 
 # sets directories from and to which we install
 src_folder="$(dirname "$(realpath "$0")")"
-kim_install_dir=`qtpaths --locate-dirs GenericDataLocation kio/servicemenus | cut -f 1 -d ':'`
+kim_install_dir=`qtpaths6 --locate-dirs GenericDataLocation kio/servicemenus | cut -f 1 -d ':'`
 kim_helper_files="$kim_install_dir"/kim6
 
-# This checks if qtpaths returned an existing directory
+# This checks if qtpaths6 returned an existing directory
 if [[ ! -d "$kim_install_dir" ]]; then
 	install_log="$install_log""<b>Error</b> fetching the KDE install prefix. Installation was aborted."
 	spit_install_log

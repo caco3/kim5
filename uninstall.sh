@@ -18,7 +18,7 @@
 # Authors: Unknown
 #          Tomáš Hnyk <tomashnyk@gmail.com>
 
-kim_install_dir=`qtpaths --locate-dirs GenericDataLocation kio/servicemenus | cut -f 1 -d ':'`
+kim_install_dir=`qtpaths6 --locate-dirs GenericDataLocation kio/servicemenus | cut -f 1 -d ':'`
 
 rm -f $kim_install_dir/kim_*.desktop 2&> /dev/null
 rm -rf $kim_install_dir/kim6 2&> /dev/null
