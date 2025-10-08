@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
 "POT-Creation-Date: 2025-09-22 22:44+0200\n"
 "PO-Revision-Date: 2025-09-22 22:22+0200\n"
-"Last-Translator: Tomáš Hnyk <drew@greenone>\n"
+"Last-Translator: Miguel Useche <contacto@migueluseche.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -250,63 +250,75 @@ msgstr ""
 #: ../kim_compressandresize.desktop.in.h:1
 #: ../kim_compressandresizevideo.desktop.in.h:1
 msgid "Kim – Compress and Resize"
-msgstr ""
+msgstr "Kim – Comprimir y redimensionar"
 
 #: ../kim_compressandresize.desktop.in.h:3
 msgid "Compress at 75 %"
-msgstr ""
+msgstr "Comprimir al 75 %"
 
 #: ../kim_compressandresize.desktop.in.h:5
 msgid "Compress at 80 %"
-msgstr ""
+msgstr "Comprimir al 80 %"
 
 #: ../kim_compressandresize.desktop.in.h:7
 msgid "Compress at 90 %"
-msgstr ""
+msgstr "Comprimir al 90 %"
 
 #: ../kim_compressandresize.desktop.in.h:8
 msgid "Compress Custom..."
-msgstr ""
+msgstr "Comprimir personalizado..."
 
 #: ../kim_compressandresize.desktop.in.h:9
 msgid "Resize (300x225 pixels)"
-msgstr ""
+msgstr "Redimensionar (300x225 píxeles)"
 
 #: ../kim_compressandresize.desktop.in.h:10
 msgid "Resize (600x450 pixels)"
-msgstr ""
+msgstr "Redimensionar (600x450 píxeles)"
 
 #: ../kim_compressandresize.desktop.in.h:11
 msgid "Resize (800x600 pixels)"
-msgstr ""
+msgstr "Redimensionar (800x600 píxeles)"
 
 #: ../kim_compressandresize.desktop.in.h:12
 msgid "Resize (1024x768 pixels)"
-msgstr ""
+msgstr "Redimensionar (1024x768 píxeles)"
 
 #: ../kim_compressandresize.desktop.in.h:13
 msgid "Resize (1200x900 pixels)"
-msgstr ""
+msgstr "Redimensionar (1200x900 píxeles)"
 
 #: ../kim_compressandresize.desktop.in.h:14
 msgid "Resize (1400x1050 pixels)"
-msgstr ""
+msgstr "Redimensionar (1400x1050 píxeles)"
+
+msgid "Resize (1280x900 pixels)"
+msgstr "Redimensionar (1280x900 píxeles)"
+
+msgid "Resize (1600x1200 pixels)"
+msgstr "Redimensionar (1600x1200 píxeles)"
+
+msgid "Resize (1920x1080 pixels)"
+msgstr "Redimensionar (1920x1080 píxeles)"
 
 #: ../kim_compressandresize.desktop.in.h:15
 msgid "Resize Custom..."
 msgstr ""
 
+msgid "WebThumbnail: 120x90 at 75 %"
+msgstr "Miniatura web: 120x90 al 75 %"
+
 #: ../kim_compressandresize.desktop.in.h:17
 msgid "WebExport: 600x450 at 75 %"
-msgstr ""
+msgstr "Exportar para web: 600x450 al 75 %"
 
 #: ../kim_compressandresize.desktop.in.h:19
 msgid "WebExport: 800x600 at 75 %"
-msgstr ""
+msgstr "Exportar para web: 800x600 al 75 %"
 
 #: ../kim_compressandresize.desktop.in.h:21
 msgid "WebExport: 1024x768 at 75 %"
-msgstr ""
+msgstr "Exportar para web: 1024x768 al 75 %"
 
 #: ../kim_compressandresizevideo.desktop.in.h:2
 msgid "Compress video hd720"
@@ -314,59 +326,62 @@ msgstr ""
 
 #: ../kim_convertandrotate.desktop.in.h:1
 msgid "Kim – Convert and Rotate"
-msgstr ""
+msgstr "Kim – Convertir y rotar"
+
+msgid "OCR on image"
+msgstr "OCR en imagen"
 
 #: ../kim_convertandrotate.desktop.in.h:2
 msgid "Convert to JPEG"
-msgstr ""
+msgstr "Convertir a JPEG"
 
 #: ../kim_convertandrotate.desktop.in.h:3
 msgid "Convert to PNG"
-msgstr ""
+msgstr "Convertir a PNG"
 
 #: ../kim_convertandrotate.desktop.in.h:4
 msgid "Convert to GIF"
-msgstr ""
+msgstr "Convertir a GIF"
 
 #: ../kim_convertandrotate.desktop.in.h:5
-msgid "Convert to TIF"
-msgstr ""
+msgid "Convert to TIFF"
+msgstr "Convertir a TIFF"
 
 #: ../kim_convertandrotate.desktop.in.h:6
 msgid "Convert to PDF"
-msgstr ""
+msgstr "Convertir a PDF"
 
 #: ../kim_convertandrotate.desktop.in.h:7
 msgid "Convert custom ..."
-msgstr ""
+msgstr "onvertir personalizado..."
 
 #: ../kim_convertandrotate.desktop.in.h:8
 msgid "Convert to graysale"
-msgstr ""
+msgstr "Convertir a escala de grises"
 
 #: ../kim_convertandrotate.desktop.in.h:9
 msgid "Convert in sepia tone"
-msgstr ""
+msgstr "Convertir a tono sepia"
 
 #: ../kim_convertandrotate.desktop.in.h:10
 msgid "Auto-rotate with EXIF"
-msgstr ""
+msgstr "Rotación automática (EXIF)"
 
 #: ../kim_convertandrotate.desktop.in.h:11
 msgid "Rotate (90°)"
-msgstr ""
+msgstr "Rotar (90°)"
 
 #: ../kim_convertandrotate.desktop.in.h:12
 msgid "Rotate (180°)"
-msgstr ""
+msgstr "Rotar (180°)"
 
 #: ../kim_convertandrotate.desktop.in.h:13
 msgid "Rotate (270°)"
-msgstr ""
+msgstr "Rotar (270°)"
 
 #: ../kim_convertandrotate.desktop.in.h:14
 msgid "Rotate custom..."
-msgstr ""
+msgstr "Rotar personalizado..."
 
 #: ../kim_convertandrotate.desktop.in.h:15
 msgid "Flip verticaly"
@@ -378,19 +393,22 @@ msgstr "Horizontalmente"
 
 #: ../kim_publication.desktop.in.h:1
 msgid "Kim – Treatment and publication"
-msgstr ""
+msgstr "Kim — Tratamiento y publicación"
 
 #: ../kim_publication.desktop.in.h:2
 msgid "Create a html gallery"
-msgstr ""
+msgstr "Crear una galería HTML"
 
 #: ../kim_publication.desktop.in.h:3
 msgid "Create a photo montage"
-msgstr ""
+msgstr "Crear un fotomontaje"
+
+msgid "Rename by EXIF date"
+msgstr "Renombrar por fecha EXIF"
 
 #: ../kim_publication.desktop.in.h:4
 msgid "Send by mail"
-msgstr ""
+msgstr "Enviar por correo"
 
 #: ../kim_publication.desktop.in.h:5
 msgid "Sort by date"
@@ -398,31 +416,31 @@ msgstr ""
 
 #: ../kim_publication.desktop.in.h:6
 msgid "Rename images"
-msgstr ""
+msgstr "Renombrar imágenes"
 
 #: ../kim_publication.desktop.in.h:7
 msgid "Create a multi-files Tiff image"
-msgstr ""
+msgstr "Crear una imagen Tiff de múltiples archivos"
 
 #: ../kim_publication.desktop.in.h:8
 msgid "Create a gif animation"
-msgstr ""
+msgstr "Crear una animación gif"
 
 #: ../kim_publication.desktop.in.h:9
 msgid "Multiburst image to gif animation"
-msgstr ""
+msgstr "Imagen multiburst a animación gif"
 
 #: ../kim_publication.desktop.in.h:10
 msgid "Add a border"
-msgstr ""
+msgstr "Añadir un borde"
 
 #: ../kim_publication.desktop.in.h:11
 msgid "Create a pdf album"
-msgstr ""
+msgstr "rear un álbum PDF"
 
 #: ../kim_publication.desktop.in.h:12
 msgid "Add text annotation"
-msgstr ""
+msgstr "Añadir anotación de texto"
 
 #: ../kim_publication.desktop.in.h:13
 msgid "License"
@@ -430,4 +448,4 @@ msgstr ""
 
 #: ../kim_publication.desktop.in.h:14
 msgid "About Kim"
-msgstr ""
+msgstr "Acerca de Kim"
