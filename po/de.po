@@ -329,7 +329,7 @@ msgid "Convert to GIF"
 msgstr ""
 
 #: ../kim_convertandrotate.desktop.in.h:5
-msgid "Convert to TIF"
+msgid "Convert to TIFF"
 msgstr ""
 
 #: ../kim_convertandrotate.desktop.in.h:6

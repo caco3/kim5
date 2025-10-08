@@ -330,8 +330,8 @@ msgid "Convert to GIF"
 msgstr "Convertir en GIF"
 
 #: ../kim_convertandrotate.desktop.in.h:5
-msgid "Convert to TIF"
-msgstr "Convertir en TIF"
+msgid "Convert to TIFF"
+msgstr "Convertir en TIFF"
 
 #: ../kim_convertandrotate.desktop.in.h:6
 msgid "Convert to PDF"

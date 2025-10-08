@@ -331,7 +331,7 @@ msgid "Convert to GIF"
 msgstr "Converteren naar gif"
 
 #: ../kim_convertandrotate.desktop.in.h:5
-msgid "Convert to TIF"
+msgid "Convert to TIFF"
 msgstr "Converteren naar tiff"
 
 #: ../kim_convertandrotate.desktop.in.h:6
