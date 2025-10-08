@@ -5,53 +5,56 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: KIM 6 – Kde Image Menu 6 1.1\n"
-"Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
-"POT-Creation-Date: 2025-09-22 22:44+0200\n"
-"PO-Revision-Date: 2025-09-22 22:22+0200\n"
-"Last-Translator: Tomáš Hnyk <drew@greenone>\n"
-"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
+"#-#-#-#-#  de.po (KIM 6 – Kde Image Menu 6 1.1)  #-#-#-#-#\n"
+"#-#-#-#-#  kim.po (0.9.6)  #-#-#-#-#\n"
+"Project-Id-Version: 0.9.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-01 20:57+0200\n"
+"PO-Revision-Date: 2014-04-01 21:08+0100\n"
+"Last-Translator: Daniel Tartavel <contact@librepc.com>\n"
+"Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: ../bin/kim_album:25 ../bin/kim_print:29
 msgid "Kim – Select album type:"
 msgstr ""
 
-#: ../bin/kim_album:25
+#: src/bin/kim_album:29
 msgid "1x1 portrait album"
-msgstr ""
+msgstr "1x1 Hochformat-Album"
 
-#: ../bin/kim_album:25
+#: src/bin/kim_album:30
 msgid "1x1 landscape album"
-msgstr ""
+msgstr "1x1 Querformat-Album"
 
-#: ../bin/kim_album:25
+#: src/bin/kim_album:31
 msgid "1x2 landscape album"
-msgstr ""
+msgstr "1x2 Querformat-Album"
 
-#: ../bin/kim_album:25
+#: src/bin/kim_album:32
 msgid "2x1 portrait album"
-msgstr ""
+msgstr "2x1 Hochformat-Album"
 
-#: ../bin/kim_album:25
+#: src/bin/kim_album:33
 msgid "2x2 landscape album"
-msgstr ""
+msgstr "2x2 Querformat-Album"
 
-#: ../bin/kim_album:25 ../bin/kim_print:29
+#: src/bin/kim_album:34 src/bin/kim_print:36
 msgid "3x2 portrait album"
-msgstr ""
+msgstr "3x2 Hochformat-Album"
 
-#: ../bin/kim_album:25
+#: src/bin/kim_album:35
 msgid "3x4 landscape album"
-msgstr ""
+msgstr "3x4 Querformat-Album"
 
-#: ../bin/kim_album:25
+#: src/bin/kim_album:36
 msgid "4x4 landscape album"
-msgstr ""
+msgstr "4x4 Querformat-Album"
 
 #: ../bin/kim_album:31
 msgid "Kim – Creating miniatures ..."
@@ -121,9 +124,9 @@ msgstr ""
 msgid "Kim – Title:"
 msgstr ""
 
-#: ../bin/kim_galery:29
+#: src/bin/kim_galery:17 src/bin/kim_slideshow:12
 msgid "My title ..."
-msgstr ""
+msgstr "Mein Titel..."
 
 #: ../bin/kim_galery:30
 msgid "Kim – Author:"
@@ -141,53 +144,53 @@ msgstr ""
 msgid "Kim – Initialising compression"
 msgstr ""
 
-#: ../bin/kim_pelemele:30
+#: src/bin/kim_pelemele:34
 msgid "Size of small images:"
-msgstr ""
+msgstr "Größe der kleinen Bilder:"
 
-#: ../bin/kim_pelemele:31
+#: src/bin/kim_pelemele:36
 msgid "Number of rows and columns:"
-msgstr ""
+msgstr "Anzahl der Reihen und Spalten:"
 
-#: ../bin/kim_pelemele:32
+#: src/bin/kim_pelemele:38
 msgid "Overlaping ratio in percent:"
-msgstr ""
+msgstr "Überlappungs-Ratio in Prozent:"
 
-#: ../bin/kim_pelemele:33
+#: src/bin/kim_pelemele:40
 msgid "Background color:"
-msgstr ""
+msgstr "Hintergrundfarbe:"
 
 #: ../bin/kim_pelemele:66 ../bin/kim_print:46
 msgid "Kim – resizing of file: "
 msgstr ""
 
-#: ../bin/kim_print:29
+#: src/bin/kim_print:31
 msgid "9x13 cm: 2x2 images, landscape"
-msgstr ""
+msgstr "9x13 cm: 2x2 Bilder, Querformat"
 
-#: ../bin/kim_print:29
+#: src/bin/kim_print:32
 msgid "10x15 cm: 1x2 images, portrait"
-msgstr ""
+msgstr "10x15 cm: 1x2 Bilder, Hochformat"
 
-#: ../bin/kim_print:29
+#: src/bin/kim_print:33
 msgid "11.5x15 cm: 1x2 images, portrait"
-msgstr ""
+msgstr "11.5x15 cm: 1x2 Bilder, Hochformat"
 
-#: ../bin/kim_print:29
+#: src/bin/kim_print:34
 msgid "13x18 cm: 1x2 images, portrait"
-msgstr ""
+msgstr "13x18 cm: 1x2 Bilder, Hochformat"
 
-#: ../bin/kim_print:29
+#: src/bin/kim_print:35
 msgid "20x25 cm: 1 image, landscape"
-msgstr ""
+msgstr "20x25 cm: 1 Bild, Querformat"
 
-#: ../bin/kim_print:29
+#: src/bin/kim_print:37
 msgid "Thumbnails: 4x5 images, portrait"
-msgstr ""
+msgstr "Vorschaubilder: 4x5 Bilder, Hochformat"
 
-#: ../bin/kim_rename:36 ../bin/kim_rename:64
+#: src/bin/kim_rename:36
 msgid "Choose the new name of images:"
-msgstr ""
+msgstr "Wähle den neuen Bildnamen:"
 
 #: ../bin/kim_rename:54 ../bin/kim_rename:82 ../bin/kim_sortbydate:64
 #: ../bin/kim_sortbydate:100
@@ -202,21 +205,9 @@ msgstr ""
 msgid "Kim – Send by mail:"
 msgstr ""
 
-#: ../bin/kim_resizeandsend:32
+#: src/bin/kim_resizeandsend:36
 msgid "Full size"
-msgstr ""
-
-#: ../bin/kim_resizeandsend:32
-msgid "800x600 px"
-msgstr ""
-
-#: ../bin/kim_resizeandsend:32
-msgid "600x450 px"
-msgstr ""
-
-#: ../bin/kim_resizeandsend:32
-msgid "300x225 px"
-msgstr ""
+msgstr "Volle Größe"
 
 #: ../bin/kim_resizeandsend:49
 msgid "Kim – Resizing and compressing file: "
@@ -227,25 +218,25 @@ msgstr ""
 msgid "Kim – Send by mail: you can write your message!"
 msgstr ""
 
-#: ../bin/kim_treatment:32
+#: src/bin/kim_treatment:35
 msgid "Choose your annotation:"
-msgstr ""
+msgstr "Wähle deine Notiz:"
 
-#: ../bin/kim_treatment:32
+#: src/bin/kim_treatment:36
 msgid "My annotation"
-msgstr ""
+msgstr "Meine Notiz:"
 
 #: ../bin/kim_treatment:33
 msgid "Kim – Select border color:"
 msgstr ""
 
-#: ../bin/kim_treatment:33
+#: src/bin/kim_treatment:38
 msgid "white"
-msgstr ""
+msgstr "weiß"
 
-#: ../bin/kim_treatment:33
+#: src/bin/kim_treatment:39
 msgid "black"
-msgstr ""
+msgstr "schwarz"
 
 #: ../kim_compressandresize.desktop.in.h:1
 #: ../kim_compressandresizevideo.desktop.in.h:1
@@ -431,3 +422,319 @@ msgstr ""
 #: ../kim_publication.desktop.in.h:14
 msgid "About Kim"
 msgstr ""
+
+#: src/bin/kim_about:29
+msgid "about"
+msgstr "über"
+
+#: src/bin/kim_about:31
+#, fuzzy
+msgid ""
+"Kim (Kde Image Menu) 0.9.7\\n\\nOriginal Authors : \tCharles Bouveyron "
+"<charles.bouveyron@free.fr>\\n\t\tRaphaël Pinson "
+"<raphink@raphink.net>\\nActual Maintainer\tDaniel Tartavel "
+"<contact@librepc.com>"
+msgstr ""
+"Kim (Kde Image Menü) 0.9.6\\n\\Ursprüngliche Ersteller: \tCharles Bouveyron "
+"<charles.bouveyron@free.fr>\\n\t\tRaphaël Pinson "
+"<raphink@raphink.net>\\nJetziger Maintainer\tDaniel Tartavel "
+"<contact@librepc.com>"
+
+#: src/bin/kim_album:27
+msgid "Kim - PDF Album"
+msgstr "Kim: PDF-Album erstellen"
+
+#: src/bin/kim_album:28 src/bin/kim_print:30
+msgid "Select album type:"
+msgstr "Wähle die Art des Albums:"
+
+#: src/bin/kim_album:42
+msgid "Making album ..."
+msgstr "Album erstellen..."
+
+#: src/bin/kim_album:81 src/bin/kim_print:109
+msgid "Unrecognized option !"
+msgstr "Unbekannte Option!"
+
+#: src/bin/kim_album:88 src/bin/kim_convmv:54 src/bin/kim_other:63
+#: src/bin/kim_other:72 src/bin/kim_print:56 src/bin/kim_print:63
+#: src/bin/kim_rotatewithexif:50
+msgid "command execution error "
+msgstr ""
+
+#: src/bin/kim_compress:36
+msgid "Kim - Compression"
+msgstr "Kim: Bildqualität (Komprimierung)"
+
+#: src/bin/kim_compress:37 src/bin/kim_convert:35 src/bin/kim_convmv:37
+#: src/bin/kim_flipflop:35 src/bin/kim_galery:45 src/bin/kim_multiburst:39
+#: src/bin/kim_ocr:32 src/bin/kim_pelemele:45 src/bin/kim_print:39
+#: src/bin/kim_treatment:55 src/bin/kim_webexport:40
+msgid "Initializing"
+msgstr "Initialisieren"
+
+#: src/bin/kim_compress:38 src/bin/kim_rename:34 src/bin/kim_resize:36
+#: src/bin/kim_sortbydate:35 src/bin/kim_treatment:49 src/bin/kim_webexport:35
+msgid "Do you want to replace existing files ?"
+msgstr "Sollen bestehende Dateien überschrieben werden?"
+
+#: src/bin/kim_compress:54 src/bin/kim_multiburst:59 src/bin/kim_webexport:54
+msgid "Compressing file :"
+msgstr "Komprimiere Datei:"
+
+#: src/bin/kim_compress:59
+#, fuzzy
+msgid "compressed"
+msgstr "komprimiert_"
+
+#: src/bin/kim_convert:34
+msgid "Kim - Convert"
+msgstr "Kim: Bilder umwandeln"
+
+#: src/bin/kim_convert:49
+msgid "Converting file:"
+msgstr "Konvertiere Datei:"
+
+#: src/bin/kim_convmv:29 src/bin/kim_print:29
+msgid "Kim - Print"
+msgstr "Kim: Bilder drucken"
+
+#: src/bin/kim_convmv:30
+msgid "Select original character encoding:"
+msgstr ""
+
+#: src/bin/kim_convmv:52 src/bin/kim_ocr:33
+msgid "Converting file :"
+msgstr "Konvertiere Datei:"
+
+#: src/bin/kim_convmv:60
+#, fuzzy
+msgid "Deleting temp files ..."
+msgstr "Lösche Miniaturen..."
+
+#: src/bin/kim_flipflop:34
+msgid "Kim - flip flop"
+msgstr "Kim: Bilder drehen"
+
+#: src/bin/kim_flipflop:49
+msgid "Rotating file :"
+msgstr "Drehe Bild:"
+
+#: src/bin/kim_functions:31
+msgid "Destination file exist<br />Enter new name else file will be replaced"
+msgstr ""
+
+#: src/bin/kim_galery:15
+msgid "Kim HTML Gallery"
+msgstr "Kim HTML-Galerie"
+
+#: src/bin/kim_galery:16
+msgid "Title of the Gallery:"
+msgstr "Titel der Galerie:"
+
+#: src/bin/kim_galery:18 src/bin/kim_slideshow:14
+msgid "Author:"
+msgstr "Ersteller:"
+
+#: src/bin/kim_galery:32
+msgid "Number of columns:"
+msgstr "Anzahl der Spalten:"
+
+#: src/bin/kim_galery:71 src/bin/kim_treatment:69
+msgid "Treatment of file:"
+msgstr "Datei-Aufbereitung:"
+
+#: src/bin/kim_multiburst:36
+msgid "Kim multiburst to GIF"
+msgstr "Kim Standbildfolge (Multiburst) zu GIF"
+
+#: src/bin/kim_multiburst:66
+msgid "Converting ..."
+msgstr "Konvertiere..."
+
+#: src/bin/kim_multiburst:70
+msgid "Removing temporary files"
+msgstr "Entferne temporäre Dateien"
+
+#: src/bin/kim_ocr:31
+msgid "Kim Convert to text"
+msgstr "Kim Umwandlung in Text"
+
+#: src/bin/kim_ocr:53
+msgid "Character recognition"
+msgstr "Texterkennung"
+
+#: src/bin/kim_other:33 src/bin/kim_rename:35 src/bin/kim_resize:35
+#: src/bin/kim_resizeandsend:43 src/bin/kim_slideshow:22
+#: src/bin/kim_sortbydate:44
+msgid "Initialising"
+msgstr "Initialisieren"
+
+#: src/bin/kim_other:36
+msgid "Kim - Images to GIF animation"
+msgstr "Kim: Bilder ins GIF-Format umwandeln"
+
+#: src/bin/kim_other:48
+msgid "Adding image:"
+msgstr "Bild hinzufügen:"
+
+#: src/bin/kim_other:57
+msgid "Delay between images in 1/100 second"
+msgstr "Verzögerung zwischen Bildern in 1/100 Sekunden"
+
+#: src/bin/kim_other:58
+msgid "Name of the GIF animation image"
+msgstr "Name des animierten GIF-Bildes"
+
+#: src/bin/kim_other:61
+msgid "Creating GIF animation"
+msgstr "GIF-Animation erstellen"
+
+#: src/bin/kim_other:67
+msgid "Name of the Tiff image"
+msgstr "Name des TIFF-Bildes"
+
+#: src/bin/kim_other:70
+msgid "Creating multipages TIFF"
+msgstr "mehrere Bilder in einer TIFF-Datei zusammenfassen"
+
+#: src/bin/kim_pelemele:33
+msgid "Kim pelemele"
+msgstr "Kim Collagen erstellen"
+
+#: src/bin/kim_pelemele:65 src/bin/kim_print:54
+msgid "resizing of file :"
+msgstr "Größenveränderung der Datei:"
+
+#: src/bin/kim_pelemele:80
+msgid "Making pelemele"
+msgstr "Collage erstellen"
+
+#: src/bin/kim_print:67 src/bin/kim_print:73 src/bin/kim_print:79
+#: src/bin/kim_print:85 src/bin/kim_print:91 src/bin/kim_print:97
+#: src/bin/kim_print:103
+msgid "Creating album ..."
+msgstr "Erstelle Album..."
+
+#: src/bin/kim_print:112
+msgid "Deleting miniatures ..."
+msgstr "Lösche Miniaturen..."
+
+#: src/bin/kim_record:36
+msgid "Choose duration of animation (sec):"
+msgstr "Wähle die Dauer der Animation (Sek.):"
+
+#: src/bin/kim_record:39
+msgid "Click 'Ok' and then choose the window target !"
+msgstr "Klicke 'Ok' und wähle dann das Zielfenster!"
+
+#: src/bin/kim_record:65
+msgid "The animation is created !"
+msgstr "Die Animation wurde erstellt!"
+
+#: src/bin/kim_rename:33
+msgid "Kim - rename"
+msgstr "Kim: Bilder umbenennen"
+
+#: src/bin/kim_rename:37
+msgid "wallpaper_"
+msgstr "wallpaper_"
+
+#: src/bin/kim_rename:70
+msgid "Renaming file:"
+msgstr "Benenne Datei um:"
+
+#: src/bin/kim_resize:51
+msgid "Kim - Resizing file: "
+msgstr "Kim: Bildgröße ändern: "
+
+#: src/bin/kim_resizeandsend:34
+msgid "Kim - Resize and send"
+msgstr "Kim: Bilder versenden mit Größenänderung"
+
+#: src/bin/kim_resizeandsend:35
+msgid "Send by mail:"
+msgstr "Per Email senden:"
+
+#: src/bin/kim_resizeandsend:37
+msgid "1600 px width"
+msgstr ""
+
+#: src/bin/kim_resizeandsend:38
+msgid "1280 px width"
+msgstr ""
+
+#: src/bin/kim_resizeandsend:39
+msgid "1024 px width"
+msgstr ""
+
+#: src/bin/kim_resizeandsend:58
+msgid "Resizing and compressing file:"
+msgstr "Wandle Bild um:"
+
+#: src/bin/kim_rotate:33
+msgid "Kim - rotate"
+msgstr "Kim: Bilder drehen"
+
+#: src/bin/kim_rotate:47 src/bin/kim_rotatewithexif:48
+msgid "Rotating file: "
+msgstr "Drehe Bild: "
+
+#: src/bin/kim_rotatewithexif:34
+msgid "kim - Rotate with EXIF"
+msgstr "Kim - Automatisches Drehen anhand EXIF-Information"
+
+#: src/bin/kim_slideshow:8
+msgid "Kim - Slideshow"
+msgstr "Kim: Diashow erstellen"
+
+#: src/bin/kim_slideshow:11
+msgid "Title:"
+msgstr "Titel:"
+
+#: src/bin/kim_slideshow:17
+msgid "Size:"
+msgstr "Größe:"
+
+#: src/bin/kim_slideshow:56
+msgid "Treatment of file: "
+msgstr "Datei-Aufbereitung: "
+
+#: src/bin/kim_sortbydate:34
+msgid "Kim - Rename with EXIF date"
+msgstr "Kim: nach EXIF-Datum benennen"
+
+#: src/bin/kim_sortbydate:58
+msgid "Renaming file: "
+msgstr "Benenne Datei um: "
+
+#: src/bin/kim_sortbydate:83
+msgid "Do not find a date in EXIF, so can't rename"
+msgstr "Umbenennen nicht möglich, da kein EXIF-Datum gefunden"
+
+#: src/bin/kim_treatment:34
+msgid "Kim treatment"
+msgstr "Kim Aufbereitung"
+
+#: src/bin/kim_treatment:37
+msgid "Select border color:"
+msgstr "Wähle die Rahmenfarbe:"
+
+#: src/bin/kim_webexport:34
+msgid "Kim Web export"
+msgstr "Kim: Bild-Veröffentlichung"
+
+#~ msgid "800x600 px"
+#~ msgstr "800x600 px"
+
+#~ msgid "600x450 px"
+#~ msgstr "600x450 px"
+
+#~ msgid "300x225 px"
+#~ msgstr "300x225 px"
+
+#~ msgid "Kim - Sort by date"
+#~ msgstr "Kim: nach Datum sortieren"
+
+#~ msgid "The action was cancelled by user !"
+#~ msgstr "Der Vorgang wurde durch den Benutzer abgebrochen!"
