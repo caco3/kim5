@@ -30,7 +30,7 @@ cd kim6/
 ## Uninstall
 Best do it the same way you installed it.
 1. Best done through Dolphin, though the uninstall might have to be done twice due to a bug: https://bugs.kde.org/show_bug.cgi?id=508142
-2. Alternatively  locate the archive from which you installed. Dolphin saves the archive into '~/.local/share/servicemenu-download', if you installed manually, it does not get saved there (instead the archive is extracted in the directory where it is located). Then run:
+2. Alternatively  locate the archive from which you installed. Dolphin saves the archive into `~/.local/share/servicemenu-download`, if you installed manually, it does not get saved there (instead the archive is extracted in the directory where it is located). Then run:
 ```
 servicemenuinstaller uninstall PATH_TO_INSTALL_ARCHIVE.tar.gz 
 ```
@@ -39,6 +39,18 @@ servicemenuinstaller uninstall PATH_TO_INSTALL_ARCHIVE.tar.gz
 ```
 ./uninstall.sh
 ```
+
+## History
+- KIM6 is a fork for KDE 6 of KIM5: https://github.com/caco3/kim5 
+- One KDE4 fork is here: https://store.kde.org/p/998188/
+- The original version for KDE4 is here: https://store.kde.org/p/1126887/
+- KIM itself goes as far back as KDE 3. There is a website that was still functioning in 2025: http://bouveyron.free.fr/kim/index.html
+- A huge majority of the code is from the original authors, thanks to them!
+
+## See also
+There is functionally similar but independent project: https://github.com/irfanhakim-as/kde-service-menu-reimage
+
+# Develper and translator information
 ## Translations
 To submit a new translation, just run `msginit -l XX` in the po directory (replace "XX" with the shortcut of your language) and translate the strings there. Then open an issue here with the resulting file as an attachment to submit it or better create a pull request. Current wrong or incomplete translations can be done by directly editing the po files and opening pull requests.
 
@@ -106,10 +118,3 @@ Individual scripts can also be ran directly. Look into the bin files (which are 
 - Display old and new sizes of resized files
 - Add new resolutions to resize plugins
 - Add more options to video transformations
-
-## History
-- KIM6 is a fork for KDE 6 of KIM5: https://github.com/caco3/kim5 
-- One KDE4 fork is here: https://store.kde.org/p/998188/
-- The original version for KDE4 is here: https://store.kde.org/p/1126887/
-- KIM itself goes as far back as KDE 3. There is a website that was still functioning in 2025: http://bouveyron.free.fr/kim/index.html
-- A huge majority of the code is from the original authors, thanks to them!
