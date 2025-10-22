@@ -30,51 +30,51 @@ DIR="$2";
 let "nbfiles = ($# -1)/2"
 kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to create new files?")" --yes-label "$(gettext "Create new")" --no-label "$(gettext "Replace existing")"
 case $? in
-	1)	# Replace existing files!
-	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
-	qdbus $dbusRef showCancelButton true
-	counter=0
-	for i in "$@";do
-		if [ -f "$i" ];then
-			#test if cancel button has been pushed
-			if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
-				qdbus $dbusRef close
-				exit 1
-			fi
-			let "counter +=1"
-			FILE="$i"
-			qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
-			mv "$FILE" "$FILE-work"
-			ffmpeg -i "$FILE-work" -s $QUALITY -c:v libx264 -crf 23 -c:a aac -strict -2 "$FILE"
-			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $counter
-		fi;
-	done
-	qdbus $dbusRef close;;
-	
-	0)
-	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
-	qdbus $dbusRef showCancelButton true
-	counter=0
-	for i in "$@";do
-		if [ -f "$i" ];then
-			#test if cancel button has been pushed
-			if test "true" = `qdbus $dbusRef wasCancelled`;then
-				qdbus $dbusRef close
-				exit 1
-			fi
-			let "counter +=1"
-			FILE="$i"
-			filename=$(basename -- "$FILE")
+    1)    # Replace existing files!
+    dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
+    qdbus $dbusRef showCancelButton true
+    counter=0
+    for i in "$@";do
+        if [ -f "$i" ];then
+            #test if cancel button has been pushed
+            if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+                qdbus $dbusRef close
+                exit 1
+            fi
+            let "counter +=1"
+            FILE="$i"
+            qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
+            mv "$FILE" "$FILE-work"
+            ffmpeg -i "$FILE-work" -s $QUALITY -c:v libx264 -crf 23 -c:a aac -strict -2 "$FILE"
+            qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $counter
+        fi;
+    done
+    qdbus $dbusRef close;;
+
+    0)
+    dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
+    qdbus $dbusRef showCancelButton true
+    counter=0
+    for i in "$@";do
+        if [ -f "$i" ];then
+            #test if cancel button has been pushed
+            if test "true" = `qdbus $dbusRef wasCancelled`;then
+                qdbus $dbusRef close
+                exit 1
+            fi
+            let "counter +=1"
+            FILE="$i"
+            filename=$(basename -- "$FILE")
                         extension="${filename##*.}"
                         filename="${filename%.*}"
-			DIR=$(dirname "${FILE}")
-			ffmpeg -i "$FILE" -s $QUALITY -c:v libx264 -crf 23 -c:a aac -strict -2 "$DIR/$filename-compressed.$extension"
-			qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
-#	 		qdbus $dbusRef setProgress "$counter"
-		fi;
-	done
-	qdbus $dbusRef close;;
-	
-	2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user!")"
-	exit 1;;
+            DIR=$(dirname "${FILE}")
+            ffmpeg -i "$FILE" -s $QUALITY -c:v libx264 -crf 23 -c:a aac -strict -2 "$DIR/$filename-compressed.$extension"
+            qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
+#             qdbus $dbusRef setProgress "$counter"
+        fi;
+    done
+    qdbus $dbusRef close;;
+
+    2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user!")"
+    exit 1;;
 esac;

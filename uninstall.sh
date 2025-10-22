@@ -24,8 +24,8 @@ rm -f $kim_install_dir/kim_*.desktop 2&> /dev/null
 rm -rf $kim_install_dir/kim6 2&> /dev/null
 
 if [[ "$1" == "--no_message" ]]; then
-	: # Say nothing when called from install script
+    : # Say nothing when called from install script
 else
-	echo "Kim6 has been removed. Good bye."
+    echo "Kim6 has been removed. Good bye."
 fi
 

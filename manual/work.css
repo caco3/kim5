@@ -1,41 +1,41 @@
       body 
            {
-	       font:11px verdana, arial, helvetica, sans-serif;
-	       color:#222;
-	       background-color:white;
-	     }
+           font:11px verdana, arial, helvetica, sans-serif;
+           color:#222;
+           background-color:white;
+         }
       h1
            {
-	       color:#333;
-	       font:1.1em/1 Georgia, "Times New Roman", Times, serif;
-	       font-weight:700;
-	       margin:2em 0 .5em;
-	     }
+           color:#333;
+           font:1.1em/1 Georgia, "Times New Roman", Times, serif;
+           font-weight:700;
+           margin:2em 0 .5em;
+         }
       h2
            {
-	       color:#333;
-	       font:1em/1 Georgia, "Times New Roman", Times, serif;
-	       font-weight:600;
-	       margin:2em 0 .5em;
-	     }
+           color:#333;
+           font:1em/1 Georgia, "Times New Roman", Times, serif;
+           font-weight:600;
+           margin:2em 0 .5em;
+         }
       p 
            {
-	       line-height:1.8;
-	       margin:0 0 1em;
+           line-height:1.8;
+           margin:0 0 1em;
                text-align: justify;
-	     }
+         }
       ol, ul
            {
-	       margin-top:0;
+           margin-top:0;
              margin-bottom:1em;
-	       line-height:1.8;
-	     }
+           line-height:1.8;
+         }
       a
            {
-	       color:#333;
-	       text-decoration:none;
-	       font-weight:600;
-	     }
+           color:#333;
+           text-decoration:none;
+           font-weight:600;
+         }
       a:link
            {  
              color:#333;
@@ -50,13 +50,13 @@
            }
       body
            {
-	       margin:20px 0px; padding:0px;
-	       text-align:center;
-	     }
+           margin:20px 0px; padding:0px;
+           text-align:center;
+         }
       img
            { 
              border: 0px;
-	       margin:0 0 1em;
+           margin:0 0 1em;
            }
       acronym
            {
@@ -110,14 +110,14 @@
 
       #content
            {
-	       width:580px;
-	       margin:0px auto;
-	       text-align:left;
-	       padding:1.3em;
-	       border:1px solid #666;
+           width:580px;
+           margin:0px auto;
+           text-align:left;
+           padding:1.3em;
+           border:1px solid #666;
                margin-bottom: 2.7em;
-	       background-color:#eee;
-	     }
+           background-color:#eee;
+         }
       #description
            {
                width:460px;
@@ -136,5 +136,5 @@
            }
       #footer
            {
-	       text-align:center;
+           text-align:center;
            }

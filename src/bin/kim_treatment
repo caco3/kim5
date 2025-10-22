@@ -29,89 +29,89 @@ SCELTA="$1";
 DIR="$2";
 let "nbfiles = ($# -1)/2" 
 case $SCELTA in 
-	mark) annotation=`kdialog --inputbox "$(gettext "Choose your annotation:")" "$(gettext "My annotation")"`;;
-	border) color=`kdialog --radiolist "$(gettext "Kim – Select border color:")" 1 "$(gettext "white")"  on 2 "$(gettext "black")" off`;;
+    mark) annotation=`kdialog --inputbox "$(gettext "Choose your annotation:")" "$(gettext "My annotation")"`;;
+    border) color=`kdialog --radiolist "$(gettext "Kim – Select border color:")" 1 "$(gettext "white")"  on 2 "$(gettext "black")" off`;;
 esac
 kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to create new files?")" --yes-label "$(gettext "Create new")" --no-label "$(gettext "Replace existing")"
 case $? in
-	1)	# Replace existing files!
-	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
-	qdbus $dbusRef showCancelButton true 
-	counter=0
-	for i in "$@";do
-		if [ -f "$i" ];then
-			#test if cancel button has been pushed
-			if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
-				qdbus $dbusRef close
-				exit 1
-			fi
-			ATTACHMENTS="$i"
-			let "counter +=1"
-			qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") `basename "$ATTACHMENTS"`"
-			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
-			case "$SCELTA" in 
-				gray)
-					mogrify -colorspace gray "$ATTACHMENTS"
-				;;
-				sepia)
-					mogrify -sepia-tone 80% "$ATTACHMENTS"
-				;;
-				border)
-					case "$color" in
-					1) mogrify -border 10x10 -bordercolor white "$ATTACHMENTS";;
-					2) mogrify -border 10x10 -bordercolor black "$ATTACHMENTS";;
-					esac
-				;;
-				mark)
-					mogrify -font SheerBeauty -pointsize 20 -draw "gravity southeast  text 0,0 '$annotation'" "$ATTACHMENTS"
-				;;
-				*)
-					exit 1
-				;;
-			esac
-		fi;
-	done
-	qdbus $dbusRef close;;
-	
-	0)	# Save files with another name!
-	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
-	qdbus $dbusRef showCancelButton true 
-	counter=0
-	for i in "$@";do
-		if [ -f "$i" ];then
-			#test if cancel button has been pushed
-			if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
-				qdbus $dbusRef close
-				exit 1
-			fi
-			ATTACHMENTS="$i"
-			let "counter +=1"
-			qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") `basename "$ATTACHMENTS"`"
-			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
-			case "$SCELTA" in 
-				gray)
-					magick "$ATTACHMENTS" -colorspace gray "$DIR/gray_`basename "$ATTACHMENTS"`"
-				;;
-				sepia)
-					magick "$ATTACHMENTS" -sepia-tone 80% "$DIR/sepia_`basename "$ATTACHMENTS"`"
-				;;
-				border)
-					case "$color" in
-					1) magick "$ATTACHMENTS" -border 10x10 -bordercolor white "$DIR/border_`basename "$ATTACHMENTS"`";;
-					2) magick "$ATTACHMENTS" -border 10x10 -bordercolor black "$DIR/border_`basename "$ATTACHMENTS"`";;
-					esac
-				;;
-				mark)
-					magick "$ATTACHMENTS" -font SheerBeauty -pointsize 20 -draw "gravity southeast  text 0,0 '$annotation'" "$DIR"/text_`basename "$ATTACHMENTS"`
-				;;
-				*)
-					exit 1
-				;;
-			esac
-		fi;
-	done
-	qdbus $dbusRef close;;
-	
-	2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user!")"
-	exit 1;;
+    1)    # Replace existing files!
+    dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
+    qdbus $dbusRef showCancelButton true
+    counter=0
+    for i in "$@";do
+        if [ -f "$i" ];then
+            #test if cancel button has been pushed
+            if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+                qdbus $dbusRef close
+                exit 1
+            fi
+            ATTACHMENTS="$i"
+            let "counter +=1"
+            qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") `basename "$ATTACHMENTS"`"
+            qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
+            case "$SCELTA" in
+                gray)
+                    mogrify -colorspace gray "$ATTACHMENTS"
+                ;;
+                sepia)
+                    mogrify -sepia-tone 80% "$ATTACHMENTS"
+                ;;
+                border)
+                    case "$color" in
+                    1) mogrify -border 10x10 -bordercolor white "$ATTACHMENTS";;
+                    2) mogrify -border 10x10 -bordercolor black "$ATTACHMENTS";;
+                    esac
+                ;;
+                mark)
+                    mogrify -font SheerBeauty -pointsize 20 -draw "gravity southeast  text 0,0 '$annotation'" "$ATTACHMENTS"
+                ;;
+                *)
+                    exit 1
+                ;;
+            esac
+        fi;
+    done
+    qdbus $dbusRef close;;
+
+    0)    # Save files with another name!
+    dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
+    qdbus $dbusRef showCancelButton true
+    counter=0
+    for i in "$@";do
+        if [ -f "$i" ];then
+            #test if cancel button has been pushed
+            if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+                qdbus $dbusRef close
+                exit 1
+            fi
+            ATTACHMENTS="$i"
+            let "counter +=1"
+            qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") `basename "$ATTACHMENTS"`"
+            qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
+            case "$SCELTA" in
+                gray)
+                    magick "$ATTACHMENTS" -colorspace gray "$DIR/gray_`basename "$ATTACHMENTS"`"
+                ;;
+                sepia)
+                    magick "$ATTACHMENTS" -sepia-tone 80% "$DIR/sepia_`basename "$ATTACHMENTS"`"
+                ;;
+                border)
+                    case "$color" in
+                    1) magick "$ATTACHMENTS" -border 10x10 -bordercolor white "$DIR/border_`basename "$ATTACHMENTS"`";;
+                    2) magick "$ATTACHMENTS" -border 10x10 -bordercolor black "$DIR/border_`basename "$ATTACHMENTS"`";;
+                    esac
+                ;;
+                mark)
+                    magick "$ATTACHMENTS" -font SheerBeauty -pointsize 20 -draw "gravity southeast  text 0,0 '$annotation'" "$DIR"/text_`basename "$ATTACHMENTS"`
+                ;;
+                *)
+                    exit 1
+                ;;
+            esac
+        fi;
+    done
+    qdbus $dbusRef close;;
+
+    2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user!")"
+    exit 1;;
 esac;

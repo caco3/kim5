@@ -27,10 +27,10 @@ ACTION="$1";
 KIM_INST_TTT
 
 case $ACTION in 
-	about) 
+    about)
             kdialog --textbox "$kim_inst"/ABOUT 600 400
             ;;
-	license) 
+    license)
             kdialog --textbox "$kim_inst"/LICENSE 600 400
             ;;
 esac

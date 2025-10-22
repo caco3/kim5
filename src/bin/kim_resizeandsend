@@ -38,42 +38,42 @@ qdbus $dbusRef showCancelButton true
 counter=0
 
 for i in "$@";do
-	if [ -f "$i" ];then
-		#test if cancel button has been pushed
-		if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
-			qdbus $dbusRef close
-			exit 1
-		fi
-		ATTACHMENTS="$i"
-		let "counter +=1"
-		qdbus $dbusRef setLabelText "$(gettext "Kim – Resizing and compressing file: ") `basename "$ATTACHMENTS"`"
- 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $counter
-		case "$choice" in 
-			1) cp $i $TMPDIR;;
-			2) magick "$ATTACHMENTS" -resize 800x800 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
-			3) magick "$ATTACHMENTS" -resize 600x600 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
-			4) magick "$ATTACHMENTS" -resize 300x300 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
-			*)exit 1;;
-		esac
-	fi;
+    if [ -f "$i" ];then
+        #test if cancel button has been pushed
+        if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+            qdbus $dbusRef close
+            exit 1
+        fi
+        ATTACHMENTS="$i"
+        let "counter +=1"
+        qdbus $dbusRef setLabelText "$(gettext "Kim – Resizing and compressing file: ") `basename "$ATTACHMENTS"`"
+         qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $counter
+        case "$choice" in
+            1) cp $i $TMPDIR;;
+            2) magick "$ATTACHMENTS" -resize 800x800 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+            3) magick "$ATTACHMENTS" -resize 600x600 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+            4) magick "$ATTACHMENTS" -resize 300x300 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+            *)exit 1;;
+        esac
+    fi;
 done
 
 if [ `command -v kmail` ]; then
-	kmail --attach "$TMPDIR"/*;
-	qdbus $dbusRef close;
-	kdialog --msgbox "$(gettext "Kim – Send by mail: you can write your message!")"
+    kmail --attach "$TMPDIR"/*;
+    qdbus $dbusRef close;
+    kdialog --msgbox "$(gettext "Kim – Send by mail: you can write your message!")"
 elif [ `command -v thunderbird` ]; then
-	ATTACHMENT=`ls -m $TMPDIR/* | tr -d ' '`
-	thunderbird -compose "attachment='$ATTACHMENT'"
-	qdbus $dbusRef close;
-	kdialog --msgbox "$(gettext "Kim – Send by mail: you can write your message!")"
+    ATTACHMENT=`ls -m $TMPDIR/* | tr -d ' '`
+    thunderbird -compose "attachment='$ATTACHMENT'"
+    qdbus $dbusRef close;
+    kdialog --msgbox "$(gettext "Kim – Send by mail: you can write your message!")"
 elif [ `command -v xdg-email` ]; then
-	ATTACHMENT=`ls -m $TMPDIR/* | tr -d ' '`
-	xdg-email --attach "$ATTACHMENT";
-	qdbus $dbusRef close;
-	kdialog --msgbox "$(gettext "Kim – Send by mail: you can write your message!")"
+    ATTACHMENT=`ls -m $TMPDIR/* | tr -d ' '`
+    xdg-email --attach "$ATTACHMENT";
+    qdbus $dbusRef close;
+    kdialog --msgbox "$(gettext "Kim – Send by mail: you can write your message!")"
 else
-	kdialog --msgbox "$(gettext "Can't find your mail client. The attachments are in $TMPDIR/ and you need to send them yourself.")"
+    kdialog --msgbox "$(gettext "Can't find your mail client. The attachments are in $TMPDIR/ and you need to send them yourself.")"
 fi
 
 rm -rf "$TMPDIR"

@@ -23,9 +23,9 @@
 
 # If there is no kdedialog, create an error log and abort.
 if [ ! `command -v kdialog` ]; then
-	touch ~/kim6_installation_failed.log
-	echo "You tried to install KDE Image Menu 6 (KIM 6) service menu for KDE's Dolphin file manager in an environment that does not have kdialog. Most of the functionality would not work and the installation was aborted. Please install KDE< or kdialog and try again. This message was created by this command: $(realpath "$0")." > ~/kim6_installation_failed.log
-	exit
+    touch ~/kim6_installation_failed.log
+    echo "You tried to install KDE Image Menu 6 (KIM 6) service menu for KDE's Dolphin file manager in an environment that does not have kdialog. Most of the functionality would not work and the installation was aborted. Please install KDE< or kdialog and try again. This message was created by this command: $(realpath "$0")." > ~/kim6_installation_failed.log
+    exit
 fi
 
 #function to show install errors and declare install_log variable to store the errors
@@ -36,25 +36,25 @@ kdialog --title "KIM 6 Installation problems" --error="$install_log"
 
 # Test for presence of dependencies, if not present, a user is presented with a log after installation
 if [ ! `command -v qtpaths6` ]; then
-	install_log="$install_log""KDE Image Menu 6 is meant to be run under KDE 6, but I can't find executable <b>qtpaths6</b> that should be a part of your QT base installation. Without qtpaths6, I cannot check for installations directories.  Please check your system installation. Installation was aborted."
-	spit_install_log
-	exit 1
+    install_log="$install_log""KDE Image Menu 6 is meant to be run under KDE 6, but I can't find executable <b>qtpaths6</b> that should be a part of your QT base installation. Without qtpaths6, I cannot check for installations directories.  Please check your system installation. Installation was aborted."
+    spit_install_log
+    exit 1
 fi
 if [ ! `command -v montage` ]; then
-	install_log="$install_log""Cannot find executable <b>montage</b>  Please install it. It is usually in package <b>graphicsmagick</b> Without it, the montage feature will not work.<br><br>"
+    install_log="$install_log""Cannot find executable <b>montage</b>  Please install it. It is usually in package <b>graphicsmagick</b> Without it, the montage feature will not work.<br><br>"
 fi
 
 if [ ! `command -v mogrify` ]; then
-	install_log="$install_log""Cannot find executable <b>mogrify</b>  Please install it. It  is usually in package <b>graphicsmagick</b> Without it, a lot of features like resizing and rotating and other transformations will not work.<br><br>"
+    install_log="$install_log""Cannot find executable <b>mogrify</b>  Please install it. It  is usually in package <b>graphicsmagick</b> Without it, a lot of features like resizing and rotating and other transformations will not work.<br><br>"
 fi
 if [ ! `command -v convert` ]; then
-	install_log="$install_log""Cannot find executable <b>convert</b>  Please install it. It is usually in package <b>graphicsmagick</b> Without it, format conversion will not work.<br><br>"
+    install_log="$install_log""Cannot find executable <b>convert</b>  Please install it. It is usually in package <b>graphicsmagick</b> Without it, format conversion will not work.<br><br>"
 fi
 if [ ! `command -v ffmpeg` ]; then
-	install_log="$install_log""Cannot find executable <b>ffmpeg</b>.  Please install it. It may be in package <b>ffmpeg</b>. Without it, video resizing will not work.<br><br>"
+    install_log="$install_log""Cannot find executable <b>ffmpeg</b>.  Please install it. It may be in package <b>ffmpeg</b>. Without it, video resizing will not work.<br><br>"
 fi
 if [ ! `command -v xdg-email` ]; then
-	install_log="$install_log""Cannot find executable <b>xdg-email</b>  Please install it. It may be in package <b>xdg-utils</b> Without it, sending an image by e-mail will not work.<br><br>"
+    install_log="$install_log""Cannot find executable <b>xdg-email</b>  Please install it. It may be in package <b>xdg-utils</b> Without it, sending an image by e-mail will not work.<br><br>"
 fi
 
 # sets directories from and to which we install
@@ -64,9 +64,9 @@ kim_helper_files="$kim_install_dir"/kim6
 
 # This checks if qtpaths6 returned an existing directory
 if [[ ! -d "$kim_install_dir" ]]; then
-	install_log="$install_log""<b>Error</b> fetching the KDE install prefix. Installation was aborted."
-	spit_install_log
-	exit 1
+    install_log="$install_log""<b>Error</b> fetching the KDE install prefix. Installation was aborted."
+    spit_install_log
+    exit 1
 fi
 
 # First uninstall so we do not leave anything behind when potentially renaming, removing or moving stuff from version to version
@@ -76,17 +76,17 @@ fi
 if compgen -G "$src_folder"/*.desktop > /dev/null; then
     desktop_files_generated=false
 else
-	desktop_files_generated=true
-	if [ ! `command -v intltool-merge` ]; then
-		install_log="$install_log""You are probably trying to install KIM6 from git and do not have pregenerated .desktop files.<br>They are generated by the tool <b>intltool-merge</b>, usually found in package <b>intltool</b>.<br>Please install it. The installation was attempted, but it failed.<br><br>"
-	else
-		for desk_ini in "$src_folder"/src/*.desktop.in
-			do
-			new_desktop_file_filename="${desk_ini%.in}"
-			intltool-merge --desktop-style "$src_folder"/po/ "$desk_ini"  "$new_desktop_file_filename" > /dev/null
-			chmod +x "$new_desktop_file_filename"
-		done
-	fi
+    desktop_files_generated=true
+    if [ ! `command -v intltool-merge` ]; then
+        install_log="$install_log""You are probably trying to install KIM6 from git and do not have pregenerated .desktop files.<br>They are generated by the tool <b>intltool-merge</b>, usually found in package <b>intltool</b>.<br>Please install it. The installation was attempted, but it failed.<br><br>"
+    else
+        for desk_ini in "$src_folder"/src/*.desktop.in
+            do
+            new_desktop_file_filename="${desk_ini%.in}"
+            intltool-merge --desktop-style "$src_folder"/po/ "$desk_ini"  "$new_desktop_file_filename" > /dev/null
+            chmod +x "$new_desktop_file_filename"
+        done
+    fi
 fi
 
 # install desktop
@@ -96,23 +96,23 @@ cp -pr "$src_folder"/src/kim_*.desktop "$kim_install_dir"
 
 # Replace the path in desktop and other files with the installed path
 for file in "$kim_install_dir"/kim_*.desktop; do
-	sed -i "s|Exec=kim|Exec='$kim_helper_files/bin/kim'|g" "$file"
+    sed -i "s|Exec=kim|Exec='$kim_helper_files/bin/kim'|g" "$file"
 done
 for file in "$kim_helper_files"/bin/kim_*; do
-	sed -i "s|KIM_INST_TTT|kim_inst='$kim_helper_files'|g" "$file"
-	sed -i "s|SOURCE_TRANSLATION_TTT|. '$kim_helper_files/kim_translation'|g" "$file"
+    sed -i "s|KIM_INST_TTT|kim_inst='$kim_helper_files'|g" "$file"
+    sed -i "s|SOURCE_TRANSLATION_TTT|. '$kim_helper_files/kim_translation'|g" "$file"
 done
 sed -i "s|LOCALE_SOURCE_TTT|'$kim_helper_files/locale'|g" "$kim_helper_files/kim_translation"
 
 # install translation mo files
 if [ ! `command -v msgfmt` ]; then
-	install_log="$install_log""The <b>msgfmt</b> command was not found, translation files were not generated and KIM6 will only be available in English. The command is usually provide by the package <b>gettext</b>. Please install it and then install KIM6 again.<br><br>"
+    install_log="$install_log""The <b>msgfmt</b> command was not found, translation files were not generated and KIM6 will only be available in English. The command is usually provide by the package <b>gettext</b>. Please install it and then install KIM6 again.<br><br>"
 else
-	for i in "$kim_helper_files"/po/*.po; do
-		TRANSLANG=`basename -s .po $i`
-		mkdir -p "$kim_helper_files"/locale/$TRANSLANG/LC_MESSAGES
-		msgfmt -o "$kim_helper_files"/locale/$TRANSLANG/LC_MESSAGES/kim6.mo $i
-	done
+    for i in "$kim_helper_files"/po/*.po; do
+        TRANSLANG=`basename -s .po $i`
+        mkdir -p "$kim_helper_files"/locale/$TRANSLANG/LC_MESSAGES
+        msgfmt -o "$kim_helper_files"/locale/$TRANSLANG/LC_MESSAGES/kim6.mo $i
+    done
 fi
 
 # po files do not need to be installed after generating locale
@@ -125,7 +125,7 @@ fi
 
 # if error were encoutered, display them, otherwise the succes message will only be seen when installed manually from a terminal, not from GUI
 if [[ "$install_log" == "" ]]; then
-	echo "Kim has been succesfully installed. Good bye!"
+    echo "Kim has been succesfully installed. Good bye!"
 else
-	spit_install_log
+    spit_install_log
 fi

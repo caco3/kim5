@@ -29,62 +29,62 @@ let "nbfiles = ($# -1)/2"
 DIR="$1";
 kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to create new files?")" --yes-label "$(gettext "Create new")" --no-label "$(gettext "Replace existing")"
 case $? in
-	1)	# Replace existing files!
-	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
-	qdbus $dbusRef showCancelButton true
-	counter=0
-	newname=`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`
-	for i in "$@";do
-		if [ -f "$i" ];then 
-			#test if cancel button has been pushed
-			if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
-				qdbus $dbusRef close
-				exit 1
-			fi
-			let "counter +=1"
-			FILE="$i";
-			suff="";
-			if [ "$counter" -lt "10" ];
-			then suff="00";
-			else   if [ "$counter" -lt "100" ];
-				then suff="0";
-				fi
-			fi
-			mv "$FILE" "$DIR/$newname$suff$counter.jpg"
-			qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
- 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
-		fi;
-	done
-	qdbus $dbusRef close;;
-	
-	0)
-	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
-	qdbus $dbusRef showCancelButton true
-	counter=0
-	newname="`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`"
-	for i in "$@";do
-		if [ -f "$i" ];then 
-			#test if cancel button has been pushed
-			if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
-				qdbus $dbusRef close
-				exit 1
-			fi
-			let "counter +=1"
-			FILE="$i";
-			suff="";
-			if [ "$counter" -lt "10" ];
-			then suff="00";
-			else   if [ "$counter" -lt "100" ];
-				then suff="0";
-				fi
-			fi
-			cp "$FILE" "$DIR/$newname$suff$counter.jpg"
-			qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
- 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
-		fi;
-	done
-	qdbus $dbusRef close;;
-	
-	2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user!")"
-	exit 1;;
+    1)    # Replace existing files!
+    dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
+    qdbus $dbusRef showCancelButton true
+    counter=0
+    newname=`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`
+    for i in "$@";do
+        if [ -f "$i" ];then
+            #test if cancel button has been pushed
+            if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+                qdbus $dbusRef close
+                exit 1
+            fi
+            let "counter +=1"
+            FILE="$i";
+            suff="";
+            if [ "$counter" -lt "10" ];
+            then suff="00";
+            else   if [ "$counter" -lt "100" ];
+                then suff="0";
+                fi
+            fi
+            mv "$FILE" "$DIR/$newname$suff$counter.jpg"
+            qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
+             qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
+        fi;
+    done
+    qdbus $dbusRef close;;
+
+    0)
+    dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
+    qdbus $dbusRef showCancelButton true
+    counter=0
+    newname="`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`"
+    for i in "$@";do
+        if [ -f "$i" ];then
+            #test if cancel button has been pushed
+            if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+                qdbus $dbusRef close
+                exit 1
+            fi
+            let "counter +=1"
+            FILE="$i";
+            suff="";
+            if [ "$counter" -lt "10" ];
+            then suff="00";
+            else   if [ "$counter" -lt "100" ];
+                then suff="0";
+                fi
+            fi
+            cp "$FILE" "$DIR/$newname$suff$counter.jpg"
+            qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
+             qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
+        fi;
+    done
+    qdbus $dbusRef close;;
+
+    2) kdialog --title "$(gettext "Kim")" --msgbox "$(gettext "The action was cancelled by user!")"
+    exit 1;;
 esac;

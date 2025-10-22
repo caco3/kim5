@@ -39,20 +39,20 @@ counter=0
 # Extract all 16 subpictures
 for ((i=1;i<=4;i++))
 do
-	for ((j=1;j<=4;j++))
-	do
-		#test if cancel button has been pushed
-		if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
-			qdbus $dbusRef close
-			exit 1
-		fi
-		let "counter +=1"
-		x=$((($j-1)*320));
-		y=$((($i-1)*240));
+    for ((j=1;j<=4;j++))
+    do
+        #test if cancel button has been pushed
+        if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+            qdbus $dbusRef close
+            exit 1
+        fi
+        let "counter +=1"
+        x=$((($j-1)*320));
+        y=$((($i-1)*240));
         magick "$1" -crop 320x240+$x+$y "$KIMDIR"/imagette.$i.$j.jpg
-		qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
- 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
-	done
+        qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
+         qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
+    done
 done
 
 # Convert in gif animation

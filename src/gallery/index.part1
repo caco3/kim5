@@ -5,28 +5,28 @@
 <title>Image gallery (Kde Image Menu)</title>
 <style type="text/css">
 body {
-	background:#eee;
-	text-align:center;
-	height:100%;
-	padding-top:1em;
+    background:#eee;
+    text-align:center;
+    height:100%;
+    padding-top:1em;
 }
 a,p {
-	color:#aaa;
-	font-family:Verdana,Arial,Helvetica,Sans-serif;
-	text-decoration:none;
-	font-size:xx-small;
+    color:#aaa;
+    font-family:Verdana,Arial,Helvetica,Sans-serif;
+    text-decoration:none;
+    font-size:xx-small;
 }
 a:hover {
-	color:#666;
-	text-decoration:underline;
+    color:#666;
+    text-decoration:underline;
 }
 img.photo { 
-	border: 5px solid #ffffff; 
+    border: 5px solid #ffffff;
 }
 table {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
 </style>

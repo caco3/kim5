@@ -51,34 +51,34 @@ echo '<table><tr>' >> $DIR/index.html;
 counter=0;
 tmp=0;
 for i in "$@";do
-	if [ -f "$i" ];then
-		#test if cancel button has been pushed
-		if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
-			qdbus $dbusRef close
-			exit 1
-		fi
-		let "counter +=1"
-		let "tmp +=1"
-		FILE="$i";
-		IMAGE=`basename "$FILE"`;
-		magick "$FILE" -resize $SCALE_1 $DIR/images/"$IMAGE";
-		magick "$FILE" -resize $SCALE_2 $DIR/thumbs/"$IMAGE";
-		W2=`identify -format "%w" $DIR/images/"$IMAGE"`;
-		H2=`identify -format "%h" $DIR/images/"$IMAGE"`;
-		echo '<td align='center'>' >> $DIR/index.html;
-		if [ "$H2" -lt "$W2" ];
-		then echo '<a href="images/'"$IMAGE"'"><img class="photo" src="thumbs/'"$IMAGE"'" width="'$W'" height="'$H'" alt="thumbs/'"$IMAGE"'" title="'"$IMAGE"'"></a>' >> $DIR/index.html;
-		else echo '<a href="images/'"$IMAGE"'"><img class="photo" src="thumbs/'"$IMAGE"'" width="'$H'" height="'$W'" alt="thumbs/'"$IMAGE"'" title="'"$IMAGE"'"></a>' >> $DIR/index.html;
-		fi;
-		echo '<p>'"$IMAGE"'</p>' >> $DIR/index.html;
-		echo '</td>' >> $DIR/index.html;
-		if [ "$tmp" -eq "$K" ];
-		then 	echo '</tr><tr>' >> $DIR/index.html;
-			tmp=0;
-		fi
-		qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") $IMAGE"
- 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
-	fi;
+    if [ -f "$i" ];then
+        #test if cancel button has been pushed
+        if [[ "$(qdbus $dbusRef wasCancelled)" == "true" ]] ; then
+            qdbus $dbusRef close
+            exit 1
+        fi
+        let "counter +=1"
+        let "tmp +=1"
+        FILE="$i";
+        IMAGE=`basename "$FILE"`;
+        magick "$FILE" -resize $SCALE_1 $DIR/images/"$IMAGE";
+        magick "$FILE" -resize $SCALE_2 $DIR/thumbs/"$IMAGE";
+        W2=`identify -format "%w" $DIR/images/"$IMAGE"`;
+        H2=`identify -format "%h" $DIR/images/"$IMAGE"`;
+        echo '<td align='center'>' >> $DIR/index.html;
+        if [ "$H2" -lt "$W2" ];
+        then echo '<a href="images/'"$IMAGE"'"><img class="photo" src="thumbs/'"$IMAGE"'" width="'$W'" height="'$H'" alt="thumbs/'"$IMAGE"'" title="'"$IMAGE"'"></a>' >> $DIR/index.html;
+        else echo '<a href="images/'"$IMAGE"'"><img class="photo" src="thumbs/'"$IMAGE"'" width="'$H'" height="'$W'" alt="thumbs/'"$IMAGE"'" title="'"$IMAGE"'"></a>' >> $DIR/index.html;
+        fi;
+        echo '<p>'"$IMAGE"'</p>' >> $DIR/index.html;
+        echo '</td>' >> $DIR/index.html;
+        if [ "$tmp" -eq "$K" ];
+        then     echo '</tr><tr>' >> $DIR/index.html;
+            tmp=0;
+        fi
+        qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") $IMAGE"
+         qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
+    fi;
 done
 
 cat $KIM_DIR/index.part2 >> $DIR/index.html;
