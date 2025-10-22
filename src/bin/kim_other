@@ -34,7 +34,7 @@ case $ACTION in
             kdialog --textbox "$kim_inst"/LICENSE 600 400
             ;;
     manual)
-            xdg-open "$kim_inst"/manual/index.html
+            xdg-open "$kim_inst"/docs/index.html
             ;;
 esac
 
