@@ -1,6 +1,6 @@
       body 
            {
-           font:11px verdana, arial, helvetica, sans-serif;
+           font:16px verdana, arial, helvetica, sans-serif;
            color:#222;
            background-color:white;
          }
@@ -24,7 +24,7 @@
            margin:0 0 1em;
                text-align: justify;
          }
-      ol, ul
+      oul
            {
            margin-top:0;
              margin-bottom:1em;
@@ -37,7 +37,7 @@
            font-weight:600;
          }
       a:link
-           {  
+           {
              color:#333;
            }
       a:visited
@@ -53,15 +53,7 @@
            margin:20px 0px; padding:0px;
            text-align:center;
          }
-      img
-           { 
-             border: 0px;
-           margin:0 0 1em;
-           }
-      acronym
-           {
-             cursor: help;
-           }
+
       #navcontainer
            {
              margin-left: auto;
@@ -110,24 +102,14 @@
 
       #content
            {
-           width:580px;
+           width:87ch;
            margin:0px auto;
            text-align:left;
            padding:1.3em;
            border:1px solid #666;
-               margin-bottom: 2.7em;
+           margin-bottom: 2.7em;
            background-color:#eee;
          }
-      #description
-           {
-               width:460px;
-               margin:0px auto;
-               text-align:left;
-               padding:0.6em;
-               border:1px dotted #888;
-               margin-bottom: 0.5em;
-               background-color:#f3f3f3;
-             }
 
       #address ul
            {
