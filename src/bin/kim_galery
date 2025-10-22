@@ -48,7 +48,7 @@ echo '<h1>'$TITLE'</h1>' >> $DIR/index.html;
 echo '<h5>Author: '$AUTHOR'<br>Date: '$DATE'</h5>' >> $DIR/index.html;
 echo '<table><tr>' >> $DIR/index.html;
 
-compteur=0;
+counter=0;
 tmp=0;
 for i in "$@";do
 	if [ -f "$i" ];then
@@ -57,7 +57,7 @@ for i in "$@";do
 			qdbus $dbusRef close
 			exit 1
 		fi
-		let "compteur +=1"
+		let "counter +=1"
 		let "tmp +=1"
 		FILE="$i";
 		IMAGE=`basename "$FILE"`;
@@ -77,7 +77,7 @@ for i in "$@";do
 			tmp=0;
 		fi
 		qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") $IMAGE"
- 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+ 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
 	fi;
 done
 

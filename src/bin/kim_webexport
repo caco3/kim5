@@ -33,7 +33,7 @@ case $? in
 	0)	# Replace existing files!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising compression")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
-	compteur=0
+	counter=0
 	for i in "$@";do
 		if [ -f "$i" ];then
 			#test if cancel button has been pushed
@@ -41,11 +41,11 @@ case $? in
 				qdbus $dbusRef close
 				exit 1
 			fi
-			let "compteur +=1"
+			let "counter +=1"
 			FILE="$i"
 			mogrify -resize "$SCELTA" -quality 75 "$FILE"
 			qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
-			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
 		fi;
 	done
 	qdbus $dbusRef close;;
@@ -53,7 +53,7 @@ case $? in
 	1)
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising compression")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
-	compteur=0
+	counter=0
 	for i in "$@";do
 		if [ -f "$i" ];then
 			#test if cancel button has been pushed
@@ -61,11 +61,11 @@ case $? in
 				qdbus $dbusRef close
 				exit 1
 			fi
-			let "compteur +=1"
+			let "counter +=1"
 			FILE="$i"
 			magick "$FILE" -resize $SCELTA -quality 75 "$DIR""web_`basename "$FILE"`"
 			qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename "$FILE"`"
-			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
 		fi;
 	done
 	qdbus $dbusRef close;;

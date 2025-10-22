@@ -37,7 +37,7 @@ case $? in
 	0)	# Replace existing files!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true 
-	compteur=0
+	counter=0
 	for i in "$@";do
 		if [ -f "$i" ];then
 			#test if cancel button has been pushed
@@ -46,9 +46,9 @@ case $? in
 				exit 1
 			fi
 			ATTACHMENTS="$i"
-			let "compteur +=1"
+			let "counter +=1"
 			qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") `basename "$ATTACHMENTS"`"
-			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
 			case "$SCELTA" in 
 				gray)
 					mogrify -colorspace gray "$ATTACHMENTS"
@@ -76,7 +76,7 @@ case $? in
 	1)	# Save files with another name!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true 
-	compteur=0
+	counter=0
 	for i in "$@";do
 		if [ -f "$i" ];then
 			#test if cancel button has been pushed
@@ -85,9 +85,9 @@ case $? in
 				exit 1
 			fi
 			ATTACHMENTS="$i"
-			let "compteur +=1"
+			let "counter +=1"
 			qdbus $dbusRef setLabelText "$(gettext "Kim – Treatment of file: ") `basename "$ATTACHMENTS"`"
-			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
 			case "$SCELTA" in 
 				gray)
 					magick "$ATTACHMENTS" -colorspace gray "$DIR/gray_`basename "$ATTACHMENTS"`"

@@ -30,7 +30,7 @@ nb=`kdialog --radiolist "$(gettext "Kim – Select album type:")" 1 "$(gettext "
 
 dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 qdbus $dbusRef showCancelButton true
-compteur=0
+counter=0
 
 case "$nb" in
 1)	for i in "$@";do
@@ -40,11 +40,11 @@ case "$nb" in
 				rm -rf "tmp/kim.*"
 				exit 1
 			fi
-			let "compteur +=1"
+			let "counter +=1"
 			FILE=`basename "$i"`;
 			magick -resize 640x480 -rotate '90<' $i "$TMPDIR/mini_$FILE";
 			qdbus $dbusRef setLabelText "$(gettext "Kim – resizing of file: ") $FILE"
- 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+ 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
 		fi;
 	done
 	qdbus $dbusRef close;

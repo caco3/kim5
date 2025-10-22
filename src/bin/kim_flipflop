@@ -30,7 +30,7 @@ let "nbfiles = $# -1"
 dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 qdbus $dbusRef showCancelButton true
 
-compteur=0
+counter=0
 for i in "$@";do
 	if [ -f "$i" ];then
 		#test if cancel button has been pushed
@@ -38,11 +38,11 @@ for i in "$@";do
 			qdbus $dbusRef close
 			exit 1
 		fi
-		let "compteur +=1"
+		let "counter +=1"
 		FILE="$i"
 		qdbus $dbusRef setLabelText "$(gettext "Kim – Rotating file: ") `basename "$FILE"`"
 		mogrify -$ANGLE "$FILE"
-		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
 	fi;
 done
 

@@ -32,7 +32,7 @@ case $? in
 	0)	# Replace existing files!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 	qdbus $dbusRef showCancelButton true
-	compteur=0
+	counter=0
 	newname=`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`
 	for i in "$@";do
 		if [ -f "$i" ];then 
@@ -41,18 +41,18 @@ case $? in
 				qdbus $dbusRef close
 				exit 1
 			fi
-			let "compteur +=1"
+			let "counter +=1"
 			FILE="$i";
 			suff="";
-			if [ "$compteur" -lt "10" ];
+			if [ "$counter" -lt "10" ];
 			then suff="00";
-			else   if [ "$compteur" -lt "100" ];
+			else   if [ "$counter" -lt "100" ];
 				then suff="0";
 				fi
 			fi
-			mv "$FILE" "$DIR/$newname$suff$compteur.jpg"
+			mv "$FILE" "$DIR/$newname$suff$counter.jpg"
 			qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
- 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+ 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
 		fi;
 	done
 	qdbus $dbusRef close;;
@@ -60,7 +60,7 @@ case $? in
 	1) 
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
-	compteur=0
+	counter=0
 	newname="`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`"
 	for i in "$@";do
 		if [ -f "$i" ];then 
@@ -69,18 +69,18 @@ case $? in
 				qdbus $dbusRef close
 				exit 1
 			fi
-			let "compteur +=1"
+			let "counter +=1"
 			FILE="$i";
 			suff="";
-			if [ "$compteur" -lt "10" ];
+			if [ "$counter" -lt "10" ];
 			then suff="00";
-			else   if [ "$compteur" -lt "100" ];
+			else   if [ "$counter" -lt "100" ];
 				then suff="0";
 				fi
 			fi
-			cp "$FILE" "$DIR/$newname$suff$compteur.jpg"
+			cp "$FILE" "$DIR/$newname$suff$counter.jpg"
 			qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
- 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$compteur"
+ 			qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
 		fi;
 	done
 	qdbus $dbusRef close;;

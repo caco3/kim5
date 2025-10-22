@@ -35,7 +35,7 @@ let "nbfiles = $#"
 dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 qdbus $dbusRef showCancelButton true 
 
-compteur=0
+counter=0
 
 for i in "$@";do
 	if [ -f "$i" ];then
@@ -45,9 +45,9 @@ for i in "$@";do
 			exit 1
 		fi
 		ATTACHMENTS="$i"
-		let "compteur +=1"
+		let "counter +=1"
 		qdbus $dbusRef setLabelText "$(gettext "Kim – Resizing and compressing file: ") `basename "$ATTACHMENTS"`"
- 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $compteur
+ 		qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $counter
 		case "$choice" in 
 			1) cp $i $TMPDIR;;
 			2) magick "$ATTACHMENTS" -resize 800x800 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
