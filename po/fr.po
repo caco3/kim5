@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kim 0.9.7\n"
-"Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/KIM-6/kim6/issues\n"
 "POT-Creation-Date: 2025-10-22 19:11+0200\n"
 "PO-Revision-Date: 2014-04-01 21:08+0100\n"
 "Last-Translator: Daniel Tartavel <contact@librepc.com>\n"

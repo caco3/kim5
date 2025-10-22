@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KIM 6 – Kde Image Menu 6 1.1\n"
-"Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/KIM-6/kim6/issues\n"
 "POT-Creation-Date: 2025-10-22 19:11+0200\n"
 "PO-Revision-Date: 2025-09-22 22:23+0200\n"
 "Last-Translator: Tomáš Hnyk <drew@greenone>\n"
