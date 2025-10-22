@@ -30,7 +30,7 @@ DIR="$1";
 kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to create new files?")" --yes-label "$(gettext "Create new")" --no-label "$(gettext "Replace existing")"
 case $? in
     1)    # Replace existing files!
-    dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
+    dbusRef=`kdialog --progressbar "$(gettext "Kim — Initialising ...")" $nbfiles`
     qdbus $dbusRef showCancelButton true
     counter=0
     newname=`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`
@@ -51,14 +51,14 @@ case $? in
                 fi
             fi
             mv "$FILE" "$DIR/$newname$suff$counter.jpg"
-            qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
+            qdbus $dbusRef setLabelText "$(gettext "Kim — Renaming file: ") `basename "$FILE"`"
              qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
         fi;
     done
     qdbus $dbusRef close;;
 
     0)
-    dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
+    dbusRef=`kdialog --progressbar "$(gettext "Kim — Initialising ...")" "$nbfiles"`
     qdbus $dbusRef showCancelButton true
     counter=0
     newname="`kdialog --inputbox "$(gettext "Choose the new name of images:")" "wallpaper_"`"
@@ -79,7 +79,7 @@ case $? in
                 fi
             fi
             cp "$FILE" "$DIR/$newname$suff$counter.jpg"
-            qdbus $dbusRef setLabelText "$(gettext "Kim – Renaming file: ") `basename "$FILE"`"
+            qdbus $dbusRef setLabelText "$(gettext "Kim — Renaming file: ") `basename "$FILE"`"
              qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
         fi;
     done

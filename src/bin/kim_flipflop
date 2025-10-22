@@ -27,7 +27,7 @@ SOURCE_TRANSLATION_TTT
 FILE="";
 ANGLE="$1";
 let "nbfiles = $# -1"
-dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
+dbusRef=`kdialog --progressbar "$(gettext "Kim — Initialising ...")" $nbfiles`
 qdbus $dbusRef showCancelButton true
 
 counter=0
@@ -40,7 +40,7 @@ for i in "$@";do
         fi
         let "counter +=1"
         FILE="$i"
-        qdbus $dbusRef setLabelText "$(gettext "Kim – Rotating file: ") `basename "$FILE"`"
+        qdbus $dbusRef setLabelText "$(gettext "Kim — Rotating file: ") `basename "$FILE"`"
         mogrify -$ANGLE "$FILE"
         qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
     fi;

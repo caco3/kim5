@@ -1,4 +1,4 @@
-# Servicemenu — Publish, treat and do miscellaneous things with images (also help and license)
+# Servicemenu–Publish, treat and do miscellaneous things with images (also help and license)
 #
 # Copyright (C) 2005, 2006  Charles Bouveyron <charles.bouveyron@free.fr>
 # Copyright (C) 2025  Tomáš Hnyk <tomashnyk@gmail.com>
@@ -21,7 +21,7 @@ Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,image/*
 Actions=Rename;SortByDate;SendByMail;_SEPARATOR_;PeleMele;Galery;_SEPARATOR_;Watermark;Border;_SEPARATOR_;Animation;Multiburst;Adjoin;_SEPARATOR_;License;Apropos;
 Encoding=UTF-8
-_X-KDE-Submenu=Kim – Treatment and publication
+_X-KDE-Submenu=Kim — Treatment and publication
 
 [Desktop Action Galery]
 _Name=Create a html gallery
@@ -56,7 +56,7 @@ Exec=magick -adjoin %U my_images.tiff
 [Desktop Action Animation]
 _Name=Create a gif animation
 Icon=video
-Exec=magick %U -set delay `kdialog --inputbox "Kim – Delay between images in centiseconds (100 is one second, 50 is half a second):" 100` -loop 0 my_animation.gif
+Exec=magick %U -set delay `kdialog --inputbox "Kim — Delay between images in centiseconds (100 is one second, 50 is half a second):" 100` -loop 0 my_animation.gif
 
 [Desktop Action Multiburst]
 _Name=Multiburst image to gif animation

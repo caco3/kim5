@@ -18,8 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/bin/kim_album:25 ../src/bin/kim_print:29
-msgid "Kim – Select album type:"
-msgstr "Kim – Kies het soort album:"
+msgid "Kim — Select album type:"
+msgstr "Kim — Kies het soort album:"
 
 #: ../src/bin/kim_album:25
 msgid "1x1 portrait album"
@@ -54,25 +54,25 @@ msgid "4x4 landscape album"
 msgstr "4x4 horizontaal album"
 
 #: ../src/bin/kim_album:31
-msgid "Kim – Creating miniatures ..."
-msgstr "Kim – Bezig met samenstellen van miniaturen…"
+msgid "Kim — Creating miniatures ..."
+msgstr "Kim — Bezig met samenstellen van miniaturen…"
 
 #: ../src/bin/kim_album:34 ../src/bin/kim_album:40 ../src/bin/kim_album:46
 #: ../src/bin/kim_album:51 ../src/bin/kim_album:56 ../src/bin/kim_album:61
 #: ../src/bin/kim_album:66 ../src/bin/kim_album:71 ../src/bin/kim_print:55
 #: ../src/bin/kim_print:61 ../src/bin/kim_print:66 ../src/bin/kim_print:71
 #: ../src/bin/kim_print:76 ../src/bin/kim_print:81 ../src/bin/kim_print:86
-msgid "Kim – Creating album ..."
-msgstr "Kim – Bezig met samenstellen van album…"
+msgid "Kim — Creating album ..."
+msgstr "Kim — Bezig met samenstellen van album…"
 
 #: ../src/bin/kim_album:75 ../src/bin/kim_print:90
 #, fuzzy
-msgid "Kim – Unrecognized option! "
-msgstr "Kim – Onbekende optie!"
+msgid "Kim — Unrecognized option! "
+msgstr "Kim — Onbekende optie!"
 
 #: ../src/bin/kim_album:78 ../src/bin/kim_print:93
-msgid "Kim – Deleting miniatures ..."
-msgstr "Kim – Bezig met verwijderen van miniaturen…"
+msgid "Kim — Deleting miniatures ..."
+msgstr "Kim — Bezig met verwijderen van miniaturen…"
 
 #: ../src/bin/kim_compress:31 ../src/bin/kim_compress:76
 #: ../src/bin/kim_rename:30 ../src/bin/kim_rename:88 ../src/bin/kim_resize:31
@@ -111,14 +111,14 @@ msgstr ""
 #: ../src/bin/kim_sortbydate:35 ../src/bin/kim_sortbydate:71
 #: ../src/bin/kim_treatment:38 ../src/bin/kim_treatment:77
 #: ../src/bin/kim_video:36 ../src/bin/kim_video:57
-msgid "Kim – Initialising ..."
-msgstr "Kim – Bezig met initialiseren…"
+msgid "Kim — Initialising ..."
+msgstr "Kim — Bezig met initialiseren…"
 
 #: ../src/bin/kim_compress:46 ../src/bin/kim_compress:70
 #: ../src/bin/kim_multiburst:53 ../src/bin/kim_video:48 ../src/bin/kim_video:74
 #: ../src/bin/kim_webexport:47 ../src/bin/kim_webexport:70
-msgid "Kim – Compressing file: "
-msgstr "Kim – Bezig met comprimeren van bestand: "
+msgid "Kim — Compressing file: "
+msgstr "Kim — Bezig met comprimeren van bestand: "
 
 #: ../src/bin/kim_compress:76 ../src/bin/kim_rename:88 ../src/bin/kim_resize:77
 #: ../src/bin/kim_sortbydate:106 ../src/bin/kim_treatment:115
@@ -128,39 +128,39 @@ msgid "The action was cancelled by user!"
 msgstr "De handeling is afgebroken."
 
 #: ../src/bin/kim_convert:43
-msgid "Kim – Converting file:"
-msgstr "Kim – Bezig met converteren van bestand:"
+msgid "Kim — Converting file:"
+msgstr "Kim — Bezig met converteren van bestand:"
 
 #: ../src/bin/kim_flipflop:43 ../src/bin/kim_rotate:47
 #: ../src/bin/kim_rotatewithexif:44
-msgid "Kim – Rotating file: "
-msgstr "Kim – Bezig met draaien van bestand:"
+msgid "Kim — Rotating file: "
+msgstr "Kim — Bezig met draaien van bestand:"
 
 #: ../src/bin/kim_galery:29
-msgid "Kim – Title:"
-msgstr "Kim – Naam:"
+msgid "Kim — Title:"
+msgstr "Kim — Naam:"
 
 #: ../src/bin/kim_galery:29
 msgid "My title ..."
 msgstr "Mijn zelfgekozen naam…"
 
 #: ../src/bin/kim_galery:30
-msgid "Kim – Author:"
-msgstr "Kim – Maker:"
+msgid "Kim — Author:"
+msgstr "Kim — Maker:"
 
 #: ../src/bin/kim_galery:34
-msgid "Kim – Number of columns:"
-msgstr "Kim – Aantal kolommen:"
+msgid "Kim — Number of columns:"
+msgstr "Kim — Aantal kolommen:"
 
 #: ../src/bin/kim_galery:79 ../src/bin/kim_treatment:50
 #: ../src/bin/kim_treatment:89
-msgid "Kim – Treatment of file: "
-msgstr "Kim – Bezig met afhandelen van bestand: "
+msgid "Kim — Treatment of file: "
+msgstr "Kim — Bezig met afhandelen van bestand: "
 
 #: ../src/bin/kim_multiburst:34 ../src/bin/kim_webexport:34
 #: ../src/bin/kim_webexport:54
-msgid "Kim – Initialising compression"
-msgstr "Kim – Bezig met initialiseren van compressie…"
+msgid "Kim — Initialising compression"
+msgstr "Kim — Bezig met initialiseren van compressie…"
 
 #: ../src/bin/kim_pelemele:30
 msgid "Size of small images:"
@@ -179,8 +179,8 @@ msgid "Background color:"
 msgstr "Achtergrondkleur:"
 
 #: ../src/bin/kim_pelemele:66 ../src/bin/kim_print:46
-msgid "Kim – resizing of file: "
-msgstr "Kim – Bezig met grootte-aanpassing van bestand: "
+msgid "Kim — resizing of file: "
+msgstr "Kim — Bezig met grootte-aanpassing van bestand: "
 
 #: ../src/bin/kim_print:29
 msgid "9x13 cm: 2x2 images, landscape"
@@ -212,16 +212,16 @@ msgstr "Geef de afbeeldingen een nieuwe naam:"
 
 #: ../src/bin/kim_rename:54 ../src/bin/kim_rename:82
 #: ../src/bin/kim_sortbydate:64 ../src/bin/kim_sortbydate:100
-msgid "Kim – Renaming file: "
-msgstr "Kim – Bezig met naamswijziging: "
+msgid "Kim — Renaming file: "
+msgstr "Kim — Bezig met naamswijziging: "
 
 #: ../src/bin/kim_resize:47 ../src/bin/kim_resize:71
-msgid "Kim – Resizing file: "
-msgstr "Kim – Bezig met grootte-aanpassing: "
+msgid "Kim — Resizing file: "
+msgstr "Kim — Bezig met grootte-aanpassing: "
 
 #: ../src/bin/kim_resizeandsend:32
-msgid "Kim – Send by mail:"
-msgstr "Kim – Versturen per e-mail:"
+msgid "Kim — Send by mail:"
+msgstr "Kim — Versturen per e-mail:"
 
 #: ../src/bin/kim_resizeandsend:32
 msgid "Full size"
@@ -240,13 +240,13 @@ msgid "300x300 px"
 msgstr "300x300 px"
 
 #: ../src/bin/kim_resizeandsend:49
-msgid "Kim – Resizing and compressing file: "
-msgstr "Kim – Bezig met aanpassen en comprimeren van bestand: "
+msgid "Kim — Resizing and compressing file: "
+msgstr "Kim — Bezig met aanpassen en comprimeren van bestand: "
 
 #: ../src/bin/kim_resizeandsend:64 ../src/bin/kim_resizeandsend:69
 #: ../src/bin/kim_resizeandsend:74
-msgid "Kim – Send by mail: you can write your message!"
-msgstr "Kim – Versturen per e-mail: stel een bericht op."
+msgid "Kim — Send by mail: you can write your message!"
+msgstr "Kim — Versturen per e-mail: stel een bericht op."
 
 #: ../src/bin/kim_treatment:32
 msgid "Choose your annotation:"
@@ -257,8 +257,8 @@ msgid "My annotation"
 msgstr "Mijn aantekening"
 
 #: ../src/bin/kim_treatment:33
-msgid "Kim – Select border color:"
-msgstr "Kim – Kies een kaderkleur:"
+msgid "Kim — Select border color:"
+msgstr "Kim — Kies een kaderkleur:"
 
 #: ../src/bin/kim_treatment:33
 msgid "white"
@@ -270,8 +270,8 @@ msgstr "zwart"
 
 #: ../src/kim_compressandresize.desktop.in.h:1
 #: ../src/kim_compressandresizevideo.desktop.in.h:1
-msgid "Kim – Compress and Resize"
-msgstr "Kim – Comprimeren en grootte aanpassen"
+msgid "Kim — Compress and Resize"
+msgstr "Kim — Comprimeren en grootte aanpassen"
 
 #: ../src/kim_compressandresize.desktop.in.h:3
 #, fuzzy
@@ -439,8 +439,8 @@ msgid "Transcode video to 1920x1080, bad quality, x264"
 msgstr ""
 
 #: ../src/kim_convertandrotate.desktop.in.h:1
-msgid "Kim – Convert and Rotate"
-msgstr "Kim – Converteren en draaien"
+msgid "Kim — Convert and Rotate"
+msgstr "Kim — Converteren en draaien"
 
 #: ../src/kim_convertandrotate.desktop.in.h:2
 msgid "Convert to JPEG"
@@ -504,8 +504,8 @@ msgid "Flip horizontaly"
 msgstr "Horizontaal spiegelen"
 
 #: ../src/kim_publication.desktop.in.h:1
-msgid "Kim – Treatment and publication"
-msgstr "Kim – Aanpassen en publiceren"
+msgid "Kim — Treatment and publication"
+msgstr "Kim — Aanpassen en publiceren"
 
 #: ../src/kim_publication.desktop.in.h:2
 msgid "Create a html gallery"
@@ -583,13 +583,13 @@ msgstr "Over Kim"
 #~ msgid "Click 'Ok' and then choose the window target ! "
 #~ msgstr "Klik op ‘Oké’ en vervolgens op het betreffende venster."
 
-#~ msgid "Kim – Record"
-#~ msgstr "Kim – Opname"
+#~ msgid "Kim — Record"
+#~ msgstr "Kim — Opname"
 
 #, fuzzy
 #~ msgid "The animation is created ! "
 #~ msgstr "De animatie is vastgelegd."
 
 #, fuzzy
-#~ msgid "Kim – Size:"
-#~ msgstr "Kim – Naam:"
+#~ msgid "Kim — Size:"
+#~ msgstr "Kim — Naam:"

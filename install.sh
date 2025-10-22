@@ -54,10 +54,10 @@ if [ ! `command -v ffmpeg` ]; then
     install_log="$install_log""Cannot find executable <b>ffmpeg</b>.  Please install it. It may be in package <b>ffmpeg</b>. Without it, video resizing will not work.<br><br>"
 else
    if ! ffmpeg -encoders 2>&1 | grep -q libx264; then
-   install_log="$install_log""Cannot find encoder <b>libx264</b> for ffmpeg. Encoding video with it will not work. Please install it.<br><br>"
+   install_log="$install_log""Cannot find encoder <b>libx264</b> for FFmpeg. Encoding video with it will not work. Please install it.<br><br>"
    fi
    if ! ffmpeg -encoders 2>&1 | grep -q libx265; then
-   install_log="$install_log""Cannot find encoder <b>libx265</b> for ffmpeg. Encoding video with it will not work. Please install it.<br><br>"
+   install_log="$install_log""Cannot find encoder <b>libx265</b> for FFmpeg. Encoding video with it will not work. Please install it.<br><br>"
    fi
 fi
 if [ ! `command -v xdg-email` ]; then

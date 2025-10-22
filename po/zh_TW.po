@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: KIM 6 – Kde Image Menu 6\n"
+"Project-Id-Version: KIM 6 — Kde Image Menu 6\n"
 "Report-Msgid-Bugs-To: https://github.com/KIM-6/kim6/issues\n"
 "POT-Creation-Date: 2025-10-22 20:20+0200\n"
 "PO-Revision-Date: 2020-08-20 22:13+0800\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/bin/kim_album:25 ../src/bin/kim_print:29
-msgid "Kim – Select album type:"
-msgstr "Kim – 請選擇相簿型態："
+msgid "Kim — Select album type:"
+msgstr "Kim — 請選擇相簿型態："
 
 #: ../src/bin/kim_album:25
 msgid "1x1 portrait album"
@@ -54,25 +54,25 @@ msgid "4x4 landscape album"
 msgstr "4x4 橫向相簿"
 
 #: ../src/bin/kim_album:31
-msgid "Kim – Creating miniatures ..."
-msgstr "Kim – 建立縮圖中..."
+msgid "Kim — Creating miniatures ..."
+msgstr "Kim — 建立縮圖中..."
 
 #: ../src/bin/kim_album:34 ../src/bin/kim_album:40 ../src/bin/kim_album:46
 #: ../src/bin/kim_album:51 ../src/bin/kim_album:56 ../src/bin/kim_album:61
 #: ../src/bin/kim_album:66 ../src/bin/kim_album:71 ../src/bin/kim_print:55
 #: ../src/bin/kim_print:61 ../src/bin/kim_print:66 ../src/bin/kim_print:71
 #: ../src/bin/kim_print:76 ../src/bin/kim_print:81 ../src/bin/kim_print:86
-msgid "Kim – Creating album ..."
-msgstr "Kim – 建立相簿中..."
+msgid "Kim — Creating album ..."
+msgstr "Kim — 建立相簿中..."
 
 #: ../src/bin/kim_album:75 ../src/bin/kim_print:90
 #, fuzzy
-msgid "Kim – Unrecognized option! "
-msgstr "Kim – 無法識別的選項。"
+msgid "Kim — Unrecognized option! "
+msgstr "Kim — 無法識別的選項。"
 
 #: ../src/bin/kim_album:78 ../src/bin/kim_print:93
-msgid "Kim – Deleting miniatures ..."
-msgstr "Kim – 刪除縮圖中..."
+msgid "Kim — Deleting miniatures ..."
+msgstr "Kim — 刪除縮圖中..."
 
 #: ../src/bin/kim_compress:31 ../src/bin/kim_compress:76
 #: ../src/bin/kim_rename:30 ../src/bin/kim_rename:88 ../src/bin/kim_resize:31
@@ -111,14 +111,14 @@ msgstr ""
 #: ../src/bin/kim_sortbydate:35 ../src/bin/kim_sortbydate:71
 #: ../src/bin/kim_treatment:38 ../src/bin/kim_treatment:77
 #: ../src/bin/kim_video:36 ../src/bin/kim_video:57
-msgid "Kim – Initialising ..."
-msgstr "Kim – 初始化中..."
+msgid "Kim — Initialising ..."
+msgstr "Kim — 初始化中..."
 
 #: ../src/bin/kim_compress:46 ../src/bin/kim_compress:70
 #: ../src/bin/kim_multiburst:53 ../src/bin/kim_video:48 ../src/bin/kim_video:74
 #: ../src/bin/kim_webexport:47 ../src/bin/kim_webexport:70
-msgid "Kim – Compressing file: "
-msgstr "Kim – 壓縮此檔案中："
+msgid "Kim — Compressing file: "
+msgstr "Kim — 壓縮此檔案中："
 
 #: ../src/bin/kim_compress:76 ../src/bin/kim_rename:88 ../src/bin/kim_resize:77
 #: ../src/bin/kim_sortbydate:106 ../src/bin/kim_treatment:115
@@ -128,39 +128,39 @@ msgid "The action was cancelled by user!"
 msgstr "此動作已被使用者取消。"
 
 #: ../src/bin/kim_convert:43
-msgid "Kim – Converting file:"
-msgstr "Kim – 轉換此檔案中："
+msgid "Kim — Converting file:"
+msgstr "Kim — 轉換此檔案中："
 
 #: ../src/bin/kim_flipflop:43 ../src/bin/kim_rotate:47
 #: ../src/bin/kim_rotatewithexif:44
-msgid "Kim – Rotating file: "
-msgstr "Kim – 旋轉此檔案中："
+msgid "Kim — Rotating file: "
+msgstr "Kim — 旋轉此檔案中："
 
 #: ../src/bin/kim_galery:29
-msgid "Kim – Title:"
-msgstr "Kim – 標題："
+msgid "Kim — Title:"
+msgstr "Kim — 標題："
 
 #: ../src/bin/kim_galery:29
 msgid "My title ..."
 msgstr "請在此輸入標題..."
 
 #: ../src/bin/kim_galery:30
-msgid "Kim – Author:"
-msgstr "Kim – 作者："
+msgid "Kim — Author:"
+msgstr "Kim — 作者："
 
 #: ../src/bin/kim_galery:34
-msgid "Kim – Number of columns:"
-msgstr "Kim – 欄數："
+msgid "Kim — Number of columns:"
+msgstr "Kim — 欄數："
 
 #: ../src/bin/kim_galery:79 ../src/bin/kim_treatment:50
 #: ../src/bin/kim_treatment:89
-msgid "Kim – Treatment of file: "
-msgstr "Kim – 檔案處理方式："
+msgid "Kim — Treatment of file: "
+msgstr "Kim — 檔案處理方式："
 
 #: ../src/bin/kim_multiburst:34 ../src/bin/kim_webexport:34
 #: ../src/bin/kim_webexport:54
-msgid "Kim – Initialising compression"
-msgstr "Kim – 壓縮初始化中"
+msgid "Kim — Initialising compression"
+msgstr "Kim — 壓縮初始化中"
 
 #: ../src/bin/kim_pelemele:30
 msgid "Size of small images:"
@@ -179,8 +179,8 @@ msgid "Background color:"
 msgstr "背景顏色："
 
 #: ../src/bin/kim_pelemele:66 ../src/bin/kim_print:46
-msgid "Kim – resizing of file: "
-msgstr "Kim – 調整此檔案大小中："
+msgid "Kim — resizing of file: "
+msgstr "Kim — 調整此檔案大小中："
 
 #: ../src/bin/kim_print:29
 msgid "9x13 cm: 2x2 images, landscape"
@@ -212,16 +212,16 @@ msgstr "選擇新影像的名稱："
 
 #: ../src/bin/kim_rename:54 ../src/bin/kim_rename:82
 #: ../src/bin/kim_sortbydate:64 ../src/bin/kim_sortbydate:100
-msgid "Kim – Renaming file: "
-msgstr "Kim – 重新命名此檔案中："
+msgid "Kim — Renaming file: "
+msgstr "Kim — 重新命名此檔案中："
 
 #: ../src/bin/kim_resize:47 ../src/bin/kim_resize:71
-msgid "Kim – Resizing file: "
-msgstr "Kim – 重新調整此檔案大小中："
+msgid "Kim — Resizing file: "
+msgstr "Kim — 重新調整此檔案大小中："
 
 #: ../src/bin/kim_resizeandsend:32
-msgid "Kim – Send by mail:"
-msgstr "Kim – 用郵件寄出："
+msgid "Kim — Send by mail:"
+msgstr "Kim — 用郵件寄出："
 
 #: ../src/bin/kim_resizeandsend:32
 msgid "Full size"
@@ -240,13 +240,13 @@ msgid "300x300 px"
 msgstr "300x300 像素"
 
 #: ../src/bin/kim_resizeandsend:49
-msgid "Kim – Resizing and compressing file: "
-msgstr "Kim – 正在調整與壓縮此檔案："
+msgid "Kim — Resizing and compressing file: "
+msgstr "Kim — 正在調整與壓縮此檔案："
 
 #: ../src/bin/kim_resizeandsend:64 ../src/bin/kim_resizeandsend:69
 #: ../src/bin/kim_resizeandsend:74
-msgid "Kim – Send by mail: you can write your message!"
-msgstr "Kim – 用郵件寄出：您可以開始寫您的信件內容了。"
+msgid "Kim — Send by mail: you can write your message!"
+msgstr "Kim — 用郵件寄出：您可以開始寫您的信件內容了。"
 
 #: ../src/bin/kim_treatment:32
 msgid "Choose your annotation:"
@@ -257,8 +257,8 @@ msgid "My annotation"
 msgstr "請將註記寫在這裡"
 
 #: ../src/bin/kim_treatment:33
-msgid "Kim – Select border color:"
-msgstr "Kim – 選擇邊框顏色："
+msgid "Kim — Select border color:"
+msgstr "Kim — 選擇邊框顏色："
 
 #: ../src/bin/kim_treatment:33
 msgid "white"
@@ -270,8 +270,8 @@ msgstr "黑色"
 
 #: ../src/kim_compressandresize.desktop.in.h:1
 #: ../src/kim_compressandresizevideo.desktop.in.h:1
-msgid "Kim – Compress and Resize"
-msgstr "Kim – 壓縮與調整大小"
+msgid "Kim — Compress and Resize"
+msgstr "Kim — 壓縮與調整大小"
 
 #: ../src/kim_compressandresize.desktop.in.h:3
 #, fuzzy
@@ -441,8 +441,8 @@ msgid "Transcode video to 1920x1080, bad quality, x264"
 msgstr ""
 
 #: ../src/kim_convertandrotate.desktop.in.h:1
-msgid "Kim – Convert and Rotate"
-msgstr "Kim – 轉換與旋轉"
+msgid "Kim — Convert and Rotate"
+msgstr "Kim — 轉換與旋轉"
 
 #: ../src/kim_convertandrotate.desktop.in.h:2
 msgid "Convert to JPEG"
@@ -506,8 +506,8 @@ msgid "Flip horizontaly"
 msgstr "水平"
 
 #: ../src/kim_publication.desktop.in.h:1
-msgid "Kim – Treatment and publication"
-msgstr "Kim – 處理與發布"
+msgid "Kim — Treatment and publication"
+msgstr "Kim — 處理與發布"
 
 #: ../src/kim_publication.desktop.in.h:2
 msgid "Create a html gallery"
@@ -586,13 +586,13 @@ msgstr "關於 Kim"
 #~ msgid "Click 'Ok' and then choose the window target ! "
 #~ msgstr "點擊「確認」然後選擇視窗目標。"
 
-#~ msgid "Kim – Record"
-#~ msgstr "Kim – 錄影"
+#~ msgid "Kim — Record"
+#~ msgstr "Kim — 錄影"
 
 #, fuzzy
 #~ msgid "The animation is created ! "
 #~ msgstr "動畫已建立。"
 
 #, fuzzy
-#~ msgid "Kim – Size:"
-#~ msgstr "Kim – 標題："
+#~ msgid "Kim — Size:"
+#~ msgstr "Kim — 標題："

@@ -1,6 +1,6 @@
-# French translations for KIM 6 – Kde Image Menu 6 package.
-# Copyright (C) 2025 THE KIM 6 – Kde Image Menu 6'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the KIM 6 – Kde Image Menu 6 package.
+# French translations for KIM 6 — Kde Image Menu 6 package.
+# Copyright (C) 2025 THE KIM 6 — Kde Image Menu 6'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the KIM 6 — Kde Image Menu 6 package.
 #
 msgid ""
 msgstr ""
@@ -17,7 +17,7 @@ msgstr ""
 "#-#-#-#-#  kim.po (Kim 0.9.7)  #-#-#-#-#\n"
 
 #: ../src/bin/kim_album:25 ../src/bin/kim_print:29
-msgid "Kim – Select album type:"
+msgid "Kim — Select album type:"
 msgstr ""
 
 #: ../src/bin/kim_album:25
@@ -53,7 +53,7 @@ msgid "4x4 landscape album"
 msgstr "album 4x4 paysage"
 
 #: ../src/bin/kim_album:31
-msgid "Kim – Creating miniatures ..."
+msgid "Kim — Creating miniatures ..."
 msgstr ""
 
 #: ../src/bin/kim_album:34 ../src/bin/kim_album:40 ../src/bin/kim_album:46
@@ -61,15 +61,15 @@ msgstr ""
 #: ../src/bin/kim_album:66 ../src/bin/kim_album:71 ../src/bin/kim_print:55
 #: ../src/bin/kim_print:61 ../src/bin/kim_print:66 ../src/bin/kim_print:71
 #: ../src/bin/kim_print:76 ../src/bin/kim_print:81 ../src/bin/kim_print:86
-msgid "Kim – Creating album ..."
+msgid "Kim — Creating album ..."
 msgstr ""
 
 #: ../src/bin/kim_album:75 ../src/bin/kim_print:90
-msgid "Kim – Unrecognized option! "
+msgid "Kim — Unrecognized option! "
 msgstr ""
 
 #: ../src/bin/kim_album:78 ../src/bin/kim_print:93
-msgid "Kim – Deleting miniatures ..."
+msgid "Kim — Deleting miniatures ..."
 msgstr ""
 
 #: ../src/bin/kim_compress:31 ../src/bin/kim_compress:76
@@ -109,13 +109,13 @@ msgstr ""
 #: ../src/bin/kim_sortbydate:35 ../src/bin/kim_sortbydate:71
 #: ../src/bin/kim_treatment:38 ../src/bin/kim_treatment:77
 #: ../src/bin/kim_video:36 ../src/bin/kim_video:57
-msgid "Kim – Initialising ..."
+msgid "Kim — Initialising ..."
 msgstr ""
 
 #: ../src/bin/kim_compress:46 ../src/bin/kim_compress:70
 #: ../src/bin/kim_multiburst:53 ../src/bin/kim_video:48 ../src/bin/kim_video:74
 #: ../src/bin/kim_webexport:47 ../src/bin/kim_webexport:70
-msgid "Kim – Compressing file: "
+msgid "Kim — Compressing file: "
 msgstr ""
 
 #: ../src/bin/kim_compress:76 ../src/bin/kim_rename:88 ../src/bin/kim_resize:77
@@ -125,16 +125,16 @@ msgid "The action was cancelled by user!"
 msgstr ""
 
 #: ../src/bin/kim_convert:43
-msgid "Kim – Converting file:"
+msgid "Kim — Converting file:"
 msgstr ""
 
 #: ../src/bin/kim_flipflop:43 ../src/bin/kim_rotate:47
 #: ../src/bin/kim_rotatewithexif:44
-msgid "Kim – Rotating file: "
+msgid "Kim — Rotating file: "
 msgstr ""
 
 #: ../src/bin/kim_galery:29
-msgid "Kim – Title:"
+msgid "Kim — Title:"
 msgstr ""
 
 #: ../src/bin/kim_galery:29
@@ -142,21 +142,21 @@ msgid "My title ..."
 msgstr "Mon titre ..."
 
 #: ../src/bin/kim_galery:30
-msgid "Kim – Author:"
+msgid "Kim — Author:"
 msgstr ""
 
 #: ../src/bin/kim_galery:34
-msgid "Kim – Number of columns:"
+msgid "Kim — Number of columns:"
 msgstr ""
 
 #: ../src/bin/kim_galery:79 ../src/bin/kim_treatment:50
 #: ../src/bin/kim_treatment:89
-msgid "Kim – Treatment of file: "
+msgid "Kim — Treatment of file: "
 msgstr ""
 
 #: ../src/bin/kim_multiburst:34 ../src/bin/kim_webexport:34
 #: ../src/bin/kim_webexport:54
-msgid "Kim – Initialising compression"
+msgid "Kim — Initialising compression"
 msgstr ""
 
 #: ../src/bin/kim_pelemele:30
@@ -176,7 +176,7 @@ msgid "Background color:"
 msgstr "Couleur de fond"
 
 #: ../src/bin/kim_pelemele:66 ../src/bin/kim_print:46
-msgid "Kim – resizing of file: "
+msgid "Kim — resizing of file: "
 msgstr ""
 
 #: ../src/bin/kim_print:29
@@ -209,15 +209,15 @@ msgstr "Choisissez le nouveau nom des images:"
 
 #: ../src/bin/kim_rename:54 ../src/bin/kim_rename:82
 #: ../src/bin/kim_sortbydate:64 ../src/bin/kim_sortbydate:100
-msgid "Kim – Renaming file: "
+msgid "Kim — Renaming file: "
 msgstr ""
 
 #: ../src/bin/kim_resize:47 ../src/bin/kim_resize:71
-msgid "Kim – Resizing file: "
+msgid "Kim — Resizing file: "
 msgstr ""
 
 #: ../src/bin/kim_resizeandsend:32
-msgid "Kim – Send by mail:"
+msgid "Kim — Send by mail:"
 msgstr ""
 
 #: ../src/bin/kim_resizeandsend:32
@@ -237,12 +237,12 @@ msgid "300x300 px"
 msgstr "300x300 px"
 
 #: ../src/bin/kim_resizeandsend:49
-msgid "Kim – Resizing and compressing file: "
+msgid "Kim — Resizing and compressing file: "
 msgstr ""
 
 #: ../src/bin/kim_resizeandsend:64 ../src/bin/kim_resizeandsend:69
 #: ../src/bin/kim_resizeandsend:74
-msgid "Kim – Send by mail: you can write your message!"
+msgid "Kim — Send by mail: you can write your message!"
 msgstr ""
 
 #: ../src/bin/kim_treatment:32
@@ -254,7 +254,7 @@ msgid "My annotation"
 msgstr "Mon annotation"
 
 #: ../src/bin/kim_treatment:33
-msgid "Kim – Select border color:"
+msgid "Kim — Select border color:"
 msgstr ""
 
 #: ../src/bin/kim_treatment:33
@@ -267,8 +267,8 @@ msgstr "noir"
 
 #: ../src/kim_compressandresize.desktop.in.h:1
 #: ../src/kim_compressandresizevideo.desktop.in.h:1
-msgid "Kim – Compress and Resize"
-msgstr "Kim – Compresser et redimensionner"
+msgid "Kim — Compress and Resize"
+msgstr "Kim — Compresser et redimensionner"
 
 #: ../src/kim_compressandresize.desktop.in.h:3
 #, fuzzy
@@ -436,8 +436,8 @@ msgid "Transcode video to 1920x1080, bad quality, x264"
 msgstr ""
 
 #: ../src/kim_convertandrotate.desktop.in.h:1
-msgid "Kim – Convert and Rotate"
-msgstr "Kim – Convertir et tourner"
+msgid "Kim — Convert and Rotate"
+msgstr "Kim — Convertir et tourner"
 
 # Convert and rotate actions
 #: ../src/kim_convertandrotate.desktop.in.h:2
@@ -502,8 +502,8 @@ msgid "Flip horizontaly"
 msgstr "Horizontalement"
 
 #: ../src/kim_publication.desktop.in.h:1
-msgid "Kim – Treatment and publication"
-msgstr "Kim – Traitement et publication"
+msgid "Kim — Treatment and publication"
+msgstr "Kim — Traitement et publication"
 
 #: ../src/kim_publication.desktop.in.h:2
 msgid "Create a html gallery"
@@ -585,8 +585,8 @@ msgstr "A propos de Kim"
 #~ "<raphink@raphink.net>\\nDeveloppeur actuel\tDaniel Tartavel "
 #~ "<contact@librepc.com>"
 
-#~ msgid "Kim - PDF Album"
-#~ msgstr "Kim - Album PDF"
+#~ msgid "Kim–PDF Album"
+#~ msgstr "Kim–Album PDF"
 
 #~ msgid "Select album type:"
 #~ msgstr "Sélectionnez le type d'album"
@@ -600,8 +600,8 @@ msgstr "A propos de Kim"
 #~ msgid "command execution error "
 #~ msgstr "Erreur à l'exécution de la commande"
 
-#~ msgid "Kim - Compression"
-#~ msgstr "Kim - Compression"
+#~ msgid "Kim–Compression"
+#~ msgstr "Kim–Compression"
 
 #~ msgid "Initializing"
 #~ msgstr "Initialisation"
@@ -612,14 +612,14 @@ msgstr "A propos de Kim"
 #~ msgid "compressed"
 #~ msgstr "compresse"
 
-#~ msgid "Kim - Convert"
-#~ msgstr "Kim - Convertir"
+#~ msgid "Kim–Convert"
+#~ msgstr "Kim–Convertir"
 
 #~ msgid "Converting file:"
 #~ msgstr "Conversion du fichier :"
 
-#~ msgid "Kim - Print"
-#~ msgstr "Kim - Impression"
+#~ msgid "Kim–Print"
+#~ msgstr "Kim–Impression"
 
 #~ msgid "Select original character encoding:"
 #~ msgstr "Sélection de l'encodage des caractères :"
@@ -630,8 +630,8 @@ msgstr "A propos de Kim"
 #~ msgid "Deleting temp files ..."
 #~ msgstr "Effacement des fichiers temporaires ..."
 
-#~ msgid "Kim - flip flop"
-#~ msgstr "Kim - Flip flop"
+#~ msgid "Kim–flip flop"
+#~ msgstr "Kim–Flip flop"
 
 #~ msgid "Rotating file :"
 #~ msgstr "Rotation du fichier :"
@@ -643,7 +643,7 @@ msgstr "A propos de Kim"
 #~ "fichier sera remplacé"
 
 #~ msgid "Kim HTML Gallery"
-#~ msgstr "Kim - Galerie HTML"
+#~ msgstr "Kim–Galerie HTML"
 
 #~ msgid "Title of the Gallery:"
 #~ msgstr "Titre de la galerie"
@@ -667,7 +667,7 @@ msgstr "A propos de Kim"
 #~ msgstr "Suppression des fichiers temporaires"
 
 #~ msgid "Kim Convert to text"
-#~ msgstr "Kim - Convertir en texte"
+#~ msgstr "Kim–Convertir en texte"
 
 #~ msgid "Character recognition"
 #~ msgstr "Reconnaissance de caractères"
@@ -675,8 +675,8 @@ msgstr "A propos de Kim"
 #~ msgid "Initialising"
 #~ msgstr "Initialisation"
 
-#~ msgid "Kim - Images to GIF animation"
-#~ msgstr "Kim - Animation GIF"
+#~ msgid "Kim–Images to GIF animation"
+#~ msgstr "Kim–Animation GIF"
 
 #~ msgid "Adding image:"
 #~ msgstr "Ajout de l'images:"
@@ -720,8 +720,8 @@ msgstr "A propos de Kim"
 #~ msgid "The animation is created !"
 #~ msgstr "L'animation est crée !"
 
-#~ msgid "Kim - rename"
-#~ msgstr "Kim - renommer"
+#~ msgid "Kim–rename"
+#~ msgstr "Kim–renommer"
 
 #~ msgid "wallpaper_"
 #~ msgstr "papierpeint_"
@@ -729,11 +729,11 @@ msgstr "A propos de Kim"
 #~ msgid "Renaming file:"
 #~ msgstr "Renommage du fichier:"
 
-#~ msgid "Kim - Resizing file: "
-#~ msgstr "Kim - Redimensionnement du fichier :"
+#~ msgid "Kim–Resizing file: "
+#~ msgstr "Kim–Redimensionnement du fichier :"
 
-#~ msgid "Kim - Resize and send"
-#~ msgstr "Kim - Redimensionner et envoyer"
+#~ msgid "Kim–Resize and send"
+#~ msgstr "Kim–Redimensionner et envoyer"
 
 #~ msgid "Send by mail:"
 #~ msgstr "Envois par courriel:"
@@ -750,17 +750,17 @@ msgstr "A propos de Kim"
 #~ msgid "Resizing and compressing file:"
 #~ msgstr "Redimensionnement et compression du fichier:"
 
-#~ msgid "Kim - rotate"
-#~ msgstr "Kim - pivoter"
+#~ msgid "Kim–rotate"
+#~ msgstr "Kim–pivoter"
 
 #~ msgid "Rotating file: "
 #~ msgstr "Rotation du fichier :"
 
-#~ msgid "kim - Rotate with EXIF"
-#~ msgstr "Kim - Pivoter suivant l'EXIF"
+#~ msgid "kim–Rotate with EXIF"
+#~ msgstr "Kim–Pivoter suivant l'EXIF"
 
-#~ msgid "Kim - Slideshow"
-#~ msgstr "Kim - Diaporama"
+#~ msgid "Kim–Slideshow"
+#~ msgstr "Kim–Diaporama"
 
 #~ msgid "Title:"
 #~ msgstr "Titre:"
@@ -771,8 +771,8 @@ msgstr "A propos de Kim"
 #~ msgid "Treatment of file: "
 #~ msgstr "Traitement du fichier:"
 
-#~ msgid "Kim - Rename with EXIF date"
-#~ msgstr "Kim - renommer avec la date de l'EXIF"
+#~ msgid "Kim–Rename with EXIF date"
+#~ msgstr "Kim–renommer avec la date de l'EXIF"
 
 #~ msgid "Renaming file: "
 #~ msgstr "Renommage du fichier:"
@@ -789,8 +789,8 @@ msgstr "A propos de Kim"
 #~ msgid "Kim Web export"
 #~ msgstr "Kim Exportation Web"
 
-#~ msgid "Kim - Sort by date"
-#~ msgstr "Kim - Trier par date"
+#~ msgid "Kim–Sort by date"
+#~ msgstr "Kim–Trier par date"
 
 #~ msgid "The action was cancelled by user !"
 #~ msgstr "L'action à été annulée par l'utilisateur !"
@@ -798,8 +798,8 @@ msgstr "A propos de Kim"
 #~ msgid "Kim Animation"
 #~ msgstr "Kim Animation"
 
-#~ msgid "Kim - MPEG animation"
-#~ msgstr "Kim - Animation MPEG"
+#~ msgid "Kim–MPEG animation"
+#~ msgstr "Kim–Animation MPEG"
 
 #~ msgid "Click 'Ok' and then choose the window target ! "
 #~ msgstr "Cliquez 'Ok' et choisissez la fenêtre cible !"
@@ -810,8 +810,8 @@ msgstr "A propos de Kim"
 #~ msgid "Creating miniatures ..."
 #~ msgstr "Création des miniatures ..."
 
-#~ msgid "Kim - Unrecognized option !"
-#~ msgstr "Kim - Option inconnu !"
+#~ msgid "Kim–Unrecognized option !"
+#~ msgstr "Kim–Option inconnu !"
 
 #~ msgid "Send by mail: you can write your message!"
 #~ msgstr "Envoyé par courriel: vous pouvez écrire votre message!"
