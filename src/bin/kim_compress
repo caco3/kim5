@@ -63,7 +63,10 @@ case $? in
 			fi
 			let "counter +=1"
 			FILE="$i"
-			magick -quality $QUALITY "$FILE" $DIR/compressed_"`basename "$FILE"`"
+            BASENAME="$(basename "$FILE")"
+            NAME="${BASENAME%.*}"
+            EXT="${BASENAME##*.}"
+            magick -quality $QUALITY "$FILE" "$DIR/${NAME}_compressed.${EXT}"
 			qdbus $dbusRef setLabelText "$(gettext "Kim – Compressing file: ") `basename $(FILE)`"
 #	 		qdbus $dbusRef setProgress "$counter"
 		fi;
