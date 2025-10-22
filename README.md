@@ -4,6 +4,8 @@ This is a service menu for the KDE desktop. It displays a context menu entry for
 
 Here is the KDE store link: https://store.kde.org/p/2307290/
 
+Here you can read the manual: https://kim-6.github.io/kim6/
+
 ![Screenshot](KIM6.png)
 
 ## Dependencies
