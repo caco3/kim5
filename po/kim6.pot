@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the KIM 6 — Kde Image Menu 6 package.
+# This file is distributed under the same license as the KIM 6 – Kde Image Menu 6 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: KIM 6 — Kde Image Menu 6 1.1\n"
+"Project-Id-Version: KIM 6 – Kde Image Menu 6 2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/KIM-6/kim6/issues\n"
-"POT-Creation-Date: 2025-10-22 20:20+0200\n"
+"POT-Creation-Date: 2025-10-22 22:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -439,7 +439,7 @@ msgid "Convert to GIF"
 msgstr ""
 
 #: ../src/kim_convertandrotate.desktop.in.h:5
-msgid "Convert  to TIFF"
+msgid "Convert to TIFF"
 msgstr ""
 
 #: ../src/kim_convertandrotate.desktop.in.h:6
@@ -535,9 +535,13 @@ msgid "Add text annotation"
 msgstr ""
 
 #: ../src/kim_publication.desktop.in.h:13
-msgid "License"
+msgid "KIM 6 Manual"
 msgstr ""
 
 #: ../src/kim_publication.desktop.in.h:14
+msgid "License"
+msgstr ""
+
+#: ../src/kim_publication.desktop.in.h:15
 msgid "About Kim"
 msgstr ""

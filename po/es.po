@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KIM 6 — Kde Image Menu 6 1.1\n"
 "Report-Msgid-Bugs-To: https://github.com/KIM-6/kim6/issues\n"
-"POT-Creation-Date: 2025-10-22 20:20+0200\n"
+"POT-Creation-Date: 2025-10-22 22:37+0200\n"
 "PO-Revision-Date: 2025-09-22 22:22+0200\n"
 "Last-Translator: Miguel Useche <contacto@migueluseche.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
@@ -450,8 +450,7 @@ msgid "Convert to GIF"
 msgstr "Convertir a GIF"
 
 #: ../src/kim_convertandrotate.desktop.in.h:5
-#, fuzzy
-msgid "Convert  to TIFF"
+msgid "Convert to TIFF"
 msgstr "Convertir a TIFF"
 
 #: ../src/kim_convertandrotate.desktop.in.h:6
@@ -547,21 +546,26 @@ msgid "Add text annotation"
 msgstr "Añadir anotación de texto"
 
 #: ../src/kim_publication.desktop.in.h:13
-msgid "License"
+msgid "KIM 6 Manual"
 msgstr ""
 
 #: ../src/kim_publication.desktop.in.h:14
+msgid "License"
+msgstr ""
+
+#: ../src/kim_publication.desktop.in.h:15
 msgid "About Kim"
 msgstr "Acerca de Kim"
+
+#, fuzzy
+#~ msgid "Convert  to TIFF"
+#~ msgstr "Convertir a TIFF"
 
 #~ msgid "Compress at 75 %"
 #~ msgstr "Comprimir al 75 %"
 
 #~ msgid "Resize (1200x900 pixels)"
 #~ msgstr "Redimensionar (1200x900 píxeles)"
-
-#~ msgid "Convert to TIFF"
-#~ msgstr "Convertir a TIFF"
 
 #~ msgid "OCR on image"
 #~ msgstr "OCR en imagen"

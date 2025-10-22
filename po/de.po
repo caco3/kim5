@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.9.6\n"
 "Report-Msgid-Bugs-To: https://github.com/KIM-6/kim6/issues\n"
-"POT-Creation-Date: 2025-10-22 20:20+0200\n"
+"POT-Creation-Date: 2025-10-22 22:37+0200\n"
 "PO-Revision-Date: 2014-04-01 21:08+0100\n"
 "Last-Translator: Daniel Tartavel <contact@librepc.com>\n"
 "Language-Team: German\n"
@@ -444,7 +444,7 @@ msgstr ""
 
 #: ../src/kim_convertandrotate.desktop.in.h:5
 #, fuzzy
-msgid "Convert  to TIFF"
+msgid "Convert to TIFF"
 msgstr "Kim Umwandlung in Text"
 
 #: ../src/kim_convertandrotate.desktop.in.h:6
@@ -540,10 +540,14 @@ msgid "Add text annotation"
 msgstr ""
 
 #: ../src/kim_publication.desktop.in.h:13
-msgid "License"
+msgid "KIM 6 Manual"
 msgstr ""
 
 #: ../src/kim_publication.desktop.in.h:14
+msgid "License"
+msgstr ""
+
+#: ../src/kim_publication.desktop.in.h:15
 msgid "About Kim"
 msgstr ""
 

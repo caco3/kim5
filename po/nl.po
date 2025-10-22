@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/KIM-6/kim6/issues\n"
-"POT-Creation-Date: 2025-10-22 20:20+0200\n"
+"POT-Creation-Date: 2025-10-22 22:37+0200\n"
 "PO-Revision-Date: 2021-06-06 13:19+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <>\n"
@@ -455,8 +455,7 @@ msgid "Convert to GIF"
 msgstr "Converteren naar gif"
 
 #: ../src/kim_convertandrotate.desktop.in.h:5
-#, fuzzy
-msgid "Convert  to TIFF"
+msgid "Convert to TIFF"
 msgstr "Converteren naar tiff"
 
 #: ../src/kim_convertandrotate.desktop.in.h:6
@@ -553,12 +552,20 @@ msgid "Add text annotation"
 msgstr "Aantekening toevoegen"
 
 #: ../src/kim_publication.desktop.in.h:13
+msgid "KIM 6 Manual"
+msgstr ""
+
+#: ../src/kim_publication.desktop.in.h:14
 msgid "License"
 msgstr "Licentie"
 
-#: ../src/kim_publication.desktop.in.h:14
+#: ../src/kim_publication.desktop.in.h:15
 msgid "About Kim"
 msgstr "Over Kim"
+
+#, fuzzy
+#~ msgid "Convert  to TIFF"
+#~ msgstr "Converteren naar tiff"
 
 #~ msgid "Compress video hd720"
 #~ msgstr "Video comprimeren (720p)"
@@ -568,9 +575,6 @@ msgstr "Over Kim"
 
 #~ msgid "Resize (1200x900 pixels)"
 #~ msgstr "Grootte aanpassen (1200x900 pixels)"
-
-#~ msgid "Convert to TIFF"
-#~ msgstr "Converteren naar tiff"
 
 #, fuzzy
 #~ msgid "The action was cancelled by user !"

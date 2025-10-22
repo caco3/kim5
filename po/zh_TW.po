@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KIM 6 — Kde Image Menu 6\n"
 "Report-Msgid-Bugs-To: https://github.com/KIM-6/kim6/issues\n"
-"POT-Creation-Date: 2025-10-22 20:20+0200\n"
+"POT-Creation-Date: 2025-10-22 22:37+0200\n"
 "PO-Revision-Date: 2020-08-20 22:13+0800\n"
 "Last-Translator: Franklin Weng <franklin@goodhorse.idv.tw>\n"
 "Language-Team: Chinese (traditional) <zh_l10n@lists.linux.org.tw>\n"
@@ -457,8 +457,7 @@ msgid "Convert to GIF"
 msgstr "轉換成 GIF"
 
 #: ../src/kim_convertandrotate.desktop.in.h:5
-#, fuzzy
-msgid "Convert  to TIFF"
+msgid "Convert to TIFF"
 msgstr "轉換成 TIFF"
 
 #: ../src/kim_convertandrotate.desktop.in.h:6
@@ -555,12 +554,20 @@ msgid "Add text annotation"
 msgstr "新增文字註記"
 
 #: ../src/kim_publication.desktop.in.h:13
+msgid "KIM 6 Manual"
+msgstr ""
+
+#: ../src/kim_publication.desktop.in.h:14
 msgid "License"
 msgstr "版權宣告"
 
-#: ../src/kim_publication.desktop.in.h:14
+#: ../src/kim_publication.desktop.in.h:15
 msgid "About Kim"
 msgstr "關於 Kim"
+
+#, fuzzy
+#~ msgid "Convert  to TIFF"
+#~ msgstr "轉換成 TIFF"
 
 #~ msgid "Compress video hd720"
 #~ msgstr "壓縮影像為 720p"
@@ -571,9 +578,6 @@ msgstr "關於 Kim"
 
 #~ msgid "Resize (1200x900 pixels)"
 #~ msgstr "調整大小（1200x900 像素）"
-
-#~ msgid "Convert to TIFF"
-#~ msgstr "轉換成 TIFF"
 
 #, fuzzy
 #~ msgid "The action was cancelled by user !"
