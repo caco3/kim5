@@ -19,28 +19,28 @@
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,image/*
-Actions=JPEG;PNG;GIF;TIF;PDF;ConvCustom;_SEPARATOR_;GrayScale;Sepia;_SEPARATOR_;AutoRot;Rot90;Rot180;Rot270;RotCustom;_SEPARATOR_;Flip;Flop
+Actions=JPEG;PNG;GIF;TIFF;PDF;ConvCustom;_SEPARATOR_;GrayScale;Sepia;_SEPARATOR_;AutoRot;Rot90;Rot180;Rot270;RotCustom;_SEPARATOR_;Flip;Flop
 Encoding=UTF-8
 _X-KDE-Submenu=Kim — Convert and Rotate
 
 [Desktop Action JPEG]
 _Name=Convert to JPEG
-Icon=document-save
+Icon=image-jpeg
 Exec=kim_convert jpg %U
 
 [Desktop Action PNG]
 _Name=Convert to PNG
-Icon=document-save
+Icon=image-png
 Exec=kim_convert png %U
 
 [Desktop Action GIF]
 _Name=Convert to GIF
-Icon=document-save
+Icon=image-gif
 Exec=kim_convert gif %U
 
-[Desktop Action TIF]
-_Name=Convert to TIF
-Icon=document-save
+[Desktop Action TIFF]
+_Name=Convert to TIFF
+Icon=image-tiff
 Exec=kim_convert tiff %U
 
 [Desktop Action PDF]

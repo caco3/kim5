@@ -456,7 +456,7 @@ msgstr "Converteren naar gif"
 
 #: ../src/kim_convertandrotate.desktop.in.h:5
 #, fuzzy
-msgid "Convert to TIF"
+msgid "Convert  to TIFF"
 msgstr "Converteren naar tiff"
 
 #: ../src/kim_convertandrotate.desktop.in.h:6
