@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2005, 2006  Charles Bouveyron <charles.bouveyron@free.fr>
 # Copyright (C) 2025  Tomáš Hnyk <tomashnyk@gmail.com>
-# 
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -19,76 +19,136 @@
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,image/*
-Actions=Rcprs75;Rcprs80;Rcprs90;RcprsCustom;_SEPARATOR_;Rsize300;Rsize600;Rsize800;Rsize1024;Rsize1200;Rsize1400;RsizeCustom;_SEPARATOR_;WebExp75640;WebExp75800;WebExp751024
+Actions=aRcprs10;bRcprs20;cRcprs30;dRcprs40;eRcprs50;fRcprs60;gRcprs70;hRcprs80;iRcprs90;jRcprsCustom;_SEPARATOR_;aRsize0300;bRsize0600;cRsize0800;dRsize1024;eRsize1280;fRsize1400;gRsize1600;hRsize1920;iRsize2560;jRsize3440;kRsize3840;lRsizeCustom;_SEPARATOR_;aWebThumb75120;bWebExp75640;cWebExp75800;dWebExp751024;
 Encoding=UTF-8
 _X-KDE-Submenu=Kim – Compress and Resize
 
-[Desktop Action Rcprs75]
-_Name=Compress at 75 %
+[Desktop Action aRcprs10]
+_Name=Compress at 10 %
 Icon=application-x-compress
-Exec=kim_compress 75 %D %U
+Exec=kim_compress 10 %D %U
 
-[Desktop Action Rcprs80]
+[Desktop Action bRcprs20]
+_Name=Compress at 20 %
+Icon=application-x-compress
+Exec=kim_compress 20 %D %U
+
+[Desktop Action cRcprs30]
+_Name=Compress at 30 %
+Icon=application-x-compress
+Exec=kim_compress 30 %D %U
+
+[Desktop Action dRcprs40]
+_Name=Compress at 40 %
+Icon=application-x-compress
+Exec=kim_compress 40 %D %U
+
+[Desktop Action eRcprs50]
+_Name=Compress at 50 %
+Icon=application-x-compress
+Exec=kim_compress 50 %D %U
+
+[Desktop Action fRcprs60]
+_Name=Compress at 60 %
+Icon=application-x-compress
+Exec=kim_compress 60 %D %U
+
+[Desktop Action gRcprs70]
+_Name=Compress at 70 %
+Icon=application-x-compress
+Exec=kim_compress 70 %D %U
+
+[Desktop Action hRcprs80]
 _Name=Compress at 80 %
 Icon=application-x-compress
 Exec=kim_compress 80 %D %U
 
-[Desktop Action Rcprs90]
+[Desktop Action iRcprs90]
 _Name=Compress at 90 %
 Icon=application-x-compress
 Exec=kim_compress 90 %D %U
 
-[Desktop Action RcprsCustom]
+[Desktop Action jRcprsCustom]
 _Name=Compress Custom...
 Icon=application-x-compress
 Exec=kim_compress `kdialog --inputbox "Compression rate:" 60` %D %U
 
-[Desktop Action Rsize300]
-_Name=Resize (300x225 pixels)
-Icon=transform-crop-and-resize
+[Desktop Action aRsize0300]
+_Name=Resize (300x300 pixels)
+Icon=transform-scale
 Exec=kim_resize 300x300 %D %U
 
-[Desktop Action Rsize600]
-_Name=Resize (600x450 pixels)
-Icon=transform-crop-and-resize
+[Desktop Action bRsize0600]
+_Name=Resize (600x600 pixels)
+Icon=transform-scale
 Exec=kim_resize 600x600 %D %U
 
-[Desktop Action Rsize800]
-_Name=Resize (800x600 pixels)
-Icon=transform-crop-and-resize
+[Desktop Action cRsize0800]
+_Name=Resize (800x800 pixels)
+Icon=transform-scale
 Exec=kim_resize 800x800 %D %U
 
-[Desktop Action Rsize1024]
-_Name=Resize (1024x768 pixels)
-Icon=transform-crop-and-resize
+[Desktop Action dRsize1024]
+_Name=Resize (1024x1024 pixels)
+Icon=transform-scale
 Exec=kim_resize 1024x1024 %D %U
 
-[Desktop Action Rsize1200]
-_Name=Resize (1200x900 pixels)
-Icon=transform-crop-and-resize
-Exec=kim_resize 1200x1200 %D %U
+[Desktop Action eRsize1280]
+_Name=Resize (1280x1280 pixels)
+Icon=transform-scale
+Exec=kim_resize 1280x1280 %D %U
 
-[Desktop Action Rsize1400]
-_Name=Resize (1400x1050 pixels)
-Icon=transform-crop-and-resize
+[Desktop Action fRsize1400]
+_Name=Resize (1400x1400 pixels)
+Icon=transform-scale
 Exec=kim_resize 1400x1400 %D %U
 
-[Desktop Action RsizeCustom]
+[Desktop Action gRsize1600]
+_Name=Resize (1600x1600 pixels)
+Icon=transform-scale
+Exec=kim_resize 1600x1600 %D %U
+
+[Desktop Action hRsize1920]
+_Name=Resize (1920x1920 pixels)
+Icon=transform-scale
+Exec=kim_resize 1920x1920 %D %U
+
+[Desktop Action iRsize2560]
+_Name=Resize (2560x2560 pixels)
+Icon=transform-scale
+Exec=kim_resize 2560x2560 %D %U
+
+[Desktop Action jRsize3440]
+_Name=Resize (3440x3440 pixels)
+Icon=transform-scale
+Exec=kim_resize 3440x3440 %D %U
+
+[Desktop Action kRsize3840]
+_Name=Resize (3840x3840 pixels)
+Icon=transform-scale
+Exec=kim_resize 3840x3840 %D %U
+
+[Desktop Action lRsizeCustom]
 _Name=Resize Custom...
-Icon=transform-crop-and-resize
+Icon=transform-scale
 Exec=kim_resize `kdialog --inputbox "Resize dimension (max width x max height):" 300x300` %D %U
 
-[Desktop Action WebExp75640]
-_Name=WebExport: 600x450 at 75 %
+[Desktop Action aWebThumb75120]
+_Name=WebThumbnail: 128x128 at 75 %
+Icon=applications-development-web
+Exec=kim_webexport 128x128 %D %U
+
+[Desktop Action bWebExp75640]
+_Name=WebExport: 600x600 at 75 %
 Icon=applications-development-web
 Exec=kim_webexport 600x600 %D %U
 
-[Desktop Action WebExp75800]
-_Name=WebExport: 800x600 at 75 %
+[Desktop Action cWebExp75800]
+_Name=WebExport: 800x800 at 75 %
 Icon=applications-development-web
 Exec=kim_webexport 800x800 %D %U
 
-[Desktop Action WebExp751024]
-_Name=WebExport: 1024x768 at 75 %
+[Desktop Action dWebExp751024]
+_Name=WebExport: 1024x1024 at 75 %
 Icon=applications-development-web
 Exec=kim_webexport 1024x1024 %D %U

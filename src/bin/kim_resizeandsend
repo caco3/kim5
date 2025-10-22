@@ -29,7 +29,7 @@ TMPDIR=`mktemp -d /tmp/kim.XXXXXXXX` || exit 1
 
 ATTACHMENTS="";
 
-choice=`kdialog --radiolist "$(gettext "Kim – Send by mail:")" 1 "$(gettext "Full size")"  off 2 "$(gettext "800x600 px")"  on 3 "$(gettext "600x450 px")" off 4 "$(gettext "300x225 px")"  off`;
+choice=`kdialog --radiolist "$(gettext "Kim – Send by mail:")" 1 "$(gettext "Full size")"  off 2 "$(gettext "800x800 px")"  on 3 "$(gettext "600x600 px")" off 4 "$(gettext "300x300 px")"  off`;
 
 let "nbfiles = $#" 
 dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`

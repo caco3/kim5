@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KIM 6 – Kde Image Menu 6 1.1\n"
 "Report-Msgid-Bugs-To: https://github.com/felagund/kim6/issues\n"
-"POT-Creation-Date: 2025-09-22 22:44+0200\n"
+"POT-Creation-Date: 2025-10-22 19:11+0200\n"
 "PO-Revision-Date: 2025-09-22 22:23+0200\n"
 "Last-Translator: Tomáš Hnyk <drew@greenone>\n"
 "Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
@@ -17,417 +17,483 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../bin/kim_album:25 ../bin/kim_print:29
+#: ../src/bin/kim_album:25 ../src/bin/kim_print:29
 msgid "Kim – Select album type:"
 msgstr ""
 
-#: ../bin/kim_album:25
+#: ../src/bin/kim_album:25
 msgid "1x1 portrait album"
 msgstr ""
 
-#: ../bin/kim_album:25
+#: ../src/bin/kim_album:25
 msgid "1x1 landscape album"
 msgstr ""
 
-#: ../bin/kim_album:25
+#: ../src/bin/kim_album:25
 msgid "1x2 landscape album"
 msgstr ""
 
-#: ../bin/kim_album:25
+#: ../src/bin/kim_album:25
 msgid "2x1 portrait album"
 msgstr ""
 
-#: ../bin/kim_album:25
+#: ../src/bin/kim_album:25
 msgid "2x2 landscape album"
 msgstr ""
 
-#: ../bin/kim_album:25 ../bin/kim_print:29
+#: ../src/bin/kim_album:25 ../src/bin/kim_print:29
 msgid "3x2 portrait album"
 msgstr ""
 
-#: ../bin/kim_album:25
+#: ../src/bin/kim_album:25
 msgid "3x4 landscape album"
 msgstr ""
 
-#: ../bin/kim_album:25
+#: ../src/bin/kim_album:25
 msgid "4x4 landscape album"
 msgstr ""
 
-#: ../bin/kim_album:31
+#: ../src/bin/kim_album:31
 msgid "Kim – Creating miniatures ..."
 msgstr ""
 
-#: ../bin/kim_album:34 ../bin/kim_album:40 ../bin/kim_album:46
-#: ../bin/kim_album:51 ../bin/kim_album:56 ../bin/kim_album:61
-#: ../bin/kim_album:66 ../bin/kim_album:71 ../bin/kim_print:55
-#: ../bin/kim_print:61 ../bin/kim_print:66 ../bin/kim_print:71
-#: ../bin/kim_print:76 ../bin/kim_print:81 ../bin/kim_print:86
+#: ../src/bin/kim_album:34 ../src/bin/kim_album:40 ../src/bin/kim_album:46
+#: ../src/bin/kim_album:51 ../src/bin/kim_album:56 ../src/bin/kim_album:61
+#: ../src/bin/kim_album:66 ../src/bin/kim_album:71 ../src/bin/kim_print:55
+#: ../src/bin/kim_print:61 ../src/bin/kim_print:66 ../src/bin/kim_print:71
+#: ../src/bin/kim_print:76 ../src/bin/kim_print:81 ../src/bin/kim_print:86
 msgid "Kim – Creating album ..."
 msgstr ""
 
-#: ../bin/kim_album:75 ../bin/kim_print:90
+#: ../src/bin/kim_album:75 ../src/bin/kim_print:90
 msgid "Kim – Unrecognized option! "
 msgstr ""
 
-#: ../bin/kim_album:78 ../bin/kim_print:93
+#: ../src/bin/kim_album:78 ../src/bin/kim_print:93
 msgid "Kim – Deleting miniatures ..."
 msgstr ""
 
-#: ../bin/kim_compress:31 ../bin/kim_compress:73 ../bin/kim_rename:30
-#: ../bin/kim_rename:88 ../bin/kim_resize:31 ../bin/kim_resize:74
-#: ../bin/kim_sortbydate:31 ../bin/kim_sortbydate:106 ../bin/kim_treatment:35
-#: ../bin/kim_treatment:115 ../bin/kim_video:31 ../bin/kim_video:78
-#: ../bin/kim_webexport:31 ../bin/kim_webexport:73
+#: ../src/bin/kim_compress:31 ../src/bin/kim_compress:76
+#: ../src/bin/kim_rename:30 ../src/bin/kim_rename:88 ../src/bin/kim_resize:31
+#: ../src/bin/kim_resize:77 ../src/bin/kim_sortbydate:31
+#: ../src/bin/kim_sortbydate:106 ../src/bin/kim_treatment:35
+#: ../src/bin/kim_treatment:115 ../src/bin/kim_video:31 ../src/bin/kim_video:78
+#: ../src/bin/kim_webexport:31 ../src/bin/kim_webexport:76
 msgid "Kim"
 msgstr ""
 
-#: ../bin/kim_compress:31 ../bin/kim_rename:30 ../bin/kim_resize:31
-#: ../bin/kim_sortbydate:31 ../bin/kim_treatment:35 ../bin/kim_video:31
-#: ../bin/kim_webexport:31
-msgid "Do you want to replace existing files?"
+#: ../src/bin/kim_compress:31 ../src/bin/kim_rename:30 ../src/bin/kim_resize:31
+#: ../src/bin/kim_sortbydate:31 ../src/bin/kim_treatment:35
+#: ../src/bin/kim_video:31 ../src/bin/kim_webexport:31
+msgid "Do you want to create new files?"
 msgstr ""
 
-#: ../bin/kim_compress:34 ../bin/kim_compress:54 ../bin/kim_convert:30
-#: ../bin/kim_flipflop:30 ../bin/kim_galery:39 ../bin/kim_pelemele:38
-#: ../bin/kim_print:31 ../bin/kim_rename:33 ../bin/kim_rename:61
-#: ../bin/kim_resize:34 ../bin/kim_resize:55 ../bin/kim_resizeandsend:35
-#: ../bin/kim_rotate:30 ../bin/kim_rotatewithexif:30 ../bin/kim_sortbydate:35
-#: ../bin/kim_sortbydate:71 ../bin/kim_treatment:38 ../bin/kim_treatment:77
-#: ../bin/kim_video:34 ../bin/kim_video:55
+#: ../src/bin/kim_compress:31 ../src/bin/kim_rename:30 ../src/bin/kim_resize:31
+#: ../src/bin/kim_sortbydate:31 ../src/bin/kim_treatment:35
+#: ../src/bin/kim_video:31 ../src/bin/kim_webexport:31
+msgid "Create new"
+msgstr ""
+
+#: ../src/bin/kim_compress:31 ../src/bin/kim_rename:30 ../src/bin/kim_resize:31
+#: ../src/bin/kim_sortbydate:31 ../src/bin/kim_treatment:35
+#: ../src/bin/kim_video:31 ../src/bin/kim_webexport:31
+msgid "Replace existing"
+msgstr ""
+
+#: ../src/bin/kim_compress:34 ../src/bin/kim_compress:54
+#: ../src/bin/kim_convert:30 ../src/bin/kim_flipflop:30
+#: ../src/bin/kim_galery:39 ../src/bin/kim_pelemele:38 ../src/bin/kim_print:31
+#: ../src/bin/kim_rename:33 ../src/bin/kim_rename:61 ../src/bin/kim_resize:34
+#: ../src/bin/kim_resize:55 ../src/bin/kim_resizeandsend:35
+#: ../src/bin/kim_rotate:30 ../src/bin/kim_rotatewithexif:30
+#: ../src/bin/kim_sortbydate:35 ../src/bin/kim_sortbydate:71
+#: ../src/bin/kim_treatment:38 ../src/bin/kim_treatment:77
+#: ../src/bin/kim_video:34 ../src/bin/kim_video:55
 msgid "Kim – Initialising ..."
 msgstr ""
 
-#: ../bin/kim_compress:46 ../bin/kim_compress:67 ../bin/kim_multiburst:54
-#: ../bin/kim_video:46 ../bin/kim_video:72 ../bin/kim_webexport:47
-#: ../bin/kim_webexport:67
+#: ../src/bin/kim_compress:46 ../src/bin/kim_compress:70
+#: ../src/bin/kim_multiburst:53 ../src/bin/kim_video:46 ../src/bin/kim_video:72
+#: ../src/bin/kim_webexport:47 ../src/bin/kim_webexport:70
 msgid "Kim – Compressing file: "
 msgstr ""
 
-#: ../bin/kim_compress:73 ../bin/kim_rename:88 ../bin/kim_resize:74
-#: ../bin/kim_sortbydate:106 ../bin/kim_treatment:115 ../bin/kim_video:78
-#: ../bin/kim_webexport:73
+#: ../src/bin/kim_compress:76 ../src/bin/kim_rename:88 ../src/bin/kim_resize:77
+#: ../src/bin/kim_sortbydate:106 ../src/bin/kim_treatment:115
+#: ../src/bin/kim_video:78 ../src/bin/kim_webexport:76
 msgid "The action was cancelled by user!"
 msgstr ""
 
-#: ../bin/kim_convert:43
+#: ../src/bin/kim_convert:43
 msgid "Kim – Converting file:"
 msgstr ""
 
-#: ../bin/kim_flipflop:43 ../bin/kim_rotate:47 ../bin/kim_rotatewithexif:44
+#: ../src/bin/kim_flipflop:43 ../src/bin/kim_rotate:47
+#: ../src/bin/kim_rotatewithexif:44
 msgid "Kim – Rotating file: "
 msgstr ""
 
-#: ../bin/kim_galery:29
+#: ../src/bin/kim_galery:29
 msgid "Kim – Title:"
 msgstr ""
 
-#: ../bin/kim_galery:29
+#: ../src/bin/kim_galery:29
 msgid "My title ..."
 msgstr ""
 
-#: ../bin/kim_galery:30
+#: ../src/bin/kim_galery:30
 msgid "Kim – Author:"
 msgstr ""
 
-#: ../bin/kim_galery:34
+#: ../src/bin/kim_galery:34
 msgid "Kim – Number of columns:"
 msgstr ""
 
-#: ../bin/kim_galery:79 ../bin/kim_treatment:50 ../bin/kim_treatment:89
+#: ../src/bin/kim_galery:79 ../src/bin/kim_treatment:50
+#: ../src/bin/kim_treatment:89
 msgid "Kim – Treatment of file: "
 msgstr ""
 
-#: ../bin/kim_multiburst:35 ../bin/kim_webexport:34 ../bin/kim_webexport:54
+#: ../src/bin/kim_multiburst:34 ../src/bin/kim_webexport:34
+#: ../src/bin/kim_webexport:54
 msgid "Kim – Initialising compression"
 msgstr ""
 
-#: ../bin/kim_pelemele:30
+#: ../src/bin/kim_pelemele:30
 msgid "Size of small images:"
 msgstr ""
 
-#: ../bin/kim_pelemele:31
+#: ../src/bin/kim_pelemele:31
 msgid "Number of rows and columns:"
 msgstr ""
 
-#: ../bin/kim_pelemele:32
+#: ../src/bin/kim_pelemele:32
 msgid "Overlaping ratio in percent:"
 msgstr ""
 
-#: ../bin/kim_pelemele:33
+#: ../src/bin/kim_pelemele:33
 msgid "Background color:"
 msgstr ""
 
-#: ../bin/kim_pelemele:66 ../bin/kim_print:46
+#: ../src/bin/kim_pelemele:66 ../src/bin/kim_print:46
 msgid "Kim – resizing of file: "
 msgstr ""
 
-#: ../bin/kim_print:29
+#: ../src/bin/kim_print:29
 msgid "9x13 cm: 2x2 images, landscape"
 msgstr ""
 
-#: ../bin/kim_print:29
+#: ../src/bin/kim_print:29
 msgid "10x15 cm: 1x2 images, portrait"
 msgstr ""
 
-#: ../bin/kim_print:29
+#: ../src/bin/kim_print:29
 msgid "11.5x15 cm: 1x2 images, portrait"
 msgstr ""
 
-#: ../bin/kim_print:29
+#: ../src/bin/kim_print:29
 msgid "13x18 cm: 1x2 images, portrait"
 msgstr ""
 
-#: ../bin/kim_print:29
+#: ../src/bin/kim_print:29
 msgid "20x25 cm: 1 image, landscape"
 msgstr ""
 
-#: ../bin/kim_print:29
+#: ../src/bin/kim_print:29
 msgid "Thumbnails: 4x5 images, portrait"
 msgstr ""
 
-#: ../bin/kim_rename:36 ../bin/kim_rename:64
+#: ../src/bin/kim_rename:36 ../src/bin/kim_rename:64
 msgid "Choose the new name of images:"
 msgstr ""
 
-#: ../bin/kim_rename:54 ../bin/kim_rename:82 ../bin/kim_sortbydate:64
-#: ../bin/kim_sortbydate:100
+#: ../src/bin/kim_rename:54 ../src/bin/kim_rename:82
+#: ../src/bin/kim_sortbydate:64 ../src/bin/kim_sortbydate:100
 msgid "Kim – Renaming file: "
 msgstr ""
 
-#: ../bin/kim_resize:47 ../bin/kim_resize:68
+#: ../src/bin/kim_resize:47 ../src/bin/kim_resize:71
 msgid "Kim – Resizing file: "
 msgstr ""
 
-#: ../bin/kim_resizeandsend:32
+#: ../src/bin/kim_resizeandsend:32
 msgid "Kim – Send by mail:"
 msgstr ""
 
-#: ../bin/kim_resizeandsend:32
+#: ../src/bin/kim_resizeandsend:32
 msgid "Full size"
 msgstr ""
 
-#: ../bin/kim_resizeandsend:32
-msgid "800x600 px"
+#: ../src/bin/kim_resizeandsend:32
+msgid "800x800 px"
 msgstr ""
 
-#: ../bin/kim_resizeandsend:32
-msgid "600x450 px"
+#: ../src/bin/kim_resizeandsend:32
+msgid "600x600 px"
 msgstr ""
 
-#: ../bin/kim_resizeandsend:32
-msgid "300x225 px"
+#: ../src/bin/kim_resizeandsend:32
+msgid "300x300 px"
 msgstr ""
 
-#: ../bin/kim_resizeandsend:49
+#: ../src/bin/kim_resizeandsend:49
 msgid "Kim – Resizing and compressing file: "
 msgstr ""
 
-#: ../bin/kim_resizeandsend:64 ../bin/kim_resizeandsend:69
-#: ../bin/kim_resizeandsend:74
+#: ../src/bin/kim_resizeandsend:64 ../src/bin/kim_resizeandsend:69
+#: ../src/bin/kim_resizeandsend:74
 msgid "Kim – Send by mail: you can write your message!"
 msgstr ""
 
-#: ../bin/kim_treatment:32
+#: ../src/bin/kim_treatment:32
 msgid "Choose your annotation:"
 msgstr ""
 
-#: ../bin/kim_treatment:32
+#: ../src/bin/kim_treatment:32
 msgid "My annotation"
 msgstr ""
 
-#: ../bin/kim_treatment:33
+#: ../src/bin/kim_treatment:33
 msgid "Kim – Select border color:"
 msgstr ""
 
-#: ../bin/kim_treatment:33
+#: ../src/bin/kim_treatment:33
 msgid "white"
 msgstr ""
 
-#: ../bin/kim_treatment:33
+#: ../src/bin/kim_treatment:33
 msgid "black"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:1
-#: ../kim_compressandresizevideo.desktop.in.h:1
+#: ../src/kim_compressandresize.desktop.in.h:1
+#: ../src/kim_compressandresizevideo.desktop.in.h:1
 msgid "Kim – Compress and Resize"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:3
-msgid "Compress at 75 %"
+#: ../src/kim_compressandresize.desktop.in.h:3
+msgid "Compress at 10 %"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:5
+#: ../src/kim_compressandresize.desktop.in.h:5
+msgid "Compress at 20 %"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:7
+msgid "Compress at 30 %"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:9
+msgid "Compress at 40 %"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:11
+msgid "Compress at 50 %"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:13
+msgid "Compress at 60 %"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:15
+msgid "Compress at 70 %"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:17
 msgid "Compress at 80 %"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:7
+#: ../src/kim_compressandresize.desktop.in.h:19
 msgid "Compress at 90 %"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:8
+#: ../src/kim_compressandresize.desktop.in.h:20
 msgid "Compress Custom..."
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:9
-msgid "Resize (300x225 pixels)"
+#: ../src/kim_compressandresize.desktop.in.h:21
+msgid "Resize (300x300 pixels)"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:10
-msgid "Resize (600x450 pixels)"
+#: ../src/kim_compressandresize.desktop.in.h:22
+msgid "Resize (600x600 pixels)"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:11
-msgid "Resize (800x600 pixels)"
+#: ../src/kim_compressandresize.desktop.in.h:23
+msgid "Resize (800x800 pixels)"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:12
-msgid "Resize (1024x768 pixels)"
+#: ../src/kim_compressandresize.desktop.in.h:24
+msgid "Resize (1024x1024 pixels)"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:13
-msgid "Resize (1200x900 pixels)"
+#: ../src/kim_compressandresize.desktop.in.h:25
+msgid "Resize (1280x1280 pixels)"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:14
-msgid "Resize (1400x1050 pixels)"
+#: ../src/kim_compressandresize.desktop.in.h:26
+msgid "Resize (1400x1400 pixels)"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:15
+#: ../src/kim_compressandresize.desktop.in.h:27
+msgid "Resize (1600x1600 pixels)"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:28
+msgid "Resize (1920x1920 pixels)"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:29
+msgid "Resize (2560x1080 pixels)"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:30
+msgid "Resize (3440x3440 pixels)"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:31
+msgid "Resize (3840x3840 pixels)"
+msgstr ""
+
+#: ../src/kim_compressandresize.desktop.in.h:32
 msgid "Resize Custom..."
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:17
-msgid "WebExport: 600x450 at 75 %"
+#: ../src/kim_compressandresize.desktop.in.h:34
+msgid "WebThumbnail: 128x128 at 75 %"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:19
-msgid "WebExport: 800x600 at 75 %"
+#: ../src/kim_compressandresize.desktop.in.h:36
+msgid "WebExport: 600x600 at 75 %"
 msgstr ""
 
-#: ../kim_compressandresize.desktop.in.h:21
-msgid "WebExport: 1024x768 at 75 %"
+#: ../src/kim_compressandresize.desktop.in.h:38
+msgid "WebExport: 800x800 at 75 %"
 msgstr ""
 
-#: ../kim_compressandresizevideo.desktop.in.h:2
+#: ../src/kim_compressandresize.desktop.in.h:40
+msgid "WebExport: 1024x1024 at 75 %"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:2
 msgid "Compress video hd720"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:1
+#: ../src/kim_convertandrotate.desktop.in.h:1
 msgid "Kim – Convert and Rotate"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:2
+#: ../src/kim_convertandrotate.desktop.in.h:2
 msgid "Convert to JPEG"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:3
+#: ../src/kim_convertandrotate.desktop.in.h:3
 msgid "Convert to PNG"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:4
+#: ../src/kim_convertandrotate.desktop.in.h:4
 msgid "Convert to GIF"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:5
-msgid "Convert to TIFF"
+#: ../src/kim_convertandrotate.desktop.in.h:5
+msgid "Convert to TIF"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:6
+#: ../src/kim_convertandrotate.desktop.in.h:6
 msgid "Convert to PDF"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:7
+#: ../src/kim_convertandrotate.desktop.in.h:7
 msgid "Convert custom ..."
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:8
+#: ../src/kim_convertandrotate.desktop.in.h:8
 msgid "Convert to graysale"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:9
+#: ../src/kim_convertandrotate.desktop.in.h:9
 msgid "Convert in sepia tone"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:10
+#: ../src/kim_convertandrotate.desktop.in.h:10
 msgid "Auto-rotate with EXIF"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:11
+#: ../src/kim_convertandrotate.desktop.in.h:11
 msgid "Rotate (90°)"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:12
+#: ../src/kim_convertandrotate.desktop.in.h:12
 msgid "Rotate (180°)"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:13
+#: ../src/kim_convertandrotate.desktop.in.h:13
 msgid "Rotate (270°)"
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:14
+#: ../src/kim_convertandrotate.desktop.in.h:14
 msgid "Rotate custom..."
 msgstr ""
 
-#: ../kim_convertandrotate.desktop.in.h:15
+#: ../src/kim_convertandrotate.desktop.in.h:15
 msgid "Flip verticaly"
 msgstr "Tükrözés függőlegesen"
 
-#: ../kim_convertandrotate.desktop.in.h:16
+#: ../src/kim_convertandrotate.desktop.in.h:16
 msgid "Flip horizontaly"
 msgstr "Tükrözés vízszintesen"
 
-#: ../kim_publication.desktop.in.h:1
+#: ../src/kim_publication.desktop.in.h:1
 msgid "Kim – Treatment and publication"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:2
+#: ../src/kim_publication.desktop.in.h:2
 msgid "Create a html gallery"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:3
+#: ../src/kim_publication.desktop.in.h:3
 msgid "Create a photo montage"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:4
+#: ../src/kim_publication.desktop.in.h:4
 msgid "Send by mail"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:5
+#: ../src/kim_publication.desktop.in.h:5
 msgid "Sort by date"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:6
+#: ../src/kim_publication.desktop.in.h:6
 msgid "Rename images"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:7
+#: ../src/kim_publication.desktop.in.h:7
 msgid "Create a multi-files Tiff image"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:8
+#: ../src/kim_publication.desktop.in.h:8
 msgid "Create a gif animation"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:9
+#: ../src/kim_publication.desktop.in.h:9
 msgid "Multiburst image to gif animation"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:10
+#: ../src/kim_publication.desktop.in.h:10
 msgid "Add a border"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:11
+#: ../src/kim_publication.desktop.in.h:11
 msgid "Create a pdf album"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:12
+#: ../src/kim_publication.desktop.in.h:12
 msgid "Add text annotation"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:13
+#: ../src/kim_publication.desktop.in.h:13
 msgid "License"
 msgstr ""
 
-#: ../kim_publication.desktop.in.h:14
+#: ../src/kim_publication.desktop.in.h:14
 msgid "About Kim"
 msgstr ""
