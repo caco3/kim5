@@ -52,10 +52,21 @@ if [ ! `command -v convert` ]; then
 fi
 if [ ! `command -v ffmpeg` ]; then
     install_log="$install_log""Cannot find executable <b>ffmpeg</b>.  Please install it. It may be in package <b>ffmpeg</b>. Without it, video resizing will not work.<br><br>"
+else
+   if ! ffmpeg -encoders 2>&1 | grep -q libx264; then
+   install_log="$install_log""Cannot find encoder <b>libx264</b> for ffmpeg. Encoding video with it will not work. Please install it.<br><br>"
+   fi
+   if ! ffmpeg -encoders 2>&1 | grep -q libx265; then
+   install_log="$install_log""Cannot find encoder <b>libx265</b> for ffmpeg. Encoding video with it will not work. Please install it.<br><br>"
+   fi
 fi
 if [ ! `command -v xdg-email` ]; then
     install_log="$install_log""Cannot find executable <b>xdg-email</b>  Please install it. It may be in package <b>xdg-utils</b> Without it, sending an image by e-mail will not work.<br><br>"
 fi
+if [[ -n "$install_log" ]]; then
+    install_log="$install_log""Some <b>dependencies are missing</b>. The installation continued, but some functionality might not work.<br><br>"
+fi
+
 
 # sets directories from and to which we install
 src_folder="$(dirname "$(realpath "$0")")"
@@ -64,7 +75,7 @@ kim_helper_files="$kim_install_dir"/kim6
 
 # This checks if qtpaths6 returned an existing directory
 if [[ ! -d "$kim_install_dir" ]]; then
-    install_log="$install_log""<b>Error</b> fetching the KDE install prefix. Installation was aborted."
+    install_log="<b>Error</b> fetching the KDE install prefix. Installation was aborted."
     spit_install_log
     exit 1
 fi
@@ -106,7 +117,7 @@ sed -i "s|LOCALE_SOURCE_TTT|'$kim_helper_files/locale'|g" "$kim_helper_files/kim
 
 # install translation mo files
 if [ ! `command -v msgfmt` ]; then
-    install_log="$install_log""The <b>msgfmt</b> command was not found, translation files were not generated and KIM6 will only be available in English. The command is usually provide by the package <b>gettext</b>. Please install it and then install KIM6 again.<br><br>"
+    install_log="$install_log""The <b>msgfmt</b> command was not found, translation files were not generated and KIM6 will only be available in English. The command is usually provided by the package <b>gettext</b>. Please install it and then install KIM6 again.<br><br>"
 else
     for i in "$kim_helper_files"/po/*.po; do
         TRANSLANG=`basename -s .po $i`

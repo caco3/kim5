@@ -19,11 +19,66 @@
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,video/*
-Actions=CompressVidHd720
+Actions=ResizeVideo1280_17_265;ResizeVideo1280_23_265;ResizeVideo1280_29_265;ResizeVideo1280_17_264;ResizeVideo1280_23_264;ResizeVideo1280_29_264;_SEPARATOR_;ResizeVideo1920_17_265;ResizeVideo1920_23_265;ResizeVideo1920_29_265;ResizeVideo1920_17_264;ResizeVideo1920_23_264;ResizeVideo1920_29_264
 Encoding=UTF-8
 _X-KDE-Submenu=Kim – Compress and Resize
 
-[Desktop Action CompressVidHd720]
-_Name=Compress video hd720
-Icon=application-x-compress
-Exec=kim_video hd720 %D %U
+[Desktop Action ResizeVideo1280_17_265]
+_Name=Transcode video to 1280x720, good quality, x265
+Icon=video-mp4
+Exec=kim_video hd720 17 x265 %D %U
+
+[Desktop Action ResizeVideo1280_23_265]
+_Name=Transcode video to 1280x720, medium quality, x265
+Icon=video-mp4
+Exec=kim_video hd720 23 x265 %D %U
+
+[Desktop Action ResizeVideo1280_29_265]
+_Name=Transcode video to 1280x720, bad quality, x265
+Icon=video-mp4
+Exec=kim_video hd720 29 x265 %D %U
+
+[Desktop Action ResizeVideo1280_17_264]
+_Name=Transcode video to 1280x720, good quality, x264
+Icon=video-mp4
+Exec=kim_video hd720 17 x264 %D %U
+
+[Desktop Action ResizeVideo1280_23_264]
+_Name=Transcode video to 1280x720, medium quality, x264
+Icon=video-mp4
+Exec=kim_video hd720 23 x264 %D %U
+
+[Desktop Action ResizeVideo1280_29_264]
+_Name=Transcode video to 1280x720, bad quality, x264
+Icon=video-mp4
+Exec=kim_video hd720 29 x264 %D %U
+
+[Desktop Action ResizeVideo1920_17_265]
+_Name=Transcode video to 1920x1080, good quality, x265
+Icon=video-mp4
+Exec=kim_video hd1080 17 x265 %D %U
+
+[Desktop Action ResizeVideo1920_23_265]
+_Name=Transcode video to 1920x1080, medium quality, x265
+Icon=video-mp4
+Exec=kim_video hd1080 23 x265 %D %U
+
+[Desktop Action ResizeVideo1920_29_265]
+_Name=Transcode video to 1920x1080, bad quality, x265
+Icon=video-mp4
+Exec=kim_video hd1080 29 x265 %D %U
+
+[Desktop Action ResizeVideo1920_17_264]
+_Name=Transcode video to 1920x1080, good quality, x264
+Icon=video-mp4
+Exec=kim_video hd1080 17 x264 %D %U
+
+[Desktop Action ResizeVideo1920_23_264]
+_Name=Transcode video to 1920x1080, medium quality, x264
+Icon=video-mp4
+Exec=kim_video hd1080 23 x264 %D %U
+
+[Desktop Action ResizeVideo1920_29_264]
+_Name=Transcode video to 1920x1080, bad quality, x264
+Icon=video-mp4
+Exec=kim_video hd1080 29 x264 %D %U

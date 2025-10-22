@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KIM 6 – Kde Image Menu 6 1.1\n"
 "Report-Msgid-Bugs-To: https://github.com/KIM-6/kim6/issues\n"
-"POT-Creation-Date: 2025-10-22 19:11+0200\n"
+"POT-Creation-Date: 2025-10-22 20:20+0200\n"
 "PO-Revision-Date: 2025-09-22 22:22+0200\n"
 "Last-Translator: Miguel Useche <contacto@migueluseche.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
@@ -77,26 +77,26 @@ msgstr ""
 #: ../src/bin/kim_rename:30 ../src/bin/kim_rename:88 ../src/bin/kim_resize:31
 #: ../src/bin/kim_resize:77 ../src/bin/kim_sortbydate:31
 #: ../src/bin/kim_sortbydate:106 ../src/bin/kim_treatment:35
-#: ../src/bin/kim_treatment:115 ../src/bin/kim_video:31 ../src/bin/kim_video:78
+#: ../src/bin/kim_treatment:115 ../src/bin/kim_video:33 ../src/bin/kim_video:80
 #: ../src/bin/kim_webexport:31 ../src/bin/kim_webexport:76
 msgid "Kim"
 msgstr ""
 
 #: ../src/bin/kim_compress:31 ../src/bin/kim_rename:30 ../src/bin/kim_resize:31
 #: ../src/bin/kim_sortbydate:31 ../src/bin/kim_treatment:35
-#: ../src/bin/kim_video:31 ../src/bin/kim_webexport:31
+#: ../src/bin/kim_video:33 ../src/bin/kim_webexport:31
 msgid "Do you want to create new files?"
 msgstr ""
 
 #: ../src/bin/kim_compress:31 ../src/bin/kim_rename:30 ../src/bin/kim_resize:31
 #: ../src/bin/kim_sortbydate:31 ../src/bin/kim_treatment:35
-#: ../src/bin/kim_video:31 ../src/bin/kim_webexport:31
+#: ../src/bin/kim_video:33 ../src/bin/kim_webexport:31
 msgid "Create new"
 msgstr ""
 
 #: ../src/bin/kim_compress:31 ../src/bin/kim_rename:30 ../src/bin/kim_resize:31
 #: ../src/bin/kim_sortbydate:31 ../src/bin/kim_treatment:35
-#: ../src/bin/kim_video:31 ../src/bin/kim_webexport:31
+#: ../src/bin/kim_video:33 ../src/bin/kim_webexport:31
 msgid "Replace existing"
 msgstr ""
 
@@ -108,19 +108,19 @@ msgstr ""
 #: ../src/bin/kim_rotate:30 ../src/bin/kim_rotatewithexif:30
 #: ../src/bin/kim_sortbydate:35 ../src/bin/kim_sortbydate:71
 #: ../src/bin/kim_treatment:38 ../src/bin/kim_treatment:77
-#: ../src/bin/kim_video:34 ../src/bin/kim_video:55
+#: ../src/bin/kim_video:36 ../src/bin/kim_video:57
 msgid "Kim – Initialising ..."
 msgstr ""
 
 #: ../src/bin/kim_compress:46 ../src/bin/kim_compress:70
-#: ../src/bin/kim_multiburst:53 ../src/bin/kim_video:46 ../src/bin/kim_video:72
+#: ../src/bin/kim_multiburst:53 ../src/bin/kim_video:48 ../src/bin/kim_video:74
 #: ../src/bin/kim_webexport:47 ../src/bin/kim_webexport:70
 msgid "Kim – Compressing file: "
 msgstr ""
 
 #: ../src/bin/kim_compress:76 ../src/bin/kim_rename:88 ../src/bin/kim_resize:77
 #: ../src/bin/kim_sortbydate:106 ../src/bin/kim_treatment:115
-#: ../src/bin/kim_video:78 ../src/bin/kim_webexport:76
+#: ../src/bin/kim_video:80 ../src/bin/kim_webexport:76
 msgid "The action was cancelled by user!"
 msgstr ""
 
@@ -352,7 +352,7 @@ msgstr "Redimensionar (1920x1920 píxeles)"
 
 #: ../src/kim_compressandresize.desktop.in.h:29
 #, fuzzy
-msgid "Resize (2560x1080 pixels)"
+msgid "Resize (2560x2560 pixels)"
 msgstr "Redimensionar (2560x1080 píxeles)"
 
 #: ../src/kim_compressandresize.desktop.in.h:30
@@ -386,7 +386,51 @@ msgid "WebExport: 1024x1024 at 75 %"
 msgstr "Exportar para web: 1024x1024 al 75 %"
 
 #: ../src/kim_compressandresizevideo.desktop.in.h:2
-msgid "Compress video hd720"
+msgid "Transcode video to 1280x720, good quality, x265"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:3
+msgid "Transcode video to 1280x720, medium quality, x265"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:4
+msgid "Transcode video to 1280x720, bad quality, x265"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:5
+msgid "Transcode video to 1280x720, good quality, x264"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:6
+msgid "Transcode video to 1280x720, medium quality, x264"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:7
+msgid "Transcode video to 1280x720, bad quality, x264"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:8
+msgid "Transcode video to 1920x1080, good quality, x265"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:9
+msgid "Transcode video to 1920x1080, medium quality, x265"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:10
+msgid "Transcode video to 1920x1080, bad quality, x265"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:11
+msgid "Transcode video to 1920x1080, good quality, x264"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:12
+msgid "Transcode video to 1920x1080, medium quality, x264"
+msgstr ""
+
+#: ../src/kim_compressandresizevideo.desktop.in.h:13
+msgid "Transcode video to 1920x1080, bad quality, x264"
 msgstr ""
 
 #: ../src/kim_convertandrotate.desktop.in.h:1

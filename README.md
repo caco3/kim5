@@ -115,5 +115,4 @@ Individual scripts can also be ran directly. Look into the bin files (which are 
 ## Todo
 
 - Update manual (pointing to old site etc.)
-- Add more options to video transformations
 - Merge bin files and refactor common code is in functions, that should reduce the code size in half
