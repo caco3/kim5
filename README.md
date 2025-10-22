@@ -61,7 +61,7 @@ LANGUAGE=nl dolphin
 
 To generate new `.pot` template and update the individual translations, one runs this in `po` directory (unless you develop a new feature, you should not need this as I try to keep the translation strings up-to-date):
 ```
-VERSION=1.1; # set kim6 version
+VERSION=2.1; # set kim6 version
 cd po;
 # this creates a new pot file from the files in the bin directory (do not update because then deleted strings are kept)
 xgettext --language=Shell --keyword=gettext --output=kim6.pot --from-code=UTF-8 --add-comments=TRANSLATORS --package-name="KIM 6 — Kde Image Menu 6" --package-version="$VERSION" --msgid-bugs-address="https://github.com/KIM-6/kim6/issues" ../src/bin/kim_*
@@ -82,7 +82,7 @@ done
 ## Release
 Do not forget to update translations and changelog and then run the following in the root directory:
 ```
-VERSION=2.0; # set kim6 version
+VERSION=2.1; # set kim6 version
 # generate desktop files
 cd po;
 for desk_ini in ../src/*.desktop.in; do intltool-merge --desktop-style ./ "$desk_ini"  "${desk_ini%.in}"; chmod +x "${desk_ini%.in}" ; done
@@ -114,5 +114,5 @@ Individual scripts can also be ran directly. Look into the bin files (which are 
 
 ## Todo
 
-- Update manual (pointing to old site etc.)
-- Merge bin files and refactor common code is in functions, that should reduce the code size in half
+- Functionally, KIM 6 is stable. Do report bugs though if you find any.
+- Technically, it would be good to merge exec files and refactor common code in functions, that should reduce the code size in half. Patches welcome!
