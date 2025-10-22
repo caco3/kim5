@@ -28,9 +28,9 @@ FILE="";
 SCELTA="$1";
 DIR="$2";
 let "nbfiles = ($# -1)/2"
-kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to replace existing files?")"
+kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to create new files?")" --yes-label "$(gettext "Create new")" --no-label "$(gettext "Replace existing")"
 case $? in
-	0)	# Replace existing files!
+	1)	# Replace existing files!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising compression")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	counter=0
@@ -50,7 +50,7 @@ case $? in
 	done
 	qdbus $dbusRef close;;
 	
-	1)
+	0)
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising compression")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	counter=0

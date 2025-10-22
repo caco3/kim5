@@ -32,9 +32,9 @@ case $SCELTA in
 	mark) annotation=`kdialog --inputbox "$(gettext "Choose your annotation:")" "$(gettext "My annotation")"`;;
 	border) color=`kdialog --radiolist "$(gettext "Kim – Select border color:")" 1 "$(gettext "white")"  on 2 "$(gettext "black")" off`;;
 esac
-kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to replace existing files?")"
+kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to create new files?")" --yes-label "$(gettext "Create new")" --no-label "$(gettext "Replace existing")"
 case $? in
-	0)	# Replace existing files!
+	1)	# Replace existing files!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true 
 	counter=0
@@ -73,7 +73,7 @@ case $? in
 	done
 	qdbus $dbusRef close;;
 	
-	1)	# Save files with another name!
+	0)	# Save files with another name!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true 
 	counter=0

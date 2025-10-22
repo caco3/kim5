@@ -28,10 +28,10 @@ let "nbfiles = $#/2"
 #test -n "$KDEHOME" || KDEHOME="`kde4-config --localprefix`"; export KDEHOME
 TMPDIR=`mktemp -d /tmp/kim.XXXXXXXX` || exit 1
 
-kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to replace existing files?")"
+kdialog --title "$(gettext "Kim")" --yesnocancel "$(gettext "Do you want to create new files?")" --yes-label "$(gettext "Create new")" --no-label "$(gettext "Replace existing")"
 
 case $? in
-	0)	# Replace existing files!
+	1)	# Replace existing files!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" $nbfiles`
 	qdbus $dbusRef showCancelButton true
 	counter=0
@@ -67,7 +67,7 @@ case $? in
 	done
 	qdbus $dbusRef close;;
 	
-	1) # Do not replace existing files!
+	0) # Do not replace existing files!
 	dbusRef=`kdialog --progressbar "$(gettext "Kim – Initialising ...")" "$nbfiles"`
 	qdbus $dbusRef showCancelButton true
 	counter=0
