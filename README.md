@@ -82,13 +82,13 @@ done
 ## Release
 Do not forget to update translations and changelog and then run the following in the root directory:
 ```
-VERSION=2.1; # set kim6 version
+VERSION=2.0; # set kim6 version
 # generate desktop files
 cd po;
 for desk_ini in ../src/*.desktop.in; do intltool-merge --desktop-style ./ "$desk_ini"  "${desk_ini%.in}"; chmod +x "${desk_ini%.in}" ; done
 cd ..;
 # Do not include files that need not be installed
-tar -czf kim6_$VERSION.tar.gz --exclude=README.md  --exclude=KIM6.png --exclude=Changelog --exclude kim6_devel.tar.gz --exclude './src/*desktop.in' ./
+tar -czf kim6_$VERSION.tar.gz --exclude=README.md  --exclude=KIM6.png --exclude=Changelog --exclude kim6_$VERSION.tar.gz --exclude kim6_*.tar.gz --exclude './src/*desktop.in' --exclude ./.* ./
 # generated desktop files are no longer needed
 rm src/kim_compressandresize.desktop src/kim_compressandresizevideo.desktop src/kim_convertandrotate.desktop src/kim_publication.desktop
 ```
