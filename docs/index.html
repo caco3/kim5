@@ -1,68 +1,68 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
 
 <head>
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
     <meta name="author" content="Tomáš Hnyk" />
     <meta name="description" content="KIM6's documentation" />
     <meta name="robots" content="noarchive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <title>KIM 6 documentation</title>
 
     <style type="text/css" title="Work, a pseudo-professional style sheet.">
       @import "work.css";
     </style>
-
 </head>
 
 <body>
     <!-- The title on top -->
-    <div id="content">
-        <center><b>Documentation of Kde Image Menu 6–KIM6</b></center>
-    </div>
-
+    <h1 id="maintitle">Documentation of Kde Image Menu 6 — KIM6</h1>
     <!-- The actual content of the page -->
     <div id="content">
     <h1>KIM6 (Kde Image Menu 6)</h1>
-    <p>Developed at: <a href="https://github.com/KIM-6/kim6">https://github.com/KIM-6/kim6</a><br>
+    <p id="links">
+    Developed at: <a href="https://github.com/KIM-6/kim6">https://github.com/KIM-6/kim6</a><br>
     Webpage (work in progress): <a href="https://skatox.com/blog/kim-kde-image-manipulator-for-plasma-6/">https://skatox.com/blog/kim-kde-image-manipulator-for-plasma-6/</a><br>
     KDE Store: <a href="https://store.kde.org/p/2307290/">https://store.kde.org/p/2307290/</a><br>
-    KIM6 is a <a href="https://apps.kde.org/dolphin/Dolphin">Dolphin</a> service <a href="https://develop.kde.org/docs/apps/dolphin/service-menus">menu</a> which allows you to perform actions on your images (and videos) from your desktop or file manager without having to use other applications. This service menu can be considered as a frontend of <a href="https://imagemagick.org">ImageMagick</a> (and <a href="https://ffmpeg.org">FFmpeg</a>).<br>
-    KIM’s history goes as far back as some time around 2004 in the age of KDE 3. A huge thanks belongs to the original authors. It has been resurrected for each succesibe KDE version, so this is its 4th iteration. Some features can therefore be a bit funky, especially in the publication menu.</p>
+    License: <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL 3</a> or any later version.</p>
 
-    <h1>Menus:</h1>
+    <p>KIM6 is a <a href="https://develop.kde.org/docs/apps/dolphin/service-menus">service menu</a> for <a href="https://kde.org">KDE</a> used for example by <a href="https://apps.kde.org/dolphin/Dolphin">Dolphin</a> and other users of <a href="https://invent.kde.org/frameworks/kio">KIO</a>. KIM6 allows you to perform actions on your images (and videos) from your desktop or file manager without having to use other applications. This service menu can be considered as a frontend of <a href="https://imagemagick.org">ImageMagick</a> (and <a href="https://ffmpeg.org">FFmpeg</a>).</p>
+    <p>KIM’s history goes as far back as some time around 2004 in the age of KDE 3. A huge thanks belongs to the original authors and people who later forked it. It has been resurrected for each successive KDE version, so this is its 4th iteration. Some features can therefore be a bit funky, especially in the publication menu.</p>
+
+    <h1>Menus</h1>
     <ul>
-        <li><b>Compress and resize</b><br>
-        <p>This menu allows you to compress and resize images. Compression can significantly reduce the size of images in exchange for some loss of detail. Resizing changes the size of images but keeps scale. Each action defines a maximum size of the resulting image.<br>
-        So if your image is 2000x1000 (landscape orientation) and you resize it to 500x500, your resulting image will be 500x250 (so the limit will be applied to horizontal length of the image).
-        <br>If your image is 1000x2000 (portrait orientation) and you resize it to 500x500, your resulting image will be 250x500 (so the limit will be applied to vertical height of the image).
-        <br>Webexport combines compression and resizing. In each case, you will be asked whether you want to create a new image or overwrite existing. Pressing enter will select to create new images.</p></li>
+        <li><b>Compress and resize</b>
+        <p>This menu allows you to compress and resize images. Compression can significantly reduce the size of images in exchange for some loss of detail. Resizing changes the size of images but keeps scale. Each action defines a maximum size of the resulting image.</p>
+        <p>So if your image is 2000x1000 (landscape orientation) and you resize it to 500x500, your resulting image will be 500x250 (so the limit will be applied to horizontal length of the image).</p>
+        <p>If your image is 1000x2000 (portrait orientation) and you resize it to 500x500, your resulting image will be 250x500 (so the limit will be applied to vertical height of the image).</p>
+        <p>Webexport combines compression and resizing. In each case, you will be asked whether you want to create a new image or overwrite existing. Pressing enter will select to create new images.</p></li>
 
-        <li><b>Convert and rotate</b><br>
-        <p>This menu allows to convert the images to several other formats, change its colours to a pale shae or to black and white and rotate and flip images.</li></p>
+        <li><b>Convert and rotate</b>
+        <p>This menu allows to convert the images to several other formats, change its colours to a pale shade or to black and white and rotate and flip images.</p></li>
 
-        <li><b>Treatment and publication</b><br>
-        <p>This menu contains various actions. You can rename images (they will then share the name and will be differentiated by a suffix, so it will be: Picture_001.jpg, Picture_002.jpg. etc.<br>
-        If you use Kmail or Thunderbird, you should be able to resize pictures and open a message with them attached in one go.<br>
-        Sort by date will rename pictures based on their EXIF dates so they should be then sorted by date in filemanager.<br>
-        You can also create a HTML gallery or a funky collage of (photo montage) from your pictures.<br>
-        You can add black taxt (annotation) to the bottom right corner of your image and add white or black border to your images.<br>
-        You can combine several images into one file in the TIFF format (graphical programs like GIMP or Krita should be able to retrieve all the images from such a file.<br>
-        You can create a gif animation. That can be also done from a so-called multiburst image, but the current authors are not sure what that is supposed to do.<br>
-        You can also display a license and this help.<br>
-        <li><b>Video Compress and resize</b><br>
-        Transcodes video using either x264 or x265 to HD (1280x720) or FullHD (1920x1080) in three qualities (CFR values 17, 23 and 29 — only 17 should more or less preserve the amount of detail). Audio is copied and container (like MP4) is also preserved.</li>
-    </ul></p>
+        <li><b>Treatment and publication</b>
+        <p>This menu contains various actions. You can rename images (they will then share the name and will be differentiated by a suffix, so it will be for example: Picture_001.jpg, Picture_002.jpg. etc.</p>
+        <p>If you use Kmail or Thunderbird, you should be able to resize pictures and open a message with them attached in one go.</p>
+        <p>Sort by date will rename pictures based on their EXIF dates so they should be then sorted by date in the file manager.</p>
+        <p>You can also create a HTML gallery or a funky collage of (photo montage) from your pictures.</p>
+        <p>You can add black text (annotation) to the bottom right corner of your image and add white or black border to your images.</p>
+        <p>You can combine several images into one file in the TIFF format (graphical programs like GIMP or Krita should be able to retrieve all the images from such a file.</p>
+        <p>You can create a gif animation. That can be also done from a so-called multiburst image, but the current authors are not sure what that is supposed to do.</p>
+        You can also display a license and this help.</p></li>
+
+        <li><b>Video Compress and resize</b>
+        <p>Transcodes video using either x264 or x265 to HD (1280x720) or FullHD (1920x1080) in three qualities (CFR values 17, 23 and 29 — only 17 should more or less preserve the amount of detail). Audio is copied and container (like MP4) is also preserved.</p></li>
+    </ul>
 
     <h1>Installation</h1>
-    See <a href="https://github.com/KIM-6/kim6?tab=readme-ov-file#install">here.</a>
+    See <a href="https://github.com/KIM-6/kim6?tab=readme-ov-file#install">here.</a></div>
 
     <!-- The footer information -->
     <div id="footer">
          KIM6 M Kde Image Menu 6  | Copyleft 2004-2025
     </div>
-
 </body>
-
 </html>

@@ -1,122 +1,68 @@
-      body 
-           {
-           font:16px verdana, arial, helvetica, sans-serif;
-           color:#222;
-           background-color:white;
-         }
-      h1
-           {
-           color:#333;
-           font:1.1em/1 Georgia, "Times New Roman", Times, serif;
-           font-weight:700;
-           margin:2em 0 .5em;
-         }
-      h2
-           {
-           color:#333;
-           font:1em/1 Georgia, "Times New Roman", Times, serif;
-           font-weight:600;
-           margin:2em 0 .5em;
-         }
-      p 
-           {
-           line-height:1.8;
-           margin:0 0 1em;
-               text-align: justify;
-         }
-      oul
-           {
-           margin-top:0;
-             margin-bottom:1em;
-           line-height:1.8;
-         }
-      a
-           {
-           color:#333;
-           text-decoration:none;
-           font-weight:600;
-         }
-      a:link
-           {
-             color:#333;
-           }
-      a:visited
-           {
-             color:#444;
-           }
-      a:hover
-           {
-             color:#666;
-           }
-      body
-           {
-           margin:20px 0px; padding:0px;
-           text-align:center;
-         }
+body {
+    font:16px verdana, arial, helvetica, sans-serif;
+    color:#222;
+    background-color:white;
+    margin:20px 0px; padding:0px;
+    text-align:center;
+}
 
-      #navcontainer
-           {
-             margin-left: auto;
-             margin-right: auto;
-             margin-bottom: 3.6em;
-             border-top: 1px solid #999;
-             z-index: 1;
-           }
-      #navcontainer ul
-           {
-             list-style-type: none;
-             text-align: center;
-             margin-top: -0.9em;
-             padding: 0;
-             position: relative;
-             z-index: 2;
-           }
-      #navcontainer li
-           {
-             display: inline;
-             text-align: center;
-             margin: 0 5px;
-           }
-      #navcontainer li a
-           {
-             padding: 1px 7px;
-             color: #666;
-             background-color: #eee;
-             border: 1px solid #ccc;
-             text-decoration: none;
-           }
-      #navcontainer li a:hover
-           {
-             color: #000;
-             border: 1px solid #666;
-             border-top: 1px solid #666;
-             border-bottom: 1px solid #666;
-           }
-      #navcontainer li a#current
-           {
-             color: #000;
-             border: 1px solid #666;
-             border-top: 1px solid #666;
-             border-bottom: 1px solid #666;
-           }
+h1 {
+    color:#333;
+    font:1.1em/1 Georgia, "Times New Roman", Times, serif;
+    font-weight:700;
+    margin:2em 0 .5em;
+}
 
-      #content
-           {
-           width:87ch;
-           margin:0px auto;
-           text-align:left;
-           padding:1.3em;
-           border:1px solid #666;
-           margin-bottom: 2.7em;
-           background-color:#eee;
-         }
+p {
+  line-height: 1.7;
+  margin-left margin-right: 1em;
+  margin-top, margin-bottom: 0.8em;
+  text-align: justify;
+}
 
-      #address ul
-           {
-             list-style-type: none;
-             margin-top: 4px;
-           }
-      #footer
-           {
-           text-align:center;
-           }
+a {
+    color:#0056b3;
+    text-decoration:none;
+    font-weight:600;
+}
+
+
+a:visited {
+        color:#6a2ca0;
+}
+
+a:hover {
+        color:#c0392b;
+}
+
+#maintitle {
+  text-align:center;
+  font-weight:700;
+  font-size:1.3em;
+  margin-bottom:1em;
+}
+
+#content {
+    width:80ch;
+    margin:0px auto;
+    text-align:left;
+    padding:2em;
+    border: 1px solid #ccc;
+    margin-bottom: 2.7em;
+    background-color:#eee;
+    border-radius: 8px;
+}
+
+/* removes empty space at the top of the background box*/
+#content h1:first-child {
+  margin-top: 0;
+}
+
+#links {
+        text-align:left;
+}
+
+#footer {
+    text-align:center;
+    font-size:0.9em;
+}
