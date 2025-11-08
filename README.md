@@ -61,7 +61,7 @@ To test your translation, install it (see release) and run Dolphin like this (re
 LANGUAGE=nl dolphin
 ```
 
-To generate new `.pot` template and update the individual translations, one runs this in `po` directory (unless you develop a new feature, you should not need this as I try to keep the translation strings up-to-date):
+To generate new `.pot` template and update the individual translations, one runs this in the project root directory (it actually runs in the `po` directory; unless you develop a new feature, you should not need this as I try to keep the translation strings up-to-date):
 ```
 VERSION=2.1; # set kim6 version
 cd po;
@@ -80,16 +80,18 @@ mv temp.pot kim6.pot;
 # with the resulting pot file, we can update the po files in case there are new strings or some got deleted
 for po in *.po; do msgmerge --update "$po" kim6.pot;
 done
+cd ..
 ```
 ## Release
-Do not forget to update translations and changelog and then run the following in the root directory:
+Do not forget to update translations and changelog and then run the following (change VERSION) in the project root directory:
 ```
 VERSION=2.0; # set kim6 version
 # generate desktop files
 cd po;
 for desk_ini in ../src/*.desktop.in; do intltool-merge --desktop-style ./ "$desk_ini"  "${desk_ini%.in}"; chmod +x "${desk_ini%.in}" ; done
 cd ..;
-# Do not include files that need not be installed
+# Do not include files that need not be installed (we first need to create the archive so tar does not complain about file being changed as it is read)
+touch kim6_$VERSION.tar.gz
 tar -czf kim6_$VERSION.tar.gz --exclude=README.md  --exclude=KIM6.png --exclude=Changelog --exclude kim6_$VERSION.tar.gz --exclude kim6_*.tar.gz --exclude './src/*desktop.in' --exclude ./.* ./
 # generated desktop files are no longer needed
 rm src/kim_compressandresize.desktop src/kim_compressandresizevideo.desktop src/kim_convertandrotate.desktop src/kim_publication.desktop
