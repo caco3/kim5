@@ -90,10 +90,10 @@ VERSION=2.0; # set kim6 version
 cd po;
 for desk_ini in ../src/*.desktop.in; do intltool-merge --desktop-style ./ "$desk_ini"  "${desk_ini%.in}"; chmod +x "${desk_ini%.in}" ; done
 cd ..;
-# Do not include files that need not be installed (we first need to create the archive so tar does not complain about file being changed as it is read)
+# Do not include files that do not need to be installed (first, we need to create the archive so that tar does not complain about file being changed as it is read)
 touch kim6_$VERSION.tar.gz
 tar -czf kim6_$VERSION.tar.gz --exclude=README.md  --exclude=KIM6.png --exclude=Changelog --exclude kim6_$VERSION.tar.gz --exclude kim6_*.tar.gz --exclude './src/*desktop.in' --exclude ./.* ./
-# generated desktop files are no longer needed
+# at this point, the generated desktop files are no longer needed
 rm src/kim_compressandresize.desktop src/kim_compressandresizevideo.desktop src/kim_convertandrotate.desktop src/kim_publication.desktop
 ```
 
@@ -109,14 +109,14 @@ Then clean up with:
 servicemenuinstaller uninstall kim6_$VERSION.tar.gz
 ```
 
-It is also possible to run directly the `.install.sh` and `.uninstall.sh` scripts, the desktopfiles will be generated automatically. 
+It is also possible to directly run the `.install.sh` and `.uninstall.sh` scripts, the desktop files will be generated automatically. 
 
-Individual scripts can also be ran directly. Look into the bin files (which are bash scripts) to see what arguments they need. For example this resizes proportionally a given file 300 pixels along its shorter side:
+Individual scripts can also be run directly. Look into the src/bin BASH scripts to see what arguments they need. For example, this example resizes a given file 300 pixels along its shorter side:
 ```
 ./kim_resize ~/example.jpg 300x300
 ```
 
 ## Todo
 
-- Functionally, KIM 6 is stable. Do report bugs though if you find any.
+- Functionally, KIM 6 is stable. Please report bugs if you find any.
 - Technically, it would be good to merge exec files and refactor common code in functions, that should reduce the code size in half. Patches welcome!
