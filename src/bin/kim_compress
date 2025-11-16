@@ -44,7 +44,7 @@ case $? in
             let "counter +=1"
             FILE="$i"
             qdbus $dbusRef setLabelText "$(gettext "Kim — Compressing file: ") `basename $(FILE)`"
-            mogrify -quality $QUALITY "$FILE"
+            mogrify -quality $QUALITY -- "$FILE"
             qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $counter
         fi;
     done
@@ -66,7 +66,7 @@ case $? in
             BASENAME="$(basename "$FILE")"
             NAME="${BASENAME%.*}"
             EXT="${BASENAME##*.}"
-            magick -quality $QUALITY "$FILE" "$DIR/${NAME}_compressed.${EXT}"
+            magick -quality $QUALITY -- "$FILE" "$DIR/${NAME}_compressed.${EXT}"
             qdbus $dbusRef setLabelText "$(gettext "Kim — Compressing file: ") `basename $(FILE)`"
 #             qdbus $dbusRef setProgress "$counter"
         fi;
