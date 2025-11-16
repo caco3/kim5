@@ -54,8 +54,8 @@ for i in "$@";do
         while [ -e "$TMPDIR/pelemele_$RANDOM.png" ]; do
             RANDOM=`perl -e 'print int(rand(1000000))'`;
         done
-        magick $i -resize $SIZE "$TMPDIR/$FILE"
-        magick "$TMPDIR/$FILE" \
+        magick -resize $SIZE -- $i "$TMPDIR/$FILE"
+        magick -- "$TMPDIR/$FILE" \
             -bordercolor white  -border $BORDER \
             -bordercolor grey60 -border 1 \
             -background  none   -rotate `perl -e 'print rand() * 30 - 15'` \
@@ -68,8 +68,7 @@ for i in "$@";do
         fi;
 done
 qdbus $dbusRef close;
-
-montage -background $COLOR -tile $TILE -geometry -$OVER-$OVER $TMPDIR/pelemele_*.png `kdialog --getsavefilename ~ *.png`;
+montage -background "$COLOR" -tile "$TILE" -geometry "-$OVER-$OVER" -- "$TMPDIR"/pelemele_*.png `kdialog --getsavefilename ~ *.png`;
 
 #rm -rf "$KDEHOME"/tmp-"$HOST"/kim.*;
 rm -rf $TMPDIR
