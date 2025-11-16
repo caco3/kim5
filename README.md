@@ -168,7 +168,7 @@ servicemenuinstaller uninstall kim6_$VERSION.tar.gz
 
 It is also possible to run the `.install.sh` and `.uninstall.sh` scripts, the desktop files will be generated automatically. 
 
-Individual scripts can also be run directly. Look into the bin files (which are bash scripts) to see what arguments they need. For example this resizes proportionally a given file 300 pixels along its shorter side:
+Individual scripts can also be run directly. Look into the bin files (which are bash scripts in `src/bin` folder) to see what arguments they need. For example this resizes proportionally a given file 300 pixels along its shorter side:
 ```
 ./kim_resize ~/example.jpg 300x300
 ```
