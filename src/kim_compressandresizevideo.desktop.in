@@ -2,6 +2,7 @@
 #
 # Copyright (C) 2005, 2006  Charles Bouveyron <charles.bouveyron@free.fr>
 # Copyright (C) 2025  Tomáš Hnyk <tomashnyk@gmail.com>
+# Copyright (C) 2025  Miguel Useche <migueluseche@skatox.com>
 # 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,7 +19,7 @@
 
 [Desktop Entry]
 Type=Service
-ServiceTypes=KonqPopupMenu/Plugin,video/*
+MimeType=video/*;
 Actions=ResizeVideo1280_17_265;ResizeVideo1280_23_265;ResizeVideo1280_29_265;ResizeVideo1280_17_264;ResizeVideo1280_23_264;ResizeVideo1280_29_264;_SEPARATOR_;ResizeVideo1920_17_265;ResizeVideo1920_23_265;ResizeVideo1920_29_265;ResizeVideo1920_17_264;ResizeVideo1920_23_264;ResizeVideo1920_29_264
 Encoding=UTF-8
 _X-KDE-Submenu=Kim — Compress and Resize

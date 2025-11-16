@@ -2,6 +2,7 @@
 #
 # Copyright (C) 2005, 2006  Charles Bouveyron <charles.bouveyron@free.fr>
 # Copyright (C) 2025  Tomáš Hnyk <tomashnyk@gmail.com>
+# Copyright (C) 2025  Miguel Useche <migueluseche@skatox.com>
 # 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,7 +19,7 @@
 
 [Desktop Entry]
 Type=Service
-ServiceTypes=KonqPopupMenu/Plugin,image/*
+MimeType=image/*;
 Actions=JPEG;PNG;GIF;TIFF;PDF;ConvCustom;_SEPARATOR_;GrayScale;Sepia;_SEPARATOR_;AutoRot;Rot90;Rot180;Rot270;RotCustom;_SEPARATOR_;Flip;Flop
 Encoding=UTF-8
 _X-KDE-Submenu=Kim — Convert and Rotate
