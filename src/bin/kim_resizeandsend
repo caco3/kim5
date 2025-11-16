@@ -50,9 +50,9 @@ for i in "$@";do
          qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $counter
         case "$choice" in
             1) cp $i $TMPDIR;;
-            2) magick "$ATTACHMENTS" -resize 800x800 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
-            3) magick "$ATTACHMENTS" -resize 600x600 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
-            4) magick "$ATTACHMENTS" -resize 300x300 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+            2) magick -- "$ATTACHMENTS" -resize 800x800 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+            3) magick -- "$ATTACHMENTS" -resize 600x600 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
+            4) magick -- "$ATTACHMENTS" -resize 300x300 "$TMPDIR"/`basename "$ATTACHMENTS"`;;
             *)exit 1;;
         esac
     fi;

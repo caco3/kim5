@@ -41,7 +41,7 @@ for i in "$@";do
         let "counter +=1"
         FILE="$i"
         qdbus $dbusRef setLabelText "$(gettext "Kim — Converting file:") `basename "$FILE"`"
-        mogrify -format "$FORMAT" "$FILE"
+        mogrify -format "$FORMAT" -- "$FILE"
         qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value $counter
     fi;
 done
