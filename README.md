@@ -39,7 +39,7 @@ The manual: [KIM6 manual](https://kim-6.github.io/kim6/)
 2. Install it using:
 
 ```
-servicemenuinstaller install ./kim6_*.tar.gz
+servicemenuinstaller install ./kim6*.tar.gz
 ```
 
 ### Option 3: Install from a cloned repository
