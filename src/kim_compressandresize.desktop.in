@@ -18,7 +18,8 @@
 
 [Desktop Entry]
 Type=Service
-ServiceTypes=KonqPopupMenu/Plugin,image/*
+MimeType=image/*;
+ServiceTypes=KonqPopupMenu/Plugin
 Actions=aRcprs10;bRcprs20;cRcprs30;dRcprs40;eRcprs50;fRcprs60;gRcprs70;hRcprs80;iRcprs90;jRcprsCustom;_SEPARATOR_;aRsize0300;bRsize0600;cRsize0800;dRsize1024;eRsize1280;fRsize1400;gRsize1600;hRsize1920;iRsize2560;jRsize3440;kRsize3840;lRsizeCustom;_SEPARATOR_;aWebThumb75120;bWebExp75640;cWebExp75800;dWebExp751024;
 Encoding=UTF-8
 _X-KDE-Submenu=Kim — Compress and Resize
