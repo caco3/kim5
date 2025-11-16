@@ -42,50 +42,50 @@ case "$nb" in
             fi
             let "counter +=1"
             FILE=`basename "$i"`;
-            magick -resize 640x480 -rotate '90<' $i "$TMPDIR/mini_$FILE";
+            magick -resize 640x480 -rotate '90<' -- $i "$TMPDIR/mini_$FILE";
             qdbus $dbusRef setLabelText "$(gettext "Kim — resizing of file: ") $FILE"
              qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
         fi;
     done
     qdbus $dbusRef close;
-    montage -tile 2x2 -geometry 600x800+5+5 -page 595x842 "$KIMDIR"/mini_* `kdialog --getsavefilename "$dir" *.pdf`;
+    montage -tile 2x2 -geometry 600x800+5+5 -page 595x842 -- "$KIMDIR"/mini_* `kdialog --getsavefilename "$dir" *.pdf`;
     rm -rf /tmp/kim.*;;
 
-2)    montage -tile 1x1 -geometry 800x600+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg
+2)    montage -tile 1x1 -geometry 800x600+5+5 -page 595x842 -- "$@" "$KIMDIR"/miniature.jpg
     qdbus $dbusRef setLabelText "$(gettext "Kim — Creating album ...")"
     qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
-    montage -tile 1x1 -geometry 800x600+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir"
+    montage -tile 1x1 -geometry 800x600+5+5 -page 595x842 -- "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir"
 *.pdf`;;
 
-3)    montage -tile 1x2 -geometry 640x480+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg
+3)    montage -tile 1x2 -geometry 640x480+5+5 -page 595x842 -- "$@" "$KIMDIR"/miniature.jpg
     qdbus $dbusRef setLabelText "$(gettext "Kim — Creating album ...")"
     qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
-    montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+    montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 -- "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
 
-4)    montage -tile 1x2 -geometry 640x480+5+5 -page 842x595 "$@" "$KIMDIR"/miniature.jpg
+4)    montage -tile 1x2 -geometry 640x480+5+5 -page 842x595 -- "$@" "$KIMDIR"/miniature.jpg
     qdbus $dbusRef setLabelText "$(gettext "Kim — Creating album ...")"
     qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
-    montage -tile 1x1 -geometry 480x640+5+5 -page 842x595 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+    montage -tile 1x1 -geometry 480x640+5+5 -page 842x595 -- "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
 
-5)    montage -tile 2x2 -geometry 640x480+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg
+5)    montage -tile 2x2 -geometry 640x480+5+5 -page 595x842 -- "$@" "$KIMDIR"/miniature.jpg
     qdbus $dbusRef setLabelText "$(gettext "Kim — Creating album ...")"
     qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
-    montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+    montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 -- "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
 
-6)    montage -tile 2x3 -geometry 640x480+5+5 -page 842x595 "$@" "$KIMDIR"/miniature.jpg
+6)    montage -tile 2x3 -geometry 640x480+5+5 -page 842x595 -- "$@" "$KIMDIR"/miniature.jpg
     qdbus $dbusRef setLabelText "$(gettext "Kim — Creating album ...")"
     qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
-    montage -tile 1x1 -geometry 480x640+5+5 -page 842x595 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+    montage -tile 1x1 -geometry 480x640+5+5 -page 842x595 -- "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
 
-7)    montage -tile 4x3 -geometry 640x480+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg
+7)    montage -tile 4x3 -geometry 640x480+5+5 -page 595x842 -- "$@" "$KIMDIR"/miniature.jpg
     qdbus $dbusRef setLabelText "$(gettext "Kim — Creating album ...")"
     qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
-    montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+    montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 -- "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
 
-8)    montage -tile 4x4 -geometry 640x480+5+5 -page 595x842 "$@" "$KIMDIR"/miniature.jpg
+8)    montage -tile 4x4 -geometry 640x480+5+5 -page 595x842 -- "$@" "$KIMDIR"/miniature.jpg
     qdbus $dbusRef setLabelText "$(gettext "Kim — Creating album ...")"
     qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value 1
-    montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
+    montage -tile 1x1 -geometry 640x480+5+5 -page 595x842 -- "$KIMDIR"/miniature*.jpg* `kdialog --getsavefilename "$dir" *.pdf`;;
 
 *) kdialog --msgbox "$(gettext "Kim — Unrecognized option! ")";;
 esac

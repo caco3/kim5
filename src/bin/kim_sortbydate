@@ -45,7 +45,7 @@ case $? in
             let "counter +=1"
             FILE=`basename "$i"`;
             mv "$DIR/$FILE" "$TMPDIR/$FILE"
-            DATE="`identify -format "%[EXIF:DateTimeOriginal]" $TMPDIR/$FILE`";
+            DATE="`identify -format "%[EXIF:DateTimeOriginal]" -- $TMPDIR/$FILE`";
             D1=`echo $DATE | sed 's/[^0-9]/ /g' | awk '{print $1}'`;
             D2=`echo $DATE | sed 's/[^0-9]/ /g' | awk '{print $2}'`;
             D3=`echo $DATE | sed 's/[^0-9]/ /g' | awk '{print $3}'`;
@@ -81,7 +81,7 @@ case $? in
             let "counter +=1"
             FILE=`basename "$i"`;
             cp "$DIR/$FILE" "$TMPDIR/$FILE"
-            DATE="`identify -format "%[EXIF:DateTimeOriginal]" $TMPDIR/$FILE`";
+            DATE="`identify -format "%[EXIF:DateTimeOriginal]" -- $TMPDIR/$FILE`";
             D1=`echo $DATE | sed 's/[^0-9]/ /g' | awk '{print $1}'`;
             D2=`echo $DATE | sed 's/[^0-9]/ /g' | awk '{print $2}'`;
             D3=`echo $DATE | sed 's/[^0-9]/ /g' | awk '{print $3}'`;

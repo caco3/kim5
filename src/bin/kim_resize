@@ -67,7 +67,7 @@ case $? in
             BASENAME="$(basename "$FILE")"
             NAME="${BASENAME%.*}"
             EXT="${BASENAME##*.}"
-            magick "$FILE" -resize "$SCALE" "$DIR/${NAME}_resized.${EXT}"
+            magick -- "$FILE" -resize "$SCALE" "$DIR/${NAME}_resized.${EXT}"
             qdbus $dbusRef setLabelText "$(gettext "Kim — Resizing file: ") `basename "$FILE"`"
              qdbus $dbusRef org.freedesktop.DBus.Properties.Set org.kde.kdialog.ProgressDialog value "$counter"
         fi;
